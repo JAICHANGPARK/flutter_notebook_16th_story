@@ -36,12 +36,29 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                   IconButton(
                       onPressed: () {
                         ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text("Clicked Menu button")));
+                          const SnackBar(
+                            content: Text(
+                              "Clicked Menu button",
+                            ),
+                          ),
+                        );
                       },
                       icon: const Icon(Coolicons.menu_alt_02)),
                 ],
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 24),
+              child: Container(
+                height: 280,
+                child: Placeholder(),
+              ),
+            ),
+            Container(
+              height: 84,
+              child: Placeholder(),
+            ),
+            Expanded(child: Placeholder()),
           ],
         ),
       ),
