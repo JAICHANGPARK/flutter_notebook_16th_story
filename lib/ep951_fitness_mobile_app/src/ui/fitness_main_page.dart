@@ -12,21 +12,24 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Column(
-                children: [
-                  Text("Hi Malik"),
-                  Text("You've free trial class"),
-                ],
-              ),
-              Spacer(),
-              Icon(Coolicons.menu_alt_02),
-            ],
-          )
-        ],
+      body: SafeArea(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text("Hi Malik"),
+                    Text("You've free trial class"),
+                  ],
+                ),
+                const Spacer(),
+                const Icon(Coolicons.menu_alt_02),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
