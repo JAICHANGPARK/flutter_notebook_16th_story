@@ -26,6 +26,9 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                         "Hi Malik",
                         style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       ),
+                      SizedBox(
+                        height: 4,
+                      ),
                       Text("You've free trial class"),
                     ],
                   ),
