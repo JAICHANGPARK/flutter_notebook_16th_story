@@ -15,18 +15,24 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
       body: SafeArea(
         child: Column(
           children: [
-            Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text("Hi Malik"),
-                    Text("You've free trial class"),
-                  ],
-                ),
-                const Spacer(),
-                const Icon(Coolicons.menu_alt_02),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "Hi Malik",
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      ),
+                      Text("You've free trial class"),
+                    ],
+                  ),
+                  const Spacer(),
+                  const Icon(Coolicons.menu_alt_02),
+                ],
+              ),
             )
           ],
         ),
