@@ -18,6 +18,8 @@ dependencies:
   google_fonts: any
   badges: any
   freezed_annotation:
+  percent_indicator: any
+
 
 
 
