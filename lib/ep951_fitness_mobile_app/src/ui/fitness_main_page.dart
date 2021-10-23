@@ -33,7 +33,8 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                     ],
                   ),
                   const Spacer(),
-                  const Icon(Coolicons.menu_alt_02),
+                  IconButton(onPressed: () {}, 
+                      icon: const Icon(Coolicons.menu_alt_02)),
                 ],
               ),
             )
