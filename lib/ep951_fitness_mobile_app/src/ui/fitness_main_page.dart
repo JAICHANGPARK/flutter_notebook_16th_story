@@ -48,7 +48,7 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 24),
+              padding: const EdgeInsets.symmetric(vertical: 16),
               child: Container(
                 height: 280,
                 child: Placeholder(),
@@ -57,6 +57,9 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
             Container(
               height: 84,
               child: Placeholder(),
+            ),
+            SizedBox(
+              height: 16,
             ),
             Expanded(child: Placeholder()),
           ],
