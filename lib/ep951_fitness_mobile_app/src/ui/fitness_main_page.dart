@@ -31,10 +31,13 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                       SizedBox(
                         height: 4,
                       ),
-                      Text("You've free trial class",style: TextStyle(
-                        color: Colors.grey,
-                        fontWeight: FontWeight.bold,
-                      ),),
+                      Text(
+                        "You've free trial class",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
                   const Spacer(),
@@ -44,7 +47,6 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                           const SnackBar(
                             content: Text(
                               "Clicked Menu button",
-
                             ),
                           ),
                         );
@@ -107,8 +109,7 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                                             const Spacer(),
                                             Text(
                                               item.time ?? "-",
-                                              style: const TextStyle(color: Colors.grey,
-                                              fontSize: 13),
+                                              style: const TextStyle(color: Colors.grey, fontSize: 13),
                                             ),
                                           ],
                                         ),
@@ -117,8 +118,7 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                                         ),
                                         Text(
                                           item.subtitle ?? "-",
-                                          style: const TextStyle(color: Colors.grey,
-                                          fontSize: 13),
+                                          style: const TextStyle(color: Colors.grey, fontSize: 13),
                                         )
                                       ],
                                     )
@@ -134,19 +134,30 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                 ),
               ),
             ),
-             SizedBox(
+            SizedBox(
               height: 72,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
                     Column(
-                      children: [
-                        Text("Workout Progress"),
-                        Text("12 class ongoing"),
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "Workout Progress",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15
+                          ),
+                        ),
+                        SizedBox(height: 4,),
+                        Text("12 class ongoing",
+                        style: TextStyle(
+                          color: Colors.grey
+                        ),),
                       ],
                     ),
-                    Spacer(),
+                    const Spacer(),
                     CircularPercentIndicator(radius: 24),
                   ],
                 ),
