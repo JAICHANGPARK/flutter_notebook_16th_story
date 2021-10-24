@@ -69,9 +69,9 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                           itemBuilder: (context, index) {
                             var item = featureWorkoutItems[index];
                             return Padding(
-                              padding: const EdgeInsets.only(right: 12),
+                              padding: const EdgeInsets.only(right: 16),
                               child: SizedBox(
-                                width: 160,
+                                width: 150,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -82,7 +82,19 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                                           image: NetworkImage(item.thumbImg ?? ""),
                                           fit: BoxFit.cover,
                                         ),
+                                        borderRadius: BorderRadius.circular(12)
                                       ),
+                                    ),
+                                    Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Text(item.title ?? "-"),
+                                            const Spacer(),
+                                            Text(item.time ?? "-"),
+                                          ],
+                                        )
+                                      ],
                                     )
                                   ],
                                 ),
