@@ -135,30 +135,41 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
               ),
             ),
             SizedBox(
-              height: 72,
+              height: 60,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
                         Text(
                           "Workout Progress",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15
-                          ),
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                         ),
-                        SizedBox(height: 4,),
-                        Text("12 class ongoing",
-                        style: TextStyle(
-                          color: Colors.grey
-                        ),),
+                        SizedBox(
+                          height: 4,
+                        ),
+                        Text(
+                          "12 class ongoing",
+                          style: TextStyle(color: Colors.grey),
+                        ),
                       ],
                     ),
                     const Spacer(),
-                    CircularPercentIndicator(radius: 24),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 12),
+                      child: CircularPercentIndicator(
+                        radius: 44,
+                        progressColor: Colors.black,
+                        percent: 0.75,
+                        center: const Text(
+                          "75%",
+                          style: TextStyle(fontSize: 11),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -166,7 +177,33 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
             const SizedBox(
               height: 16,
             ),
-            const Expanded(child: Placeholder()),
+             Expanded(child: Stack(
+              children: [
+                Positioned(
+                    left: 0,
+                    top: 0,
+                    bottom: 0,
+                    right: 100,
+                    child: Container(
+                
+                      decoration: const BoxDecoration(
+                        color: Colors.lightGreenAccent,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(32)
+                        )
+                      ),
+                )),
+                Positioned(
+
+                    top: 64,
+                    bottom: 0,
+                    right: 0,
+                    child: Container(
+                      width: 100,
+                      color: Colors.black,
+                    )),
+              ],
+            )),
           ],
         ),
       ),
