@@ -51,7 +51,12 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
               padding: EdgeInsets.symmetric(vertical: 16),
               child: SizedBox(
                 height: 280,
-                child: Placeholder(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+
+                  ],
+                ),
               ),
             ),
             const SizedBox(
