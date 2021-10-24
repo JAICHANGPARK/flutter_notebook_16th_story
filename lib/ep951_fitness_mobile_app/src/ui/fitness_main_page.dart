@@ -183,7 +183,7 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                     left: 0,
                     top: 0,
                     bottom: 0,
-                    right: 100,
+                    right: 120,
                     child: Container(
                 
                       decoration: const BoxDecoration(
@@ -199,7 +199,7 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                     bottom: 0,
                     right: 0,
                     child: Container(
-                      width: 100,
+                      width: 120,
                       color: Colors.black,
                     )),
               ],
