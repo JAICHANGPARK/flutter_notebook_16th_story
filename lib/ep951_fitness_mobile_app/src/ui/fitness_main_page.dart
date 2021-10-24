@@ -47,14 +47,21 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                 ],
               ),
             ),
-            const Padding(
+             Padding(
               padding: EdgeInsets.symmetric(vertical: 16),
               child: SizedBox(
                 height: 280,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-
+                      Text("Featured Workouts"),
+                      Expanded(
+                        child: ListView(
+                          children: [
+                            
+                          ],
+                        ),
+                      )
                   ],
                 ),
               ),
