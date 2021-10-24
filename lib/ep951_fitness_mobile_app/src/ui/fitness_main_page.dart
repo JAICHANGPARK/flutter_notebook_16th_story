@@ -1,5 +1,6 @@
 import 'package:coolicons/coolicons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_16th_story/ep951_fitness_mobile_app/src/data/feature_workouts.dart';
 
 class FitnessMainPage extends StatefulWidget {
   const FitnessMainPage({Key? key}) : super(key: key);
@@ -56,10 +57,11 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                   children: [
                       Text("Featured Workouts"),
                       Expanded(
-                        child: ListView(
-                          children: [
-                            
-                          ],
+                        child: ListView.builder(
+                          itemCount: featureWorkoutItems.length,
+                          itemBuilder: (context, index){
+                            return Container();
+                          },
                         ),
                       )
                   ],
