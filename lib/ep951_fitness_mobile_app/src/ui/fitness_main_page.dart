@@ -47,21 +47,21 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16),
-              child: Container(
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 16),
+              child: SizedBox(
                 height: 280,
                 child: Placeholder(),
               ),
             ),
-            Container(
+            const SizedBox(
               height: 84,
               child: Placeholder(),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            Expanded(child: Placeholder()),
+            const Expanded(child: Placeholder()),
           ],
         ),
       ),
