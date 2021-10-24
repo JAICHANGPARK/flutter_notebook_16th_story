@@ -19,7 +19,7 @@ dependencies:
   badges: any
   freezed_annotation:
   percent_indicator: any
-
+  fl_chart: any
 
 
 
