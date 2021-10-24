@@ -48,23 +48,51 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                 ],
               ),
             ),
-             Padding(
-              padding: EdgeInsets.symmetric(vertical: 16),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16),
               child: SizedBox(
                 height: 280,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                      Text("Featured Workouts"),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(8,8,0,8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("Featured Workouts",style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16
+                      ),),
+                      const SizedBox(height: 16,),
                       Expanded(
                         child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
                           itemCount: featureWorkoutItems.length,
-                          itemBuilder: (context, index){
-                            return Container();
+                          itemBuilder: (context, index) {
+                            var item = featureWorkoutItems[index];
+                            return Padding(
+                              padding: const EdgeInsets.only(right: 12),
+                              child: SizedBox(
+                                width: 160,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      height: 180,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: NetworkImage(item.thumbImg ?? ""),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
                           },
                         ),
                       )
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
