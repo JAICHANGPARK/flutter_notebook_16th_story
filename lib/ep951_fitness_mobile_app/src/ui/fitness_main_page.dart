@@ -207,7 +207,7 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                             style: TextStyle(fontSize: 12, color: Colors.grey),
                           ),
                           const SizedBox(
-                            height: 16,
+                            height: 32,
                           ),
                           Expanded(
                               child: SizedBox(
@@ -218,8 +218,27 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                                 gridData: FlGridData(show: false),
                                 titlesData: FlTitlesData(
                                     bottomTitles: SideTitles(
-                                      showTitles: true,
-                                    ),
+                                        showTitles: true,
+                                        getTitles: (value) {
+                                          switch (value.toInt()) {
+                                            case 0:
+                                              return "S";
+                                            case 1:
+                                              return "M";
+                                            case 2:
+                                              return "T";
+                                            case 3:
+                                              return "W";
+                                            case 4:
+                                              return "W";
+                                            case 5:
+                                              return "W";
+                                            case 6:
+                                              return "S";
+                                            default:
+                                              return "A";
+                                          }
+                                        }),
                                     leftTitles: SideTitles(showTitles: false),
                                     rightTitles: SideTitles(showTitles: false),
                                     topTitles: SideTitles(showTitles: false)),
@@ -230,22 +249,22 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                                     BarChartRodData(y: 16, width: 2.5, colors: [Colors.black])
                                   ]),
                                   BarChartGroupData(x: 1, barRods: [
-                                    BarChartRodData(y: 10, width: 3, colors: [Colors.black])
+                                    BarChartRodData(y: 10, width: 2.5, colors: [Colors.black])
                                   ]),
                                   BarChartGroupData(x: 2, barRods: [
-                                    BarChartRodData(y: 11, width: 3, colors: [Colors.black])
+                                    BarChartRodData(y: 11, width: 2.5, colors: [Colors.black])
                                   ]),
                                   BarChartGroupData(x: 3, barRods: [
-                                    BarChartRodData(y: 10, width: 3, colors: [Colors.black])
+                                    BarChartRodData(y: 10, width: 2.5, colors: [Colors.black])
                                   ]),
                                   BarChartGroupData(x: 4, barRods: [
-                                    BarChartRodData(y: 16, width: 3, colors: [Colors.black])
+                                    BarChartRodData(y: 16, width: 2.5, colors: [Colors.black])
                                   ]),
                                   BarChartGroupData(x: 5, barRods: [
-                                    BarChartRodData(y: 8, width: 3, colors: [Colors.black])
+                                    BarChartRodData(y: 8, width: 2.5, colors: [Colors.black])
                                   ]),
                                   BarChartGroupData(x: 6, barRods: [
-                                    BarChartRodData(y: 16, width: 3, colors: [Colors.black])
+                                    BarChartRodData(y: 16, width: 2.5, colors: [Colors.black])
                                   ]),
                                 ],
                               ),
