@@ -192,10 +192,29 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                 Positioned(
                     top: 64,
                     bottom: 0,
-                    right: 0,s
+                    right: 0,
                     child: Container(
                       width: 120,
                       color: Colors.black,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "More"
+                            "\n"
+                            "Workout"
+                            "\n"
+                            "Progress",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          RotatedBox(
+                              quarterTurns: 3,
+                              child: Icon(
+                                Icons.arrow_circle_down,
+                                color: Colors.white,
+                              ))
+                        ],
+                      ),
                     )),
               ],
             )),
