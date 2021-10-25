@@ -196,7 +196,7 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                     child: Container(
                       width: 120,
                       color: Colors.black,
-padding: EdgeInsets.only(left: 24, top: 24, bottom: 24),
+                      padding: const EdgeInsets.only(left: 24, top: 24, bottom: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -208,6 +208,9 @@ padding: EdgeInsets.only(left: 24, top: 24, bottom: 24),
                             "\n"
                             "Progress",
                             style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 32,
                           ),
                           RotatedBox(
                               quarterTurns: 3,
