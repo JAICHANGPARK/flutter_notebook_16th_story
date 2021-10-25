@@ -196,8 +196,10 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                     child: Container(
                       width: 120,
                       color: Colors.black,
+padding: EdgeInsets.only(left: 24, top: 24, bottom: 24),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           Text(
                             "More"
