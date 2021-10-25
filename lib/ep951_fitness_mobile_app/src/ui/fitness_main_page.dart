@@ -206,7 +206,7 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                             "20,000 Kcal this week",
                             style: TextStyle(fontSize: 12, color: Colors.grey),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 16,
                           ),
                           Expanded(
@@ -214,6 +214,8 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                             width: double.infinity,
                             child: BarChart(
                               BarChartData(
+                                alignment: BarChartAlignment.spaceAround,
+                                gridData: FlGridData(show: false),
                                 titlesData: FlTitlesData(
                                     bottomTitles: SideTitles(
                                       showTitles: true,
@@ -224,13 +226,27 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                                 borderData: FlBorderData(show: false),
                                 axisTitleData: FlAxisTitleData(show: false),
                                 barGroups: [
-                                  BarChartGroupData(x: 0, barRods: [BarChartRodData(y: 16)]),
-                                  BarChartGroupData(x: 1, barRods: [BarChartRodData(y: 10)]),
-                                  BarChartGroupData(x: 2, barRods: [BarChartRodData(y: 11)]),
-                                  BarChartGroupData(x: 3, barRods: [BarChartRodData(y: 10)]),
-                                  BarChartGroupData(x: 4, barRods: [BarChartRodData(y: 16)]),
-                                  BarChartGroupData(x: 5, barRods: [BarChartRodData(y: 8)]),
-                                  BarChartGroupData(x: 6, barRods: [BarChartRodData(y: 16)]),
+                                  BarChartGroupData(x: 0, barRods: [
+                                    BarChartRodData(y: 16, width: 2.5, colors: [Colors.black])
+                                  ]),
+                                  BarChartGroupData(x: 1, barRods: [
+                                    BarChartRodData(y: 10, width: 3, colors: [Colors.black])
+                                  ]),
+                                  BarChartGroupData(x: 2, barRods: [
+                                    BarChartRodData(y: 11, width: 3, colors: [Colors.black])
+                                  ]),
+                                  BarChartGroupData(x: 3, barRods: [
+                                    BarChartRodData(y: 10, width: 3, colors: [Colors.black])
+                                  ]),
+                                  BarChartGroupData(x: 4, barRods: [
+                                    BarChartRodData(y: 16, width: 3, colors: [Colors.black])
+                                  ]),
+                                  BarChartGroupData(x: 5, barRods: [
+                                    BarChartRodData(y: 8, width: 3, colors: [Colors.black])
+                                  ]),
+                                  BarChartGroupData(x: 6, barRods: [
+                                    BarChartRodData(y: 16, width: 3, colors: [Colors.black])
+                                  ]),
                                 ],
                               ),
                             ),
