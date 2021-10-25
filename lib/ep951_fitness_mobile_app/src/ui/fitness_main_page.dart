@@ -177,7 +177,8 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
             const SizedBox(
               height: 16,
             ),
-             Expanded(child: Stack(
+            Expanded(
+                child: Stack(
               children: [
                 Positioned(
                     left: 0,
@@ -185,19 +186,13 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                     bottom: 0,
                     right: 120,
                     child: Container(
-                
                       decoration: const BoxDecoration(
-                        color: Colors.lightGreenAccent,
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(32)
-                        )
-                      ),
-                )),
+                          color: Colors.lightGreenAccent, borderRadius: BorderRadius.only(topRight: Radius.circular(32))),
+                    )),
                 Positioned(
-
                     top: 64,
                     bottom: 0,
-                    right: 0,
+                    right: 0,s
                     child: Container(
                       width: 120,
                       color: Colors.black,
