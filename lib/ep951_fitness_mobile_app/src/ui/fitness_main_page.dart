@@ -1,4 +1,5 @@
 import 'package:coolicons/coolicons.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep951_fitness_mobile_app/src/data/feature_workouts.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -187,7 +188,55 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                     right: 120,
                     child: Container(
                       decoration: const BoxDecoration(
-                          color: Colors.lightGreenAccent, borderRadius: BorderRadius.only(topRight: Radius.circular(32))),
+                        color: Colors.lightGreenAccent,
+                        borderRadius: BorderRadius.only(topRight: Radius.circular(32)),
+                      ),
+                      padding: const EdgeInsets.only(top: 32, left: 16, right: 16, bottom: 16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Body Workout",
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                          ),
+                          const SizedBox(
+                            height: 16,
+                          ),
+                          const Text(
+                            "20,000 Kcal this week",
+                            style: TextStyle(fontSize: 12, color: Colors.grey),
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Expanded(
+                              child: SizedBox(
+                            width: double.infinity,
+                            child: BarChart(
+                              BarChartData(
+                                titlesData: FlTitlesData(
+                                    bottomTitles: SideTitles(
+                                      showTitles: true,
+                                    ),
+                                    leftTitles: SideTitles(showTitles: false),
+                                    rightTitles: SideTitles(showTitles: false),
+                                    topTitles: SideTitles(showTitles: false)),
+                                borderData: FlBorderData(show: false),
+                                axisTitleData: FlAxisTitleData(show: false),
+                                barGroups: [
+                                  BarChartGroupData(x: 0, barRods: [BarChartRodData(y: 16)]),
+                                  BarChartGroupData(x: 1, barRods: [BarChartRodData(y: 10)]),
+                                  BarChartGroupData(x: 2, barRods: [BarChartRodData(y: 11)]),
+                                  BarChartGroupData(x: 3, barRods: [BarChartRodData(y: 10)]),
+                                  BarChartGroupData(x: 4, barRods: [BarChartRodData(y: 16)]),
+                                  BarChartGroupData(x: 5, barRods: [BarChartRodData(y: 8)]),
+                                  BarChartGroupData(x: 6, barRods: [BarChartRodData(y: 16)]),
+                                ],
+                              ),
+                            ),
+                          ))
+                        ],
+                      ),
                     )),
                 Positioned(
                     top: 64,
