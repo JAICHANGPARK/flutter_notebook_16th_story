@@ -2,6 +2,8 @@ import 'package:coolicons/coolicons.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep951_fitness_mobile_app/src/data/feature_workouts.dart';
+import 'package:flutter_notebook_16th_story/ep951_fitness_mobile_app/src/ui/fitness_body_workout_page.dart';
+import 'package:get/get.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class FitnessMainPage extends StatefulWidget {
@@ -187,7 +189,9 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                     bottom: 0,
                     right: 120,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(const FitnessBodyWorkoutPage());
+                      },
                       child: Container(
                         decoration: const BoxDecoration(
                           color: Colors.lightGreenAccent,
