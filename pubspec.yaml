@@ -20,6 +20,7 @@ dependencies:
   freezed_annotation:
   percent_indicator: any
   fl_chart: any
+  get: any
 
 
 
