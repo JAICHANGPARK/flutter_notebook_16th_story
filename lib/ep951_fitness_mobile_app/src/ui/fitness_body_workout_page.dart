@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_16th_story/ep951_fitness_mobile_app/src/controller/body_page_controller.dart';
+import 'package:get/get.dart';
 
 class FitnessBodyWorkoutPage extends StatefulWidget {
   const FitnessBodyWorkoutPage({Key? key}) : super(key: key);
@@ -8,6 +10,7 @@ class FitnessBodyWorkoutPage extends StatefulWidget {
 }
 
 class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
+  BodyPageController bodyPageController = Get.put(BodyPageController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +44,11 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+
+          bodyPageController.increment();
+          print("${bodyPageController.getTabIndex}");
+        },
         child: const Icon(Icons.add),
       ),
     );
