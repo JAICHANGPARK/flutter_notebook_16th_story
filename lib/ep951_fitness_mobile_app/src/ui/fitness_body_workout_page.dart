@@ -11,7 +11,7 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+
     );
   }
 }
