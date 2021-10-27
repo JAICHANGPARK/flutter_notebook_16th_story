@@ -93,29 +93,47 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                 ),
                 child: Stack(
                   children: [
-
                     Positioned(
                         right: -90,
                         top: -120,
                         bottom: 32,
                         child: Container(
-                        height: 180,
-                      width: 180,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(color: Colors.lightGreenAccent)
-                      ),
-                    )),
+                          height: 180,
+                          width: 180,
+                          decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(color: Colors.lightGreenAccent)),
+                        )),
                     Positioned(
                         right: -132,
                         bottom: -48,
                         child: Container(
                           height: 180,
                           width: 180,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(color: Colors.lightGreenAccent)
-                          ),
+                          decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(color: Colors.lightGreenAccent)),
+                        )),
+                    Positioned(
+                        left: 16,
+                        right: 16,
+                        top: 16,
+                        child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Burn calories",
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                Text(
+                                  "20,000kcal",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
                         )),
                     Positioned(
                       top: 84,
