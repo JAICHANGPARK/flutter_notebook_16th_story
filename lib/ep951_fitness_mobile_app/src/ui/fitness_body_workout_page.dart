@@ -93,6 +93,30 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                 ),
                 child: Stack(
                   children: [
+
+                    Positioned(
+                        right: -90,
+                        top: -120,
+                        bottom: 32,
+                        child: Container(
+                        height: 180,
+                      width: 180,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.lightGreenAccent)
+                      ),
+                    )),
+                    Positioned(
+                        right: -132,
+                        bottom: -48,
+                        child: Container(
+                          height: 180,
+                          width: 180,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.lightGreenAccent)
+                          ),
+                        )),
                     Positioned(
                       top: 84,
                       left: 16,
