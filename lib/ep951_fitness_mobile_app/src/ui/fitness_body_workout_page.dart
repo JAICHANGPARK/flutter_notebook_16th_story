@@ -118,20 +118,41 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                           children: [
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
+                              children: const [
                                 Text(
                                   "Burn calories",
                                   style: TextStyle(
                                     color: Colors.grey,
                                   ),
                                 ),
+                                SizedBox(
+                                  height: 8,
+                                ),
                                 Text(
                                   "20,000kcal",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                  ),
+                                  style: TextStyle(color: Colors.white, fontSize: 18),
                                 )
                               ],
+                            ),
+                            Spacer(),
+                            Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.white),
+                                borderRadius: BorderRadius.circular(32)
+                              ),
+                              
+                              child: Row(
+                                children: [
+                                  Text(
+                                    "This Week",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  Icon(
+                                    Icons.keyboard_arrow_down,
+                                    color: Colors.white,
+                                  )
+                                ],
+                              ),
                             )
                           ],
                         )),
@@ -147,7 +168,7 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                           titlesData: FlTitlesData(
                               bottomTitles: SideTitles(
                                   showTitles: true,
-                                  getTextStyles: (context, value) => TextStyle(color: Colors.white),
+                                  getTextStyles: (context, value) => const TextStyle(color: Colors.white),
                                   getTitles: (value) {
                                     switch (value.toInt()) {
                                       case 0:
@@ -202,7 +223,7 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               const Expanded(child: Placeholder())
