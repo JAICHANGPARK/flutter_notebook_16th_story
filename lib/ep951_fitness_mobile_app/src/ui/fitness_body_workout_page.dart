@@ -29,27 +29,35 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
           child: Column(
             children: [
               Container(
-                height: 64,
+                height: 62,
                 decoration: const BoxDecoration(
                   color: Colors.grey,
                 ),
                 child: Row(
                   children: [
-                    Expanded(child: GestureDetector(
-                      onTap: (){
-                        bodyPageController.setTabIndex(0);
+                    Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: GestureDetector(
+                      onTap: () {
+                          bodyPageController.setTabIndex(0);
                       },
                       child: Container(
-                        decoration: BoxDecoration(),
-                        child: Center(
-                          child: Text("Exercise"),
-                        ),
+                          decoration: BoxDecoration(
+                            color: Colors.lightGreenAccent,
+                            borderRadius: BorderRadius.circular(32),
+                          ),
+                          child: Center(
+                            child: Text("Exercise"),
+                          ),
                       ),
-                    )),
+                    ),
+                        )),
                     SizedBox(
                       width: 8,
                     ),
-                    Expanded(child: Container(
+                    Expanded(
+                        child: Container(
                       child: Center(
                         child: Text("Detail"),
                       ),
