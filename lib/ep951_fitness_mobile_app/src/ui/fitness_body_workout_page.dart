@@ -11,6 +11,7 @@ class FitnessBodyWorkoutPage extends StatefulWidget {
 
 class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
   BodyPageController bodyPageController = Get.put(BodyPageController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,8 +33,33 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                 decoration: const BoxDecoration(
                   color: Colors.grey,
                 ),
+                child: Row(
+                  children: [
+                    Expanded(child: GestureDetector(
+                      onTap: (){
+                        bodyPageController.setTabIndex(0);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(),
+                        child: Center(
+                          child: Text("Exercise"),
+                        ),
+                      ),
+                    )),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Expanded(child: Container(
+                      child: Center(
+                        child: Text("Detail"),
+                      ),
+                    )),
+                  ],
+                ),
               ),
-              const SizedBox(height: 24,),
+              const SizedBox(
+                height: 24,
+              ),
               Container(
                 height: 240,
                 decoration: const BoxDecoration(color: Colors.black),
@@ -45,7 +71,6 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-
           bodyPageController.increment();
           print("${bodyPageController.getTabIndex}");
         },
