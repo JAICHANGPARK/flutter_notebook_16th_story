@@ -37,28 +37,28 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                   children: [
                     Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: GestureDetector(
-                      onTap: () {
+                      padding: const EdgeInsets.all(8.0),
+                      child: GestureDetector(
+                        onTap: () {
                           bodyPageController.setTabIndex(0);
-                      },
-                      child: Container(
+                        },
+                        child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.lightGreenAccent,
+                            color: bodyPageController.getTabIndex == 0 ? Colors.lightGreenAccent : Colors.white,
                             borderRadius: BorderRadius.circular(32),
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Text("Exercise"),
                           ),
+                        ),
                       ),
-                    ),
-                        )),
-                    SizedBox(
+                    )),
+                    const SizedBox(
                       width: 8,
                     ),
                     Expanded(
                         child: Container(
-                      child: Center(
+                      child: const Center(
                         child: Text("Detail"),
                       ),
                     )),
@@ -72,7 +72,7 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                 height: 240,
                 decoration: const BoxDecoration(color: Colors.black),
               ),
-              const Expanded(child: const Placeholder())
+              const Expanded(child: Placeholder())
             ],
           ),
         ),
