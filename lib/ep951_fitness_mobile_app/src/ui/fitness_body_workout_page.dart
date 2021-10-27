@@ -98,68 +98,71 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                       left: 16,
                       right: 16,
                       bottom: 16,
-                      child:  BarChart(
-                      BarChartData(
-                        alignment: BarChartAlignment.spaceAround,
-                        gridData: FlGridData(show: false),
-                        titlesData: FlTitlesData(
-                            bottomTitles: SideTitles(
-                                showTitles: true,
-                                getTextStyles: ,
-                                getTitles: (value) {
-                                  switch (value.toInt()) {
-                                    case 0:
-                                      return "S";
-                                    case 1:
-                                      return "M";
-                                    case 2:
-                                      return "T";
-                                    case 3:
-                                      return "W";
-                                    case 4:
-                                      return "W";
-                                    case 5:
-                                      return "W";
-                                    case 6:
-                                      return "S";
-                                    default:
-                                      return "A";
-                                  }
-                                }),
-                            leftTitles: SideTitles(showTitles: false),
-                            rightTitles: SideTitles(showTitles: false),
-                            topTitles: SideTitles(showTitles: false)),
-                        borderData: FlBorderData(show: false),
-                        axisTitleData: FlAxisTitleData(show: false),
-                        barGroups: [
-                          BarChartGroupData(x: 0, barRods: [
-                            BarChartRodData(y: 16, width: 2.5, colors: [Colors.white])
-                          ]),
-                          BarChartGroupData(x: 1, barRods: [
-                            BarChartRodData(y: 10, width: 2.5, colors: [Colors.white])
-                          ]),
-                          BarChartGroupData(x: 2, barRods: [
-                            BarChartRodData(y: 11, width: 2.5, colors: [Colors.white])
-                          ]),
-                          BarChartGroupData(x: 3, barRods: [
-                            BarChartRodData(y: 10, width: 2.5, colors: [Colors.white])
-                          ]),
-                          BarChartGroupData(x: 4, barRods: [
-                            BarChartRodData(y: 16, width: 2.5, colors: [Colors.white])
-                          ]),
-                          BarChartGroupData(x: 5, barRods: [
-                            BarChartRodData(y: 8, width: 2.5, colors: [Colors.white])
-                          ]),
-                          BarChartGroupData(x: 6, barRods: [
-                            BarChartRodData(y: 16, width: 2.5, colors: [Colors.white])
-                          ]),
-                        ],
+                      child: BarChart(
+                        BarChartData(
+                          alignment: BarChartAlignment.spaceAround,
+                          gridData: FlGridData(show: false),
+                          titlesData: FlTitlesData(
+                              bottomTitles: SideTitles(
+                                  showTitles: true,
+                                  getTextStyles: (context, value) => TextStyle(color: Colors.white),
+                                  getTitles: (value) {
+                                    switch (value.toInt()) {
+                                      case 0:
+                                        return "S";
+                                      case 1:
+                                        return "M";
+                                      case 2:
+                                        return "T";
+                                      case 3:
+                                        return "W";
+                                      case 4:
+                                        return "W";
+                                      case 5:
+                                        return "W";
+                                      case 6:
+                                        return "S";
+                                      default:
+                                        return "A";
+                                    }
+                                  }),
+                              leftTitles: SideTitles(showTitles: false),
+                              rightTitles: SideTitles(showTitles: false),
+                              topTitles: SideTitles(showTitles: false)),
+                          borderData: FlBorderData(show: false),
+                          axisTitleData: FlAxisTitleData(show: false),
+                          barGroups: [
+                            BarChartGroupData(x: 0, barRods: [
+                              BarChartRodData(y: 16, width: 2.5, colors: [Colors.white])
+                            ]),
+                            BarChartGroupData(x: 1, barRods: [
+                              BarChartRodData(y: 10, width: 2.5, colors: [Colors.white])
+                            ]),
+                            BarChartGroupData(x: 2, barRods: [
+                              BarChartRodData(y: 11, width: 2.5, colors: [Colors.white])
+                            ]),
+                            BarChartGroupData(x: 3, barRods: [
+                              BarChartRodData(y: 10, width: 2.5, colors: [Colors.white])
+                            ]),
+                            BarChartGroupData(x: 4, barRods: [
+                              BarChartRodData(y: 16, width: 2.5, colors: [Colors.white])
+                            ]),
+                            BarChartGroupData(x: 5, barRods: [
+                              BarChartRodData(y: 8, width: 2.5, colors: [Colors.white])
+                            ]),
+                            BarChartGroupData(x: 6, barRods: [
+                              BarChartRodData(y: 16, width: 2.5, colors: [Colors.white])
+                            ]),
+                          ],
+                        ),
                       ),
-                    ),)
+                    )
                   ],
                 ),
               ),
-              SizedBox(height: 16,),
+              SizedBox(
+                height: 16,
+              ),
               const Expanded(child: Placeholder())
             ],
           ),
