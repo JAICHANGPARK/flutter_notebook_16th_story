@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep951_fitness_mobile_app/src/controller/body_page_controller.dart';
 import 'package:get/get.dart';
@@ -40,7 +41,9 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                       padding: const EdgeInsets.all(8.0),
                       child: GestureDetector(
                         onTap: () {
-                          bodyPageController.setTabIndex(0);
+                          final c = Get.find<BodyPageController>();
+                          c.setTabIndex(0);
+                          c.update();
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -57,9 +60,23 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                       width: 8,
                     ),
                     Expanded(
+                        child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: GestureDetector(
+                        onTap: () {
+                          final c = Get.find<BodyPageController>();
+                          c.setTabIndex(1);
+                          c.update();
+                        },
                         child: Container(
-                      child: const Center(
-                        child: Text("Detail"),
+                          decoration: BoxDecoration(
+                            color: bodyPageController.getTabIndex == 1 ? Colors.lightGreenAccent : Colors.white,
+                            borderRadius: BorderRadius.circular(32),
+                          ),
+                          child: const Center(
+                            child: Text("Detail"),
+                          ),
+                        ),
                       ),
                     )),
                   ],
@@ -70,8 +87,79 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
               ),
               Container(
                 height: 240,
-                decoration: const BoxDecoration(color: Colors.black),
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top: 84,
+                      left: 16,
+                      right: 16,
+                      bottom: 16,
+                      child:  BarChart(
+                      BarChartData(
+                        alignment: BarChartAlignment.spaceAround,
+                        gridData: FlGridData(show: false),
+                        titlesData: FlTitlesData(
+                            bottomTitles: SideTitles(
+                                showTitles: true,
+                                getTextStyles: ,
+                                getTitles: (value) {
+                                  switch (value.toInt()) {
+                                    case 0:
+                                      return "S";
+                                    case 1:
+                                      return "M";
+                                    case 2:
+                                      return "T";
+                                    case 3:
+                                      return "W";
+                                    case 4:
+                                      return "W";
+                                    case 5:
+                                      return "W";
+                                    case 6:
+                                      return "S";
+                                    default:
+                                      return "A";
+                                  }
+                                }),
+                            leftTitles: SideTitles(showTitles: false),
+                            rightTitles: SideTitles(showTitles: false),
+                            topTitles: SideTitles(showTitles: false)),
+                        borderData: FlBorderData(show: false),
+                        axisTitleData: FlAxisTitleData(show: false),
+                        barGroups: [
+                          BarChartGroupData(x: 0, barRods: [
+                            BarChartRodData(y: 16, width: 2.5, colors: [Colors.white])
+                          ]),
+                          BarChartGroupData(x: 1, barRods: [
+                            BarChartRodData(y: 10, width: 2.5, colors: [Colors.white])
+                          ]),
+                          BarChartGroupData(x: 2, barRods: [
+                            BarChartRodData(y: 11, width: 2.5, colors: [Colors.white])
+                          ]),
+                          BarChartGroupData(x: 3, barRods: [
+                            BarChartRodData(y: 10, width: 2.5, colors: [Colors.white])
+                          ]),
+                          BarChartGroupData(x: 4, barRods: [
+                            BarChartRodData(y: 16, width: 2.5, colors: [Colors.white])
+                          ]),
+                          BarChartGroupData(x: 5, barRods: [
+                            BarChartRodData(y: 8, width: 2.5, colors: [Colors.white])
+                          ]),
+                          BarChartGroupData(x: 6, barRods: [
+                            BarChartRodData(y: 16, width: 2.5, colors: [Colors.white])
+                          ]),
+                        ],
+                      ),
+                    ),)
+                  ],
+                ),
               ),
+              SizedBox(height: 16,),
               const Expanded(child: Placeholder())
             ],
           ),
