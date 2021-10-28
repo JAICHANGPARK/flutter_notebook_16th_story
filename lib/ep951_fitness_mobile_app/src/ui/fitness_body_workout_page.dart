@@ -25,6 +25,8 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.more_horiz))],
       ),
       body: SafeArea(
+
+
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: Column(
@@ -32,7 +34,7 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
               Container(
                 height: 62,
                 decoration: const BoxDecoration(
-                  color: Colors.grey,
+                  // color: Colors.grey,
                 ),
                 child: Row(
                   children: [
@@ -137,10 +139,11 @@ class _FitnessBodyWorkoutPageState extends State<FitnessBodyWorkoutPage> {
                             Spacer(),
                             Container(
                               decoration: BoxDecoration(
+                                color: Colors.black,
                                 border: Border.all(color: Colors.white),
                                 borderRadius: BorderRadius.circular(32)
                               ),
-                              
+                              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                               child: Row(
                                 children: [
                                   Text(
