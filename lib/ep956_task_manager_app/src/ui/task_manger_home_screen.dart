@@ -58,15 +58,15 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    padding: const EdgeInsets.symmetric(vertical: 24),
                     child: Row(
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: const [
-                            Text("Welcome Back!"),
+                            Text("Welcome Back!",style: TextStyle(fontSize: 15),),
                             SizedBox(
-                              height: 12,
+                              height: 8,
                             ),
                             Text(
                               "Here's Update Today.",
