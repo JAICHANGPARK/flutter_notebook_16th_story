@@ -18,8 +18,12 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
           )),
           Positioned(
             child: Container(
+
+              height: 120,
               decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [], begin: Alignment.bottomCenter,
+                gradient: LinearGradient(colors: [
+                  Colors.white
+                ], begin: Alignment.bottomCenter,
                 end: Alignment.topCenter)
               ),
             ),
