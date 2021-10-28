@@ -126,10 +126,32 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                   Colors.white.withOpacity(0.25),
                   Colors.white.withOpacity(0.1),
                 ], begin: Alignment.bottomCenter, end: Alignment.topCenter)),
+                // child: Center(
+                //   child: Container(
+                //
+                //     decoration: BoxDecoration(
+                //       color: Colors.black,
+                //       borderRadius: BorderRadius.circular(24)
+                //     ),
+                //     child: Row(
+                //       children: [
+                //         Icon(Icons.add_box,),
+                //         Text("")
+                //
+                //       ],
+                //     ),
+                //   ),
+                // ),
               ),
             )
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        label: Text("Add Task"),
+        icon: Icon(Icons.add_box),
       ),
     );
   }
