@@ -149,9 +149,11 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton.extended(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.black,
         onPressed: () {},
-        label: Text("Add Task"),
-        icon: Icon(Icons.add_box),
+        label: const Text("Add Task"),
+        icon: const Icon(Icons.add_box),
       ),
     );
   }
