@@ -103,11 +103,12 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                       child: ListView.builder(
                           itemCount: 8,
                           itemBuilder: (context, index) {
-                    return Container(
-                      height: 200,
-                      decoration: BoxDecoration(color: Colors.yellow),
-                    );
-                  }))
+                            return Container(
+                              height: 200,
+                              decoration:
+                                  const BoxDecoration(color: Colors.yellow),
+                            );
+                          }))
                 ],
               ),
             ),
