@@ -1,3 +1,4 @@
+import 'package:coolicons/coolicons.dart';
 import 'package:flutter/material.dart';
 
 class TaskManagerHomeScreen extends StatefulWidget {
@@ -15,12 +16,41 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
         child: Stack(
           children: [
             Positioned(
-              left: 0,
-              right: 0,
-              top: 0,
+              left: 16,
+              right: 16,
+              top: 16,
               bottom: 0,
               child: Column(
-                children: [],
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: CircleAvatar(
+                          backgroundColor: Colors.black,
+                        ),
+                      )),
+                      Expanded(child: Center(child: Text("Task Manager"))),
+                      Expanded(
+                          child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Stack(
+                          children: [
+                            const Icon(Coolicons.notification_outline),
+                            Positioned(
+                              right: 0,
+                                top: 0,
+                                child: CircleAvatar(
+                              radius: 4,
+                              backgroundColor: Colors.red,
+                            ))
+                          ],
+                        ),
+                      )),
+                    ],
+                  )
+                ],
               ),
             ),
             Positioned(
