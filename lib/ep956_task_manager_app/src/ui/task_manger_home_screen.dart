@@ -64,7 +64,10 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: const [
-                            Text("Welcome Back!",style: TextStyle(fontSize: 15),),
+                            Text(
+                              "Welcome Back!",
+                              style: TextStyle(fontSize: 15),
+                            ),
                             SizedBox(
                               height: 8,
                             ),
@@ -79,11 +82,29 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                         const CircleAvatar(
                           backgroundColor: Colors.black,
                           foregroundColor: Colors.white,
-                          child: const Icon(Coolicons.search),
+                          child: Icon(Coolicons.search),
                         )
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 48,
+                    child: Container(
+                      color: Colors.blue,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8,
+                    child: Container(
+                      color: Colors.white,
+                    ),
+                  ),
+                  Expanded(
+                      child: ListView.builder(itemBuilder: (context, index) {
+                    return Container(
+                      decoration: BoxDecoration(color: Colors.yellow),
+                    );
+                  }))
                 ],
               ),
             ),
