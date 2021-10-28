@@ -56,6 +56,25 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                         ),
                       )),
                     ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text("Welcome Back!"),
+                            Text("Here's Update Today."),
+                          ],
+                        ),
+                        Spacer(),
+                        CircleAvatar(
+                          backgroundColor: Colors.black,
+                          foregroundColor: Colors.white,
+                          child: Icon(Coolicons.search),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
