@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'ep951_fitness_mobile_app/fitness_mobile_app.dart';
+import 'ep956_task_manager_app/task_manager_app.dart';
 
 
 main() {
-  runApp(const FitnessMobileApp());
+  runApp(const TaskManagerApp());
 }
