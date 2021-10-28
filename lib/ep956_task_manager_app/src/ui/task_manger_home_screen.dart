@@ -24,27 +24,34 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                 children: [
                   Row(
                     children: [
-                      Expanded(
+                      const Expanded(
                           child: Align(
                         alignment: Alignment.centerLeft,
                         child: CircleAvatar(
                           backgroundColor: Colors.black,
+                          foregroundColor: Colors.white,
+                          child: Icon(Icons.apps),
                         ),
                       )),
-                      Expanded(child: Center(child: Text("Task Manager"))),
+                      const Expanded(
+                          child: Center(
+                              child: Text(
+                        "Task Manager",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ))),
                       Expanded(
                           child: Align(
                         alignment: Alignment.centerRight,
                         child: Stack(
-                          children: [
-                            const Icon(Coolicons.notification_outline),
+                          children: const [
+                            Icon(Coolicons.notification_outline),
                             Positioned(
-                              right: 0,
+                                right: 0,
                                 top: 0,
                                 child: CircleAvatar(
-                              radius: 4,
-                              backgroundColor: Colors.red,
-                            ))
+                                  radius: 4,
+                                  backgroundColor: Colors.red,
+                                ))
                           ],
                         ),
                       )),
