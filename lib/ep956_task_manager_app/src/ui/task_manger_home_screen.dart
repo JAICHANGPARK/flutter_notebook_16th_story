@@ -62,16 +62,24 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                     child: Row(
                       children: [
                         Column(
-                          children: [
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
                             Text("Welcome Back!"),
-                            Text("Here's Update Today."),
+                            SizedBox(
+                              height: 12,
+                            ),
+                            Text(
+                              "Here's Update Today.",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20),
+                            ),
                           ],
                         ),
-                        Spacer(),
-                        CircleAvatar(
+                        const Spacer(),
+                        const CircleAvatar(
                           backgroundColor: Colors.black,
                           foregroundColor: Colors.white,
-                          child: Icon(Coolicons.search),
+                          child: const Icon(Coolicons.search),
                         )
                       ],
                     ),
