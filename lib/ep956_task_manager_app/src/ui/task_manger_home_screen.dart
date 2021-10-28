@@ -26,8 +26,10 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [
                   Colors.white.withOpacity(0.7),
+                  Colors.white.withOpacity(0.75),
                   Colors.white.withOpacity(0.5),
                   Colors.white.withOpacity(0.25),
+                  Colors.white.withOpacity(0.1),
 
                 ], begin: Alignment.bottomCenter,
                 end: Alignment.topCenter)
