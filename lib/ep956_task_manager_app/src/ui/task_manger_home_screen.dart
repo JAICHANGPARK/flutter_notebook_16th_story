@@ -155,8 +155,9 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                               padding: const EdgeInsets.symmetric(vertical: 8),
                               child: Container(
                                 height: 180,
-                                decoration:
-                                    const BoxDecoration(color: Colors.yellow),
+                                decoration: BoxDecoration(
+                                    color: Colors.yellow,
+                                    borderRadius: BorderRadius.circular(8)),
                                 padding: const EdgeInsets.all(12),
                                 child: Column(
                                   children: [
@@ -178,16 +179,26 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                                                 .tags?[idx2] ??
                                                             "";
                                                     return Padding(
-                                                      padding: const EdgeInsets.only(right: 12),
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              right: 12),
                                                       child: Container(
-                                                        padding: const EdgeInsets.symmetric(horizontal: 12,
-                                                        vertical: 4),
-                                                        decoration: BoxDecoration(
-                                                          border: Border.all(
-                                                            color: Colors.black45,
-                                                          ),
-                                                          borderRadius: BorderRadius.circular(24)
-                                                        ),
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .symmetric(
+                                                                horizontal: 12,
+                                                                vertical: 4),
+                                                        decoration:
+                                                            BoxDecoration(
+                                                                border:
+                                                                    Border.all(
+                                                                  color: Colors
+                                                                      .black45,
+                                                                ),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            24)),
                                                         child: Center(
                                                           child: Text(_tag),
                                                         ),
