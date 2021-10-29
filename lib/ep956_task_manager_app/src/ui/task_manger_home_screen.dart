@@ -96,13 +96,14 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(24)
-                            ),
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(24)),
                             padding: EdgeInsets.symmetric(horizontal: 24),
                             child: const Center(
-
-                              child: const Text("Today"),
+                              child: const Text(
+                                "Today",
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
                           )
                         ],
