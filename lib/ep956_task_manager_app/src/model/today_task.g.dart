@@ -12,6 +12,7 @@ _$_TodayTask _$$_TodayTaskFromJson(Map<String, dynamic> json) => _$_TodayTask(
       date: json['date'] as String?,
       time: json['time'] as String?,
       isCompleted: json['isCompleted'] as bool?,
+      remindAt: json['remindAt'] as String?,
     );
 
 Map<String, dynamic> _$$_TodayTaskToJson(_$_TodayTask instance) =>
@@ -21,4 +22,5 @@ Map<String, dynamic> _$$_TodayTaskToJson(_$_TodayTask instance) =>
       'date': instance.date,
       'time': instance.time,
       'isCompleted': instance.isCompleted,
+      'remindAt': instance.remindAt,
     };
