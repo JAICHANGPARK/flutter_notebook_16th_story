@@ -88,7 +88,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 42,
+                    height: 36,
                     child: Container(
                       color: Colors.blue,
                       child: ListView(
