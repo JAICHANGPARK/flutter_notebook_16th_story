@@ -88,9 +88,25 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 48,
+                    height: 42,
                     child: Container(
                       color: Colors.blue,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(24)
+                            ),
+                            padding: EdgeInsets.symmetric(horizontal: 24),
+                            child: const Center(
+
+                              child: const Text("Today"),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
