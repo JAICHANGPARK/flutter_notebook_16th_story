@@ -1,5 +1,6 @@
 import 'package:coolicons/coolicons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_16th_story/ep956_task_manager_app/src/data/fake_today_task.dart';
 
 class TaskManagerHomeScreen extends StatefulWidget {
   const TaskManagerHomeScreen({Key? key}) : super(key: key);
@@ -148,7 +149,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                   ),
                   Expanded(
                       child: ListView.builder(
-                          itemCount: 8,
+                          itemCount: fakeTodayTask.length,
                           itemBuilder: (context, index) {
                             return Padding(
                               padding: const EdgeInsets.symmetric(vertical: 8),
@@ -156,6 +157,35 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                 height: 180,
                                 decoration:
                                     const BoxDecoration(color: Colors.yellow),
+                                child: Column(
+                                  children: [
+                                    SizedBox(
+                                      height: 28,
+                                      child: Row(
+                                        children: [
+                                          Expanded(
+                                              child: ListView.builder(
+                                                scrollDirection: Axis.horizontal,
+                                                  itemCount:
+                                                      fakeTodayTask[index]
+                                                          .tags
+                                                          ?.length,
+                                                  itemBuilder: (context, idx2) {
+                                                    String _tag =
+                                                        fakeTodayTask[index]
+                                                                .tags?[idx2] ??
+                                                            "";
+                                                    return Container(
+                                                      child: Center(
+                                                        child: Text("${_tag}"),
+                                                      ),
+                                                    );
+                                                  }))
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             );
                           }))
