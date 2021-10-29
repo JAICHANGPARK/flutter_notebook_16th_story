@@ -12,6 +12,7 @@ class TodayTask with _$TodayTask {
     String? date,
     String? time,
     bool? isCompleted,
+    String? remindAt,
   }) = _TodayTask;
 
   factory TodayTask.fromJson(Map<String, dynamic> json) => _$TodayTaskFromJson(json);
