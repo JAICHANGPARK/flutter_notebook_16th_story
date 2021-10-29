@@ -107,7 +107,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 8,
                           ),
                           Container(
@@ -122,7 +122,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 8,
                           ),
                           Container(
@@ -157,6 +157,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                 height: 180,
                                 decoration:
                                     const BoxDecoration(color: Colors.yellow),
+                                padding: const EdgeInsets.all(12),
                                 child: Column(
                                   children: [
                                     SizedBox(
@@ -165,7 +166,8 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                         children: [
                                           Expanded(
                                               child: ListView.builder(
-                                                scrollDirection: Axis.horizontal,
+                                                  scrollDirection:
+                                                      Axis.horizontal,
                                                   itemCount:
                                                       fakeTodayTask[index]
                                                           .tags
@@ -175,9 +177,20 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                                         fakeTodayTask[index]
                                                                 .tags?[idx2] ??
                                                             "";
-                                                    return Container(
-                                                      child: Center(
-                                                        child: Text("${_tag}"),
+                                                    return Padding(
+                                                      padding: const EdgeInsets.only(right: 12),
+                                                      child: Container(
+                                                        padding: const EdgeInsets.symmetric(horizontal: 12,
+                                                        vertical: 4),
+                                                        decoration: BoxDecoration(
+                                                          border: Border.all(
+                                                            color: Colors.black45,
+                                                          ),
+                                                          borderRadius: BorderRadius.circular(24)
+                                                        ),
+                                                        child: Center(
+                                                          child: Text(_tag),
+                                                        ),
                                                       ),
                                                     );
                                                   }))
