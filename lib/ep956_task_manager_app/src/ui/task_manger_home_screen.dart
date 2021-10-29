@@ -156,7 +156,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                               child: Container(
                                 height: 180,
                                 decoration: BoxDecoration(
-                                    color: Colors.yellow,
+                                    color: fakeTodayTask[index].backgroundColorRGB,
                                     borderRadius: BorderRadius.circular(8)),
                                 padding: const EdgeInsets.all(12),
                                 child: Column(
