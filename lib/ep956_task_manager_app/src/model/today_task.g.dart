@@ -13,6 +13,9 @@ _$_TodayTask _$$_TodayTaskFromJson(Map<String, dynamic> json) => _$_TodayTask(
       time: json['time'] as String?,
       isCompleted: json['isCompleted'] as bool?,
       remindAt: json['remindAt'] as String?,
+      backgroundColorRGB: json['backgroundColorRGB'] == null
+          ? ColorIntConv.defaultColor
+          : const ColorIntConv().fromJson(json['backgroundColorRGB'] as int),
     );
 
 Map<String, dynamic> _$$_TodayTaskToJson(_$_TodayTask instance) =>
@@ -23,4 +26,6 @@ Map<String, dynamic> _$$_TodayTaskToJson(_$_TodayTask instance) =>
       'time': instance.time,
       'isCompleted': instance.isCompleted,
       'remindAt': instance.remindAt,
+      'backgroundColorRGB':
+          const ColorIntConv().toJson(instance.backgroundColorRGB),
     };
