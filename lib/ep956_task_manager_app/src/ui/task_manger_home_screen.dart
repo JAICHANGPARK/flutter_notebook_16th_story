@@ -90,7 +90,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                   SizedBox(
                     height: 36,
                     child: Container(
-                      color: Colors.blue,
+                      // color: Colors.blue,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
@@ -98,7 +98,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                             decoration: BoxDecoration(
                                 color: Colors.black,
                                 borderRadius: BorderRadius.circular(24)),
-                            padding: EdgeInsets.symmetric(horizontal: 24),
+                            padding: EdgeInsets.symmetric(horizontal: 36),
                             child: const Center(
                               child: const Text(
                                 "Today",
