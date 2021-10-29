@@ -26,13 +26,15 @@ class _$TodayTaskTearOff {
       String? title,
       String? date,
       String? time,
-      bool? isCompleted}) {
+      bool? isCompleted,
+      String? remindAt}) {
     return _TodayTask(
       tags: tags,
       title: title,
       date: date,
       time: time,
       isCompleted: isCompleted,
+      remindAt: remindAt,
     );
   }
 
@@ -51,6 +53,7 @@ mixin _$TodayTask {
   String? get date => throw _privateConstructorUsedError;
   String? get time => throw _privateConstructorUsedError;
   bool? get isCompleted => throw _privateConstructorUsedError;
+  String? get remindAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -67,7 +70,8 @@ abstract class $TodayTaskCopyWith<$Res> {
       String? title,
       String? date,
       String? time,
-      bool? isCompleted});
+      bool? isCompleted,
+      String? remindAt});
 }
 
 /// @nodoc
@@ -85,6 +89,7 @@ class _$TodayTaskCopyWithImpl<$Res> implements $TodayTaskCopyWith<$Res> {
     Object? date = freezed,
     Object? time = freezed,
     Object? isCompleted = freezed,
+    Object? remindAt = freezed,
   }) {
     return _then(_value.copyWith(
       tags: tags == freezed
@@ -107,6 +112,10 @@ class _$TodayTaskCopyWithImpl<$Res> implements $TodayTaskCopyWith<$Res> {
           ? _value.isCompleted
           : isCompleted // ignore: cast_nullable_to_non_nullable
               as bool?,
+      remindAt: remindAt == freezed
+          ? _value.remindAt
+          : remindAt // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -122,7 +131,8 @@ abstract class _$TodayTaskCopyWith<$Res> implements $TodayTaskCopyWith<$Res> {
       String? title,
       String? date,
       String? time,
-      bool? isCompleted});
+      bool? isCompleted,
+      String? remindAt});
 }
 
 /// @nodoc
@@ -141,6 +151,7 @@ class __$TodayTaskCopyWithImpl<$Res> extends _$TodayTaskCopyWithImpl<$Res>
     Object? date = freezed,
     Object? time = freezed,
     Object? isCompleted = freezed,
+    Object? remindAt = freezed,
   }) {
     return _then(_TodayTask(
       tags: tags == freezed
@@ -163,6 +174,10 @@ class __$TodayTaskCopyWithImpl<$Res> extends _$TodayTaskCopyWithImpl<$Res>
           ? _value.isCompleted
           : isCompleted // ignore: cast_nullable_to_non_nullable
               as bool?,
+      remindAt: remindAt == freezed
+          ? _value.remindAt
+          : remindAt // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -170,7 +185,13 @@ class __$TodayTaskCopyWithImpl<$Res> extends _$TodayTaskCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TodayTask implements _TodayTask {
-  _$_TodayTask({this.tags, this.title, this.date, this.time, this.isCompleted});
+  _$_TodayTask(
+      {this.tags,
+      this.title,
+      this.date,
+      this.time,
+      this.isCompleted,
+      this.remindAt});
 
   factory _$_TodayTask.fromJson(Map<String, dynamic> json) =>
       _$$_TodayTaskFromJson(json);
@@ -185,10 +206,12 @@ class _$_TodayTask implements _TodayTask {
   final String? time;
   @override
   final bool? isCompleted;
+  @override
+  final String? remindAt;
 
   @override
   String toString() {
-    return 'TodayTask(tags: $tags, title: $title, date: $date, time: $time, isCompleted: $isCompleted)';
+    return 'TodayTask(tags: $tags, title: $title, date: $date, time: $time, isCompleted: $isCompleted, remindAt: $remindAt)';
   }
 
   @override
@@ -201,7 +224,9 @@ class _$_TodayTask implements _TodayTask {
             (identical(other.date, date) || other.date == date) &&
             (identical(other.time, time) || other.time == time) &&
             (identical(other.isCompleted, isCompleted) ||
-                other.isCompleted == isCompleted));
+                other.isCompleted == isCompleted) &&
+            (identical(other.remindAt, remindAt) ||
+                other.remindAt == remindAt));
   }
 
   @override
@@ -211,7 +236,8 @@ class _$_TodayTask implements _TodayTask {
       title,
       date,
       time,
-      isCompleted);
+      isCompleted,
+      remindAt);
 
   @JsonKey(ignore: true)
   @override
@@ -230,7 +256,8 @@ abstract class _TodayTask implements TodayTask {
       String? title,
       String? date,
       String? time,
-      bool? isCompleted}) = _$_TodayTask;
+      bool? isCompleted,
+      String? remindAt}) = _$_TodayTask;
 
   factory _TodayTask.fromJson(Map<String, dynamic> json) =
       _$_TodayTask.fromJson;
@@ -245,6 +272,8 @@ abstract class _TodayTask implements TodayTask {
   String? get time;
   @override
   bool? get isCompleted;
+  @override
+  String? get remindAt;
   @override
   @JsonKey(ignore: true)
   _$TodayTaskCopyWith<_TodayTask> get copyWith =>
