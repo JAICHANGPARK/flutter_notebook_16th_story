@@ -27,7 +27,10 @@ class _$TodayTaskTearOff {
       String? date,
       String? time,
       bool? isCompleted,
-      String? remindAt}) {
+      String? remindAt,
+      @ColorIntConv()
+      @JsonKey()
+          Color backgroundColorRGB = ColorIntConv.defaultColor}) {
     return _TodayTask(
       tags: tags,
       title: title,
@@ -35,6 +38,7 @@ class _$TodayTaskTearOff {
       time: time,
       isCompleted: isCompleted,
       remindAt: remindAt,
+      backgroundColorRGB: backgroundColorRGB,
     );
   }
 
@@ -54,6 +58,9 @@ mixin _$TodayTask {
   String? get time => throw _privateConstructorUsedError;
   bool? get isCompleted => throw _privateConstructorUsedError;
   String? get remindAt => throw _privateConstructorUsedError;
+  @ColorIntConv()
+  @JsonKey()
+  Color get backgroundColorRGB => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -71,7 +78,8 @@ abstract class $TodayTaskCopyWith<$Res> {
       String? date,
       String? time,
       bool? isCompleted,
-      String? remindAt});
+      String? remindAt,
+      @ColorIntConv() @JsonKey() Color backgroundColorRGB});
 }
 
 /// @nodoc
@@ -90,6 +98,7 @@ class _$TodayTaskCopyWithImpl<$Res> implements $TodayTaskCopyWith<$Res> {
     Object? time = freezed,
     Object? isCompleted = freezed,
     Object? remindAt = freezed,
+    Object? backgroundColorRGB = freezed,
   }) {
     return _then(_value.copyWith(
       tags: tags == freezed
@@ -116,6 +125,10 @@ class _$TodayTaskCopyWithImpl<$Res> implements $TodayTaskCopyWith<$Res> {
           ? _value.remindAt
           : remindAt // ignore: cast_nullable_to_non_nullable
               as String?,
+      backgroundColorRGB: backgroundColorRGB == freezed
+          ? _value.backgroundColorRGB
+          : backgroundColorRGB // ignore: cast_nullable_to_non_nullable
+              as Color,
     ));
   }
 }
@@ -132,7 +145,8 @@ abstract class _$TodayTaskCopyWith<$Res> implements $TodayTaskCopyWith<$Res> {
       String? date,
       String? time,
       bool? isCompleted,
-      String? remindAt});
+      String? remindAt,
+      @ColorIntConv() @JsonKey() Color backgroundColorRGB});
 }
 
 /// @nodoc
@@ -152,6 +166,7 @@ class __$TodayTaskCopyWithImpl<$Res> extends _$TodayTaskCopyWithImpl<$Res>
     Object? time = freezed,
     Object? isCompleted = freezed,
     Object? remindAt = freezed,
+    Object? backgroundColorRGB = freezed,
   }) {
     return _then(_TodayTask(
       tags: tags == freezed
@@ -178,6 +193,10 @@ class __$TodayTaskCopyWithImpl<$Res> extends _$TodayTaskCopyWithImpl<$Res>
           ? _value.remindAt
           : remindAt // ignore: cast_nullable_to_non_nullable
               as String?,
+      backgroundColorRGB: backgroundColorRGB == freezed
+          ? _value.backgroundColorRGB
+          : backgroundColorRGB // ignore: cast_nullable_to_non_nullable
+              as Color,
     ));
   }
 }
@@ -185,13 +204,16 @@ class __$TodayTaskCopyWithImpl<$Res> extends _$TodayTaskCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TodayTask implements _TodayTask {
-  _$_TodayTask(
+  const _$_TodayTask(
       {this.tags,
       this.title,
       this.date,
       this.time,
       this.isCompleted,
-      this.remindAt});
+      this.remindAt,
+      @ColorIntConv()
+      @JsonKey()
+          this.backgroundColorRGB = ColorIntConv.defaultColor});
 
   factory _$_TodayTask.fromJson(Map<String, dynamic> json) =>
       _$$_TodayTaskFromJson(json);
@@ -208,10 +230,14 @@ class _$_TodayTask implements _TodayTask {
   final bool? isCompleted;
   @override
   final String? remindAt;
+  @override
+  @ColorIntConv()
+  @JsonKey()
+  final Color backgroundColorRGB;
 
   @override
   String toString() {
-    return 'TodayTask(tags: $tags, title: $title, date: $date, time: $time, isCompleted: $isCompleted, remindAt: $remindAt)';
+    return 'TodayTask(tags: $tags, title: $title, date: $date, time: $time, isCompleted: $isCompleted, remindAt: $remindAt, backgroundColorRGB: $backgroundColorRGB)';
   }
 
   @override
@@ -226,7 +252,9 @@ class _$_TodayTask implements _TodayTask {
             (identical(other.isCompleted, isCompleted) ||
                 other.isCompleted == isCompleted) &&
             (identical(other.remindAt, remindAt) ||
-                other.remindAt == remindAt));
+                other.remindAt == remindAt) &&
+            (identical(other.backgroundColorRGB, backgroundColorRGB) ||
+                other.backgroundColorRGB == backgroundColorRGB));
   }
 
   @override
@@ -237,7 +265,8 @@ class _$_TodayTask implements _TodayTask {
       date,
       time,
       isCompleted,
-      remindAt);
+      remindAt,
+      backgroundColorRGB);
 
   @JsonKey(ignore: true)
   @override
@@ -251,13 +280,14 @@ class _$_TodayTask implements _TodayTask {
 }
 
 abstract class _TodayTask implements TodayTask {
-  factory _TodayTask(
+  const factory _TodayTask(
       {List<String>? tags,
       String? title,
       String? date,
       String? time,
       bool? isCompleted,
-      String? remindAt}) = _$_TodayTask;
+      String? remindAt,
+      @ColorIntConv() @JsonKey() Color backgroundColorRGB}) = _$_TodayTask;
 
   factory _TodayTask.fromJson(Map<String, dynamic> json) =
       _$_TodayTask.fromJson;
@@ -274,6 +304,10 @@ abstract class _TodayTask implements TodayTask {
   bool? get isCompleted;
   @override
   String? get remindAt;
+  @override
+  @ColorIntConv()
+  @JsonKey()
+  Color get backgroundColorRGB;
   @override
   @JsonKey(ignore: true)
   _$TodayTaskCopyWith<_TodayTask> get copyWith =>
