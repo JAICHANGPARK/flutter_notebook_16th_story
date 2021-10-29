@@ -98,11 +98,41 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                             decoration: BoxDecoration(
                                 color: Colors.black,
                                 borderRadius: BorderRadius.circular(24)),
-                            padding: EdgeInsets.symmetric(horizontal: 36),
+                            padding: const EdgeInsets.symmetric(horizontal: 36),
                             child: const Center(
-                              child: const Text(
+                              child: Text(
                                 "Today",
                                 style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(24)),
+                            padding: const EdgeInsets.symmetric(horizontal: 32),
+                            child: const Center(
+                              child: Text(
+                                "Upcoming",
+                                style: TextStyle(color: Colors.black),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(24)),
+                            padding: const EdgeInsets.symmetric(horizontal: 32),
+                            child: const Center(
+                              child: Text(
+                                "Task Done",
+                                style: TextStyle(color: Colors.black),
                               ),
                             ),
                           )
