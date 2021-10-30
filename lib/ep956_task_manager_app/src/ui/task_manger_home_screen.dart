@@ -155,6 +155,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                     borderRadius: BorderRadius.circular(8)),
                                 padding: const EdgeInsets.all(12),
                                 child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     SizedBox(
                                       height: 28,
@@ -194,22 +195,43 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                         ],
                                       ),
                                     ),
-                                    const Text("Taking My Sister To School"),
+                                    const Padding(
+                                      padding: EdgeInsets.symmetric(vertical: 16),
+                                      child: Text(
+                                        "Taking My Sister To School",
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                    ),
                                     Row(
                                       children: [
                                         Expanded(
-                                          
                                           child: Column(
                                             children: [
                                               Row(
                                                 children: [
-                                                  const Icon(Icons.calendar_today_outlined),
+                                                  const Icon(
+                                                    Icons.calendar_today_outlined,
+                                                    size: 12,
+                                                  ),
+                                                  const SizedBox(
+                                                    width: 8,
+                                                  ),
                                                   Text("${fakeTodayTask[index].date}"),
                                                 ],
                                               ),
                                               Row(
                                                 children: [
-                                                  const Icon(Icons.timer),
+                                                  const Icon(
+                                                    Icons.timer,
+                                                    size: 12,
+                                                  ),
+                                                  const SizedBox(
+                                                    width: 8,
+                                                  ),
                                                   Text("${fakeTodayTask[index].time} "
                                                       "(Remind At ${fakeTodayTask[index].remindAt})"),
                                                 ],
