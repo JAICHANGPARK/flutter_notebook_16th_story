@@ -193,6 +193,30 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                               ))
                                         ],
                                       ),
+                                    ),
+                                    Text("Taking My Sister To School"),
+                                    Row(
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Icon(Icons.calendar_today_outlined),
+                                                Text("${fakeTodayTask[index].date}"),
+                                              ],
+                                            ),
+                                            Row(
+                                              children: [
+                                                Icon(Icons.timer),
+                                                Text("${fakeTodayTask[index].date}"),
+                                              ],
+                                            ),
+
+                                          ],
+                                        ),
+
+
+                                      ],
                                     )
                                   ],
                                 ),
