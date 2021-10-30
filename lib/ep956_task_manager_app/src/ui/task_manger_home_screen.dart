@@ -10,6 +10,8 @@ class TaskManagerHomeScreen extends StatefulWidget {
 }
 
 class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
+  int? _tabIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,39 +94,60 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        Container(
-                          decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(24)),
-                          padding: const EdgeInsets.symmetric(horizontal: 36),
-                          child: const Center(
-                            child: Text(
-                              "Today",
-                              style: TextStyle(color: Colors.white),
+                        GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              _tabIndex = 0;
+                            });
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(24)),
+                            padding: const EdgeInsets.symmetric(horizontal: 36),
+                            child: const Center(
+                              child: Text(
+                                "Today",
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
                           ),
                         ),
                         const SizedBox(
                           width: 8,
                         ),
-                        Container(
-                          decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
-                          padding: const EdgeInsets.symmetric(horizontal: 32),
-                          child: const Center(
-                            child: Text(
-                              "Upcoming",
-                              style: TextStyle(color: Colors.black),
+                        GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              _tabIndex = 1;
+                            });
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
+                            padding: const EdgeInsets.symmetric(horizontal: 32),
+                            child: const Center(
+                              child: Text(
+                                "Upcoming",
+                                style: TextStyle(color: Colors.black),
+                              ),
                             ),
                           ),
                         ),
                         const SizedBox(
                           width: 8,
                         ),
-                        Container(
-                          decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
-                          padding: const EdgeInsets.symmetric(horizontal: 32),
-                          child: const Center(
-                            child: Text(
-                              "Task Done",
-                              style: TextStyle(color: Colors.black),
+                        GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              _tabIndex = 2;
+                            });
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
+                            padding: const EdgeInsets.symmetric(horizontal: 32),
+                            child: const Center(
+                              child: Text(
+                                "Task Done",
+                                style: TextStyle(color: Colors.black),
+                              ),
                             ),
                           ),
                         )
