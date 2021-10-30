@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep956_task_manager_app/src/model/today_task.dart';
 
+/// Color one = 75 238 209   4b ee d1
+/// Color two = 251 225 20    fb e1 14
+/// Color three = 62 209 240  3e d1 f0
+/// Color 4 =  182 173 255  b6 ad ff
+
 List<TodayTask> fakeTodayTask = [
   const TodayTask(
       time: "7:30",
