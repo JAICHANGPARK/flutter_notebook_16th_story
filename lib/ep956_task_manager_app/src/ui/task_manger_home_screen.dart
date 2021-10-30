@@ -74,8 +74,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                             ),
                             Text(
                               "Here's Update Today.",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                             ),
                           ],
                         ),
@@ -96,9 +95,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                         scrollDirection: Axis.horizontal,
                         children: [
                           Container(
-                            decoration: BoxDecoration(
-                                color: Colors.black,
-                                borderRadius: BorderRadius.circular(24)),
+                            decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(24)),
                             padding: const EdgeInsets.symmetric(horizontal: 36),
                             child: const Center(
                               child: Text(
@@ -111,9 +108,8 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                             width: 8,
                           ),
                           Container(
-                            decoration: BoxDecoration(
-                                color: Colors.transparent,
-                                borderRadius: BorderRadius.circular(24)),
+                            decoration:
+                                BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
                             padding: const EdgeInsets.symmetric(horizontal: 32),
                             child: const Center(
                               child: Text(
@@ -126,9 +122,8 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                             width: 8,
                           ),
                           Container(
-                            decoration: BoxDecoration(
-                                color: Colors.transparent,
-                                borderRadius: BorderRadius.circular(24)),
+                            decoration:
+                                BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
                             padding: const EdgeInsets.symmetric(horizontal: 32),
                             child: const Center(
                               child: Text(
@@ -167,38 +162,20 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                         children: [
                                           Expanded(
                                               child: ListView.builder(
-                                                  scrollDirection:
-                                                      Axis.horizontal,
-                                                  itemCount:
-                                                      fakeTodayTask[index]
-                                                          .tags
-                                                          ?.length,
+                                                  scrollDirection: Axis.horizontal,
+                                                  itemCount: fakeTodayTask[index].tags?.length,
                                                   itemBuilder: (context, idx2) {
-                                                    String _tag =
-                                                        fakeTodayTask[index]
-                                                                .tags?[idx2] ??
-                                                            "";
+                                                    String _tag = fakeTodayTask[index].tags?[idx2] ?? "";
                                                     return Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              right: 12),
+                                                      padding: const EdgeInsets.only(right: 12),
                                                       child: Container(
                                                         padding:
-                                                            const EdgeInsets
-                                                                    .symmetric(
-                                                                horizontal: 12,
-                                                                vertical: 4),
-                                                        decoration:
-                                                            BoxDecoration(
-                                                                border:
-                                                                    Border.all(
-                                                                  color: Colors
-                                                                      .black45,
-                                                                ),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            24)),
+                                                            const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                                                        decoration: BoxDecoration(
+                                                            border: Border.all(
+                                                              color: Colors.black45,
+                                                            ),
+                                                            borderRadius: BorderRadius.circular(24)),
                                                         child: Center(
                                                           child: Text(_tag),
                                                         ),
