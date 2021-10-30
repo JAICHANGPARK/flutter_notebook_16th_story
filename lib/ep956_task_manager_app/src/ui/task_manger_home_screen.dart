@@ -183,7 +183,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                                     );
                                                   })),
                                           Container(
-                                              padding: EdgeInsets.all(4),
+                                              padding: const EdgeInsets.all(4),
                                               decoration: BoxDecoration(
                                                   color: Colors.black, borderRadius: BorderRadius.circular(4)),
                                               child: Icon(
@@ -194,28 +194,30 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                         ],
                                       ),
                                     ),
-                                    Text("Taking My Sister To School"),
+                                    const Text("Taking My Sister To School"),
                                     Row(
                                       children: [
-                                        Column(
-                                          children: [
-                                            Row(
-                                              children: [
-                                                Icon(Icons.calendar_today_outlined),
-                                                Text("${fakeTodayTask[index].date}"),
-                                              ],
-                                            ),
-                                            Row(
-                                              children: [
-                                                Icon(Icons.timer),
-                                                Text("${fakeTodayTask[index].date}"),
-                                              ],
-                                            ),
-
-                                          ],
+                                        Expanded(
+                                          
+                                          child: Column(
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  const Icon(Icons.calendar_today_outlined),
+                                                  Text("${fakeTodayTask[index].date}"),
+                                                ],
+                                              ),
+                                              Row(
+                                                children: [
+                                                  const Icon(Icons.timer),
+                                                  Text("${fakeTodayTask[index].time} "
+                                                      "(Remind At ${fakeTodayTask[index].remindAt})"),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
                                         ),
-
-
+                                        Container()
                                       ],
                                     )
                                   ],
