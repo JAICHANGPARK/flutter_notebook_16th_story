@@ -125,10 +125,11 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                           },
                           child: Container(
                             decoration: BoxDecoration(
-                                color: _tabIndex == 1 ? Colors.black : Colors.transparent,
-                                borderRadius: BorderRadius.circular(24),),
+                              color: _tabIndex == 1 ? Colors.black : Colors.transparent,
+                              borderRadius: BorderRadius.circular(24),
+                            ),
                             padding: const EdgeInsets.symmetric(horizontal: 32),
-                            child:  Center(
+                            child: Center(
                               child: Text(
                                 "Upcoming",
                                 style: TextStyle(color: _tabIndex == 1 ? Colors.white : Colors.black),
@@ -146,13 +147,17 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                             });
                           },
                           child: Container(
-                            decoration:
-                                BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
+                            decoration: BoxDecoration(
+                              color: _tabIndex == 2 ? Colors.black : Colors.transparent,
+                              borderRadius: BorderRadius.circular(24),
+                            ),
                             padding: const EdgeInsets.symmetric(horizontal: 32),
-                            child: const Center(
+                            child: Center(
                               child: Text(
                                 "Task Done",
-                                style: TextStyle(color: Colors.black),
+                                style: TextStyle(
+                                  color: _tabIndex == 2 ? Colors.white : Colors.black,
+                                ),
                               ),
                             ),
                           ),
