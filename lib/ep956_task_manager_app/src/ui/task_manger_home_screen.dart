@@ -131,7 +131,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                             child:  Center(
                               child: Text(
                                 "Upcoming",
-                                style: TextStyle(color: Colors.black),
+                                style: TextStyle(color: _tabIndex == 1 ? Colors.white : Colors.black),
                               ),
                             ),
                           ),
