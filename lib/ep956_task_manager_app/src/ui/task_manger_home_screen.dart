@@ -106,8 +106,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                           width: 8,
                         ),
                         Container(
-                          decoration:
-                              BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
+                          decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
                           padding: const EdgeInsets.symmetric(horizontal: 32),
                           child: const Center(
                             child: Text(
@@ -120,8 +119,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                           width: 8,
                         ),
                         Container(
-                          decoration:
-                              BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
+                          decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
                           padding: const EdgeInsets.symmetric(horizontal: 32),
                           child: const Center(
                             child: Text(
@@ -164,18 +162,21 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                                   itemCount: fakeTodayTask[index].tags?.length,
                                                   itemBuilder: (context, idx2) {
                                                     String _tag = fakeTodayTask[index].tags?[idx2] ?? "";
-                                                    return Padding(
-                                                      padding: const EdgeInsets.only(right: 12),
-                                                      child: Container(
-                                                        padding:
-                                                            const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                                                        decoration: BoxDecoration(
-                                                            border: Border.all(
-                                                              color: Colors.black45,
-                                                            ),
-                                                            borderRadius: BorderRadius.circular(24)),
-                                                        child: Center(
-                                                          child: Text(_tag),
+                                                    return GestureDetector(
+                                                      onTap: () {},
+                                                      child: Padding(
+                                                        padding: const EdgeInsets.only(right: 12),
+                                                        child: Container(
+                                                          padding:
+                                                              const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                                                          decoration: BoxDecoration(
+                                                              border: Border.all(
+                                                                color: Colors.black45,
+                                                              ),
+                                                              borderRadius: BorderRadius.circular(24)),
+                                                          child: Center(
+                                                            child: Text(_tag),
+                                                          ),
                                                         ),
                                                       ),
                                                     );
