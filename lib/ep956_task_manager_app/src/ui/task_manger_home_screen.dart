@@ -95,18 +95,21 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                       scrollDirection: Axis.horizontal,
                       children: [
                         GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             setState(() {
                               _tabIndex = 0;
                             });
                           },
                           child: Container(
-                            decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(24)),
+                            decoration: BoxDecoration(
+                              color: _tabIndex == 0 ? Colors.black : Colors.transparent,
+                              borderRadius: BorderRadius.circular(24),
+                            ),
                             padding: const EdgeInsets.symmetric(horizontal: 36),
-                            child: const Center(
+                            child: Center(
                               child: Text(
                                 "Today",
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(color: _tabIndex == 0 ? Colors.white : Colors.black),
                               ),
                             ),
                           ),
@@ -115,15 +118,17 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                           width: 8,
                         ),
                         GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             setState(() {
                               _tabIndex = 1;
                             });
                           },
                           child: Container(
-                            decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
+                            decoration: BoxDecoration(
+                                color: _tabIndex == 1 ? Colors.black : Colors.transparent,
+                                borderRadius: BorderRadius.circular(24),),
                             padding: const EdgeInsets.symmetric(horizontal: 32),
-                            child: const Center(
+                            child:  Center(
                               child: Text(
                                 "Upcoming",
                                 style: TextStyle(color: Colors.black),
@@ -135,13 +140,14 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                           width: 8,
                         ),
                         GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             setState(() {
                               _tabIndex = 2;
                             });
                           },
                           child: Container(
-                            decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
+                            decoration:
+                                BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
                             padding: const EdgeInsets.symmetric(horizontal: 32),
                             child: const Center(
                               child: Text(
