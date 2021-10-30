@@ -89,51 +89,48 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                   ),
                   SizedBox(
                     height: 36,
-                    child: Container(
-                      // color: Colors.blue,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(24)),
-                            padding: const EdgeInsets.symmetric(horizontal: 36),
-                            child: const Center(
-                              child: Text(
-                                "Today",
-                                style: TextStyle(color: Colors.white),
-                              ),
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(24)),
+                          padding: const EdgeInsets.symmetric(horizontal: 36),
+                          child: const Center(
+                            child: Text(
+                              "Today",
+                              style: TextStyle(color: Colors.white),
                             ),
                           ),
-                          const SizedBox(
-                            width: 8,
-                          ),
-                          Container(
-                            decoration:
-                                BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
-                            padding: const EdgeInsets.symmetric(horizontal: 32),
-                            child: const Center(
-                              child: Text(
-                                "Upcoming",
-                                style: TextStyle(color: Colors.black),
-                              ),
+                        ),
+                        const SizedBox(
+                          width: 8,
+                        ),
+                        Container(
+                          decoration:
+                              BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
+                          padding: const EdgeInsets.symmetric(horizontal: 32),
+                          child: const Center(
+                            child: Text(
+                              "Upcoming",
+                              style: TextStyle(color: Colors.black),
                             ),
                           ),
-                          const SizedBox(
-                            width: 8,
-                          ),
-                          Container(
-                            decoration:
-                                BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
-                            padding: const EdgeInsets.symmetric(horizontal: 32),
-                            child: const Center(
-                              child: Text(
-                                "Task Done",
-                                style: TextStyle(color: Colors.black),
-                              ),
+                        ),
+                        const SizedBox(
+                          width: 8,
+                        ),
+                        Container(
+                          decoration:
+                              BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.circular(24)),
+                          padding: const EdgeInsets.symmetric(horizontal: 32),
+                          child: const Center(
+                            child: Text(
+                              "Task Done",
+                              style: TextStyle(color: Colors.black),
                             ),
-                          )
-                        ],
-                      ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                   SizedBox(
@@ -149,11 +146,11 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                             return Padding(
                               padding: const EdgeInsets.symmetric(vertical: 8),
                               child: Container(
-                                height: 180,
+                                // height: 180,
                                 decoration: BoxDecoration(
                                     color: fakeTodayTask[index].backgroundColorRGB,
                                     borderRadius: BorderRadius.circular(8)),
-                                padding: const EdgeInsets.all(12),
+                                padding: const EdgeInsets.all(16),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -223,6 +220,9 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                                   Text("${fakeTodayTask[index].date}"),
                                                 ],
                                               ),
+                                              SizedBox(
+                                                height: 12,
+                                              ),
                                               Row(
                                                 children: [
                                                   const Icon(
@@ -239,7 +239,16 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                             ],
                                           ),
                                         ),
-                                        Container()
+                                        Container(
+                                          height: 32,
+                                          width: 32,
+                                          decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              border: Border.all(
+                                                color: Colors.black,
+                                                width: 2,
+                                              )),
+                                        )
                                       ],
                                     )
                                   ],
