@@ -27,9 +27,10 @@ class _TaskEditPageState extends State<TaskEditPage> {
             const Expanded(child: Placeholder()),
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              decoration: const BoxDecoration(
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+              decoration: BoxDecoration(
                 color: Colors.black,
+                borderRadius: BorderRadius.circular(24),
               ),
               child: const Center(
                 child: Text(
