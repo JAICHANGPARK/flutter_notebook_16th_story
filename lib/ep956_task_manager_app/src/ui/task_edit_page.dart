@@ -27,7 +27,7 @@ class _TaskEditPageState extends State<TaskEditPage> {
             const Expanded(child: Placeholder()),
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
               decoration: BoxDecoration(
                 color: Colors.black,
                 borderRadius: BorderRadius.circular(24),
@@ -35,7 +35,11 @@ class _TaskEditPageState extends State<TaskEditPage> {
               child: const Center(
                 child: Text(
                   "Save Task",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             )
