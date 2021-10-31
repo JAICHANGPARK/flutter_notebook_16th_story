@@ -1,6 +1,8 @@
 import 'package:coolicons/coolicons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_16th_story/ep956_task_manager_app/src/controller/tab_controller.dart';
 import 'package:flutter_notebook_16th_story/ep956_task_manager_app/src/data/fake_today_task.dart';
+import 'package:get/get.dart';
 
 class TaskManagerHomeScreen extends StatefulWidget {
   const TaskManagerHomeScreen({Key? key}) : super(key: key);
@@ -11,6 +13,7 @@ class TaskManagerHomeScreen extends StatefulWidget {
 
 class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
   int? _tabIndex = 0;
+  final taskTabController = Get.put(TaskTabController());
 
   @override
   Widget build(BuildContext context) {
@@ -91,11 +94,12 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                   ),
                   SizedBox(
                     height: 36,
-                    child: ListView(
+                    child:  ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
                         GestureDetector(
                           onTap: () {
+                            taskTabController.setTabIndex(0);
                             setState(() {
                               _tabIndex = 0;
                             });
@@ -119,6 +123,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                         ),
                         GestureDetector(
                           onTap: () {
+                            taskTabController.setTabIndex(1);
                             setState(() {
                               _tabIndex = 1;
                             });
@@ -142,6 +147,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                         ),
                         GestureDetector(
                           onTap: () {
+                            taskTabController.setTabIndex(2);
                             setState(() {
                               _tabIndex = 2;
                             });
@@ -164,6 +170,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                         )
                       ],
                     ),
+
                   ),
                   SizedBox(
                     height: 8,
