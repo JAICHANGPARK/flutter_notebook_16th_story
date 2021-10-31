@@ -181,7 +181,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                     child: GetBuilder<TaskTabController>(
                       builder: (controller) {
                         return IndexedStack(
-                          index: _tabIndex,
+                          index: controller.tabIndex,
                           children: [
                             Expanded(
                                 child: ListView.builder(
