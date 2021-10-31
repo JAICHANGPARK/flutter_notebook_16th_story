@@ -48,18 +48,25 @@ class _TaskEditPageState extends State<TaskEditPage> {
                     children: [
                       Expanded(
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: _colorItem
-                            .map((e) =>  CircleAvatar(
-                                  radius: 8,
-                          backgroundColor: e,
+                            .map((e) => CircleAvatar(
+                                  radius: 10,
+                                  backgroundColor: e,
                                 ))
                             .toList(),
                       )),
+                      const SizedBox(
+                        width: 16,
+                      ),
                       const CircleAvatar(
-                        backgroundColor: Colors.grey,
+                        backgroundColor: Colors.grey[200]!,
                         foregroundColor: Colors.black,
-                        child: Icon(Icons.add),
+                        radius: 10,
+                        child: Icon(
+                          Icons.add,
+                          size: 12,
+                        ),
                       )
                     ],
                   ),
