@@ -11,6 +11,7 @@ class _TaskEditPageState extends State<TaskEditPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         title: const Text("Edit Task"),
@@ -19,23 +20,26 @@ class _TaskEditPageState extends State<TaskEditPage> {
         elevation: 0,
         iconTheme: IconTheme.of(context).copyWith(color: Colors.black),
       ),
-      body: Column(
-        children: [
-          const Expanded(child: Placeholder()),
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 4),
-            decoration: const BoxDecoration(
-              color: Colors.black,
-            ),
-            child: const Center(
-              child: const Text(
-                "Save Task",
-                style: const TextStyle(color: Colors.black),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            const Expanded(child: Placeholder()),
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              decoration: const BoxDecoration(
+                color: Colors.black,
               ),
-            ),
-          )
-        ],
+              child: const Center(
+                child: Text(
+                  "Save Task",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
