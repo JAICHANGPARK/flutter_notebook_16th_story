@@ -43,7 +43,7 @@ class _TaskEditPageState extends State<TaskEditPage> {
               children: [
                 const Text(
                   "Color Task",
-                  style: const TextStyle(color: Colors.grey),
+                  style: TextStyle(color: Colors.grey),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 16),
@@ -78,6 +78,28 @@ class _TaskEditPageState extends State<TaskEditPage> {
                   color: Colors.grey,
                   thickness: 1.5,
                 ),
+                const Text(
+                  "Color Task",
+                  style: TextStyle(color: Colors.grey),
+                ),
+                TextField(
+                    decoration: InputDecoration(
+                        suffixIcon: IconButton(
+                  icon: const Icon(Icons.calendar_today_outlined),
+                  onPressed: () async {
+                    await showDatePicker(
+                      context: context,
+                      firstDate: DateTime.now(),
+                      lastDate: DateTime.now(),
+                      initialDate: DateTime.now(),
+                    );
+
+                    await showTimePicker(
+                      context: context,
+                      initialTime: TimeOfDay.now(),
+                    );
+                  },
+                )))
               ],
             )),
             Container(
