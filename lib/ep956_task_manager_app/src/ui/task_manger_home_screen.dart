@@ -298,7 +298,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                         Expanded(
                           child: Container(
                             child: const Center(
-                              child: const Center(
+                              child: Center(
                                 child: Text("Upcoming Tab"),
                               ),
                             ),
@@ -307,7 +307,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                         Expanded(
                           child: Container(
                             child: const Center(
-                              child: const Center(
+                              child: Center(
                                 child: Text("Task Done"),
                               ),
                             ),
