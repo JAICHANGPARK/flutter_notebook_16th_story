@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TaskEditPage extends StatefulWidget {
   const TaskEditPage({Key? key}) : super(key: key);
 
@@ -14,14 +13,28 @@ class _TaskEditPageState extends State<TaskEditPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Edit Task"),
+        title: const Text("Edit Task"),
         backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
         elevation: 0,
         iconTheme: IconTheme.of(context).copyWith(color: Colors.black),
       ),
       body: Column(
         children: [
-          Expanded(child: Placeholder())
+          const Expanded(child: Placeholder()),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            decoration: const BoxDecoration(
+              color: Colors.black,
+            ),
+            child: const Center(
+              child: const Text(
+                "Save Task",
+                style: const TextStyle(color: Colors.black),
+              ),
+            ),
+          )
         ],
       ),
     );
