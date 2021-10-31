@@ -24,7 +24,13 @@ class _TaskEditPageState extends State<TaskEditPage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            const Expanded(child: Placeholder()),
+            Expanded(
+                child: Column(
+              children: [
+                Text("Color Task"),
+                
+              ],
+            )),
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
