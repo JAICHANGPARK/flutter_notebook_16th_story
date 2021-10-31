@@ -2,6 +2,7 @@ import 'package:coolicons/coolicons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep956_task_manager_app/src/controller/tab_controller.dart';
 import 'package:flutter_notebook_16th_story/ep956_task_manager_app/src/data/fake_today_task.dart';
+import 'package:flutter_notebook_16th_story/ep956_task_manager_app/src/ui/task_edit_page.dart';
 import 'package:get/get.dart';
 
 class TaskManagerHomeScreen extends StatefulWidget {
@@ -228,7 +229,7 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                                         })),
                                                 GestureDetector(
                                                   onTap: () {
-                                                    
+                                                    Get.to(TaskEditPage());
                                                   },
                                                   child: Container(
                                                       padding: const EdgeInsets.all(4),
