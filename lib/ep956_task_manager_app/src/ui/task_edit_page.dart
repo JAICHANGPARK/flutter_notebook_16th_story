@@ -50,8 +50,9 @@ class _TaskEditPageState extends State<TaskEditPage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: _colorItem
-                            .map((e) => const CircleAvatar(
+                            .map((e) =>  CircleAvatar(
                                   radius: 8,
+                          backgroundColor: e,
                                 ))
                             .toList(),
                       )),
