@@ -41,7 +41,10 @@ class _TaskEditPageState extends State<TaskEditPage> {
                 child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("Color Task"),
+                const Text(
+                  "Color Task",
+                  style: const TextStyle(color: Colors.grey),
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   child: Row(
@@ -59,7 +62,7 @@ class _TaskEditPageState extends State<TaskEditPage> {
                       const SizedBox(
                         width: 16,
                       ),
-                       CircleAvatar(
+                      CircleAvatar(
                         backgroundColor: Colors.grey[200]!,
                         foregroundColor: Colors.black,
                         radius: 10,
@@ -70,7 +73,11 @@ class _TaskEditPageState extends State<TaskEditPage> {
                       )
                     ],
                   ),
-                )
+                ),
+                const Divider(
+                  color: Colors.grey,
+                  thickness: 1.5,
+                ),
               ],
             )),
             Container(
