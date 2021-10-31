@@ -226,16 +226,20 @@ class _TaskManagerHomeScreenState extends State<TaskManagerHomeScreen> {
                                                             ),
                                                           );
                                                         })),
-                                                Container(
-                                                    padding: const EdgeInsets.all(4),
-                                                    decoration: BoxDecoration(
-                                                        color: Colors.black,
-                                                        borderRadius: BorderRadius.circular(4)),
-                                                    child: Icon(
-                                                      Icons.edit,
-                                                      color: fakeTodayTask[index].backgroundColorRGB,
-                                                      size: 12,
-                                                    ))
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    
+                                                  },
+                                                  child: Container(
+                                                      padding: const EdgeInsets.all(4),
+                                                      decoration: BoxDecoration(
+                                                          color: Colors.black, borderRadius: BorderRadius.circular(4)),
+                                                      child: Icon(
+                                                        Icons.edit,
+                                                        color: fakeTodayTask[index].backgroundColorRGB,
+                                                        size: 12,
+                                                      )),
+                                                )
                                               ],
                                             ),
                                           ),
