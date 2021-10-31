@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TaskEditPage extends StatefulWidget {
@@ -8,6 +9,18 @@ class TaskEditPage extends StatefulWidget {
 }
 
 class _TaskEditPageState extends State<TaskEditPage> {
+  List<Color> _colorItem = [
+    const Color(0xff4beed1),
+    const Color(0xfffbe114),
+    const Color(0xff3ed1f0),
+    const Color(0xffb6adff),
+    Colors.blue,
+    Colors.orange,
+    Colors.red,
+    Colors.pink,
+    Colors.brown
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,9 +39,27 @@ class _TaskEditPageState extends State<TaskEditPage> {
           children: [
             Expanded(
                 child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Color Task"),
-                
+                const Text("Color Task"),
+                Row(
+                  children: [
+                    Expanded(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: _colorItem
+                          .map((e) => const CircleAvatar(
+                                radius: 8,
+                              ))
+                          .toList(),
+                    )),
+                    const CircleAvatar(
+                      backgroundColor: Colors.grey,
+                      foregroundColor: Colors.black,
+                      child: Icon(Icons.add),
+                    )
+                  ],
+                )
               ],
             )),
             Container(
