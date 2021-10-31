@@ -42,23 +42,26 @@ class _TaskEditPageState extends State<TaskEditPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text("Color Task"),
-                Row(
-                  children: [
-                    Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: _colorItem
-                          .map((e) => const CircleAvatar(
-                                radius: 8,
-                              ))
-                          .toList(),
-                    )),
-                    const CircleAvatar(
-                      backgroundColor: Colors.grey,
-                      foregroundColor: Colors.black,
-                      child: Icon(Icons.add),
-                    )
-                  ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: _colorItem
+                            .map((e) => const CircleAvatar(
+                                  radius: 8,
+                                ))
+                            .toList(),
+                      )),
+                      const CircleAvatar(
+                        backgroundColor: Colors.grey,
+                        foregroundColor: Colors.black,
+                        child: Icon(Icons.add),
+                      )
+                    ],
+                  ),
                 )
               ],
             )),
