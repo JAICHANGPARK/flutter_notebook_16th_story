@@ -43,7 +43,7 @@ class _TaskEditPageState extends State<TaskEditPage> {
               children: [
                 const Text("Color Task"),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  padding: const EdgeInsets.symmetric(vertical: 16),
                   child: Row(
                     children: [
                       Expanded(
@@ -59,11 +59,11 @@ class _TaskEditPageState extends State<TaskEditPage> {
                       const SizedBox(
                         width: 16,
                       ),
-                      const CircleAvatar(
+                       CircleAvatar(
                         backgroundColor: Colors.grey[200]!,
                         foregroundColor: Colors.black,
                         radius: 10,
-                        child: Icon(
+                        child: const Icon(
                           Icons.add,
                           size: 12,
                         ),
