@@ -208,11 +208,14 @@ class _TaskEditPageState extends State<TaskEditPage> {
                     ),
                     GestureDetector(
                       onTap: (){
-                        
+                        setState(() {
+                          _taskTypeIndex = 2;
+                          _taskType = _taskTypeItem[_taskTypeIndex];
+                        });
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: _taskTypeIndex == 2 ? Colors.black : Colors.white,
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(color: Colors.black)),
                         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
