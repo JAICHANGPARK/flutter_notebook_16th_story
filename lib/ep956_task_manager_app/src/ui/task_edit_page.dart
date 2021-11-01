@@ -96,7 +96,7 @@ class _TaskEditPageState extends State<TaskEditPage> {
                       onPressed: () async {
                         DateTime? datetime = await showDatePicker(
                           context: context,
-                          firstDate: DateTime.now(),
+                          firstDate: DateTime(1990, 1, 1),
                           lastDate: DateTime.now(),
                           initialDate: DateTime.now(),
                         );
