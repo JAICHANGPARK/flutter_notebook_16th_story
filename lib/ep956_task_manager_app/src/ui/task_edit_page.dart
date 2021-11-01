@@ -21,6 +21,9 @@ class _TaskEditPageState extends State<TaskEditPage> {
     Colors.brown
   ];
 
+  TextEditingController _dateTimeEditingController = TextEditingController();
+  TextEditingController _placeEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,28 +81,114 @@ class _TaskEditPageState extends State<TaskEditPage> {
                   color: Colors.grey,
                   thickness: 1.5,
                 ),
+                const SizedBox(
+                  height: 24,
+                ),
                 const Text(
                   "Color Task",
                   style: TextStyle(color: Colors.grey),
                 ),
                 TextField(
-                    decoration: InputDecoration(
-                        suffixIcon: IconButton(
-                  icon: const Icon(Icons.calendar_today_outlined),
-                  onPressed: () async {
-                    await showDatePicker(
-                      context: context,
-                      firstDate: DateTime.now(),
-                      lastDate: DateTime.now(),
-                      initialDate: DateTime.now(),
-                    );
-
-                    await showTimePicker(
-                      context: context,
-                      initialTime: TimeOfDay.now(),
-                    );
-                  },
-                )))
+                  controller: _dateTimeEditingController,
+                  decoration: InputDecoration(
+                    suffixIcon: IconButton(
+                      icon: const Icon(Icons.calendar_today_outlined),
+                      onPressed: () async {
+                        DateTime? datetime = await showDatePicker(
+                          context: context,
+                          firstDate: DateTime.now(),
+                          lastDate: DateTime.now(),
+                          initialDate: DateTime.now(),
+                        );
+                        debugPrint(datetime.toString());
+                        _dateTimeEditingController.text = datetime.toString();
+                        await showTimePicker(
+                          context: context,
+                          initialTime: TimeOfDay.now(),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                const Text(
+                  "Place",
+                  style: TextStyle(color: Colors.grey),
+                ),
+                TextField(
+                  controller: _placeEditingController,
+                  decoration: InputDecoration(
+                    suffixIcon: IconButton(
+                      icon: const Icon(Icons.location_on_outlined),
+                      onPressed: () async {},
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                const Text(
+                  "Task Type",
+                  style: TextStyle(color: Colors.grey),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.black, borderRadius: BorderRadius.circular(32), border: Border.all()),
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                      child: const Center(
+                        child: Text(
+                          "Basic",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(32),
+                          border: Border.all(color: Colors.black)),
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                      child: const Center(
+                        child: Text(
+                          "Urgent",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(32),
+                          border: Border.all(color: Colors.black)),
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                      child: const Center(
+                        child: Text(
+                          "Important",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             )),
             Container(
