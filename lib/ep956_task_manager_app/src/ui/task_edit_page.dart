@@ -145,13 +145,11 @@ class _TaskEditPageState extends State<TaskEditPage> {
                       child: const Center(
                         child: Text(
                           "Basic",
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 8,
                     ),
                     Container(
@@ -163,13 +161,11 @@ class _TaskEditPageState extends State<TaskEditPage> {
                       child: const Center(
                         child: Text(
                           "Urgent",
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
+                          style: TextStyle(color: Colors.black, fontSize: 16),
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 8,
                     ),
                     Container(
@@ -181,9 +177,7 @@ class _TaskEditPageState extends State<TaskEditPage> {
                       child: const Center(
                         child: Text(
                           "Important",
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
+                          style: TextStyle(color: Colors.black, fontSize: 16),
                         ),
                       ),
                     ),
