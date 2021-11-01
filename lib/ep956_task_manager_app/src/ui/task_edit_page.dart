@@ -9,7 +9,7 @@ class TaskEditPage extends StatefulWidget {
 }
 
 class _TaskEditPageState extends State<TaskEditPage> {
-  List<Color> _colorItem = [
+  final List<Color> _colorItem = [
     const Color(0xff4beed1),
     const Color(0xfffbe114),
     const Color(0xff3ed1f0),
@@ -21,12 +21,20 @@ class _TaskEditPageState extends State<TaskEditPage> {
     Colors.brown
   ];
 
-  TextEditingController _dateTimeEditingController = TextEditingController();
-  TextEditingController _placeEditingController = TextEditingController();
+  final TextEditingController _dateTimeEditingController = TextEditingController();
+  final TextEditingController _placeEditingController = TextEditingController();
 
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _dateTimeEditingController.dispose();
+    _placeEditingController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
