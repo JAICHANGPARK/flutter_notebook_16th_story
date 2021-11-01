@@ -153,7 +153,6 @@ class _TaskEditPageState extends State<TaskEditPage> {
                   children: [
                     GestureDetector(
                       onTap: () {
-
                         setState(() {
                           _taskTypeIndex = 0;
                           _taskType = _taskTypeItem[_taskTypeIndex];
@@ -192,13 +191,13 @@ class _TaskEditPageState extends State<TaskEditPage> {
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(color: Colors.black)),
                         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                        child:  Center(
+                        child: Center(
                           child: Text(
                             "Urgent",
                             style: TextStyle(
-                                color: _taskTypeIndex == 1 ? Colors.white : Colors.black,
-
-                                fontSize: 16),
+                              color: _taskTypeIndex == 1 ? Colors.white : Colors.black,
+                              fontSize: 16,
+                            ),
                           ),
                         ),
                       ),
@@ -207,7 +206,7 @@ class _TaskEditPageState extends State<TaskEditPage> {
                       width: 8,
                     ),
                     GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         setState(() {
                           _taskTypeIndex = 2;
                           _taskType = _taskTypeItem[_taskTypeIndex];
@@ -219,10 +218,13 @@ class _TaskEditPageState extends State<TaskEditPage> {
                             borderRadius: BorderRadius.circular(32),
                             border: Border.all(color: Colors.black)),
                         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                        child: const Center(
+                        child: Center(
                           child: Text(
                             "Important",
-                            style: TextStyle(color: Colors.black, fontSize: 16),
+                            style: TextStyle(
+                              color: _taskTypeIndex == 2 ? Colors.white : Colors.black,
+                              fontSize: 16,
+                            ),
                           ),
                         ),
                       ),
