@@ -234,6 +234,7 @@ class _TaskEditPageState extends State<TaskEditPage> {
                 const SizedBox(
                   height: 24,
                 ),
+                Divider(),
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
