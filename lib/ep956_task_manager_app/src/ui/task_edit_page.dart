@@ -25,6 +25,8 @@ class _TaskEditPageState extends State<TaskEditPage> {
   final TextEditingController _placeEditingController = TextEditingController();
 
   int _taskTypeIndex = 0;
+  List<String> _taskTypeItem = ["Basic", "Urgent", "Important"];
+  String _taskType = "Basic";
 
   @override
   void dispose() {
@@ -151,8 +153,10 @@ class _TaskEditPageState extends State<TaskEditPage> {
                   children: [
                     GestureDetector(
                       onTap: () {
+
                         setState(() {
                           _taskTypeIndex = 0;
+                          _taskType = _taskTypeItem[_taskTypeIndex];
                         });
                       },
                       child: Container(
@@ -175,32 +179,48 @@ class _TaskEditPageState extends State<TaskEditPage> {
                     const SizedBox(
                       width: 8,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(32),
-                          border: Border.all(color: Colors.black)),
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                      child: const Center(
-                        child: Text(
-                          "Urgent",
-                          style: TextStyle(color: Colors.black, fontSize: 16),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _taskTypeIndex = 1;
+                          _taskType = _taskTypeItem[_taskTypeIndex];
+                        });
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: _taskTypeIndex == 1 ? Colors.black : Colors.white,
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(color: Colors.black)),
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                        child:  Center(
+                          child: Text(
+                            "Urgent",
+                            style: TextStyle(
+                                color: _taskTypeIndex == 1 ? Colors.white : Colors.black,
+
+                                fontSize: 16),
+                          ),
                         ),
                       ),
                     ),
                     const SizedBox(
                       width: 8,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(32),
-                          border: Border.all(color: Colors.black)),
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                      child: const Center(
-                        child: Text(
-                          "Important",
-                          style: TextStyle(color: Colors.black, fontSize: 16),
+                    GestureDetector(
+                      onTap: (){
+                        
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(color: Colors.black)),
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                        child: const Center(
+                          child: Text(
+                            "Important",
+                            style: TextStyle(color: Colors.black, fontSize: 16),
+                          ),
                         ),
                       ),
                     ),
