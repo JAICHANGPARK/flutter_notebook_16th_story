@@ -230,6 +230,38 @@ class _TaskEditPageState extends State<TaskEditPage> {
                       ),
                     ),
                   ],
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+                  decoration: BoxDecoration(
+                    color: const Color(0xff4beed1),
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.file_copy_outlined,
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        const Text(
+                          "Attach File",
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 )
               ],
             )),
