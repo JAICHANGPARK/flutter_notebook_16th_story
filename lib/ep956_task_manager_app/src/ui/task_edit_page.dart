@@ -24,6 +24,8 @@ class _TaskEditPageState extends State<TaskEditPage> {
   final TextEditingController _dateTimeEditingController = TextEditingController();
   final TextEditingController _placeEditingController = TextEditingController();
 
+  int _taskTypeIndex = 0;
+
   @override
   void dispose() {
     // TODO: implement dispose
@@ -31,6 +33,7 @@ class _TaskEditPageState extends State<TaskEditPage> {
     _placeEditingController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -146,14 +149,26 @@ class _TaskEditPageState extends State<TaskEditPage> {
                 ),
                 Row(
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.black, borderRadius: BorderRadius.circular(32), border: Border.all()),
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                      child: const Center(
-                        child: Text(
-                          "Basic",
-                          style: TextStyle(color: Colors.white, fontSize: 16),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _taskTypeIndex = 0;
+                        });
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: _taskTypeIndex == 0 ? Colors.black : Colors.white,
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all()),
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                        child: Center(
+                          child: Text(
+                            "Basic",
+                            style: TextStyle(
+                              color: _taskTypeIndex == 0 ? Colors.white : Colors.black,
+                              fontSize: 16,
+                            ),
+                          ),
                         ),
                       ),
                     ),
