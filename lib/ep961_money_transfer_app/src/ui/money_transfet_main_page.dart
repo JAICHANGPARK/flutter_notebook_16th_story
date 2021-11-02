@@ -19,19 +19,22 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
             children: [
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.keyboard_arrow_left,
                     color: Colors.white,
                     size: 20,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Text(
                             "Add New",
                             style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w300),
+                          ),
+                          SizedBox(
+                            width: 4,
                           ),
                           Icon(
                             Icons.add_circle_outline,
@@ -40,10 +43,12 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                           )
                         ],
                       ),
-                      
+                      const SizedBox(
+                        height: 4,
+                      ),
                       Container(
-                        height: 1,
-                        width: 72,
+                        height: 0.8,
+                        width: 74,
                         color: Colors.white,
                       )
                     ],
