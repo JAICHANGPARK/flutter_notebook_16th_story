@@ -32,7 +32,11 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                         children: const [
                           Text(
                             "Add New",
-                            style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w300),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w300,
+                            ),
                           ),
                           SizedBox(
                             width: 4,
@@ -56,25 +60,35 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                   )
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 16),
                 child: Text(
                   "My Cards",
-                  style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w800),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 28,
+                    fontWeight: FontWeight.w800,
+                  ),
                 ),
               ),
               Container(
                 height: 200,
-                decoration: BoxDecoration(color: Colors.pink[50], borderRadius: BorderRadius.circular(16)),
+                decoration: BoxDecoration(
+                  color: Colors.pink[50],
+                  borderRadius: BorderRadius.circular(16),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Container(
                   height: 140,
-                  decoration: BoxDecoration(color: Colors.grey[50], borderRadius: BorderRadius.circular(16)),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[50],
+                    borderRadius: BorderRadius.circular(16),
+                  ),
                 ),
               ),
-              Text(
+              const Text(
                 "Today",
                 style: TextStyle(
                   color: Colors.white,
