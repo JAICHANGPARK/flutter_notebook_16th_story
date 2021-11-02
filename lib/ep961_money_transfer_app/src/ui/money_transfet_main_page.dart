@@ -29,17 +29,22 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                     children: [
                       Row(
                         children: [
-                          Text("Add New",style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w300
-                          ),),
+                          Text(
+                            "Add New",
+                            style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w300),
+                          ),
                           Icon(
                             Icons.add_circle_outline,
                             color: Colors.white,
                             size: 20,
                           )
                         ],
+                      ),
+                      
+                      Container(
+                        height: 1,
+                        width: 72,
+                        color: Colors.white,
                       )
                     ],
                   )
