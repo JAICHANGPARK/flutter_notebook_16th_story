@@ -16,13 +16,14 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
                   const Icon(
                     Icons.keyboard_arrow_left,
                     color: Colors.white,
-                    size: 20,
+                    size: 24,
                   ),
                   const Spacer(),
                   Column(
@@ -54,7 +55,34 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                     ],
                   )
                 ],
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                child: Text(
+                  "My Cards",
+                  style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w800),
+                ),
+              ),
+              Container(
+                height: 200,
+                decoration: BoxDecoration(
+                  color: Colors.pink[50],
+                  borderRadius: BorderRadius.circular(16)
+                ),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Container(
+                height: 140,
+                decoration: BoxDecoration(
+                    color: Colors.grey[50],
+                    borderRadius: BorderRadius.circular(16)
+                ),
+              ),
+              Text("Today",
+                style: TextStyle(color: Colors.white,
+                    fontSize: 18, fontWeight: FontWeight.w800),),
             ],
           ),
         ),
