@@ -65,24 +65,23 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
               ),
               Container(
                 height: 200,
-                decoration: BoxDecoration(
-                  color: Colors.pink[50],
-                  borderRadius: BorderRadius.circular(16)
-                ),
+                decoration: BoxDecoration(color: Colors.pink[50], borderRadius: BorderRadius.circular(16)),
               ),
               const SizedBox(
                 height: 16,
               ),
               Container(
                 height: 140,
-                decoration: BoxDecoration(
-                    color: Colors.grey[50],
-                    borderRadius: BorderRadius.circular(16)
+                decoration: BoxDecoration(color: Colors.grey[50], borderRadius: BorderRadius.circular(16)),
+              ),
+              Text(
+                "Today",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              Text("Today",
-                style: TextStyle(color: Colors.white,
-                    fontSize: 18, fontWeight: FontWeight.w800),),
             ],
           ),
         ),
