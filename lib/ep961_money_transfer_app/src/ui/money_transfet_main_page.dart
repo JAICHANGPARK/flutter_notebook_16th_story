@@ -67,12 +67,12 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                 height: 200,
                 decoration: BoxDecoration(color: Colors.pink[50], borderRadius: BorderRadius.circular(16)),
               ),
-              const SizedBox(
-                height: 16,
-              ),
-              Container(
-                height: 140,
-                decoration: BoxDecoration(color: Colors.grey[50], borderRadius: BorderRadius.circular(16)),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                child: Container(
+                  height: 140,
+                  decoration: BoxDecoration(color: Colors.grey[50], borderRadius: BorderRadius.circular(16)),
+                ),
               ),
               Text(
                 "Today",
