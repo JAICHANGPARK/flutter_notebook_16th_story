@@ -31,7 +31,8 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                         children: [
                           Text("Add New",style: TextStyle(
                             color: Colors.white,
-                            fontSize: 12
+                            fontSize: 12,
+                            fontWeight: FontWeight.w300
                           ),),
                           Icon(
                             Icons.add_circle_outline,
