@@ -12,30 +12,41 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Column(
-        children: [
-          Row(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
             children: [
-              Icon(
-                Icons.keyboard_arrow_left,
-                color: Colors.white,
-              ),
-              Column(
+              Row(
                 children: [
-                  Row(
+                  Icon(
+                    Icons.keyboard_arrow_left,
+                    color: Colors.white,
+                    size: 20,
+                  ),
+                  Spacer(),
+                  Column(
                     children: [
-                      Text("Add New"),
-                      Icon(
-                        Icons.add_circle_outline,
-                        color: Colors.white,
+                      Row(
+                        children: [
+                          Text("Add New",style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12
+                          ),),
+                          Icon(
+                            Icons.add_circle_outline,
+                            color: Colors.white,
+                            size: 20,
+                          )
+                        ],
                       )
                     ],
                   )
                 ],
               )
             ],
-          )
-        ],
+          ),
+        ),
       ),
     );
   }
