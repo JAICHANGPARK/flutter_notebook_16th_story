@@ -245,16 +245,16 @@ class _TaskEditPageState extends State<TaskEditPage> {
                   child: Center(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(
+                      children: const [
+                        Icon(
                           Icons.file_copy_outlined,
                         ),
                         SizedBox(
                           width: 8,
                         ),
-                        const Text(
+                        Text(
                           "Attach File",
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
