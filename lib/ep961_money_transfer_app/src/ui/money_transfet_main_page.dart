@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 
 class MoneyTransferMainPage extends StatefulWidget {
   const MoneyTransferMainPage({Key? key}) : super(key: key);
@@ -73,10 +74,41 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                   ),
                 ),
                 Container(
-                  height: 200,
+                  height: 190,
                   decoration: BoxDecoration(
-                    color: Colors.pink[50],
+                    color: Colors.purple[50],
                     borderRadius: BorderRadius.circular(16),
+                  ),
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Dreamwalker",
+                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          Icon(
+                            LineIcons.visaCreditCard,
+                            size: 24,
+                          )
+                        ],
+                      ),
+                      Spacer(),
+                      Text(
+                        "4566  ****  ****  5237",
+                        style: TextStyle(fontSize: 12),
+                      ),
+                      SizedBox(
+                        height: 16,
+                      ),
+                      Text(
+                        "\$2,425.00",
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      )
+                    ],
                   ),
                 ),
                 Padding(
@@ -84,8 +116,57 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                   child: Container(
                     height: 140,
                     decoration: BoxDecoration(
-                      color: Colors.grey[50],
                       borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                            child: Padding(
+                          padding: const EdgeInsets.only(right: 8, left: 8),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            padding: EdgeInsets.all(16),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  height: 24,
+                                  width: 24,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(4),
+                                    border: Border.all(color: Colors.white)
+                                  ),
+                                ),
+                                Text("Location"),
+                                Text("Transfer")
+                              ],
+                            ),
+                          ),
+                        )),
+                        Expanded(
+                            child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        )),
+                        Expanded(
+                            child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        )),
+                      ],
                     ),
                   ),
                 ),
