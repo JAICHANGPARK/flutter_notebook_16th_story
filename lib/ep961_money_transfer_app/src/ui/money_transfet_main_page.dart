@@ -164,9 +164,39 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                             child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
                           child: Container(
+                            padding: const EdgeInsets.all(16),
                             decoration: BoxDecoration(
                               color: Colors.white.withOpacity(0.1),
                               borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  height: 24,
+                                  width: 24,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(4),
+                                    border: Border.all(color: Colors.white),
+                                  ),
+                                  child: const Center(
+                                    child: Icon(
+                                      Icons.person_outline,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
+                                  ),
+                                ),
+                                const Spacer(),
+                                const Text(
+                                  "My",
+                                  style: const TextStyle(color: Colors.white),
+                                ),
+                                const Text(
+                                  "Contacts",
+                                  style: const TextStyle(color: Colors.white),
+                                )
+                              ],
                             ),
                           ),
                         )),
