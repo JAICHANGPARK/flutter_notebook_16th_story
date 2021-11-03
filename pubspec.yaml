@@ -15,6 +15,7 @@ dependencies:
   coolicons: ^1.0.0
   flutter_riverpod: ^1.0.0-dev.11
   line_icons: any
+  ionicons: any
   google_fonts: any
   badges: any
   freezed_annotation:
