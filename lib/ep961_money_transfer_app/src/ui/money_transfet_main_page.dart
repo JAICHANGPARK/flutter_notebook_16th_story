@@ -219,13 +219,13 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                                     borderRadius: BorderRadius.circular(4),
                                     border: Border.all(color: Colors.white),
                                   ),
-                                  child: const Center(
-                                    child: Icon(
-                                      Icons.person_outline,
-                                      color: Colors.white,
-                                      size: 14,
+                                  padding: const EdgeInsets.all(4),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(4),
+                                      border: Border.all(color: Colors.white),
                                     ),
-                                  ),
+                                  )
                                 ),
                                 const Spacer(),
                                 const Text(
