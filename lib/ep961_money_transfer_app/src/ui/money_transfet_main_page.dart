@@ -86,25 +86,25 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                             "Dreamwalker",
-                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                           ),
-                          Icon(
+                          const Icon(
                             LineIcons.visaCreditCard,
                             size: 24,
                           )
                         ],
                       ),
-                      Spacer(),
-                      Text(
+                      const Spacer(),
+                      const Text(
                         "4566  ****  ****  5237",
-                        style: TextStyle(fontSize: 12),
+                        style: const TextStyle(fontSize: 12),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 16,
                       ),
-                      Text(
+                      const Text(
                         "\$2,425.00",
                         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                       )
@@ -128,7 +128,7 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                               color: Colors.white.withOpacity(0.1),
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            padding: EdgeInsets.all(16),
+                            padding: const EdgeInsets.all(16),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -137,11 +137,25 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                                   width: 24,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(4),
-                                    border: Border.all(color: Colors.white)
+                                    border: Border.all(color: Colors.white),
+                                  ),
+                                  child: const Center(
+                                    child: Icon(
+                                      Icons.location_searching,
+                                      color: Colors.white,
+                                      size: 14,
+                                    ),
                                   ),
                                 ),
-                                Text("Location"),
-                                Text("Transfer")
+                                const Spacer(),
+                                const Text(
+                                  "Location",
+                                  style: const TextStyle(color: Colors.white),
+                                ),
+                                const Text(
+                                  "Transfer",
+                                  style: const TextStyle(color: Colors.white),
+                                )
                               ],
                             ),
                           ),
