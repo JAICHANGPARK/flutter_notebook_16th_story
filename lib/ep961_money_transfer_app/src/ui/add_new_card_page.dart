@@ -33,16 +33,20 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconButton(
-                  onPressed: () {
+              GestureDetector(
+                  onTap: (){
                     Get.back();
                   },
-                  color: Colors.white,
-                  icon: const Icon(Icons.arrow_back_ios)),
+                  child: Icon(Icons.keyboard_arrow_left_outlined,
+                  color: Colors.white,),
+              ),
+              const SizedBox(
+                height: 24,
+              ),
               const Text(
                 "Add New Card",
                 style: const TextStyle(color: Colors.white, fontSize: 32),
