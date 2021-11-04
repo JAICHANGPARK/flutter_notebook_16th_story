@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 
 class CardInputController extends GetxController {
   TextEditingController _nameTextEditingController = TextEditingController();
-
 }
 
 class AddNewCardPage extends StatefulWidget {
@@ -22,13 +21,21 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               IconButton(
                   onPressed: () {
                     Get.back();
                   },
                   color: Colors.white,
-                  icon: Icon(Icons.arrow_back_ios))
+                  icon: Icon(Icons.arrow_back_ios)),
+              Text("NAME ON CARD"),
+              GetBuilder(
+                init: CardInputController(),
+                builder: (CardInputController controller) {
+                  return TextField();
+                },
+              )
             ],
           ),
         ),
