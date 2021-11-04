@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+class CardInputController extends GetxController {
+  TextEditingController _nameTextEditingController = TextEditingController();
+
+}
 
 class AddNewCardPage extends StatefulWidget {
   const AddNewCardPage({Key? key}) : super(key: key);
@@ -11,6 +16,23 @@ class AddNewCardPage extends StatefulWidget {
 class _AddNewCardPage1State extends State<AddNewCardPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              IconButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                  color: Colors.white,
+                  icon: Icon(Icons.arrow_back_ios))
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
