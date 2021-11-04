@@ -85,12 +85,12 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             "Dreamwalker",
-                            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                           ),
-                          const Icon(
+                          Icon(
                             LineIcons.visaCreditCard,
                             size: 24,
                           )
@@ -266,7 +266,7 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
+                              children: const [
                                 Text(
                                   "You received a payment",
                                   style: TextStyle(
