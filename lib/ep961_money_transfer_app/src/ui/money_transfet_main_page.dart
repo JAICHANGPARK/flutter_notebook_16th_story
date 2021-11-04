@@ -263,17 +263,30 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                               width: 48,
                               decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(4)),
                             ),
-                            Column(
-                              children: [
-                                Text(
-                                  "You received a payment",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "You received a payment",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
-                                ),
-                                Text("Dreamwalker"),
-                              ],
+                                  SizedBox(
+                                    height: 4,
+                                  ),
+                                  Text(
+                                    "Dreamwalker",
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             Spacer(),
                             Text("\$220.00")
