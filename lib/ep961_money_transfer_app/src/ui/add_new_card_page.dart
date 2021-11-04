@@ -43,11 +43,11 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                   },
                   color: Colors.white,
                   icon: const Icon(Icons.arrow_back_ios)),
-              Text(
+              const Text(
                 "Add New Card",
-                style: TextStyle(color: Colors.white, fontSize: 32),
+                style: const TextStyle(color: Colors.white, fontSize: 32),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               const Text(
@@ -61,23 +61,14 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                     controller: controller.nameTextEditingController,
                     style: const TextStyle(color: Colors.white),
                     decoration: const InputDecoration(
-                        enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                          color: Colors.grey,
-                        )),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                          color: Colors.grey,
-                        )),
-                        border: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                          color: Colors.grey,
-                        ))),
+                        enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5)),
+                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5)),
+                        border: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5))),
                   );
                 },
               ),
-              SizedBox(
-                height: 24,
+              const SizedBox(
+                height: 32,
               ),
               const Text(
                 "CARD NUMBER",
@@ -90,18 +81,9 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                     controller: controller.cardNumberTextEditingController,
                     style: const TextStyle(color: Colors.white),
                     decoration: const InputDecoration(
-                        enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.grey,
-                            )),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.grey,
-                            )),
-                        border: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.grey,
-                            ))),
+                        enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5)),
+                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5)),
+                        border: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5))),
                   );
                 },
               ),
