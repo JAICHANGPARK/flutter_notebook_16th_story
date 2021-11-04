@@ -75,7 +75,36 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                         ))),
                   );
                 },
-              )
+              ),
+              SizedBox(
+                height: 24,
+              ),
+              const Text(
+                "CARD NUMBER",
+                style: TextStyle(color: Colors.grey),
+              ),
+              GetBuilder(
+                init: CardInputController(),
+                builder: (CardInputController controller) {
+                  return TextField(
+                    controller: controller.cardNumberTextEditingController,
+                    style: const TextStyle(color: Colors.white),
+                    decoration: const InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                            )),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                            )),
+                        border: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                            ))),
+                  );
+                },
+              ),
             ],
           ),
         ),
