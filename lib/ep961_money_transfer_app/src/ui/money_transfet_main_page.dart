@@ -213,20 +213,19 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  height: 24,
-                                  width: 24,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(4),
-                                    border: Border.all(color: Colors.white),
-                                  ),
-                                  padding: const EdgeInsets.all(4),
-                                  child: Container(
+                                    height: 24,
+                                    width: 24,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(4),
                                       border: Border.all(color: Colors.white),
                                     ),
-                                  )
-                                ),
+                                    padding: const EdgeInsets.all(4),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(4),
+                                        border: Border.all(color: Colors.white),
+                                      ),
+                                    )),
                                 const Spacer(),
                                 const Text(
                                   "Saved",
@@ -254,12 +253,32 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 16),
-                  child: Container(
-                    height: 140,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[50],
-                      borderRadius: BorderRadius.circular(16),
-                    ),
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 48,
+                              width: 48,
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                borderRadius: BorderRadius.circular(4)
+                              ),
+                            ),
+                            Column(
+                              children: [
+                                Text("You received a payment"),
+                                Text("Dreamwalker"),
+                              ],
+                            ),
+                            Spacer(),
+                            Text("\$220.00")
+                          ],
+                        ),
+
+                      ),
+                    ],
                   ),
                 ),
                 const Text(
