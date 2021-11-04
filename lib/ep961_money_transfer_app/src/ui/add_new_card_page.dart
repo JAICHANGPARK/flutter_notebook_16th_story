@@ -2,7 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CardInputController extends GetxController {
-  TextEditingController _nameTextEditingController = TextEditingController();
+  TextEditingController nameTextEditingController = TextEditingController();
+  TextEditingController cardNumberTextEditingController = TextEditingController();
+
+  clear() {
+    nameTextEditingController.clear();
+    cardNumberTextEditingController.clear();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    nameTextEditingController.dispose();
+    cardNumberTextEditingController.dispose();
+  }
 }
 
 class AddNewCardPage extends StatefulWidget {
@@ -28,12 +42,38 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                     Get.back();
                   },
                   color: Colors.white,
-                  icon: Icon(Icons.arrow_back_ios)),
-              Text("NAME ON CARD"),
+                  icon: const Icon(Icons.arrow_back_ios)),
+              Text(
+                "Add New Card",
+                style: TextStyle(color: Colors.white, fontSize: 32),
+              ),
+              SizedBox(
+                height: 24,
+              ),
+              const Text(
+                "NAME ON CARD",
+                style: TextStyle(color: Colors.grey),
+              ),
               GetBuilder(
                 init: CardInputController(),
                 builder: (CardInputController controller) {
-                  return TextField();
+                  return TextField(
+                    controller: controller.nameTextEditingController,
+                    style: const TextStyle(color: Colors.white),
+                    decoration: const InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Colors.grey,
+                        )),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Colors.grey,
+                        )),
+                        border: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Colors.grey,
+                        ))),
+                  );
                 },
               )
             ],
