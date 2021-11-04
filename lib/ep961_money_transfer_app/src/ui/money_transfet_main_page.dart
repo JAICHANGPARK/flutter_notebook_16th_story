@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_16th_story/ep961_money_transfer_app/src/ui/add_new_card_page.dart';
+import 'package:get/get.dart';
 import 'package:line_icons/line_icons.dart';
 
 class MoneyTransferMainPage extends StatefulWidget {
@@ -28,37 +30,42 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                       size: 24,
                     ),
                     const Spacer(),
-                    Column(
-                      children: [
-                        Row(
-                          children: const [
-                            Text(
-                              "Add New",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w300,
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(AddNewCardPage());
+                      },
+                      child: Column(
+                        children: [
+                          Row(
+                            children: const [
+                              Text(
+                                "Add New",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w300,
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Icon(
-                              Icons.add_circle_outline,
-                              color: Colors.white,
-                              size: 20,
-                            )
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 4,
-                        ),
-                        Container(
-                          height: 0.8,
-                          width: 74,
-                          color: Colors.white,
-                        )
-                      ],
+                              SizedBox(
+                                width: 4,
+                              ),
+                              Icon(
+                                Icons.add_circle_outline,
+                                color: Colors.white,
+                                size: 20,
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 4,
+                          ),
+                          Container(
+                            height: 0.8,
+                            width: 74,
+                            color: Colors.white,
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
@@ -287,10 +294,13 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                             ),
                           ),
                           const Spacer(),
-                          const Text("\$220.00", style: const TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                          ),)
+                          const Text(
+                            "\$220.00",
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          )
                         ],
                       ),
                       Row(
@@ -325,10 +335,13 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                             ),
                           ),
                           const Spacer(),
-                          const Text("\$50.00", style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                          ),)
+                          const Text(
+                            "\$50.00",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          )
                         ],
                       ),
                     ],
@@ -344,12 +357,46 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 16),
-                  child: Container(
-                    height: 70,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[50],
-                      borderRadius: BorderRadius.circular(16),
-                    ),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 42,
+                        width: 42,
+                        decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(4)),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              "You received a payment",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 4,
+                            ),
+                            Text(
+                              "Dreamwalker",
+                              style: TextStyle(
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Spacer(),
+                      const Text(
+                        "\$50.00",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      )
+                    ],
                   ),
                 ),
               ],
