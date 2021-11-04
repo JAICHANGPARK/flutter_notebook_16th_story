@@ -38,18 +38,20 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               GestureDetector(
-                  onTap: (){
-                    Get.back();
-                  },
-                  child: Icon(Icons.keyboard_arrow_left_outlined,
-                  color: Colors.white,),
+                onTap: () {
+                  Get.back();
+                },
+                child: const Icon(
+                  Icons.keyboard_arrow_left_outlined,
+                  color: Colors.white,
+                ),
               ),
               const SizedBox(
                 height: 24,
               ),
               const Text(
                 "Add New Card",
-                style: const TextStyle(color: Colors.white, fontSize: 32),
+                style: TextStyle(color: Colors.white, fontSize: 32),
               ),
               const SizedBox(
                 height: 24,
