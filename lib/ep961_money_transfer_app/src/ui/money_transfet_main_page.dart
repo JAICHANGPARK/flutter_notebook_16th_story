@@ -261,14 +261,17 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                             Container(
                               height: 48,
                               width: 48,
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                                borderRadius: BorderRadius.circular(4)
-                              ),
+                              decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(4)),
                             ),
                             Column(
                               children: [
-                                Text("You received a payment"),
+                                Text(
+                                  "You received a payment",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                                 Text("Dreamwalker"),
                               ],
                             ),
@@ -276,7 +279,6 @@ class _MoneyTransferMainPageState extends State<MoneyTransferMainPage> {
                             Text("\$220.00")
                           ],
                         ),
-
                       ),
                     ],
                   ),
