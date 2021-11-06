@@ -223,18 +223,24 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
               const SizedBox(
                 height: 32,
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                decoration: BoxDecoration(
-                  color: Colors.red[50],
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: const Center(
-                  child: const Text(
-                    "Add Card",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16
+              GestureDetector(
+                onTap: (){
+                  final c = Get.find<CardInputController>();
+
+                },
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  decoration: BoxDecoration(
+                    color: Colors.red[50],
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Add Card",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16
+                      ),
                     ),
                   ),
                 ),
