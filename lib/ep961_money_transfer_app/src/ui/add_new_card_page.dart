@@ -172,6 +172,7 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                       ),
                     ),
                   )),
+                  SizedBox(width: 24,),
                   Expanded(child: TextField(
                     style: const TextStyle(color: Colors.white),
                     decoration: const InputDecoration(
