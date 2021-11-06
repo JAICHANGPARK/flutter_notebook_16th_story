@@ -8,10 +8,13 @@ class CardInputController extends GetxController {
   TextEditingController dayTextEditingController = TextEditingController();
   TextEditingController monthTextEditingController = TextEditingController();
   TextEditingController yearTextEditingController = TextEditingController();
+
   clear() {
     nameTextEditingController.clear();
     cardNumberTextEditingController.clear();
     dayTextEditingController.clear();
+    monthTextEditingController.clear();
+    yearTextEditingController.clear();
   }
 
   @override
@@ -20,6 +23,9 @@ class CardInputController extends GetxController {
     super.dispose();
     nameTextEditingController.dispose();
     cardNumberTextEditingController.dispose();
+    dayTextEditingController.dispose();
+    monthTextEditingController.dispose();
+    yearTextEditingController.dispose();
   }
 }
 
@@ -131,79 +137,97 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                 "EXPIRE DAY (DD/MM/YYYY)",
                 style: TextStyle(color: Colors.grey),
               ),
-
-              Row(
-                children: const [
-                  Expanded(child: TextField(
-                    style: TextStyle(color: Colors.white),
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
+              GetBuilder<CardInputController>(
+                builder: (controller) {
+                  return Row(
+                    children: const [
+                      Expanded(
+                          child: TextField(
+                        style: TextStyle(color: Colors.white),
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
                             color: Colors.grey,
                             width: 0.5,
                           )),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
+                          focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
                             color: Colors.grey,
                             width: 0.5,
                           )),
-                      border: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.grey,
-                          width: 0.5,
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                              width: 0.5,
+                            ),
+                          ),
                         ),
+                      )),
+                      SizedBox(
+                        width: 24,
                       ),
-                    ),
-                  )),
-                  SizedBox(width: 24,),
-                  Expanded(child: TextField(
-                    keyboardType: TextInputType.number,
-                    style: TextStyle(color: Colors.white),
-                    decoration: InputDecoration(
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
+                      Expanded(
+                          child: TextField(
+                        keyboardType: TextInputType.number,
+                        style: TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
                             color: Colors.grey,
                             width: 0.5,
                           )),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
+                          focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
                             color: Colors.grey,
                             width: 0.5,
                           )),
-                      border: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.grey,
-                          width: 0.5,
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                              width: 0.5,
+                            ),
+                          ),
                         ),
+                      )),
+                      SizedBox(
+                        width: 24,
                       ),
-                    ),
-                  )),
-                  SizedBox(width: 24,),
-                  Expanded(child: TextField(
-                    keyboardType: TextInputType.number,
-                    style: TextStyle(color: Colors.white),
-                    decoration: InputDecoration(
-                      enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
+                      Expanded(
+                          child: TextField(
+                        keyboardType: TextInputType.number,
+                        style: TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
                             color: Colors.grey,
                             width: 0.5,
                           )),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
+                          focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
                             color: Colors.grey,
                             width: 0.5,
                           )),
-                      border: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.grey,
-                          width: 0.5,
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey,
+                              width: 0.5,
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                  )),
-                ],
+                      )),
+                    ],
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 32,
+              ),
+              Container(
+                decoration: BoxDecoration(color: Colors.red[50], borderRadius: BorderRadius.circular(8)),
+                child: Center(
+                  child: Text("Add Card"),
+                ),
               )
             ],
           ),
