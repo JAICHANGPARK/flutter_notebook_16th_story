@@ -17,6 +17,12 @@ class CardInputController extends GetxController {
     yearTextEditingController.clear();
   }
 
+  debugInput() {
+    debugPrint("${nameTextEditingController.text}, ${cardNumberTextEditingController.text}, "
+        "${dayTextEditingController.text}, ${monthTextEditingController.text}, "
+        "${yearTextEditingController.text}");
+  }
+
   @override
   void dispose() {
     // TODO: implement dispose
@@ -40,6 +46,7 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Padding(
@@ -224,9 +231,9 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                 height: 32,
               ),
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   final c = Get.find<CardInputController>();
-
+                  c.debugInput();
                 },
                 child: Container(
                   padding: const EdgeInsets.symmetric(vertical: 20),
@@ -237,10 +244,7 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                   child: const Center(
                     child: Text(
                       "Add Card",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16
-                      ),
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                   ),
                 ),
