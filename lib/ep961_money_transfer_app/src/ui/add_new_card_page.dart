@@ -120,6 +120,21 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                   );
                 },
               ),
+              const SizedBox(
+                height: 32,
+              ),
+              const Text(
+                "EXPIRE DAY (DD/MM/YYYY)",
+                style: TextStyle(color: Colors.grey),
+              ),
+
+              Row(
+                children: [
+                  Expanded(child: Placeholder()),
+                  Expanded(child: Placeholder()),
+                  Expanded(child: Placeholder()),
+                ],
+              )
             ],
           ),
         ),
