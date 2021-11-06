@@ -224,7 +224,10 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                 height: 32,
               ),
               Container(
-                decoration: BoxDecoration(color: Colors.red[50], borderRadius: BorderRadius.circular(8)),
+                decoration: BoxDecoration(
+                  color: Colors.red[50],
+                  borderRadius: BorderRadius.circular(8),
+                ),
                 child: Center(
                   child: Text("Add Card"),
                 ),
