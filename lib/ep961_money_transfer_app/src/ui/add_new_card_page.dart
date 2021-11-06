@@ -152,9 +152,9 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                       Expanded(
                           child: TextField(
                             controller: controller.dayTextEditingController,
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                         keyboardType: TextInputType.number,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                             color: Colors.grey,
@@ -173,15 +173,15 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                           ),
                         ),
                       )),
-                      SizedBox(
+                      const SizedBox(
                         width: 24,
                       ),
                       Expanded(
                           child: TextField(
                             controller: controller.monthTextEditingController,
                         keyboardType: TextInputType.number,
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
+                        style: const TextStyle(color: Colors.white),
+                        decoration: const InputDecoration(
                           enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                             color: Colors.grey,
@@ -200,15 +200,15 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                           ),
                         ),
                       )),
-                      SizedBox(
+                      const SizedBox(
                         width: 24,
                       ),
                       Expanded(
                           child: TextField(
                         keyboardType: TextInputType.number,
                         controller: controller.yearTextEditingController,
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
+                        style: const TextStyle(color: Colors.white),
+                        decoration: const InputDecoration(
                           enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                             color: Colors.grey,
