@@ -129,11 +129,11 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
               ),
 
               Row(
-                children: [
+                children: const [
                   Expanded(child: TextField(
-                    style: const TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white),
                     keyboardType: TextInputType.number,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
 
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -156,8 +156,8 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                   SizedBox(width: 24,),
                   Expanded(child: TextField(
                     keyboardType: TextInputType.number,
-                    style: const TextStyle(color: Colors.white),
-                    decoration: const InputDecoration(
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Colors.grey,
@@ -179,8 +179,8 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                   SizedBox(width: 24,),
                   Expanded(child: TextField(
                     keyboardType: TextInputType.number,
-                    style: const TextStyle(color: Colors.white),
-                    decoration: const InputDecoration(
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Colors.grey,
