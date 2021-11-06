@@ -130,9 +130,9 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
 
               Row(
                 children: [
-                  Expanded(child: Placeholder()),
-                  Expanded(child: Placeholder()),
-                  Expanded(child: Placeholder()),
+                  Expanded(child: TextField()),
+                  Expanded(child: TextField()),
+                  Expanded(child: TextField()),
                 ],
               )
             ],
