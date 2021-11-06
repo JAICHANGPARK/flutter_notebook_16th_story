@@ -5,9 +5,13 @@ class CardInputController extends GetxController {
   TextEditingController nameTextEditingController = TextEditingController();
   TextEditingController cardNumberTextEditingController = TextEditingController();
 
+  TextEditingController dayTextEditingController = TextEditingController();
+  TextEditingController monthTextEditingController = TextEditingController();
+  TextEditingController yearTextEditingController = TextEditingController();
   clear() {
     nameTextEditingController.clear();
     cardNumberTextEditingController.clear();
+    dayTextEditingController.clear();
   }
 
   @override
