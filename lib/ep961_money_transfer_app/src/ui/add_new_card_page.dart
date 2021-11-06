@@ -67,9 +67,22 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                     controller: controller.nameTextEditingController,
                     style: const TextStyle(color: Colors.white),
                     decoration: const InputDecoration(
-                        enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5)),
-                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5)),
-                        border: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5))),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 0.5,
+                        )),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 0.5,
+                        )),
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.grey,
+                            width: 0.5,
+                          ),
+                        )),
                   );
                 },
               ),
@@ -87,9 +100,23 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                     controller: controller.cardNumberTextEditingController,
                     style: const TextStyle(color: Colors.white),
                     decoration: const InputDecoration(
-                        enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5)),
-                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5)),
-                        border: UnderlineInputBorder(borderSide: BorderSide(color: Colors.grey, width: 0.5))),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                        color: Colors.grey,
+                        width: 0.5,
+                      )),
+                      focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                        color: Colors.grey,
+                        width: 0.5,
+                      )),
+                      border: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 0.5,
+                        ),
+                      ),
+                    ),
                   );
                 },
               ),
