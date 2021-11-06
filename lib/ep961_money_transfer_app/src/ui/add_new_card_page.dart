@@ -18,7 +18,8 @@ class CardInputController extends GetxController {
   }
 
   debugInput() {
-    debugPrint("${nameTextEditingController.text}, ${cardNumberTextEditingController.text}, "
+    debugPrint("${nameTextEditingController.text}, "
+        "${cardNumberTextEditingController.text}, "
         "${dayTextEditingController.text}, ${monthTextEditingController.text}, "
         "${yearTextEditingController.text}");
   }
@@ -147,9 +148,10 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
               GetBuilder<CardInputController>(
                 builder: (controller) {
                   return Row(
-                    children: const [
+                    children:  [
                       Expanded(
                           child: TextField(
+                            controller: controller.dayTextEditingController,
                         style: TextStyle(color: Colors.white),
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
@@ -176,6 +178,7 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                       ),
                       Expanded(
                           child: TextField(
+                            controller: controller.monthTextEditingController,
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
@@ -203,6 +206,7 @@ class _AddNewCardPage1State extends State<AddNewCardPage> {
                       Expanded(
                           child: TextField(
                         keyboardType: TextInputType.number,
+                        controller: controller.yearTextEditingController,
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                           enabledBorder: UnderlineInputBorder(
