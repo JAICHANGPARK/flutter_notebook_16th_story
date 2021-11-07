@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class BankWalletStaticPage extends StatefulWidget {
   const BankWalletStaticPage({Key? key}) : super(key: key);
 
@@ -15,12 +14,11 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
       bottomNavigationBar: BottomAppBar(
         child: Row(
           children: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.home)),
-            IconButton(onPressed: (){}, icon: Icon(Icons.home)),
-            IconButton(onPressed: (){}, icon: Icon(Icons.home)),
-            IconButton(onPressed: (){}, icon: Icon(Icons.home)),
-            IconButton(onPressed: (){}, icon: Icon(Icons.home)),
-
+            IconButton(onPressed: () {}, icon: Icon(Icons.home)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.account_balance_wallet)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.pie_chart)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.description)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
           ],
         ),
       ),
