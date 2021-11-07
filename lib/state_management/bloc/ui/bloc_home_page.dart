@@ -13,8 +13,8 @@ class BlocHomePage extends StatefulWidget {
 class _BlocHomePageState extends State<BlocHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BlocProvider(
+    return MaterialApp(
+      home: BlocProvider(
         create: (BuildContext context) {
           return TodoBloc(repository: TodoRepository());
         },
@@ -34,6 +34,6 @@ class HomeWidget extends StatefulWidget {
 class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
