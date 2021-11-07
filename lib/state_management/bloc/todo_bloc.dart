@@ -67,10 +67,8 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
     try {
       if (state is Loaded) {
         final newTodos = (state as Loaded).todos.where((element) => element.id != event.todo.id).toList();
-
         yield Loaded(todos: newTodos);
         await repository.deleteTodo(event.todo);
-
       }
     } catch (e) {
       yield Error(message: e.toString());
