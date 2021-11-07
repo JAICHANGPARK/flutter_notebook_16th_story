@@ -11,8 +11,15 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
   }) : super(Empty());
 
   @override
-  Stream<TodoState> mapEventToState(TodoEvent event) {
-    // TODO: implement mapEventToState
-    return super.mapEventToState(event);
+  Stream<TodoState> mapEventToState(TodoEvent event) async *{
+    if( event is ListTodosEvent){
+      yield* _mapListTodosEvent(event);
+    }
+    else if(event is CreateTodoEvent){
+      yield* _mapCreateTodosEvent(event);
+    }
+    else if(event is DeleteTodoEvent){
+      yield* _mapDeleteTodosEvent(event);
+    }
   }
 }
