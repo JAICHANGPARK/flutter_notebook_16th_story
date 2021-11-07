@@ -43,20 +43,23 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                   decoration: BoxDecoration(color: Colors.red),
                 ),
                 Expanded(
-                    child: GridView.builder(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                    maxCrossAxisExtent: 200.0,
-                    mainAxisSpacing: 10.0,
-                    crossAxisSpacing: 10.0,
-                    childAspectRatio: 4.0,
+                      maxCrossAxisExtent: 200.0,
+                      mainAxisSpacing: 10.0,
+                      crossAxisSpacing: 10.0,
+                      childAspectRatio: 1.4,
                   ),
                   itemBuilder: (_, index) {
-                    return Container(
-                      color: Colors.blue,
-                    );
+                      return Container(
+                        color: Colors.blue,
+                      );
                   },
                   itemCount: 10,
-                )),
+                ),
+                    )),
               ],
             ),
           ),
