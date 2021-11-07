@@ -31,7 +31,13 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
             child: Center(child: Text("page 2")),
           ),
           Container(
-            child: Center(child: Text("page 3")),
+            child: Column(
+              children: [
+                Text("Statistic"),
+                Expanded(child: Placeholder()),
+                Expanded(child: Placeholder()),
+              ],
+            ),
           ),
           Container(
             child: Center(child: Text("page 4")),
