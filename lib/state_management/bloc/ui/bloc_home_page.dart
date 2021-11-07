@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_notebook_16th_story/state_management/bloc/repo/bloc_repo.dart';
 import 'package:flutter_notebook_16th_story/state_management/bloc/todo_bloc.dart';
+import 'package:flutter_notebook_16th_story/state_management/bloc/todo_event.dart';
 import 'package:flutter_notebook_16th_story/state_management/bloc/todo_state.dart';
 
 class BlocHomePage extends StatefulWidget {
@@ -36,11 +37,21 @@ class _HomeWidgetState extends State<HomeWidget> {
   String title = '';
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    BlocProvider.of<TodoBloc>(context).add(ListTodosEvent());
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          context.read<TodoBloc>().add(CreateTodoEvent(title: title));
+        },
         child: const Icon(Icons.edit),
       ),
       body: Padding(
@@ -52,40 +63,42 @@ class _HomeWidgetState extends State<HomeWidget> {
                 title = val;
               },
             ),
-            const SizedBox(
-              height: 16,
-            ),
-            BlocBuilder<TodoBloc, TodoState>(builder: (_, state) {
-              if (state is Empty) {
+            const SizedBox(height: 16),
+            Expanded(
+              child: BlocBuilder<TodoBloc, TodoState>(builder: (_, state) {
+                if (state is Empty) {
+                  return Container();
+                } else if (state is Error) {
+                  return Container(
+                    child: Text(state.message),
+                  );
+                } else if (state is Loading) {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                } else if (state is Loaded) {
+                  final items = state.todos;
+                  return ListView.separated(
+                      itemBuilder: (_, index) {
+                        final item = items[index];
+                        return Row(
+                          children: [
+                            Expanded(child: Text(item.title)),
+                            GestureDetector(
+                              onTap: () {
+                                BlocProvider.of<TodoBloc>(context).add(DeleteTodoEvent(todo: item));
+                              },
+                              child: const Icon(Icons.delete),
+                            )
+                          ],
+                        );
+                      },
+                      separatorBuilder: (_, index) => const Divider(),
+                      itemCount: items.length);
+                }
                 return Container();
-              } else if (state is Error) {
-                return Container(
-                  child: Text(state.message),
-                );
-              } else if (state is Loading) {
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
-              } else if (state is Loaded) {
-                final items = state.todos;
-                return ListView.separated(
-                    itemBuilder: (_, index) {
-                      final item = items[index];
-                      return Row(
-                        children: [
-                          Expanded(child: Text(item.title)),
-                          GestureDetector(
-                            onTap: () {},
-                            child: const Icon(Icons.delete),
-                          )
-                        ],
-                      );
-                    },
-                    separatorBuilder: (_, index) => const Divider(),
-                    itemCount: items.length);
-              }
-              return Container();
-            })
+              }),
+            )
           ],
         ),
       ),
