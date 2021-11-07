@@ -3,6 +3,8 @@ import 'package:flutter_notebook_16th_story/state_management/bloc/repo/bloc_repo
 import 'package:flutter_notebook_16th_story/state_management/bloc/todo_event.dart';
 import 'package:flutter_notebook_16th_story/state_management/bloc/todo_state.dart';
 
+import 'model/bloc_todo.dart';
+
 class TodoBloc extends Bloc<TodoEvent, TodoState> {
   final TodoRepository repository;
 
@@ -23,6 +25,9 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
 
   Stream<TodoState> _mapListTodosEvent(ListTodosEvent event) async* {
     try {
+      yield Loading();
+      final resp = await repository.listTodo();
+      final todos = resp.map<Todo>((e) => Todo.fromJson(e)).toList();
       
     } catch (e) {
       yield Error(message: e.toString());
