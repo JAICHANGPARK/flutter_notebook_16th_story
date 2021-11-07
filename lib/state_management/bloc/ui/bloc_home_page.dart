@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_notebook_16th_story/state_management/bloc/repo/bloc_repo.dart';
 import 'package:flutter_notebook_16th_story/state_management/bloc/todo_bloc.dart';
+import 'package:flutter_notebook_16th_story/state_management/bloc/todo_state.dart';
 
 class BlocHomePage extends StatefulWidget {
   const BlocHomePage({Key? key}) : super(key: key);
@@ -32,8 +33,32 @@ class HomeWidget extends StatefulWidget {
 }
 
 class _HomeWidgetState extends State<HomeWidget> {
+  String title = '';
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.edit),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            TextField(
+              onChanged: (val) {
+                title = val;
+              },
+            ),
+            SizedBox(height: 16,),
+            BlocBuilder<TodoBloc, TodoState>(builder: (_, state){
+              
+            })
+          ],
+        ),
+      ),
+    );
   }
 }
