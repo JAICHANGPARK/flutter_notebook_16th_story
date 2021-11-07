@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'state_management/bloc/ui/bloc_home_page.dart';
-
+import 'ep965_bank_wallet_app/bank_wallet_app.dart';
 
 main() {
-  runApp(const BlocHomePage());
+  runApp(const BankWalletApp());
 }
