@@ -33,9 +33,30 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
           SafeArea(
             child: Column(
               children: [
-                Text("Statistic"),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: Text("Statistic"),
+                ),
                 Expanded(child: Placeholder()),
-                Expanded(child: Placeholder()),
+                Container(
+                  height: 64,
+                  decoration: BoxDecoration(color: Colors.red),
+                ),
+                Expanded(
+                    child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                    maxCrossAxisExtent: 200.0,
+                    mainAxisSpacing: 10.0,
+                    crossAxisSpacing: 10.0,
+                    childAspectRatio: 4.0,
+                  ),
+                  itemBuilder: (_, index) {
+                    return Container(
+                      color: Colors.blue,
+                    );
+                  },
+                  itemCount: 10,
+                )),
               ],
             ),
           ),
