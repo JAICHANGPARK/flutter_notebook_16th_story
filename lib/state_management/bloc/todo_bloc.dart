@@ -36,11 +36,27 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
 
   Stream<TodoState> _mapCreateTodosEvent(CreateTodoEvent event) async* {
     try {
-      if(state is Loaded){
+      if (state is Loaded) {
         final parsedState = (state as Loaded);
-        await repository.createTodo(todo);
-      }
+        final newTodo = Todo(
+          id: parsedState.todos[parsedState.todos.length - 1].id + 1,
+          title: event.title,
+          createdAt: DateTime.now().toString(),
+        );
 
+        final prevTodos = [
+          ...parsedState.todos,
+        ];
+
+        final newTodos = [
+          ...prevTodos,
+          newTodo,
+        ];
+
+        yield Loaded(todos: newTodos);
+
+        await repository.createTodo(newTodo);
+      }
     } catch (e) {
       yield Error(message: e.toString());
     }
