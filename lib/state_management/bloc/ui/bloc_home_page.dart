@@ -59,8 +59,31 @@ class _HomeWidgetState extends State<HomeWidget> {
               if (state is Empty) {
                 return Container();
               } else if (state is Error) {
+                return Container(
+                  child: Text(state.message),
+                );
               } else if (state is Loading) {
-              } else if (state is Loaded) {}
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else if (state is Loaded) {
+                final items = state.todos;
+                return ListView.separated(
+                    itemBuilder: (_, index) {
+                      final item = items[index];
+                      return Row(
+                        children: [
+                          Expanded(child: Text(item.title)),
+                          GestureDetector(
+                            onTap: () {},
+                            child: const Icon(Icons.delete),
+                          )
+                        ],
+                      );
+                    },
+                    separatorBuilder: (_, index) => const Divider(),
+                    itemCount: items.length);
+              }
               return Container();
             })
           ],
