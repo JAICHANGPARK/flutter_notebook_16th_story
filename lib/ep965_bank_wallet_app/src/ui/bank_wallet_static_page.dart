@@ -30,7 +30,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
           Container(
             child: Center(child: Text("page 2")),
           ),
-          Container(
+          SafeArea(
             child: Column(
               children: [
                 Text("Statistic"),
