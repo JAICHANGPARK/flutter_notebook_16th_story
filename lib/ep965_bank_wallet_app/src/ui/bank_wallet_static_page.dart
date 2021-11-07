@@ -13,6 +13,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
     return Scaffold(
       bottomNavigationBar: BottomAppBar(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconButton(onPressed: () {}, icon: Icon(Icons.home)),
             IconButton(onPressed: () {}, icon: Icon(Icons.account_balance_wallet)),
