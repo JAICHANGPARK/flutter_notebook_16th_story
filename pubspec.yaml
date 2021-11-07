@@ -23,6 +23,7 @@ dependencies:
   fl_chart: any
   get: ^4.3.8
   json_annotation: ^4.3.0
+  equatable: ^2.0.3
 
   flutter_bloc: any
 
