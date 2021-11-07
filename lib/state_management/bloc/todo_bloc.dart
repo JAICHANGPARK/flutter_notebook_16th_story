@@ -28,9 +28,23 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
       yield Loading();
       final resp = await repository.listTodo();
       final todos = resp.map<Todo>((e) => Todo.fromJson(e)).toList();
-      
+      yield Loaded(todos: todos);
     } catch (e) {
       yield Error(message: e.toString());
     }
   }
+
+  Stream<TodoState> _mapCreateTodosEvent(CreateTodoEvent event) async* {
+    try {
+      if(state is Loaded){
+        final parsedState = (state as Loaded);
+        await repository.createTodo(todo);
+      }
+
+    } catch (e) {
+      yield Error(message: e.toString());
+    }
+  }
+
+  Stream<TodoState> _mapDeleteTodosEvent(DeleteTodoEvent event) async* {}
 }
