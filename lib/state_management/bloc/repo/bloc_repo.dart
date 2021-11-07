@@ -14,8 +14,8 @@ class TodoRepository {
     return todo.toJson();
   }
 
-  Future<int> deleteTodo(int id) async {
+  Future<Map<String, dynamic>> deleteTodo(Todo todo) async {
     await Future.delayed(const Duration(seconds: 1));
-    return id;
+    return todo.toJson();
   }
 }
