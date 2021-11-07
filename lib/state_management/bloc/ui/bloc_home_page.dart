@@ -19,7 +19,7 @@ class _BlocHomePageState extends State<BlocHomePage> {
         create: (BuildContext context) {
           return TodoBloc(repository: TodoRepository());
         },
-        child: HomeWidget(),
+        child: const HomeWidget(),
       ),
     );
   }
@@ -41,7 +41,7 @@ class _HomeWidgetState extends State<HomeWidget> {
       appBar: AppBar(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.edit),
+        child: const Icon(Icons.edit),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -52,9 +52,16 @@ class _HomeWidgetState extends State<HomeWidget> {
                 title = val;
               },
             ),
-            SizedBox(height: 16,),
-            BlocBuilder<TodoBloc, TodoState>(builder: (_, state){
-              
+            const SizedBox(
+              height: 16,
+            ),
+            BlocBuilder<TodoBloc, TodoState>(builder: (_, state) {
+              if (state is Empty) {
+                return Container();
+              } else if (state is Error) {
+              } else if (state is Loading) {
+              } else if (state is Loaded) {}
+              return Container();
             })
           ],
         ),
