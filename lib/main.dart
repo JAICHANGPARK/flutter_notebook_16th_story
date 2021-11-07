@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'ep961_money_transfer_app/money_transer_app.dart';
+import 'state_management/bloc/ui/bloc_home_page.dart';
 
 
 main() {
-  runApp(const MoneyTransferApp());
+  runApp(const BlocHomePage());
 }
