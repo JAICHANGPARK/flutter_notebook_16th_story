@@ -8,7 +8,8 @@ class BankWalletApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 
-      
+      home: ,
+
     );
   }
 }
