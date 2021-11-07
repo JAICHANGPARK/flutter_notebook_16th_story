@@ -24,6 +24,8 @@ dependencies:
   get: ^4.3.8
   json_annotation: ^4.3.0
 
+  flutter_bloc: any
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
