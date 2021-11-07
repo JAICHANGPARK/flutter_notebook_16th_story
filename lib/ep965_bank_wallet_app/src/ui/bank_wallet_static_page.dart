@@ -25,19 +25,19 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
         index: bottomNavIndex,
         children: [
           Container(
-            child: Text("page 1"),
+            child: Center(child: Text("page 1")),
           ),
           Container(
-            child: Text("page 2"),
+            child: Center(child: Text("page 2")),
           ),
           Container(
-            child: Text("page 3"),
+            child: Center(child: Text("page 3")),
           ),
           Container(
-            child: Text("page 4"),
+            child: Center(child: Text("page 4")),
           ),
           Container(
-            child: Text("page 5"),
+            child: Center(child: Text("page 5")),
           )
         ],
       ),
