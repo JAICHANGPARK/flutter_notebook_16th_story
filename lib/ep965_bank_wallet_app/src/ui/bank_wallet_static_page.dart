@@ -32,7 +32,10 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
               children: [
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 16),
-                  child: Text("Statistic"),
+                  child: Text(
+                    "Statistic",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
                 ),
                 Expanded(
                     child: Padding(
