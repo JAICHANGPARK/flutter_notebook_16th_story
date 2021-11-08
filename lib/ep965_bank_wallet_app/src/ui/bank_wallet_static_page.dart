@@ -41,10 +41,15 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                     elevation: 2,
                     child: LineChart(LineChartData(lineBarsData: [
                       LineChartBarData(
+                          dotData: FlDotData(show: false),
+                          isCurved: true,
                           spots: List.generate(
-                        40,
-                        (index) => FlSpot(index.toDouble(), Random().nextDouble() * 1000),
-                      )),
+                            40,
+                            (index) => FlSpot(
+                              index.toDouble(),
+                              Random().nextDouble() * 1000,
+                            ),
+                          )),
                     ])),
                   ),
                 )),
