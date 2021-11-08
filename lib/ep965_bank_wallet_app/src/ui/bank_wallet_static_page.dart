@@ -4,8 +4,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class BankTabState extends Equatable {}
 
-class BankTabCubit extends Cubit<BankTabState> {
-  BankTabCubit(BankTabState initialState) : super(initialState);
+class BankTabCubit extends Cubit<int> {
+  BankTabCubit(BankTabState initialState) : super(0);
+
+  setTab(int value) {
+    emit(value);
+  }
 }
 
 class BankWalletStaticPage extends StatefulWidget {
@@ -44,22 +48,22 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                 ),
                 Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GridView.builder(
+                    gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                       maxCrossAxisExtent: 200.0,
                       mainAxisSpacing: 10.0,
                       crossAxisSpacing: 10.0,
                       childAspectRatio: 1.4,
-                  ),
-                  itemBuilder: (_, index) {
+                    ),
+                    itemBuilder: (_, index) {
                       return Container(
                         color: Colors.blue,
                       );
-                  },
-                  itemCount: 10,
-                ),
-                    )),
+                    },
+                    itemCount: 10,
+                  ),
+                )),
               ],
             ),
           ),
