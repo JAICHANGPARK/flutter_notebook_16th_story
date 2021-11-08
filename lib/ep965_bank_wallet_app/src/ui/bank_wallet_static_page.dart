@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 
 class BankWalletStaticPage extends StatefulWidget {
   const BankWalletStaticPage({Key? key}) : super(key: key);
@@ -20,22 +20,43 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
         index: bottomNavIndex,
         children: [
           Container(
-            child: Center(child: Text("page 1")),
+            child: const Center(child: const Text("page 1")),
           ),
           Container(
-            child: Center(child: Text("page 2")),
+            child: const Center(child: Text("page 2")),
           ),
           SafeArea(
             child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                  child: Text("Statistic"),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 16),
+                  child: const Text("Statistic"),
                 ),
-                Expanded(child: Placeholder()),
+                Expanded(
+                    child: Card(
+                  child: LineChart(LineChartData()),
+                )),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.arrow_drop_up,
+                      color: Colors.deepPurpleAccent,
+                    ),
+                    Text("Receive Money"),
+                    SizedBox(
+                      width: 16,
+                    ),
+                    Icon(
+                      Icons.arrow_drop_down,
+                      color: Colors.red,
+                    ),
+                    Text("Send Money")
+                  ],
+                ),
                 Container(
                   height: 64,
-                  decoration: BoxDecoration(color: Colors.red),
+                  decoration: const BoxDecoration(color: Colors.red),
                 ),
                 Expanded(
                     child: Padding(
@@ -59,10 +80,10 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
             ),
           ),
           Container(
-            child: Center(child: Text("page 4")),
+            child: const Center(child: const Text("page 4")),
           ),
           Container(
-            child: Center(child: Text("page 5")),
+            child: const Center(child: Text("page 5")),
           )
         ],
       ),
@@ -76,35 +97,35 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                     bottomNavIndex = 0;
                   });
                 },
-                icon: Icon(Icons.home)),
+                icon: const Icon(Icons.home)),
             IconButton(
                 onPressed: () {
                   setState(() {
                     bottomNavIndex = 1;
                   });
                 },
-                icon: Icon(Icons.account_balance_wallet)),
+                icon: const Icon(Icons.account_balance_wallet)),
             IconButton(
                 onPressed: () {
                   setState(() {
                     bottomNavIndex = 2;
                   });
                 },
-                icon: Icon(Icons.pie_chart)),
+                icon: const Icon(Icons.pie_chart)),
             IconButton(
                 onPressed: () {
                   setState(() {
                     bottomNavIndex = 3;
                   });
                 },
-                icon: Icon(Icons.description)),
+                icon: const Icon(Icons.description)),
             IconButton(
                 onPressed: () {
                   setState(() {
                     bottomNavIndex = 4;
                   });
                 },
-                icon: Icon(Icons.settings)),
+                icon: const Icon(Icons.settings)),
           ],
         ),
       ),
