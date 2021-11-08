@@ -39,18 +39,37 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
                     elevation: 2,
-                    child: LineChart(LineChartData(lineBarsData: [
-                      LineChartBarData(
-                          dotData: FlDotData(show: false),
-                          isCurved: true,
-                          spots: List.generate(
-                            40,
-                            (index) => FlSpot(
-                              index.toDouble(),
-                              Random().nextDouble() * 1000,
-                            ),
-                          )),
-                    ])),
+                    child: LineChart(LineChartData(
+                        maxY: 1200,
+                        minY: 0,
+                        borderData: FlBorderData(
+                          show: false,
+                        ),
+                        gridData: FlGridData(
+                          show: false,
+                        ),
+                        axisTitleData: FlAxisTitleData(show: false),
+                        titlesData: FlTitlesData(
+                          topTitles: SideTitles(
+                            showTitles: false,
+                          ),
+                          rightTitles: SideTitles(
+                            showTitles: false,
+                          ),
+                        ),
+                        lineBarsData: [
+                          LineChartBarData(
+                              colors: [Colors.purple],
+                              dotData: FlDotData(show: false),
+                              isCurved: true,
+                              spots: List.generate(
+                                40,
+                                (index) => FlSpot(
+                                  index.toDouble(),
+                                  Random().nextDouble() * 1000,
+                                ),
+                              )),
+                        ])),
                   ),
                 )),
                 Row(
