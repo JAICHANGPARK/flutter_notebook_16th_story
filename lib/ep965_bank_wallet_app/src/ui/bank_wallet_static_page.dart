@@ -52,18 +52,27 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                           ),
                           axisTitleData: FlAxisTitleData(show: false),
                           titlesData: FlTitlesData(
-                              topTitles: SideTitles(
-                                showTitles: false,
-                              ),
-                              rightTitles: SideTitles(
-                                showTitles: false,
-                              ),
-                              leftTitles: SideTitles(
-                                  showTitles: true,
-                                  interval: 250,
-                                  getTextStyles: (context, value) {
-                                    return TextStyle(fontSize: 10, color: Colors.grey);
-                                  })),
+                            topTitles: SideTitles(
+                              showTitles: false,
+                            ),
+                            rightTitles: SideTitles(
+                              showTitles: false,
+                            ),
+                            leftTitles: SideTitles(
+                              showTitles: true,
+                              interval: 250,
+                              getTextStyles: (context, value) {
+                                return TextStyle(fontSize: 10, color: Colors.grey);
+                              },
+                            ),
+                            bottomTitles: SideTitles(
+                              showTitles: true,
+                              interval: 5,
+                              getTextStyles: (context, value) {
+                                return TextStyle(fontSize: 10, color: Colors.grey);
+                              },
+                            ),
+                          ),
                           lineBarsData: [
                             LineChartBarData(
                                 colors: [Colors.purple],
@@ -82,7 +91,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                                 isCurved: true,
                                 spots: List.generate(
                                   40,
-                                      (index) => FlSpot(
+                                  (index) => FlSpot(
                                     index.toDouble(),
                                     500 + (Random().nextDouble() * 500),
                                   ),
