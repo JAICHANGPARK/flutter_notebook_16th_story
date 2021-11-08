@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:equatable/equatable.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +22,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
         index: bottomNavIndex,
         children: [
           Container(
-            child: const Center(child: const Text("page 1")),
+            child: const Center(child: Text("page 1")),
           ),
           Container(
             child: const Center(child: Text("page 2")),
@@ -30,11 +32,21 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
               children: [
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 16),
-                  child: const Text("Statistic"),
+                  child: Text("Statistic"),
                 ),
                 Expanded(
-                    child: Card(
-                  child: LineChart(LineChartData()),
+                    child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    elevation: 2,
+                    child: LineChart(LineChartData(lineBarsData: [
+                      LineChartBarData(
+                          spots: List.generate(
+                        40,
+                        (index) => FlSpot(index.toDouble(), Random().nextDouble() * 1000),
+                      )),
+                    ])),
+                  ),
                 )),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -80,7 +92,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
             ),
           ),
           Container(
-            child: const Center(child: const Text("page 4")),
+            child: const Center(child: Text("page 4")),
           ),
           Container(
             child: const Center(child: Text("page 5")),
