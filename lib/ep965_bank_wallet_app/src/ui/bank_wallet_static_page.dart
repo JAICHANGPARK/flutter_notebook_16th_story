@@ -39,37 +39,56 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
                     elevation: 2,
-                    child: LineChart(LineChartData(
-                        maxY: 1200,
-                        minY: 0,
-                        borderData: FlBorderData(
-                          show: false,
-                        ),
-                        gridData: FlGridData(
-                          show: false,
-                        ),
-                        axisTitleData: FlAxisTitleData(show: false),
-                        titlesData: FlTitlesData(
-                          topTitles: SideTitles(
-                            showTitles: false,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: LineChart(LineChartData(
+                          maxY: 1200,
+                          minY: 0,
+                          borderData: FlBorderData(
+                            show: false,
                           ),
-                          rightTitles: SideTitles(
-                            showTitles: false,
+                          gridData: FlGridData(
+                            show: false,
                           ),
-                        ),
-                        lineBarsData: [
-                          LineChartBarData(
-                              colors: [Colors.purple],
-                              dotData: FlDotData(show: false),
-                              isCurved: true,
-                              spots: List.generate(
-                                40,
-                                (index) => FlSpot(
-                                  index.toDouble(),
-                                  Random().nextDouble() * 1000,
-                                ),
-                              )),
-                        ])),
+                          axisTitleData: FlAxisTitleData(show: false),
+                          titlesData: FlTitlesData(
+                              topTitles: SideTitles(
+                                showTitles: false,
+                              ),
+                              rightTitles: SideTitles(
+                                showTitles: false,
+                              ),
+                              leftTitles: SideTitles(
+                                  showTitles: true,
+                                  interval: 250,
+                                  getTextStyles: (context, value) {
+                                    return TextStyle(fontSize: 10, color: Colors.grey);
+                                  })),
+                          lineBarsData: [
+                            LineChartBarData(
+                                colors: [Colors.purple],
+                                dotData: FlDotData(show: false),
+                                isCurved: true,
+                                spots: List.generate(
+                                  40,
+                                  (index) => FlSpot(
+                                    index.toDouble(),
+                                    250 + (Random().nextDouble() * 500),
+                                  ),
+                                )),
+                            LineChartBarData(
+                                colors: [Colors.red],
+                                dotData: FlDotData(show: false),
+                                isCurved: true,
+                                spots: List.generate(
+                                  40,
+                                      (index) => FlSpot(
+                                    index.toDouble(),
+                                    500 + (Random().nextDouble() * 500),
+                                  ),
+                                )),
+                          ])),
+                    ),
                   ),
                 )),
                 Row(
