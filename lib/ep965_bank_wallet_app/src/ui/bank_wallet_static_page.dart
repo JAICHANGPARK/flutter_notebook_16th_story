@@ -2,15 +2,6 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-abstract class BankTabState extends Equatable {}
-
-class BankTabCubit extends Cubit<int> {
-  BankTabCubit(BankTabState initialState) : super(0);
-
-  setTab(int value) {
-    emit(value);
-  }
-}
 
 class BankWalletStaticPage extends StatefulWidget {
   const BankWalletStaticPage({Key? key}) : super(key: key);
