@@ -135,6 +135,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
                               width: 100,
+                              padding: EdgeInsets.symmetric(horizontal: 4),
                               decoration:
                                   BoxDecoration(color: Colors.deepPurpleAccent, borderRadius: BorderRadius.circular(4)),
                               child: Center(
@@ -143,11 +144,13 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                                   children: [
                                     Text(
                                       "October 21",
-                                      style: TextStyle(color: Colors.white),
+                                      style: TextStyle(color: Colors.white,
+                                      fontSize: 12),
                                     ),
                                     Icon(
                                       Icons.keyboard_arrow_down,
                                       color: Colors.white,
+                                      size: 16,
                                     )
                                   ],
                                 ),
