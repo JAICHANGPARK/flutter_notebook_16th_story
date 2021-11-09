@@ -220,11 +220,29 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                                     right: 8,
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        const CircleAvatar(
+                                      children: const [
+                                        CircleAvatar(
                                           radius: 24,
                                         ),
-                                        const Text("Monthly Salary")
+                                        SizedBox(
+                                          height: 16,
+                                        ),
+                                        Text(
+                                          "Monthly Salary",
+                                          style: TextStyle(
+                                            color: Colors.brown,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 4,
+                                        ),
+                                        Text(
+                                          "\$ 6350.61",
+                                          style: TextStyle(
+                                            color: Colors.brown,
+                                          ),
+                                        )
                                       ],
                                     ))
                               ],
