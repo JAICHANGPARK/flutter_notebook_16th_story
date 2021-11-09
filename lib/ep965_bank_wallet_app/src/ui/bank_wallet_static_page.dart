@@ -166,26 +166,31 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 IconButton(
+                  color: index == 0 ? Colors.deepPurpleAccent : Colors.black,
                     onPressed: () {
                       context.read<BankTabCubit>().setTab(0);
                     },
                     icon: const Icon(Icons.home)),
                 IconButton(
+                    color: index == 1 ? Colors.deepPurpleAccent : Colors.black,
                     onPressed: () {
                       context.read<BankTabCubit>().setTab(1);
                     },
                     icon: const Icon(Icons.account_balance_wallet)),
                 IconButton(
+                    color: index == 2 ? Colors.deepPurpleAccent : Colors.black,
                     onPressed: () {
                       context.read<BankTabCubit>().setTab(2);
                     },
                     icon: const Icon(Icons.pie_chart)),
                 IconButton(
+                    color: index == 3 ? Colors.deepPurpleAccent : Colors.black,
                     onPressed: () {
                       context.read<BankTabCubit>().setTab(3);
                     },
                     icon: const Icon(Icons.description)),
                 IconButton(
+                    color: index == 4 ? Colors.deepPurpleAccent : Colors.black,
                     onPressed: () {
                       context.read<BankTabCubit>().setTab(4);
                     },
