@@ -205,11 +205,28 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                             elevation: 2,
                             child: Stack(
                               children: [
-                                Positioned(
-                                  child: Icon(Icons.apps, size: 12,),
+                                const Positioned(
+                                  child: Icon(
+                                    Icons.apps,
+                                    size: 12,
+                                  ),
                                   right: 8,
                                   top: 8,
-                                )
+                                ),
+                                Positioned(
+                                    left: 8,
+                                    top: 8,
+                                    bottom: 8,
+                                    right: 8,
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        const CircleAvatar(
+                                          radius: 24,
+                                        ),
+                                        const Text("Monthly Salary")
+                                      ],
+                                    ))
                               ],
                             ),
                           );
