@@ -9,9 +9,11 @@ class BankWalletApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: BlocProvider(create: (BuildContext context) => BankTabCubit(),
-          child: BankWalletStaticPage()),
+    return MaterialApp(
+      home: BlocProvider(
+        create: (BuildContext context) => BankTabCubit(),
+        child: BankWalletStaticPage(),
+      ),
     );
   }
 }
