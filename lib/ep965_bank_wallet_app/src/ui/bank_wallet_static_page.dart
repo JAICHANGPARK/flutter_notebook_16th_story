@@ -68,14 +68,14 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                                   showTitles: true,
                                   interval: 250,
                                   getTextStyles: (context, value) {
-                                    return TextStyle(fontSize: 10, color: Colors.grey);
+                                    return const TextStyle(fontSize: 10, color: Colors.grey);
                                   },
                                 ),
                                 bottomTitles: SideTitles(
                                   showTitles: true,
                                   interval: 5,
                                   getTextStyles: (context, value) {
-                                    return TextStyle(fontSize: 10, color: Colors.grey);
+                                    return const TextStyle(fontSize: 10, color: Colors.grey);
                                   },
                                 ),
                               ),
@@ -108,7 +108,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                     )),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         Icon(
                           Icons.arrow_drop_up,
                           color: Colors.deepPurpleAccent,
@@ -126,7 +126,6 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                     ),
                     Container(
                       height: 58,
-                      decoration: const BoxDecoration(color: Colors.red),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -134,14 +133,14 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
-                              width: 100,
-                              padding: EdgeInsets.symmetric(horizontal: 4),
+                              width: 110,
+                              padding: const EdgeInsets.symmetric(horizontal: 4),
                               decoration:
                                   BoxDecoration(color: Colors.deepPurpleAccent, borderRadius: BorderRadius.circular(4)),
                               child: Center(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
+                                  children: const [
                                     Text(
                                       "October 21",
                                       style: TextStyle(color: Colors.white,
@@ -160,15 +159,33 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
-                              width: 100,
+                              width: 110,
+                              padding: const EdgeInsets.symmetric(horizontal: 4),
                               decoration:
-                                  BoxDecoration(color: Colors.deepPurpleAccent, borderRadius: BorderRadius.circular(4)),
+                              BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(4)),
+                              child: Center(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      "All",
+                                      style: TextStyle(color: Colors.white,
+                                          fontSize: 12),
+                                    ),
+                                    Icon(
+                                      Icons.keyboard_arrow_down,
+                                      color: Colors.white,
+                                      size: 16,
+                                    )
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
-                              width: 100,
+                              width: 110,
                               decoration:
                                   BoxDecoration(color: Colors.deepPurpleAccent, borderRadius: BorderRadius.circular(4)),
                             ),
