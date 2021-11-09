@@ -160,6 +160,30 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                             child: Container(
                               width: 110,
                               padding: const EdgeInsets.symmetric(horizontal: 8),
+                              decoration: BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(4)),
+                              child: Center(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      "All",
+                                      style: TextStyle(color: Colors.white, fontSize: 12),
+                                    ),
+                                    Icon(
+                                      Icons.keyboard_arrow_down,
+                                      color: Colors.white,
+                                      size: 16,
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              width: 110,
+                              padding: const EdgeInsets.symmetric(horizontal: 8),
                               decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(4)),
                               child: Center(
                                 child: Row(
@@ -179,14 +203,6 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                               ),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              width: 110,
-                              decoration:
-                                  BoxDecoration(color: Colors.deepPurpleAccent, borderRadius: BorderRadius.circular(4)),
-                            ),
-                          )
                         ],
                       ),
                     ),
