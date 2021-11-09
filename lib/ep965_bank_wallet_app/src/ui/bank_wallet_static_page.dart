@@ -166,37 +166,27 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
           children: [
             IconButton(
                 onPressed: () {
-                  setState(() {
-                    bottomNavIndex = 0;
-                  });
+                  context.read<BankTabCubit>().setTab(0);
                 },
                 icon: const Icon(Icons.home)),
             IconButton(
                 onPressed: () {
-                  setState(() {
-                    bottomNavIndex = 1;
-                  });
+                  context.read<BankTabCubit>().setTab(1);
                 },
                 icon: const Icon(Icons.account_balance_wallet)),
             IconButton(
                 onPressed: () {
-                  setState(() {
-                    bottomNavIndex = 2;
-                  });
+                  context.read<BankTabCubit>().setTab(2);
                 },
                 icon: const Icon(Icons.pie_chart)),
             IconButton(
                 onPressed: () {
-                  setState(() {
-                    bottomNavIndex = 3;
-                  });
+                  context.read<BankTabCubit>().setTab(3);
                 },
                 icon: const Icon(Icons.description)),
             IconButton(
                 onPressed: () {
-                  setState(() {
-                    bottomNavIndex = 4;
-                  });
+                  context.read<BankTabCubit>().setTab(4);
                 },
                 icon: const Icon(Icons.settings)),
           ],
