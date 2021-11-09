@@ -128,6 +128,8 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                       height: 58,
                       decoration: const BoxDecoration(color: Colors.red),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
