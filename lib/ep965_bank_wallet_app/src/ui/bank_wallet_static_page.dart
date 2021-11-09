@@ -135,9 +135,22 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
                               width: 100,
-                              decoration: BoxDecoration(
-                                color: Colors.deepPurpleAccent,
-                                borderRadius: BorderRadius.circular(4)
+                              decoration:
+                                  BoxDecoration(color: Colors.deepPurpleAccent, borderRadius: BorderRadius.circular(4)),
+                              child: Center(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "October 21",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    Icon(
+                                      Icons.keyboard_arrow_down,
+                                      color: Colors.white,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -145,20 +158,16 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
                               width: 100,
-                              decoration: BoxDecoration(
-                                  color: Colors.deepPurpleAccent,
-                                  borderRadius: BorderRadius.circular(4)
-                              ),
+                              decoration:
+                                  BoxDecoration(color: Colors.deepPurpleAccent, borderRadius: BorderRadius.circular(4)),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
                               width: 100,
-                              decoration: BoxDecoration(
-                                  color: Colors.deepPurpleAccent,
-                                  borderRadius: BorderRadius.circular(4)
-                              ),
+                              decoration:
+                                  BoxDecoration(color: Colors.deepPurpleAccent, borderRadius: BorderRadius.circular(4)),
                             ),
                           )
                         ],
@@ -202,7 +211,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 IconButton(
-                  color: index == 0 ? Colors.deepPurpleAccent : Colors.black,
+                    color: index == 0 ? Colors.deepPurpleAccent : Colors.black,
                     onPressed: () {
                       context.read<BankTabCubit>().setTab(0);
                     },
