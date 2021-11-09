@@ -125,8 +125,42 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                       ],
                     ),
                     Container(
-                      height: 64,
+                      height: 58,
                       decoration: const BoxDecoration(color: Colors.red),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              width: 100,
+                              decoration: BoxDecoration(
+                                color: Colors.deepPurpleAccent,
+                                borderRadius: BorderRadius.circular(4)
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              width: 100,
+                              decoration: BoxDecoration(
+                                  color: Colors.deepPurpleAccent,
+                                  borderRadius: BorderRadius.circular(4)
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              width: 100,
+                              decoration: BoxDecoration(
+                                  color: Colors.deepPurpleAccent,
+                                  borderRadius: BorderRadius.circular(4)
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                     Expanded(
                         child: Padding(
