@@ -20,7 +20,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocBuilder<BankTabCubit, int>(
-        builder: (context, index){
+        builder: (context, index) {
           return IndexedStack(
             index: index,
             children: [
@@ -42,70 +42,70 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                     ),
                     Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Card(
-                            elevation: 2,
-                            child: Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: LineChart(LineChartData(
-                                  maxY: 1200,
-                                  minY: 0,
-                                  borderData: FlBorderData(
-                                    show: false,
-                                  ),
-                                  gridData: FlGridData(
-                                    show: false,
-                                  ),
-                                  axisTitleData: FlAxisTitleData(show: false),
-                                  titlesData: FlTitlesData(
-                                    topTitles: SideTitles(
-                                      showTitles: false,
-                                    ),
-                                    rightTitles: SideTitles(
-                                      showTitles: false,
-                                    ),
-                                    leftTitles: SideTitles(
-                                      showTitles: true,
-                                      interval: 250,
-                                      getTextStyles: (context, value) {
-                                        return TextStyle(fontSize: 10, color: Colors.grey);
-                                      },
-                                    ),
-                                    bottomTitles: SideTitles(
-                                      showTitles: true,
-                                      interval: 5,
-                                      getTextStyles: (context, value) {
-                                        return TextStyle(fontSize: 10, color: Colors.grey);
-                                      },
-                                    ),
-                                  ),
-                                  lineBarsData: [
-                                    LineChartBarData(
-                                        colors: [Colors.purple],
-                                        dotData: FlDotData(show: false),
-                                        isCurved: true,
-                                        spots: List.generate(
-                                          40,
-                                              (index) => FlSpot(
-                                            index.toDouble(),
-                                            250 + (Random().nextDouble() * 500),
-                                          ),
-                                        )),
-                                    LineChartBarData(
-                                        colors: [Colors.red],
-                                        dotData: FlDotData(show: false),
-                                        isCurved: true,
-                                        spots: List.generate(
-                                          40,
-                                              (index) => FlSpot(
-                                            index.toDouble(),
-                                            500 + (Random().nextDouble() * 500),
-                                          ),
-                                        )),
-                                  ])),
-                            ),
-                          ),
-                        )),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Card(
+                        elevation: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: LineChart(LineChartData(
+                              maxY: 1200,
+                              minY: 0,
+                              borderData: FlBorderData(
+                                show: false,
+                              ),
+                              gridData: FlGridData(
+                                show: false,
+                              ),
+                              axisTitleData: FlAxisTitleData(show: false),
+                              titlesData: FlTitlesData(
+                                topTitles: SideTitles(
+                                  showTitles: false,
+                                ),
+                                rightTitles: SideTitles(
+                                  showTitles: false,
+                                ),
+                                leftTitles: SideTitles(
+                                  showTitles: true,
+                                  interval: 250,
+                                  getTextStyles: (context, value) {
+                                    return TextStyle(fontSize: 10, color: Colors.grey);
+                                  },
+                                ),
+                                bottomTitles: SideTitles(
+                                  showTitles: true,
+                                  interval: 5,
+                                  getTextStyles: (context, value) {
+                                    return TextStyle(fontSize: 10, color: Colors.grey);
+                                  },
+                                ),
+                              ),
+                              lineBarsData: [
+                                LineChartBarData(
+                                    colors: [Colors.purple],
+                                    dotData: FlDotData(show: false),
+                                    isCurved: true,
+                                    spots: List.generate(
+                                      40,
+                                      (index) => FlSpot(
+                                        index.toDouble(),
+                                        250 + (Random().nextDouble() * 500),
+                                      ),
+                                    )),
+                                LineChartBarData(
+                                    colors: [Colors.red],
+                                    dotData: FlDotData(show: false),
+                                    isCurved: true,
+                                    spots: List.generate(
+                                      40,
+                                      (index) => FlSpot(
+                                        index.toDouble(),
+                                        500 + (Random().nextDouble() * 500),
+                                      ),
+                                    )),
+                              ])),
+                        ),
+                      ),
+                    )),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -130,22 +130,22 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                     ),
                     Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: GridView.builder(
-                            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                              maxCrossAxisExtent: 200.0,
-                              mainAxisSpacing: 10.0,
-                              crossAxisSpacing: 10.0,
-                              childAspectRatio: 1.4,
-                            ),
-                            itemBuilder: (_, index) {
-                              return Container(
-                                color: Colors.blue,
-                              );
-                            },
-                            itemCount: 10,
-                          ),
-                        )),
+                      padding: const EdgeInsets.all(8.0),
+                      child: GridView.builder(
+                        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                          maxCrossAxisExtent: 200.0,
+                          mainAxisSpacing: 10.0,
+                          crossAxisSpacing: 10.0,
+                          childAspectRatio: 1.4,
+                        ),
+                        itemBuilder: (_, index) {
+                          return Container(
+                            color: Colors.blue,
+                          );
+                        },
+                        itemCount: 10,
+                      ),
+                    )),
                   ],
                 ),
               ),
@@ -158,38 +158,41 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
             ],
           );
         },
-
       ),
       bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            IconButton(
-                onPressed: () {
-                  context.read<BankTabCubit>().setTab(0);
-                },
-                icon: const Icon(Icons.home)),
-            IconButton(
-                onPressed: () {
-                  context.read<BankTabCubit>().setTab(1);
-                },
-                icon: const Icon(Icons.account_balance_wallet)),
-            IconButton(
-                onPressed: () {
-                  context.read<BankTabCubit>().setTab(2);
-                },
-                icon: const Icon(Icons.pie_chart)),
-            IconButton(
-                onPressed: () {
-                  context.read<BankTabCubit>().setTab(3);
-                },
-                icon: const Icon(Icons.description)),
-            IconButton(
-                onPressed: () {
-                  context.read<BankTabCubit>().setTab(4);
-                },
-                icon: const Icon(Icons.settings)),
-          ],
+        child: BlocBuilder<BankTabCubit, int>(
+          builder: (context, index) {
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                    onPressed: () {
+                      context.read<BankTabCubit>().setTab(0);
+                    },
+                    icon: const Icon(Icons.home)),
+                IconButton(
+                    onPressed: () {
+                      context.read<BankTabCubit>().setTab(1);
+                    },
+                    icon: const Icon(Icons.account_balance_wallet)),
+                IconButton(
+                    onPressed: () {
+                      context.read<BankTabCubit>().setTab(2);
+                    },
+                    icon: const Icon(Icons.pie_chart)),
+                IconButton(
+                    onPressed: () {
+                      context.read<BankTabCubit>().setTab(3);
+                    },
+                    icon: const Icon(Icons.description)),
+                IconButton(
+                    onPressed: () {
+                      context.read<BankTabCubit>().setTab(4);
+                    },
+                    icon: const Icon(Icons.settings)),
+              ],
+            );
+          },
         ),
       ),
     );
