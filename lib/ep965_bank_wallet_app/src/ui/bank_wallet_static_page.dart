@@ -134,7 +134,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
                               width: 110,
-                              padding: const EdgeInsets.symmetric(horizontal: 4),
+                              padding: const EdgeInsets.symmetric(horizontal: 8),
                               decoration:
                                   BoxDecoration(color: Colors.deepPurpleAccent, borderRadius: BorderRadius.circular(4)),
                               child: Center(
@@ -143,8 +143,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                                   children: const [
                                     Text(
                                       "October 21",
-                                      style: TextStyle(color: Colors.white,
-                                      fontSize: 12),
+                                      style: TextStyle(color: Colors.white, fontSize: 12),
                                     ),
                                     Icon(
                                       Icons.keyboard_arrow_down,
@@ -160,17 +159,15 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
                               width: 110,
-                              padding: const EdgeInsets.symmetric(horizontal: 4),
-                              decoration:
-                              BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(4)),
+                              padding: const EdgeInsets.symmetric(horizontal: 8),
+                              decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(4)),
                               child: Center(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: const [
                                     Text(
-                                      "All",
-                                      style: TextStyle(color: Colors.white,
-                                          fontSize: 12),
+                                      "5 days",
+                                      style: TextStyle(color: Colors.white, fontSize: 12),
                                     ),
                                     Icon(
                                       Icons.keyboard_arrow_down,
@@ -204,8 +201,17 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                           childAspectRatio: 1.4,
                         ),
                         itemBuilder: (_, index) {
-                          return Container(
-                            color: Colors.blue,
+                          return Card(
+                            elevation: 2,
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                  child: Icon(Icons.apps, size: 12,),
+                                  right: 8,
+                                  top: 8,
+                                )
+                              ],
+                            ),
                           );
                         },
                         itemCount: 10,
