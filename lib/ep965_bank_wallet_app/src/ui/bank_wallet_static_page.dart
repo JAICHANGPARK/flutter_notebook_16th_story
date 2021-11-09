@@ -218,7 +218,7 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                         ),
                         itemBuilder: (_, index) {
                           return Card(
-                            elevation: 2,
+                            elevation: 4,
                             child: Stack(
                               children: [
                                 const Positioned(
