@@ -14,23 +14,40 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    height: 54,
-                    width: 54,
+                    height: 48,
+                    width: 48,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(color: Colors.grey[300]!),
                     ),
+                    child: const Icon(Icons.notifications_outlined),
                   ),
-                  Text("Classed"),
-                  CircleAvatar(
-                    radius: 28,
+                  const Text(
+                    "Beyoga",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  const CircleAvatar(
+                    radius: 24,
                   )
                 ],
+              ),
+              Text(
+                "Good Morning, Dream",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "We wish you have a good day",
+                style: TextStyle(
+                  color: Colors.grey,
+                ),
               )
             ],
           ),
@@ -38,8 +55,11 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
       ),
       bottomNavigationBar: BottomAppBar(
         child: Container(
-          height: 84,
-          decoration: BoxDecoration(color: Colors.black),
+          height: 72,
+          decoration: const BoxDecoration(color: Colors.black),
+          child: Row(
+            children: [],
+          ),
         ),
       ),
     );
