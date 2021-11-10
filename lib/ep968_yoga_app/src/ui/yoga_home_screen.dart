@@ -11,6 +11,16 @@ class YogaHomeScreen extends StatefulWidget {
 class _YogaHomeScreenState extends State<YogaHomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: SingleChildScrollView(),
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: 84,
+          decoration: BoxDecoration(
+            color: Colors.black
+          ),
+        ),
+      ),
+    );
   }
 }
