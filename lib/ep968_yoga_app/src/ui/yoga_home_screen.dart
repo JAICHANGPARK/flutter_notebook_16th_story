@@ -18,6 +18,9 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(
+                  height: 24,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -39,13 +42,17 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                     )
                   ],
                 ),
-                Text(
-                  "Good Morning, Dream",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
+                const SizedBox(
+                  height: 24,
                 ),
-                Text(
+                const Text(
+                  "Good Morning, Dream",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                const Text(
                   "We wish you have a good day",
                   style: TextStyle(
                     color: Colors.grey,
