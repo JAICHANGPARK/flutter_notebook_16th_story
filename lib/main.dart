@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'ep965_bank_wallet_app/bank_wallet_app.dart';
+import 'ep968_yoga_app/src/yoga_app.dart';
 
 main() {
-  runApp(const BankWalletApp());
+  runApp(const YogaApp());
 }
