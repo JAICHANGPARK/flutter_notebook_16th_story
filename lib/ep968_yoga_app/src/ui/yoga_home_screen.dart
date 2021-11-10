@@ -50,7 +50,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                   "Good Morning, Dream",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 const Text(
@@ -66,22 +66,80 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
       ),
       bottomNavigationBar: BottomAppBar(
         child: Container(
-          height: 72,
+          height: 80,
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           decoration: const BoxDecoration(color: Colors.black),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
-                children: [
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
                   Icon(
                     Ionicons.home,
                     color: Colors.teal,
+                  ),
+                  SizedBox(
+                    height: 8,
                   ),
                   CircleAvatar(
                     radius: 4,
                     backgroundColor: Colors.teal,
                   )
                 ],
-              )
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(
+                    Ionicons.apps,
+                    color: Colors.white,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  CircleAvatar(radius: 4, backgroundColor: Colors.black)
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(
+                    Ionicons.calendar,
+                    color: Colors.white,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  CircleAvatar(radius: 4, backgroundColor: Colors.black)
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(
+                    Ionicons.bar_chart,
+                    color: Colors.white,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  CircleAvatar(radius: 4, backgroundColor: Colors.black)
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(
+                    Ionicons.bookmark,
+                    color: Colors.white,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  CircleAvatar(radius: 4, backgroundColor: Colors.black)
+                ],
+              ),
             ],
           ),
         ),
