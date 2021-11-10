@@ -16,6 +16,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
           child: Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     height: 54,
