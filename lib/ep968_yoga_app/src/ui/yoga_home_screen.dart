@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 class YogaHomeScreen extends StatefulWidget {
   const YogaHomeScreen({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
-                  height: 24,
+                  height: 8,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -68,7 +69,20 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
           height: 72,
           decoration: const BoxDecoration(color: Colors.black),
           child: Row(
-            children: [],
+            children: [
+              Column(
+                children: [
+                  Icon(
+                    Ionicons.home,
+                    color: Colors.teal,
+                  ),
+                  CircleAvatar(
+                    radius: 4,
+                    backgroundColor: Colors.teal,
+                  )
+                ],
+              )
+            ],
           ),
         ),
       ),
