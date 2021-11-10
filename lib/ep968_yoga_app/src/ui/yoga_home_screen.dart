@@ -12,7 +12,24 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Container(
+                  height: 64,
+                  width: 64,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.grey[300]!),
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomAppBar(
         child: Container(
           height: 84,
