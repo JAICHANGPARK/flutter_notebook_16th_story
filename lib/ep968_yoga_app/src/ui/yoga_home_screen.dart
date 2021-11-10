@@ -13,43 +13,46 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 48,
-                    width: 48,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Colors.grey[300]!),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      height: 48,
+                      width: 48,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.grey[300]!),
+                      ),
+                      child: const Icon(Icons.notifications_outlined),
                     ),
-                    child: const Icon(Icons.notifications_outlined),
-                  ),
-                  const Text(
-                    "Beyoga",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                  const CircleAvatar(
-                    radius: 24,
-                  )
-                ],
-              ),
-              Text(
-                "Good Morning, Dream",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+                    const Text(
+                      "Beyoga",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                    const CircleAvatar(
+                      radius: 24,
+                    )
+                  ],
                 ),
-              ),
-              Text(
-                "We wish you have a good day",
-                style: TextStyle(
-                  color: Colors.grey,
+                Text(
+                  "Good Morning, Dream",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              )
-            ],
+                Text(
+                  "We wish you have a good day",
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
