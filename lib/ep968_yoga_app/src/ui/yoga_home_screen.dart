@@ -202,7 +202,10 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                       SizedBox(
                         height: 8,
                       ),
-                      CircleAvatar(radius: 4, backgroundColor: Colors.black)
+                      CircleAvatar(
+                        radius: 4,
+                        backgroundColor: index == 4 ? Colors.teal : Colors.black,
+                      )
                     ],
                   ),
                 ),
