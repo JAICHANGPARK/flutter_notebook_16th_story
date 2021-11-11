@@ -72,21 +72,23 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                           padding: const EdgeInsets.symmetric(vertical: 24),
                           child: Container(
                             height: 54,
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
                             decoration: BoxDecoration(color: Colors.grey[300], borderRadius: BorderRadius.circular(32)),
                             child: Row(
                               children: [
-                                Expanded(
+                                const Expanded(
                                   child: TextField(
                                     decoration: InputDecoration(
-                                        icon: Icon(Icons.search),
-                                        ),
+                                      icon: Icon(Icons.search),
+                                      border: InputBorder.none,
+                                    ),
                                   ),
                                 ),
                                 Container(
                                   height: 42,
                                   width: 42,
-                                  decoration: BoxDecoration(color: Colors.white),
-                                  child: Center(
+                                  decoration: const BoxDecoration(color: Colors.white),
+                                  child: const Center(
                                     child: Icon(Icons.tune),
                                   ),
                                 )
