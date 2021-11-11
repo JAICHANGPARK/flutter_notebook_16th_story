@@ -71,23 +71,23 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                   ),
                 ),
                 Container(
-                  child: Center(
-                    child: Text("Hello 1"),
+                  child: const Center(
+                    child: const Text("Hello 1"),
                   ),
                 ),
                 Container(
-                  child: Center(
-                    child: Text("Hello 2"),
+                  child: const Center(
+                    child: const Text("Hello 2"),
                   ),
                 ),
                 Container(
-                  child: Center(
-                    child: Text("Hello 3"),
+                  child: const Center(
+                    child: const Text("Hello 3"),
                   ),
                 ),
                 Container(
-                  child: Center(
-                    child: Text("Hello 4"),
+                  child: const Center(
+                    child: const Text("Hello 4"),
                   ),
                 )
               ],
@@ -115,7 +115,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                         Ionicons.home,
                         color: index == 0 ? Colors.teal : Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
                       CircleAvatar(
@@ -136,7 +136,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                         Ionicons.apps,
                         color: index == 1 ? Colors.teal : Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
                       CircleAvatar(
@@ -157,10 +157,13 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                         Ionicons.calendar,
                         color: index == 2 ? Colors.teal : Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
-                      CircleAvatar(radius: 4, backgroundColor: Colors.black)
+                      CircleAvatar(
+                        radius: 4,
+                        backgroundColor: index == 2 ? Colors.teal : Colors.black,
+                      )
                     ],
                   ),
                 ),
@@ -170,15 +173,18 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Icon(
                         Ionicons.bar_chart,
-                        color: Colors.white,
+                        color: index == 3 ? Colors.teal : Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
-                      CircleAvatar(radius: 4, backgroundColor: Colors.black)
+                      CircleAvatar(
+                        radius: 4,
+                        backgroundColor: index == 3 ? Colors.teal : Colors.black,
+                      )
                     ],
                   ),
                 ),
@@ -188,10 +194,10 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Icon(
                         Ionicons.bookmark,
-                        color: Colors.white,
+                        color: index == 4 ? Colors.teal : Colors.white,
                       ),
                       SizedBox(
                         height: 8,
