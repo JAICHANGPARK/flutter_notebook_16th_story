@@ -22,93 +22,100 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
             return IndexedStack(
               index: count,
               children: [
-                SingleChildScrollView(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          height: 8,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              height: 48,
-                              width: 48,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.grey[300]!),
-                              ),
-                              child: const Icon(Icons.notifications_outlined),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: 48,
+                            width: 48,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.grey[300]!),
                             ),
-                            const Text(
-                              "Beyoga",
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                            ),
-                            const CircleAvatar(
-                              radius: 24,
-                            )
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 24,
-                        ),
-                        const Text(
-                          "Good Morning, Dream",
-                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-                        ),
-                        const SizedBox(
-                          height: 8,
-                        ),
-                        const Text(
-                          "We wish you have a good day",
-                          style: TextStyle(
-                            color: Colors.grey,
+                            child: const Icon(Icons.notifications_outlined),
                           ),
+                          const Text(
+                            "Beyoga",
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                          ),
+                          const CircleAvatar(
+                            radius: 24,
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 24,
+                      ),
+                      const Text(
+                        "Good Morning, Dream",
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      const Text(
+                        "We wish you have a good day",
+                        style: TextStyle(
+                          color: Colors.grey,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 24),
-                          child: Container(
-                            height: 54,
-                            padding: const EdgeInsets.symmetric(horizontal: 16),
-                            decoration: BoxDecoration(color: Colors.grey[300], borderRadius: BorderRadius.circular(32)),
-                            child: Row(
-                              children: const [
-                                Expanded(
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                        icon: Icon(Icons.search), border: InputBorder.none, hintText: "Search Here..."),
-                                  ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 24),
+                        child: Container(
+                          height: 54,
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          decoration: BoxDecoration(color: Colors.grey[300], borderRadius: BorderRadius.circular(32)),
+                          child: Row(
+                            children: const [
+                              Expanded(
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                      icon: Icon(Icons.search), border: InputBorder.none, hintText: "Search Here..."),
                                 ),
-                                CircleAvatar(
-                                  backgroundColor: Colors.white,
-                                  foregroundColor: Colors.black,
-                                  child: Icon(Icons.tune),
-                                )
-                              ],
-                            ),
+                              ),
+                              CircleAvatar(
+                                backgroundColor: Colors.white,
+                                foregroundColor: Colors.black,
+                                child: Icon(Icons.tune),
+                              )
+                            ],
                           ),
                         ),
-                        const Text(
-                          "Recent Activity",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
+                      ),
+                      const Text(
+                        "Recent Activity",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
                         ),
-                        const SizedBox(
-                          height: 8,
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      SizedBox(
+                        height: 120,
+                        child: Container(
+                          color: Colors.blue,
                         ),
-                        SizedBox(
-                          height: 120,
-                          child: Container(
-                            color: Colors.blue,
-                          ),
-                        )
-                      ],
-                    ),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      SizedBox(
+                        height: 480,
+                        child: Container(
+                          color: Colors.blue,
+                        ),
+                      )
+                    ],
                   ),
                 ),
                 Container(
