@@ -79,10 +79,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                 Expanded(
                                   child: TextField(
                                     decoration: InputDecoration(
-                                      icon: Icon(Icons.search),
-                                      border: InputBorder.none,
-                                      hintText: "Search Here..."
-                                    ),
+                                        icon: Icon(Icons.search), border: InputBorder.none, hintText: "Search Here..."),
                                   ),
                                 ),
                                 CircleAvatar(
@@ -94,6 +91,22 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                             ),
                           ),
                         ),
+                        const Text(
+                          "Recent Activity",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        SizedBox(
+                          height: 120,
+                          child: Container(
+                            color: Colors.blue,
+                          ),
+                        )
                       ],
                     ),
                   ),
