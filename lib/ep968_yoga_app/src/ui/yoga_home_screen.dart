@@ -73,17 +73,24 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                           child: Container(
                             height: 54,
                             decoration: BoxDecoration(color: Colors.grey[300], borderRadius: BorderRadius.circular(32)),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  icon: Icon(Icons.search),
-                                  prefix: Container(
-                                    height: 42,
-                                    width: 42,
-                                    decoration: BoxDecoration(color: Colors.white),
-                                    child: Center(
-                                      child: Icon(Icons.tune),
-                                    ),
-                                  )),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                        icon: Icon(Icons.search),
+                                        ),
+                                  ),
+                                ),
+                                Container(
+                                  height: 42,
+                                  width: 42,
+                                  decoration: BoxDecoration(color: Colors.white),
+                                  child: Center(
+                                    child: Icon(Icons.tune),
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         ),
