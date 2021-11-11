@@ -199,7 +199,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                         Ionicons.bookmark,
                         color: index == 4 ? Colors.teal : Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
                       CircleAvatar(
