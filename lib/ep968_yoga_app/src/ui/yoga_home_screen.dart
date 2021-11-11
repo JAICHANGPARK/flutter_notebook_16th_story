@@ -23,7 +23,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
               index: count,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -90,31 +90,39 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                           ),
                         ),
                       ),
-                      const Text(
-                        "Recent Activity",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                      Expanded(
+                          child: SingleChildScrollView(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              "Recent Activity",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 8,
+                            ),
+                            SizedBox(
+                              height: 120,
+                              child: Container(
+                                color: Colors.blue,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 8,
+                            ),
+                            SizedBox(
+                              height: 480,
+                              child: Container(
+                                color: Colors.blue,
+                              ),
+                            )
+                          ],
                         ),
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                      SizedBox(
-                        height: 120,
-                        child: Container(
-                          color: Colors.blue,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                      SizedBox(
-                        height: 480,
-                        child: Container(
-                          color: Colors.blue,
-                        ),
-                      )
+                      )),
                     ],
                   ),
                 ),
