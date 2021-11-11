@@ -70,6 +70,26 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                     ),
                   ),
                 ),
+                Container(
+                  child: Center(
+                    child: Text("Hello 1"),
+                  ),
+                ),
+                Container(
+                  child: Center(
+                    child: Text("Hello 2"),
+                  ),
+                ),
+                Container(
+                  child: Center(
+                    child: Text("Hello 3"),
+                  ),
+                ),
+                Container(
+                  child: Center(
+                    child: Text("Hello 4"),
+                  ),
+                )
               ],
             );
           },
@@ -106,57 +126,77 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                       ],
                     ),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(
-                        Ionicons.apps,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      CircleAvatar(radius: 4, backgroundColor: Colors.black)
-                    ],
+                  GestureDetector(
+                    onTap: (){
+                      context.read<YogaBottomTabBlock>().setTabIndex(1);
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Ionicons.apps,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        CircleAvatar(radius: 4, backgroundColor: Colors.black)
+                      ],
+                    ),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(
-                        Ionicons.calendar,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      CircleAvatar(radius: 4, backgroundColor: Colors.black)
-                    ],
+                  GestureDetector(
+                    onTap: (){
+                      context.read<YogaBottomTabBlock>().setTabIndex(2);
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Ionicons.calendar,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        CircleAvatar(radius: 4, backgroundColor: Colors.black)
+                      ],
+                    ),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(
-                        Ionicons.bar_chart,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      CircleAvatar(radius: 4, backgroundColor: Colors.black)
-                    ],
+                  GestureDetector(
+                    onTap: (){
+                      context.read<YogaBottomTabBlock>().setTabIndex(3);
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Ionicons.bar_chart,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        CircleAvatar(radius: 4, backgroundColor: Colors.black)
+                      ],
+                    ),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(
-                        Ionicons.bookmark,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      CircleAvatar(radius: 4, backgroundColor: Colors.black)
-                    ],
+                  GestureDetector(
+                    onTap: (){
+                      context.read<YogaBottomTabBlock>().setTabIndex(4);
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Ionicons.bookmark,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        CircleAvatar(radius: 4, backgroundColor: Colors.black)
+                      ],
+                    ),
                   ),
                 ],
               ),
