@@ -85,21 +85,26 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(
-                        Ionicons.home,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      CircleAvatar(
-                        radius: 4,
-                        backgroundColor: Colors.teal,
-                      )
-                    ],
+                  GestureDetector(
+                    onTap: (){
+                      context.read<YogaBottomTabBlock>().setTabIndex(0);
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Ionicons.home,
+                          color: Colors.teal,
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        CircleAvatar(
+                          radius: 4,
+                          backgroundColor: Colors.teal,
+                        )
+                      ],
+                    ),
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
