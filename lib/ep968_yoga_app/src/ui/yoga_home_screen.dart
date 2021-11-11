@@ -81,6 +81,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                     decoration: InputDecoration(
                                       icon: Icon(Icons.search),
                                       border: InputBorder.none,
+                                      hintText: "Search Here..."
                                     ),
                                   ),
                                 ),
