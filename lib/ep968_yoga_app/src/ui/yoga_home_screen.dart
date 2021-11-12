@@ -425,6 +425,8 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                           ),
                                                           child: Center(
                                                             child: Container(
+                                                              height: 32,
+                                                              width: 100,
                                                               decoration: BoxDecoration(
                                                                 color: Colors.white,
                                                                 borderRadius: BorderRadius.circular(24)
