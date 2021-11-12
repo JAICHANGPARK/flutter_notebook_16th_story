@@ -416,8 +416,8 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                       bottom: 72,
                                                       child: Container(
                                                         padding: const EdgeInsets.all(4),
-                                                        decoration:
-                                                            const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+                                                        decoration: const BoxDecoration(
+                                                            shape: BoxShape.circle, color: Colors.white),
                                                         child: Container(
                                                           decoration: const BoxDecoration(
                                                             color: Colors.red,
@@ -428,18 +428,28 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                               height: 32,
                                                               width: 100,
                                                               decoration: BoxDecoration(
-                                                                color: Colors.white,
-                                                                borderRadius: BorderRadius.circular(24)
-                                                              ),
+                                                                  color: Colors.white,
+                                                                  borderRadius: BorderRadius.circular(24)),
                                                               child: const Center(
-
-                                                                child: Text("Beginner"),
+                                                                child: Text(
+                                                                  "Beginner",
+                                                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                                                ),
                                                               ),
                                                             ),
                                                           ),
                                                         ),
                                                       ),
                                                     ),
+                                                    const Positioned(
+                                                      child: CircleAvatar(
+                                                        radius: 14,
+                                                        backgroundColor: Colors.white,
+                                                        child: Icon(Icons.bookmark_outlined),
+                                                      ),
+                                                      left: 24,
+                                                      top: 100,
+                                                    )
                                                   ],
                                                 ),
                                               ),
