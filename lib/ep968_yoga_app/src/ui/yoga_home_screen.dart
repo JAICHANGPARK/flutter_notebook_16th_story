@@ -114,12 +114,18 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                         child: Stack(
                                       children: [
                                         Positioned(
+                                            top: 0,
+                                            bottom: 0,
                                             left: 0,
                                             right: 0,
-
-                                            child: Container(
-                                              height: 2,
-                                              color: Colors.grey,
+                                            child: Center(
+                                              child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 8),
+                                                child: Container(
+                                                  height: 2,
+                                                  color: Colors.grey,
+                                                ),
+                                              ),
                                             )),
                                         Positioned(
                                           left: 0,
@@ -128,7 +134,8 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                           top: 0,
                                           child: Row(
                                             children: [
-                                              Expanded(child: Padding(
+                                              Expanded(
+                                                  child: Padding(
                                                 padding: const EdgeInsets.symmetric(horizontal: 8),
                                                 child: Container(
                                                   height: 4,
