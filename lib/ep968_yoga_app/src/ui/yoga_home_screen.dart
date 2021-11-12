@@ -388,16 +388,34 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                             child: SizedBox(
                                               height: 200,
                                               child: Container(
-                                                decoration: BoxDecoration(color: Colors.blue),
+                                                decoration: const BoxDecoration(color: Colors.blue),
+                                                child: Stack(
+                                                  children: [
+                                                    const Positioned(
+                                                        left: 0,
+                                                        right: 0,
+                                                        top: 0,
+                                                        child: CircleAvatar(
+                                                          radius: 84,
+                                                          backgroundColor: Colors.lightBlue,
+                                                        )),
+                                                    Positioned(
+                                                        child: Container(
+                                                      decoration: const BoxDecoration(color: Colors.lightBlue),
+                                                    ))
+                                                  ],
+                                                ),
                                               ),
                                             ),
                                           ),
-                                          SizedBox(height: 12,),
+                                          const SizedBox(
+                                            width: 12,
+                                          ),
                                           Expanded(
                                             child: SizedBox(
                                               height: 200,
                                               child: Container(
-                                                decoration: BoxDecoration(color: Colors.blue),
+                                                decoration: const BoxDecoration(color: Colors.blue),
                                               ),
                                             ),
                                           )
