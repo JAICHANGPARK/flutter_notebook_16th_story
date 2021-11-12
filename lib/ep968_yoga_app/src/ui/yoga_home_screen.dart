@@ -400,6 +400,10 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                           backgroundColor: Colors.lightBlue,
                                                         )),
                                                     Positioned(
+                                                        left: 4,
+                                                        right: 4,
+                                                        top: 84,
+                                                        bottom: 0,
                                                         child: Container(
                                                       decoration: const BoxDecoration(color: Colors.lightBlue),
                                                     ))
