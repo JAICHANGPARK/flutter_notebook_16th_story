@@ -117,13 +117,13 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                             top: 0,
                                             bottom: 0,
                                             left: 0,
-                                            right: 24,
+                                            right: 32,
                                             child: Center(
                                               child: Padding(
                                                 padding: const EdgeInsets.symmetric(horizontal: 10),
                                                 child: Container(
                                                   height: 1,
-                                                  color: Colors.grey[500],
+                                                  color: Colors.grey[300],
                                                 ),
                                               ),
                                             )),
@@ -179,13 +179,13 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                 top: 0,
                                                 bottom: 0,
                                                 left: 0,
-                                                right: 24,
+                                                right: 32,
                                                 child: Center(
                                                   child: Padding(
                                                     padding: const EdgeInsets.symmetric(horizontal: 10),
                                                     child: Container(
                                                       height: 1,
-                                                      color: Colors.grey[500],
+                                                      color: Colors.grey[300],
                                                     ),
                                                   ),
                                                 )),
@@ -242,13 +242,13 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                 top: 0,
                                                 bottom: 0,
                                                 left: 0,
-                                                right: 24,
+                                                right: 32,
                                                 child: Center(
                                                   child: Padding(
                                                     padding: const EdgeInsets.symmetric(horizontal: 10),
                                                     child: Container(
                                                       height: 1,
-                                                      color: Colors.grey[500],
+                                                      color: Colors.grey[300],
                                                     ),
                                                   ),
                                                 )),
