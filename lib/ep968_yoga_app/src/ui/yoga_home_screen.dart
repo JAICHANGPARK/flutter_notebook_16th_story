@@ -114,7 +114,15 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                     Expanded(
                                         child: Stack(
                                       children: [
-                                        Positioned(child: Placeholder()),
+                                        Positioned(
+                                            left: 0,
+                                            right: 0,
+                                            bottom: 0,
+                                            top: 0,
+                                            child: Container(
+                                              height: 2,
+                                              color: Colors.grey,
+                                            )),
                                         Positioned(
                                           left: 0,
                                           right: 0,
@@ -122,7 +130,13 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                           top: 0,
                                           child: Row(
                                             children: [
-                                              Expanded(child: Placeholder()),
+                                              Expanded(child: Container(
+                                                height: 4,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.teal,
+                                                  borderRadius: BorderRadius.circular(4),
+                                                ),
+                                              )),
                                               Expanded(child: Placeholder()),
                                               Expanded(child: Placeholder()),
                                               Expanded(child: Placeholder()),
