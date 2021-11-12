@@ -109,6 +109,13 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                               height: 120,
                               child: Container(
                                 color: Colors.blue,
+                                child: Column(
+                                  children: [
+                                    Expanded(child: Placeholder()),
+                                    Expanded(child: Placeholder()),
+                                    Expanded(child: Placeholder()),
+                                  ],
+                                ),
                               ),
                             ),
                             const SizedBox(
