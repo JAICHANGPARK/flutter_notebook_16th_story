@@ -111,9 +111,27 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                 color: Colors.blue,
                                 child: Column(
                                   children: [
-                                    Expanded(child: Row(
+                                    Expanded(
+                                        child: Stack(
                                       children: [
-                                        
+                                        Positioned(child: Placeholder()),
+                                        Positioned(
+                                          left: 0,
+                                          right: 0,
+                                          bottom: 0,
+                                          top: 0,
+                                          child: Row(
+                                            children: [
+                                              Expanded(child: Placeholder()),
+                                              Expanded(child: Placeholder()),
+                                              Expanded(child: Placeholder()),
+                                              Expanded(child: Placeholder()),
+                                              Expanded(child: Placeholder()),
+                                              Expanded(child: Placeholder()),
+                                              Expanded(child: Placeholder()),
+                                            ],
+                                          ),
+                                        ),
                                       ],
                                     )),
                                     Expanded(child: Placeholder()),
