@@ -108,7 +108,6 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                             SizedBox(
                               height: 120,
                               child: Container(
-                                color: Colors.blue,
                                 child: Column(
                                   children: [
                                     Expanded(
@@ -117,8 +116,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                         Positioned(
                                             left: 0,
                                             right: 0,
-                                            bottom: 0,
-                                            top: 0,
+
                                             child: Container(
                                               height: 2,
                                               color: Colors.grey,
@@ -130,11 +128,14 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                           top: 0,
                                           child: Row(
                                             children: [
-                                              Expanded(child: Container(
-                                                height: 4,
-                                                decoration: BoxDecoration(
-                                                  color: Colors.teal,
-                                                  borderRadius: BorderRadius.circular(4),
+                                              Expanded(child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 8),
+                                                child: Container(
+                                                  height: 4,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.teal,
+                                                    borderRadius: BorderRadius.circular(4),
+                                                  ),
                                                 ),
                                               )),
                                               Expanded(child: Placeholder()),
