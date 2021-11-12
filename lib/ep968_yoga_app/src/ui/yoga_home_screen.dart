@@ -386,7 +386,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                         children: [
                                           Expanded(
                                             child: SizedBox(
-                                              height: 200,
+                                              height: 210,
                                               child: Container(
                                                 // decoration: const BoxDecoration(color: Colors.blue),
                                                 child: Stack(
@@ -405,10 +405,27 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                         top: 84,
                                                         bottom: 0,
                                                         child: Container(
-                                                          decoration:  BoxDecoration(
+                                                          decoration: BoxDecoration(
                                                               borderRadius: BorderRadius.circular(16),
                                                               color: Colors.lightBlue),
-                                                        ))
+                                                        )),
+                                                    Positioned(
+                                                      left: 8,
+                                                      right: 8,
+                                                      top: 8,
+                                                      bottom: 72,
+                                                      child: Container(
+                                                        padding: EdgeInsets.all(4),
+                                                        decoration:
+                                                            BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+                                                        child: Container(
+                                                          decoration: BoxDecoration(
+                                                            color: Colors.red,
+                                                            shape: BoxShape.circle,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
                                                   ],
                                                 ),
                                               ),
