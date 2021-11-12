@@ -161,8 +161,8 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                 ),
                                               )),
                                               Expanded(child: Container()),
-                                              Expanded(
-                                                  child: const Center(
+                                              const Expanded(
+                                                  child: Center(
                                                       child: Text(
                                                 "40",
                                                 style: TextStyle(fontWeight: FontWeight.bold),
@@ -174,204 +174,201 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                     )),
                                     Expanded(
                                         child: Stack(
-                                          children: [
-                                            Positioned(
-                                                top: 0,
-                                                bottom: 0,
-                                                left: 0,
-                                                right: 32,
-                                                child: Center(
-                                                  child: Padding(
-                                                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                                                    child: Container(
-                                                      height: 1,
-                                                      color: Colors.grey[300],
-                                                    ),
-                                                  ),
-                                                )),
-                                            Positioned(
-                                              left: 0,
-                                              right: 0,
-                                              bottom: 0,
-                                              top: 0,
-                                              child: Row(
-                                                children: [
-                                                  Expanded(child: Container()),
-                                                  Expanded(child: Container()),
-                                                  Expanded(
-                                                      child: Padding(
-                                                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                                                        child: Container(
-                                                          height: 6,
-                                                          decoration: BoxDecoration(
-                                                            color: Colors.teal,
-                                                            borderRadius: BorderRadius.circular(4),
-                                                          ),
-                                                        ),
-                                                      )),
-                                                  Expanded(child: Container()),
-                                                  Expanded(child: Container()),
-
-                                                  Expanded(child: Container()),
-                                                  Expanded(
-                                                      child: Padding(
-                                                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                                                        child: Container(
-                                                          height: 6,
-                                                          decoration: BoxDecoration(
-                                                            color: Colors.teal,
-                                                            borderRadius: BorderRadius.circular(4),
-                                                          ),
-                                                        ),
-                                                      )),
-                                                  Expanded(
-                                                      child: const Center(
-                                                          child: Text(
-                                                            "",
-                                                            style: TextStyle(fontWeight: FontWeight.bold),
-                                                          ))),
-                                                ],
+                                      children: [
+                                        Positioned(
+                                            top: 0,
+                                            bottom: 0,
+                                            left: 0,
+                                            right: 32,
+                                            child: Center(
+                                              child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                                child: Container(
+                                                  height: 1,
+                                                  color: Colors.grey[300],
+                                                ),
                                               ),
-                                            ),
-                                          ],
-                                        )),
+                                            )),
+                                        Positioned(
+                                          left: 0,
+                                          right: 0,
+                                          bottom: 0,
+                                          top: 0,
+                                          child: Row(
+                                            children: [
+                                              Expanded(child: Container()),
+                                              Expanded(child: Container()),
+                                              Expanded(
+                                                  child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                                child: Container(
+                                                  height: 6,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.teal,
+                                                    borderRadius: BorderRadius.circular(4),
+                                                  ),
+                                                ),
+                                              )),
+                                              Expanded(child: Container()),
+                                              Expanded(child: Container()),
+                                              Expanded(child: Container()),
+                                              Expanded(
+                                                  child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                                child: Container(
+                                                  height: 6,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.teal,
+                                                    borderRadius: BorderRadius.circular(4),
+                                                  ),
+                                                ),
+                                              )),
+                                              const Expanded(
+                                                  child: Center(
+                                                      child: Text(
+                                                "",
+                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                              ))),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    )),
                                     Expanded(
                                         child: Stack(
-                                          children: [
-                                            Positioned(
-                                                top: 0,
-                                                bottom: 0,
-                                                left: 0,
-                                                right: 32,
-                                                child: Center(
-                                                  child: Padding(
-                                                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                                                    child: Container(
-                                                      height: 1,
-                                                      color: Colors.grey[300],
-                                                    ),
-                                                  ),
-                                                )),
-                                            Positioned(
-                                              left: 0,
-                                              right: 0,
-                                              bottom: 0,
-                                              top: 0,
-                                              child: Row(
-                                                children: [
-
-                                                  Expanded(child: Container()),
-                                                  Expanded(
-                                                      child: Padding(
-                                                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                                                        child: Container(
-                                                          height: 6,
-                                                          decoration: BoxDecoration(
-                                                            color: Colors.teal,
-                                                            borderRadius: BorderRadius.circular(4),
-                                                          ),
-                                                        ),
-                                                      )),
-                                                  Expanded(child: Container()),
-                                                  Expanded(
-                                                      child: Padding(
-                                                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                                                        child: Container(
-                                                          height: 6,
-                                                          decoration: BoxDecoration(
-                                                            color: Colors.teal,
-                                                            borderRadius: BorderRadius.circular(4),
-                                                          ),
-                                                        ),
-                                                      )),
-                                                  Expanded(child: Container()),
-                                                  Expanded(
-                                                      child: Padding(
-                                                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                                                        child: Container(
-                                                          height: 6,
-                                                          decoration: BoxDecoration(
-                                                            color: Colors.teal,
-                                                            borderRadius: BorderRadius.circular(4),
-                                                          ),
-                                                        ),
-                                                      )),
-                                                  Expanded(child: Container()),
-                                                  Expanded(
-                                                      child: const Center(
-                                                          child: Text(
-                                                            "20",
-                                                            style: TextStyle(fontWeight: FontWeight.bold),
-                                                          ))),
-                                                ],
+                                      children: [
+                                        Positioned(
+                                            top: 0,
+                                            bottom: 0,
+                                            left: 0,
+                                            right: 32,
+                                            child: Center(
+                                              child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                                child: Container(
+                                                  height: 1,
+                                                  color: Colors.grey[300],
+                                                ),
                                               ),
-                                            ),
-                                          ],
-                                        )),
+                                            )),
+                                        Positioned(
+                                          left: 0,
+                                          right: 0,
+                                          bottom: 0,
+                                          top: 0,
+                                          child: Row(
+                                            children: [
+                                              Expanded(child: Container()),
+                                              Expanded(
+                                                  child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                                child: Container(
+                                                  height: 6,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.teal,
+                                                    borderRadius: BorderRadius.circular(4),
+                                                  ),
+                                                ),
+                                              )),
+                                              Expanded(child: Container()),
+                                              Expanded(
+                                                  child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                                child: Container(
+                                                  height: 6,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.teal,
+                                                    borderRadius: BorderRadius.circular(4),
+                                                  ),
+                                                ),
+                                              )),
+                                              Expanded(child: Container()),
+                                              Expanded(
+                                                  child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                                child: Container(
+                                                  height: 6,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.teal,
+                                                    borderRadius: BorderRadius.circular(4),
+                                                  ),
+                                                ),
+                                              )),
+                                              Expanded(child: Container()),
+                                              const Expanded(
+                                                  child: Center(
+                                                      child: Text(
+                                                "20",
+                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                              ))),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    )),
                                     Expanded(
                                         child: Stack(
-                                          children: [
-
-                                            Positioned(
-                                              left: 0,
-                                              right: 0,
-                                              bottom: 0,
-                                              top: 0,
-                                              child: Row(
-                                                children: [
-                                                  Expanded(
-                                                      child: const Center(
-                                                          child: Text(
-                                                            "S",
-                                                            style: TextStyle(fontWeight: FontWeight.bold),
-                                                          ))),
-                                                  Expanded(
-                                                      child: const Center(
-                                                          child: Text(
-                                                            "M",
-                                                            style: TextStyle(fontWeight: FontWeight.bold),
-                                                          ))),
-                                                  Expanded(
-                                                      child: const Center(
-                                                          child: Text(
-                                                            "T",
-                                                            style: TextStyle(fontWeight: FontWeight.bold),
-                                                          ))),
-                                                  Expanded(
-                                                      child: const Center(
-                                                          child: Text(
-                                                            "W",
-                                                            style: TextStyle(fontWeight: FontWeight.bold),
-                                                          ))),
-                                                  Expanded(
-                                                      child: const Center(
-                                                          child: Text(
-                                                            "T",
-                                                            style: TextStyle(fontWeight: FontWeight.bold),
-                                                          ))),
-                                                  Expanded(
-                                                      child: const Center(
-                                                          child: Text(
-                                                            "F",
-                                                            style: TextStyle(fontWeight: FontWeight.bold),
-                                                          ))),
-                                                  Expanded(
-                                                      child: const Center(
-                                                          child: Text(
-                                                            "S",
-                                                            style: TextStyle(fontWeight: FontWeight.bold),
-                                                          ))),
-                                                  Expanded(
-                                                      child: const Center(
-                                                          child: Text(
-                                                            "Min",
-                                                            style: TextStyle(fontWeight: FontWeight.bold),
-                                                          ))),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        )),
+                                      children: [
+                                        Positioned(
+                                          left: 0,
+                                          right: 0,
+                                          bottom: 0,
+                                          top: 0,
+                                          child: Row(
+                                            children: const [
+                                              Expanded(
+                                                  child: Center(
+                                                      child: Text(
+                                                "S",
+                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                              ))),
+                                              Expanded(
+                                                  child: Center(
+                                                      child: Text(
+                                                "M",
+                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                              ))),
+                                              Expanded(
+                                                  child: Center(
+                                                      child: Text(
+                                                "T",
+                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                              ))),
+                                              Expanded(
+                                                  child: Center(
+                                                      child: Text(
+                                                "W",
+                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                              ))),
+                                              Expanded(
+                                                  child: Center(
+                                                      child: Text(
+                                                "T",
+                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                              ))),
+                                              Expanded(
+                                                  child: Center(
+                                                      child: Text(
+                                                "F",
+                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                              ))),
+                                              Expanded(
+                                                  child: Center(
+                                                      child: Text(
+                                                "S",
+                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                              ))),
+                                              Expanded(
+                                                  child: Center(
+                                                      child: Text(
+                                                "Min",
+                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                              ))),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    )),
                                   ],
                                 ),
                               ),
@@ -382,7 +379,33 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                             SizedBox(
                               height: 480,
                               child: Container(
-                                color: Colors.blue,
+                                child: SingleChildScrollView(
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Expanded(
+                                            child: SizedBox(
+                                              height: 200,
+                                              child: Container(
+                                                decoration: BoxDecoration(color: Colors.blue),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(height: 12,),
+                                          Expanded(
+                                            child: SizedBox(
+                                              height: 200,
+                                              child: Container(
+                                                decoration: BoxDecoration(color: Colors.blue),
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
                               ),
                             )
                           ],
