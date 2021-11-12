@@ -402,7 +402,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                     Positioned(
                                                         left: 3,
                                                         right: 3,
-                                                        top: 84,
+                                                        top: 72,
                                                         bottom: 0,
                                                         child: Container(
                                                           decoration: BoxDecoration(
@@ -415,13 +415,25 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                       top: 8,
                                                       bottom: 72,
                                                       child: Container(
-                                                        padding: EdgeInsets.all(4),
+                                                        padding: const EdgeInsets.all(4),
                                                         decoration:
-                                                            BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+                                                            const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
                                                         child: Container(
-                                                          decoration: BoxDecoration(
+                                                          decoration: const BoxDecoration(
                                                             color: Colors.red,
                                                             shape: BoxShape.circle,
+                                                          ),
+                                                          child: Center(
+                                                            child: Container(
+                                                              decoration: BoxDecoration(
+                                                                color: Colors.white,
+                                                                borderRadius: BorderRadius.circular(24)
+                                                              ),
+                                                              child: const Center(
+
+                                                                child: Text("Beginner"),
+                                                              ),
+                                                            ),
                                                           ),
                                                         ),
                                                       ),
