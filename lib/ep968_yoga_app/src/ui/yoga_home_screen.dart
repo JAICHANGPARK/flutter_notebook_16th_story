@@ -322,49 +322,49 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                   Expanded(
                                                       child: const Center(
                                                           child: Text(
-                                                            "20",
+                                                            "S",
                                                             style: TextStyle(fontWeight: FontWeight.bold),
                                                           ))),
                                                   Expanded(
                                                       child: const Center(
                                                           child: Text(
-                                                            "20",
+                                                            "M",
                                                             style: TextStyle(fontWeight: FontWeight.bold),
                                                           ))),
                                                   Expanded(
                                                       child: const Center(
                                                           child: Text(
-                                                            "20",
+                                                            "T",
                                                             style: TextStyle(fontWeight: FontWeight.bold),
                                                           ))),
                                                   Expanded(
                                                       child: const Center(
                                                           child: Text(
-                                                            "20",
+                                                            "W",
                                                             style: TextStyle(fontWeight: FontWeight.bold),
                                                           ))),
                                                   Expanded(
                                                       child: const Center(
                                                           child: Text(
-                                                            "20",
+                                                            "T",
                                                             style: TextStyle(fontWeight: FontWeight.bold),
                                                           ))),
                                                   Expanded(
                                                       child: const Center(
                                                           child: Text(
-                                                            "20",
+                                                            "F",
                                                             style: TextStyle(fontWeight: FontWeight.bold),
                                                           ))),
                                                   Expanded(
                                                       child: const Center(
                                                           child: Text(
-                                                            "20",
+                                                            "S",
                                                             style: TextStyle(fontWeight: FontWeight.bold),
                                                           ))),
                                                   Expanded(
                                                       child: const Center(
                                                           child: Text(
-                                                            "40",
+                                                            "Min",
                                                             style: TextStyle(fontWeight: FontWeight.bold),
                                                           ))),
                                                 ],
