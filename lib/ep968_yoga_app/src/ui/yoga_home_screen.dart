@@ -120,7 +120,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                             right: 24,
                                             child: Center(
                                               child: Padding(
-                                                padding: const EdgeInsets.symmetric(horizontal: 12),
+                                                padding: const EdgeInsets.symmetric(horizontal: 10),
                                                 child: Container(
                                                   height: 2,
                                                   color: Colors.grey,
@@ -136,11 +136,11 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                             children: [
                                               Expanded(
                                                   child: Padding(
-                                                padding: const EdgeInsets.symmetric(horizontal: 12),
+                                                padding: const EdgeInsets.symmetric(horizontal: 10),
                                                 child: Container(
                                                   height: 6,
                                                   decoration: BoxDecoration(
-                                                    color: Colors.green,
+                                                    color: Colors.teal,
                                                     borderRadius: BorderRadius.circular(4),
                                                   ),
                                                 ),
@@ -151,17 +151,22 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                               Expanded(child: Container()),
                                               Expanded(
                                                   child: Padding(
-                                                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                                                    child: Container(
-                                                      height: 6,
-                                                      decoration: BoxDecoration(
-                                                        color: Colors.green,
-                                                        borderRadius: BorderRadius.circular(4),
-                                                      ),
-                                                    ),
-                                                  )),
+                                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                                child: Container(
+                                                  height: 6,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.teal,
+                                                    borderRadius: BorderRadius.circular(4),
+                                                  ),
+                                                ),
+                                              )),
                                               Expanded(child: Container()),
-                                              Expanded(child: Center(child: Text("40"))),
+                                              Expanded(
+                                                  child: const Center(
+                                                      child: Text(
+                                                "40",
+                                                style: TextStyle(fontWeight: FontWeight.bold),
+                                              ))),
                                             ],
                                           ),
                                         ),
