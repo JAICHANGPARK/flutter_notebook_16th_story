@@ -467,7 +467,97 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                             ),
                                           )
                                         ],
-                                      )
+                                      ),
+
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(vertical: 8),
+                                        child: Row(
+                                          children: [
+                                            Expanded(
+                                              child: SizedBox(
+                                                height: 210,
+                                                child: Container(
+                                                  // decoration: const BoxDecoration(color: Colors.blue),
+                                                  child: Stack(
+                                                    children: [
+                                                      const Positioned(
+                                                          left: 0,
+                                                          right: 0,
+                                                          top: 0,
+                                                          child: CircleAvatar(
+                                                            radius: 84,
+                                                            backgroundColor: Colors.lightBlue,
+                                                          )),
+                                                      Positioned(
+                                                          left: 3,
+                                                          right: 3,
+                                                          top: 72,
+                                                          bottom: 0,
+                                                          child: Container(
+                                                            decoration: BoxDecoration(
+                                                                borderRadius: BorderRadius.circular(16),
+                                                                color: Colors.lightBlue),
+                                                          )),
+                                                      Positioned(
+                                                        left: 8,
+                                                        right: 8,
+                                                        top: 8,
+                                                        bottom: 72,
+                                                        child: Container(
+                                                          padding: const EdgeInsets.all(4),
+                                                          decoration: const BoxDecoration(
+                                                              shape: BoxShape.circle, color: Colors.white),
+                                                          child: Container(
+                                                            decoration: const BoxDecoration(
+                                                              color: Colors.red,
+                                                              shape: BoxShape.circle,
+                                                            ),
+                                                            child: Center(
+                                                              child: Container(
+                                                                height: 32,
+                                                                width: 100,
+                                                                decoration: BoxDecoration(
+                                                                    color: Colors.white,
+                                                                    borderRadius: BorderRadius.circular(24)),
+                                                                child: const Center(
+                                                                  child: Text(
+                                                                    "Beginner",
+                                                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      const Positioned(
+                                                        child: CircleAvatar(
+                                                          radius: 14,
+                                                          backgroundColor: Colors.white,
+                                                          child: Icon(Icons.bookmark_outlined),
+                                                        ),
+                                                        left: 24,
+                                                        top: 100,
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              width: 12,
+                                            ),
+                                            Expanded(
+                                              child: SizedBox(
+                                                height: 200,
+                                                child: Container(
+                                                  decoration: const BoxDecoration(color: Colors.blue),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
