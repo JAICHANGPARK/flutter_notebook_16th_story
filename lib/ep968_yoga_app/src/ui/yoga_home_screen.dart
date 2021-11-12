@@ -388,7 +388,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                             child: SizedBox(
                                               height: 200,
                                               child: Container(
-                                                decoration: const BoxDecoration(color: Colors.blue),
+                                                // decoration: const BoxDecoration(color: Colors.blue),
                                                 child: Stack(
                                                   children: [
                                                     const Positioned(
@@ -400,13 +400,15 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                                           backgroundColor: Colors.lightBlue,
                                                         )),
                                                     Positioned(
-                                                        left: 4,
-                                                        right: 4,
+                                                        left: 3,
+                                                        right: 3,
                                                         top: 84,
                                                         bottom: 0,
                                                         child: Container(
-                                                      decoration: const BoxDecoration(color: Colors.lightBlue),
-                                                    ))
+                                                          decoration:  BoxDecoration(
+                                                              borderRadius: BorderRadius.circular(16),
+                                                              color: Colors.lightBlue),
+                                                        ))
                                                   ],
                                                 ),
                                               ),
