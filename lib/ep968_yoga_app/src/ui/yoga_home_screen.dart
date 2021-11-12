@@ -136,20 +136,30 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                             children: [
                                               Expanded(
                                                   child: Padding(
-                                                padding: const EdgeInsets.symmetric(horizontal: 8),
+                                                padding: const EdgeInsets.symmetric(horizontal: 12),
                                                 child: Container(
-                                                  height: 4,
+                                                  height: 6,
                                                   decoration: BoxDecoration(
-                                                    color: Colors.teal,
+                                                    color: Colors.green,
                                                     borderRadius: BorderRadius.circular(4),
                                                   ),
                                                 ),
                                               )),
-                                              Expanded(child: Placeholder()),
-                                              Expanded(child: Placeholder()),
-                                              Expanded(child: Placeholder()),
-                                              Expanded(child: Placeholder()),
-                                              Expanded(child: Placeholder()),
+                                              Expanded(child: Container()),
+                                              Expanded(child: Container()),
+                                              Expanded(child: Container()),
+                                              Expanded(
+                                                  child: Padding(
+                                                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                                                    child: Container(
+                                                      height: 6,
+                                                      decoration: BoxDecoration(
+                                                        color: Colors.green,
+                                                        borderRadius: BorderRadius.circular(4),
+                                                      ),
+                                                    ),
+                                                  )),
+                                              Expanded(child: Container()),
                                               Expanded(child: Placeholder()),
                                             ],
                                           ),
