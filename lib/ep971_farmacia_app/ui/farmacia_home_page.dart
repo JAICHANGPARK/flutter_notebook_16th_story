@@ -20,10 +20,10 @@ class FarmaciaHomePage extends StatelessWidget {
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Flexible(
+                    controller.bottomTabIndex == 0 ? Flexible(
                         child: GestureDetector(
                           onTap: () {
-                            farmaciaScreenController.setBottomTabIndex(0);
+                            controller.setBottomTabIndex(0);
                           },
                           child: Container(
                             width: 100,
@@ -50,6 +50,13 @@ class FarmaciaHomePage extends StatelessWidget {
                               ],
                             ),
                           ),
+                        )) :
+                    IconButton(
+                        onPressed: () {
+                          controller.setBottomTabIndex(0);
+                        },
+                        icon: const Icon(
+                          Icons.apps,
                         )),
                     IconButton(
                         onPressed: () {},
