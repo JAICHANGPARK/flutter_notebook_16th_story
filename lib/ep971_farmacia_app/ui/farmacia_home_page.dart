@@ -15,19 +15,33 @@ class FarmaciaHomePage extends StatelessWidget {
         builder: (controller){
           switch(controller.bottomTabIndex){
             case 0:
-              return Container(
-                child: Center(
-                  child: Text("Page1"),
-                ),
+              return const Center(
+                child: Text("Page 1"),
               );
             case 1:
-              return Container();
+              return const Center(
+                child: Text("Page 2"),
+              );
+            case 2:
+              return const Center(
+                child: Text("Page 3"),
+              );
+            case 3:
+              return const Center(
+                child: Text("Page 4"),
+              );
+            case 4:
+              return const Center(
+                child: Text("Page 5"),
+              );
             default:
-              return Container();
+              return const Center(
+                child: Text("Page Default"),
+              );
           }
         },
       ),
-      bottomNavigationBar: FarmaciaHomeBottomTabBar(),
+      bottomNavigationBar: const FarmaciaHomeBottomTabBar(),
     );
   }
 }
