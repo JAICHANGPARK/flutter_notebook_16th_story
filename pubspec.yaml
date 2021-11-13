@@ -26,6 +26,7 @@ dependencies:
   equatable: ^2.0.3
 
   flutter_bloc: any
+  cached_network_image: any
 
 dev_dependencies:
   flutter_test:
