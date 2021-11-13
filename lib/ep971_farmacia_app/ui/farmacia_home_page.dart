@@ -17,31 +17,31 @@ class FarmaciaHomePage extends StatelessWidget {
                 Flexible(
                     child: Container(
                       width: 100,
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(color: Colors.black,
                   borderRadius: BorderRadius.circular(4)),
                   child: Row(
-                    children: [Icon(Icons.apps), Text("Home")],
+                    children: [const Icon(Icons.apps), const Text("Home")],
                   ),
                 )),
                 IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.shopping_cart_outlined,
                     )),
                 IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.search,
                     )),
                 IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.bookmark_border,
                     )),
                 IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.account_circle_outlined,
                     )),
 
