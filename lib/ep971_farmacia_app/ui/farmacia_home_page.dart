@@ -10,45 +10,70 @@ class FarmaciaHomePage extends StatelessWidget {
     final FarmaciaScreenController farmaciaScreenController = Get.put(FarmaciaScreenController());
     return Scaffold(
       bottomNavigationBar: BottomAppBar(
-        child: Container(
+        elevation: 5,
+        child: SizedBox(
           height: 72,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Flexible(
-                    child: Container(
-                      width: 100,
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  decoration: BoxDecoration(color: Colors.black,
-                  borderRadius: BorderRadius.circular(4)),
-                  child: Row(
-                    children: [const Icon(Icons.apps), const Text("Home")],
-                  ),
-                )),
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.shopping_cart_outlined,
-                    )),
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.search,
-                    )),
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.bookmark_border,
-                    )),
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.account_circle_outlined,
-                    )),
-
-              ],
+            child: GetBuilder<FarmaciaScreenController>(
+              builder: ( controller) {
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(
+                        child: GestureDetector(
+                          onTap: () {
+                            farmaciaScreenController.setBottomTabIndex(0);
+                          },
+                          child: Container(
+                            width: 100,
+                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Row(
+                              children: const [
+                                Icon(
+                                  Icons.apps,
+                                  color: Colors.white,
+                                ),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text(
+                                  "Home",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        )),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.shopping_cart_outlined,
+                        )),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.search,
+                        )),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.bookmark_border,
+                        )),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.account_circle_outlined,
+                        )),
+                  ],
+                );
+              },
             ),
           ),
         ),
