@@ -470,7 +470,7 @@ class _YogaHomeScreenState extends State<YogaHomeScreen> {
                                       ),
 
                                       Padding(
-                                        padding: const EdgeInsets.symmetric(vertical: 8),
+                                        padding: const EdgeInsets.symmetric(vertical:12),
                                         child: Row(
                                           children: [
                                             Expanded(
