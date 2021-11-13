@@ -58,11 +58,43 @@ class FarmaciaHomePage extends StatelessWidget {
                         icon: const Icon(
                           Icons.apps,
                         )),
+                    controller.bottomTabIndex == 1 ? Flexible(
+                        child: GestureDetector(
+                          onTap: () {
+                            controller.setBottomTabIndex(1);
+                          },
+                          child: Container(
+                            width: 100,
+                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Row(
+                              children: const [
+                                Icon(
+                                  Icons.shopping_cart_outlined,
+                                  color: Colors.white,
+                                ),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text(
+                                  "Cart",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        )) :
                     IconButton(
-                        onPressed: () {},
+                        onPressed: () { controller.setBottomTabIndex(1);},
                         icon: const Icon(
                           Icons.shopping_cart_outlined,
                         )),
+
                     IconButton(
                         onPressed: () {},
                         icon: const Icon(
