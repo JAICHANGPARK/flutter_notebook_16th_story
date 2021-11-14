@@ -10,10 +10,13 @@ class FarmaciaHomeScreen extends StatelessWidget {
       children: [
         Row(
           children: [
-            CircleAvatar(),
+            CircleAvatar(
+              radius: 24,
+            ),
             Column(
               children: [
-                
+                Text("Hello, Dream!"),
+                Text("What are you looking for today?")
               ],
             )
           ],
