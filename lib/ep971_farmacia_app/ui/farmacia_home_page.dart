@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep971_farmacia_app/controller/farmacia_home_controller.dart';
 import 'package:get/get.dart';
 
+import 'farmacia_home_screen.dart';
 import 'framacia_home_bottom_tab_bar.dart';
 
 class FarmaciaHomePage extends StatelessWidget {
@@ -15,9 +16,7 @@ class FarmaciaHomePage extends StatelessWidget {
         builder: (controller){
           switch(controller.bottomTabIndex){
             case 0:
-              return const Center(
-                child: Text("Page 1"),
-              );
+              return FarmaciaHomeScreen();
             case 1:
               return const Center(
                 child: Text("Page 2"),
