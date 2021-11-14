@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class FarmaciaHomeScreen extends StatelessWidget {
   const FarmaciaHomeScreen({Key? key}) : super(key: key);
 
@@ -20,15 +19,28 @@ class FarmaciaHomeScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Hello, Dream!"),
+                    Text(
+                      "Hello, Dream!",
+                      style: TextStyle(fontWeight: FontWeight.bold,
+                      fontSize: 16),
+                    ),
                     Text("What are you looking for today?")
                   ],
                 ),
+              ),
+              Container(
+                height: 32,
+                width: 32,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(4),
+
+                ),
+                child: Icon(Icons.qr_code_scanner_outlined,color: Colors.white,),
               )
             ],
           ),
         )
-
       ],
     );
   }
