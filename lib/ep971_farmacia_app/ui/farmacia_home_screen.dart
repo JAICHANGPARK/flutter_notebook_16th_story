@@ -15,12 +15,15 @@ class FarmaciaHomeScreen extends StatelessWidget {
               CircleAvatar(
                 radius: 24,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Hello, Dream!"),
-                  Text("What are you looking for today?")
-                ],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Hello, Dream!"),
+                    Text("What are you looking for today?")
+                  ],
+                ),
               )
             ],
           ),
