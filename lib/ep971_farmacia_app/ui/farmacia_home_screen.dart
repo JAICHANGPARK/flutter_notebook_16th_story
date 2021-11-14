@@ -78,8 +78,8 @@ class FarmaciaHomeScreen extends StatelessWidget {
                       height: 42,
                       child: GetBuilder<FarmaciaHomeCategoriesController>(
                         init: FarmaciaHomeCategoriesController(),
-                        builder: (controller){
-                          return  ListView(
+                        builder: (controller) {
+                          return ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
                               Padding(
@@ -93,11 +93,10 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                     decoration: BoxDecoration(
                                         color: controller.index == 0 ? Colors.black : Colors.grey[200],
                                         borderRadius: BorderRadius.circular(4)),
-                                    child:  Center(
+                                    child: Center(
                                       child: Text(
                                         "First aid kit",
-                                        style: TextStyle(
-                                            color: controller.index == 0 ? Colors.white : Colors.grey),
+                                        style: TextStyle(color: controller.index == 0 ? Colors.white : Colors.grey),
                                       ),
                                     ),
                                   ),
@@ -111,12 +110,14 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                   },
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 16),
-                                    decoration:
-                                    BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
-                                    child: const Center(
+                                    decoration: BoxDecoration(
+                                      color: controller.index == 1 ? Colors.black : Colors.grey[200],
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: Center(
                                       child: Text(
                                         "Cosmetics",
-                                        style: TextStyle(color: Colors.grey),
+                                        style: TextStyle(color: controller.index == 1 ? Colors.white : Colors.grey),
                                       ),
                                     ),
                                   ),
@@ -127,7 +128,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 16),
                                   decoration:
-                                  BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
+                                      BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
                                   child: const Center(
                                     child: Text(
                                       "Hygiene",
@@ -141,7 +142,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 16),
                                   decoration:
-                                  BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
+                                      BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
                                   child: const Center(
                                     child: Text(
                                       "Others",
@@ -155,7 +156,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 16),
                                   decoration:
-                                  BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
+                                      BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
                                   child: const Center(
                                     child: Text(
                                       "Cosmetics",
@@ -167,7 +168,6 @@ class FarmaciaHomeScreen extends StatelessWidget {
                             ],
                           );
                         },
-
                       ),
                     ),
                   )
