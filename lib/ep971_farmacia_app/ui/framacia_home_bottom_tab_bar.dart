@@ -7,6 +7,7 @@ class FarmaciaHomeBottomTabBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("Build FarmaciaHomeBottomTabBar()");
     return BottomAppBar(
       elevation: 5,
       child: SizedBox(
