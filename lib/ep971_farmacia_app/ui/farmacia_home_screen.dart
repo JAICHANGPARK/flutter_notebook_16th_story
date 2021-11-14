@@ -66,7 +66,29 @@ class FarmaciaHomeScreen extends StatelessWidget {
               child: TabBarView(
             children: [
               Column(
-                children: [],
+                children: [
+                  SizedBox(
+                    height: 42,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 16),
+                          decoration:  BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(4)
+                          ),
+                          child: Center(
+                            child: const Text("First aid kit",
+                            style: const TextStyle(
+                              color: Colors.white
+                            ),),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
               ),
               Container(),
               Container(),
