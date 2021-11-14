@@ -65,7 +65,9 @@ class FarmaciaHomeScreen extends StatelessWidget {
           Expanded(
               child: TabBarView(
             children: [
-              Container(),
+              Column(
+                children: [],
+              ),
               Container(),
               Container(),
             ],
