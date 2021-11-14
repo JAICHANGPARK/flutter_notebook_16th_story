@@ -23,8 +23,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                     children: const [
                       Text(
                         "Hello, Dream!",
-                        style: TextStyle(fontWeight: FontWeight.bold,
-                        fontSize: 16),
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                       ),
                       Text("What are you looking for today?")
                     ],
@@ -37,25 +36,30 @@ class FarmaciaHomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(4),
-
                   ),
-                  child: const Icon(Icons.qr_code_scanner_outlined,color: Colors.white,),
+                  child: const Icon(
+                    Icons.qr_code_scanner_outlined,
+                    color: Colors.white,
+                  ),
                 ),
               ],
             ),
           ),
-           TabBar(
-              labelColor: Colors.black,
-              indicatorWeight: 0,
-
-
-              tabs: [
-            Tab(text: "PHARMACIES",),
-            Tab(text: "PET SUPPLIES",),
-            Tab(text: "ORTHOPEDICS",),
+          const TabBar(labelColor: Colors.black, indicatorColor: Colors.white, tabs: [
+            Tab(
+              text: "PHARMACIES",
+            ),
+            Tab(
+              text: "PET SUPPLIES",
+            ),
+            Tab(
+              text: "ORTHOPEDICS",
+            ),
           ]),
-          Expanded(child: TabBarView(
+          Expanded(
+              child: TabBarView(
             children: [
+              Container(),
               Container(),
               Container(),
             ],
