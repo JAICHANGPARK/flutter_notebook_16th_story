@@ -10,6 +10,7 @@ class FarmaciaHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("Build FarmaciaHomePage()");
     final FarmaciaScreenController farmaciaScreenController = Get.put(FarmaciaScreenController());
     return Scaffold(
       body: SafeArea(
