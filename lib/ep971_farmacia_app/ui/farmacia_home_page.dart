@@ -11,34 +11,36 @@ class FarmaciaHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final FarmaciaScreenController farmaciaScreenController = Get.put(FarmaciaScreenController());
-    return  Scaffold(
-      body: GetBuilder<FarmaciaScreenController>(
-        builder: (controller){
-          switch(controller.bottomTabIndex){
-            case 0:
-              return FarmaciaHomeScreen();
-            case 1:
-              return const Center(
-                child: Text("Page 2"),
-              );
-            case 2:
-              return const Center(
-                child: Text("Page 3"),
-              );
-            case 3:
-              return const Center(
-                child: Text("Page 4"),
-              );
-            case 4:
-              return const Center(
-                child: Text("Page 5"),
-              );
-            default:
-              return const Center(
-                child: Text("Page Default"),
-              );
-          }
-        },
+    return Scaffold(
+      body: SafeArea(
+        child: GetBuilder<FarmaciaScreenController>(
+          builder: (controller) {
+            switch (controller.bottomTabIndex) {
+              case 0:
+                return FarmaciaHomeScreen();
+              case 1:
+                return const Center(
+                  child: Text("Page 2"),
+                );
+              case 2:
+                return const Center(
+                  child: Text("Page 3"),
+                );
+              case 3:
+                return const Center(
+                  child: Text("Page 4"),
+                );
+              case 4:
+                return const Center(
+                  child: Text("Page 5"),
+                );
+              default:
+                return const Center(
+                  child: Text("Page Default"),
+                );
+            }
+          },
+        ),
       ),
       bottomNavigationBar: const FarmaciaHomeBottomTabBar(),
     );
