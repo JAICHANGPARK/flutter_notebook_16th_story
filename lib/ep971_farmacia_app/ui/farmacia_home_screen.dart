@@ -7,7 +7,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final FarmaciaHomeCategoriesController homeCategoriesController = Get.put(FarmaciaHomeCategoriesController());
+    // final FarmaciaHomeCategoriesController homeCategoriesController = Get.put(FarmaciaHomeCategoriesController());
     return DefaultTabController(
       length: 3,
       child: Column(
@@ -76,80 +76,98 @@ class FarmaciaHomeScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 8),
                     child: SizedBox(
                       height: 42,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(right: 4),
-                            child: GestureDetector(
-                              onTap: (){
-                                homeCategoriesController.setIndex(0);
-                              },
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 16),
-                                decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(4)),
-                                child: const Center(
-                                  child: Text(
-                                    "First aid kit",
-                                    style: TextStyle(color: Colors.white),
+                      child: GetBuilder<FarmaciaHomeCategoriesController>(
+                        init: FarmaciaHomeCategoriesController(),
+                        builder: (controller){
+                          return  ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 4),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    controller.setIndex(0);
+                                  },
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                                    decoration: BoxDecoration(
+                                        color: controller.index == 0 ? Colors.black : Colors.grey[200],
+                                        borderRadius: BorderRadius.circular(4)),
+                                    child:  Center(
+                                      child: Text(
+                                        "First aid kit",
+                                        style: TextStyle(
+                                            color: controller.index == 0 ? Colors.white : Colors.grey),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 4),
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              decoration: BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
-                              child: const Center(
-                                child: Text(
-                                  "Cosmetics",
-                                  style: TextStyle(color: Colors.grey),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 4),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    controller.setIndex(1);
+                                  },
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                                    decoration:
+                                    BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
+                                    child: const Center(
+                                      child: Text(
+                                        "Cosmetics",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 4),
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              decoration: BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
-                              child: const Center(
-                                child: Text(
-                                  "Hygiene",
-                                  style: TextStyle(color: Colors.grey),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 4),
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                                  decoration:
+                                  BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
+                                  child: const Center(
+                                    child: Text(
+                                      "Hygiene",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 4),
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              decoration: BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
-                              child: const Center(
-                                child: Text(
-                                  "Others",
-                                  style: TextStyle(color: Colors.grey),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 4),
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                                  decoration:
+                                  BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
+                                  child: const Center(
+                                    child: Text(
+                                      "Others",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 4),
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              decoration: BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
-                              child: const Center(
-                                child: Text(
-                                  "Cosmetics",
-                                  style: TextStyle(color: Colors.grey),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 4),
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                                  decoration:
+                                  BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
+                                  child: const Center(
+                                    child: Text(
+                                      "Cosmetics",
+                                      style: TextStyle(color: Colors.grey),
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                        ],
+                            ],
+                          );
+                        },
+
                       ),
                     ),
                   )
