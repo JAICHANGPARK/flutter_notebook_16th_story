@@ -7,6 +7,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("Build FarmaciaHomeScreen()");
     // final FarmaciaHomeCategoriesController homeCategoriesController = Get.put(FarmaciaHomeCategoriesController());
     return DefaultTabController(
       length: 3,
