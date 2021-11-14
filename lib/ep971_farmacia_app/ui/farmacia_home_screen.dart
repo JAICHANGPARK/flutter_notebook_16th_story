@@ -45,7 +45,19 @@ class FarmaciaHomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          const TabBar(labelColor: Colors.black, indicatorColor: Colors.white, tabs: [
+          const TabBar(
+
+              labelStyle: TextStyle(
+                fontSize: 12,
+
+              ),
+              labelColor: Colors.black, indicatorColor: Colors.white,
+
+              unselectedLabelColor: Colors.grey,
+              unselectedLabelStyle: TextStyle(
+                fontSize: 12
+              ),
+              tabs: [
             Tab(
               text: "PHARMACIES",
             ),
