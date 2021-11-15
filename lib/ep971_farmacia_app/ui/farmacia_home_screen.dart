@@ -151,14 +151,21 @@ class FarmaciaHomeScreen extends StatelessWidget {
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(right: 4),
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                                  decoration:
-                                      BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
-                                  child: const Center(
-                                    child: Text(
-                                      "Others",
-                                      style: TextStyle(color: Colors.grey),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    controller.setIndex(3);
+                                  },
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[200],
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: const Center(
+                                      child: Text(
+                                        "Others",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
                                     ),
                                   ),
                                 ),
