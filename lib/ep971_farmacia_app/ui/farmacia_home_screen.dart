@@ -118,7 +118,9 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         "Cosmetics",
-                                        style: TextStyle(color: controller.index == 1 ? Colors.white : Colors.grey),
+                                        style: TextStyle(
+                                          color: controller.index == 1 ? Colors.white : Colors.grey,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -126,14 +128,23 @@ class FarmaciaHomeScreen extends StatelessWidget {
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(right: 4),
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                                  decoration:
-                                      BoxDecoration(color: Colors.grey[200], borderRadius: BorderRadius.circular(4)),
-                                  child: const Center(
-                                    child: Text(
-                                      "Hygiene",
-                                      style: TextStyle(color: Colors.grey),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    controller.setIndex(2);
+                                  },
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                                    decoration: BoxDecoration(
+                                      color: controller.index == 2 ? Colors.black : Colors.grey[200],
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        "Hygiene",
+                                        style: TextStyle(
+                                          color: controller.index == 2 ? Colors.white : Colors.grey,
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
