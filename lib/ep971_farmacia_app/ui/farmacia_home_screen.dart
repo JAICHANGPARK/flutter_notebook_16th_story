@@ -228,7 +228,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                 ),
                                                 borderRadius: BorderRadius.circular(6)),
                                           ),
-                                          SizedBox(height: 8,),
+                                          const SizedBox(height: 8,),
                                           Container(
                                             height: 160,
                                             decoration: BoxDecoration(
@@ -249,7 +249,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                 ),
                                                 borderRadius: BorderRadius.circular(6)),
                                           ),
-                                          SizedBox(height: 8,),
+                                          const SizedBox(height: 8,),
                                           Container(
                                             height: 160,
                                             decoration: BoxDecoration(
@@ -270,7 +270,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                 ),
                                                 borderRadius: BorderRadius.circular(6)),
                                           ),
-                                          SizedBox(height: 8,),
+                                          const SizedBox(height: 8,),
                                           Container(
                                             height: 160,
                                             decoration: BoxDecoration(
@@ -291,7 +291,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                 ),
                                                 borderRadius: BorderRadius.circular(6)),
                                           ),
-                                          SizedBox(height: 8,),
+                                          const SizedBox(height: 8,),
                                           Container(
                                             height: 160,
                                             decoration: BoxDecoration(
@@ -315,14 +315,14 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                     dotHeight: 4
                                   ) ,),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(vertical: 12),
-                                  child: Text("SALES AND DISCOUNTS",style: TextStyle(
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(vertical: 12),
+                                  child: Text("SALES AND DISCOUNTS",style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 12,
                                   ),),
                                 ),
-                                Expanded(child: Row(children: [
+                                Expanded(child: Row(children: const [
                                   Expanded(child: Placeholder()),
                                   Expanded(child: Placeholder()),
                                   Expanded(child: Placeholder()),
@@ -332,20 +332,20 @@ class FarmaciaHomeScreen extends StatelessWidget {
                             );
                           case 1:
                             return Container(
-                              child: Center(
+                              child: const Center(
                                 child: Text("2"),
                               ),
                             );
                           case 2:
                             return Container(
-                              child: Center(
+                              child: const Center(
                                 child: Text("3"),
                               ),
                             );
 
                           default:
                             return Container(
-                              child: Center(
+                              child: const Center(
                                 child: Text("61"),
                               ),
                             );
