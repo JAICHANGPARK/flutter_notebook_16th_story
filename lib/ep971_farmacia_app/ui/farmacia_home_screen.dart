@@ -210,6 +210,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                         switch (controller.index) {
                           case 0:
                             return Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
 
                                 Container(
@@ -306,13 +307,21 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                   ),
                                 ),
 
-                                SmoothPageIndicator(controller: pageController, count: 4,
-                                effect:ExpandingDotsEffect(
-                                  dotColor: Colors.grey[400]!,
-                                  activeDotColor: Colors.grey[400]!,
-                                  dotHeight: 4
-                                ) ,),
-                                Text("SALES AND DISCOUNTS"),
+                                Center(
+                                  child: SmoothPageIndicator(controller: pageController, count: 4,
+                                  effect:ExpandingDotsEffect(
+                                    dotColor: Colors.grey[400]!,
+                                    activeDotColor: Colors.grey[400]!,
+                                    dotHeight: 4
+                                  ) ,),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 12),
+                                  child: Text("SALES AND DISCOUNTS",style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12,
+                                  ),),
+                                ),
                                 Expanded(child: Row(children: [
                                   Expanded(child: Placeholder()),
                                   Expanded(child: Placeholder()),
