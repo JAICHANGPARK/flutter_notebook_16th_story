@@ -175,21 +175,18 @@ class FarmaciaHomeScreen extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(right: 4),
                                 child: GestureDetector(
-                                  onTap: (){
+                                  onTap: () {
                                     controller.setIndex(4);
                                   },
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 16),
-                                    decoration:
-                                        BoxDecoration(
-                                            color: controller.index == 4 ? Colors.black : Colors.grey[200],
-
-                                            borderRadius: BorderRadius.circular(4)),
-                                    child:  Center(
+                                    decoration: BoxDecoration(
+                                        color: controller.index == 4 ? Colors.black : Colors.grey[200],
+                                        borderRadius: BorderRadius.circular(4)),
+                                    child: Center(
                                       child: Text(
                                         "Cosmetics",
                                         style: TextStyle(
-
                                           color: controller.index == 4 ? Colors.white : Colors.grey,
                                         ),
                                       ),
@@ -203,7 +200,12 @@ class FarmaciaHomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Expanded(child: Placeholder()),
+                  Expanded(child: GetBuilder<FarmaciaHomeCategoriesController>(
+                    builder: (controller) {
+                      switch (controller.index) {
+                      }
+                    },
+                  )),
                 ],
               ),
               Container(),
