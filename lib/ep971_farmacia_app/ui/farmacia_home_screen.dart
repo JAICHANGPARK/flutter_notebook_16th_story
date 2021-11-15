@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep971_farmacia_app/controller/home_category_tab_controller.dart';
 import 'package:get/get.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class FarmaciaHomeScreen extends StatelessWidget {
-  const FarmaciaHomeScreen({Key? key}) : super(key: key);
+  FarmaciaHomeScreen({Key? key}) : super(key: key);
+  PageController pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
@@ -200,28 +202,144 @@ class FarmaciaHomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Expanded(child: Padding(
+                  Expanded(
+                      child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: GetBuilder<FarmaciaHomeCategoriesController>(
                       builder: (controller) {
                         switch (controller.index) {
                           case 0:
-                            return Container(child: Center(
-                              child: Text("1"),
-                            ),);
+                            return Column(
+                              children: [
+
+                                Container(
+                                  height: 340,
+                                  child: PageView(
+                                    controller: pageController,
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Container(
+                                            height: 160,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  color: Colors.grey,
+                                                ),
+                                                borderRadius: BorderRadius.circular(6)),
+                                          ),
+                                          SizedBox(height: 8,),
+                                          Container(
+                                            height: 160,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  color: Colors.grey,
+                                                ),
+                                                borderRadius: BorderRadius.circular(6)),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [
+                                          Container(
+                                            height: 160,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  color: Colors.grey,
+                                                ),
+                                                borderRadius: BorderRadius.circular(6)),
+                                          ),
+                                          SizedBox(height: 8,),
+                                          Container(
+                                            height: 160,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  color: Colors.grey,
+                                                ),
+                                                borderRadius: BorderRadius.circular(6)),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [
+                                          Container(
+                                            height: 160,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  color: Colors.grey,
+                                                ),
+                                                borderRadius: BorderRadius.circular(6)),
+                                          ),
+                                          SizedBox(height: 8,),
+                                          Container(
+                                            height: 160,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  color: Colors.grey,
+                                                ),
+                                                borderRadius: BorderRadius.circular(6)),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [
+                                          Container(
+                                            height: 160,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  color: Colors.grey,
+                                                ),
+                                                borderRadius: BorderRadius.circular(6)),
+                                          ),
+                                          SizedBox(height: 8,),
+                                          Container(
+                                            height: 160,
+                                            decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  color: Colors.grey,
+                                                ),
+                                                borderRadius: BorderRadius.circular(6)),
+                                          ),
+                                        ],
+                                      )
+
+                                    ],
+                                  ),
+                                ),
+
+                                SmoothPageIndicator(controller: pageController, count: 4,
+                                effect:ExpandingDotsEffect(
+                                  dotColor: Colors.grey[400]!,
+                                  activeDotColor: Colors.grey[400]!,
+                                  dotHeight: 4
+                                ) ,),
+                                Text("SALES AND DISCOUNTS"),
+                                Expanded(child: Row(children: [
+                                  Expanded(child: Placeholder()),
+                                  Expanded(child: Placeholder()),
+                                  Expanded(child: Placeholder()),
+                                ],))
+
+                              ],
+                            );
                           case 1:
-                            return Container(child: Center(
-                              child: Text("2"),
-                            ),);
+                            return Container(
+                              child: Center(
+                                child: Text("2"),
+                              ),
+                            );
                           case 2:
-                            return Container(child: Center(
-                              child: Text("3"),
-                            ),);
+                            return Container(
+                              child: Center(
+                                child: Text("3"),
+                              ),
+                            );
 
                           default:
-                            return Container(child: Center(
-                              child: Text("61"),
-                            ),);
+                            return Container(
+                              child: Center(
+                                child: Text("61"),
+                              ),
+                            );
                         }
                       },
                     ),
