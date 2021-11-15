@@ -203,6 +203,23 @@ class FarmaciaHomeScreen extends StatelessWidget {
                   Expanded(child: GetBuilder<FarmaciaHomeCategoriesController>(
                     builder: (controller) {
                       switch (controller.index) {
+                        case 0:
+                          return Container(child: Center(
+                            child: Text("1"),
+                          ),);
+                        case 1:
+                          return Container(child: Center(
+                            child: Text("2"),
+                          ),);
+                        case 2:
+                          return Container(child: Center(
+                            child: Text("3"),
+                          ),);
+
+                        default:
+                          return Container(child: Center(
+                            child: Text("61"),
+                          ),);
                       }
                     },
                   )),
