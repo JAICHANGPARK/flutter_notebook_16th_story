@@ -84,7 +84,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(right: 4),
+                                padding: const EdgeInsets.only(right: 6),
                                 child: GestureDetector(
                                   onTap: () {
                                     controller.setIndex(0);
