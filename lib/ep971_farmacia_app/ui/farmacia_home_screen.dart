@@ -76,7 +76,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 8),
                     child: SizedBox(
-                      height: 42,
+                      height: 38,
                       child: GetBuilder<FarmaciaHomeCategoriesController>(
                         init: FarmaciaHomeCategoriesController(),
                         builder: (controller) {
