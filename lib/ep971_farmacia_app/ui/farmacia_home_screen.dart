@@ -281,33 +281,33 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                   color: Colors.grey,
                                                 ),
                                                 borderRadius: BorderRadius.circular(6)),
-                                            padding: EdgeInsets.all(16),
+                                            padding: const EdgeInsets.all(16),
                                             child: Row(
                                               children: [
                                                 Column(
                                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    const Text(
+                                                  children: const [
+                                                    Text(
                                                       "Special price",
                                                       style: TextStyle(
                                                         fontSize: 20,
                                                         fontWeight: FontWeight.bold,
                                                       ),
                                                     ),
-                                                    const Text(
+                                                    Text(
                                                       "\$12.2",
                                                       style: TextStyle(color: Colors.grey, fontSize: 12),
                                                     ),
-                                                    const Text(
+                                                    Text(
                                                       "\$11,7",
                                                       style: TextStyle(
                                                         fontSize: 24,
                                                         fontWeight: FontWeight.bold,
                                                       ),
                                                     ),
-                                                    const Text("KANEBO"),
-                                                    const Text("Moisture Flow Rich Lotion")
+                                                    Text("KANEBO"),
+                                                    Text("Moisture Flow Rich Lotion")
                                                   ],
                                                 ),
                                               ],
@@ -410,6 +410,25 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                   children: [
                                     Expanded(
                                         child: Container(
+                                      padding: const EdgeInsets.all(16),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: const [
+                                          Icon(
+                                            Icons.price_check,
+                                            size: 32,
+                                          ),
+                                          Spacer(),
+                                          Text(
+                                            "50% off",
+                                            style: TextStyle(
+                                              fontSize: 24,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Text("essential oils")
+                                        ],
+                                      ),
                                       decoration:
                                           BoxDecoration(color: kFarmaciaColor, borderRadius: BorderRadius.circular(4)),
                                     )),
