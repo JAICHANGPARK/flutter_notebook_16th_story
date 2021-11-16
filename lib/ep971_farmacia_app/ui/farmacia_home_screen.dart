@@ -4,7 +4,7 @@ import 'package:flutter_notebook_16th_story/ep971_farmacia_app/controller/home_c
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-Color kFarmaciaColor = Color(0xffE0FF20);
+Color kFarmaciaColor = const Color(0xffE0FF20);
 
 /// 224 255 32
 
@@ -231,15 +231,15 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                   color: Colors.grey,
                                                 ),
                                                 borderRadius: BorderRadius.circular(6)),
-                                            padding: EdgeInsets.all(16),
+                                            padding: const EdgeInsets.all(16),
                                             child: Row(
                                               children: [
                                                 Column(
                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                   children: [
                                                     Container(
-                                                      padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
-                                                      child: Text(
+                                                      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+                                                      child: const Text(
                                                         "COVID-19 WARNING",
                                                         style: TextStyle(
                                                           fontSize: 12,
@@ -250,9 +250,9 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                           color: kFarmaciaColor,
                                                           borderRadius: BorderRadius.circular(4)),
                                                     ),
-                                                    Padding(
-                                                      padding: const EdgeInsets.symmetric(vertical: 16),
-                                                      child: Text(
+                                                    const Padding(
+                                                      padding: EdgeInsets.symmetric(vertical: 16),
+                                                      child: const Text(
                                                         "Keep safe",
                                                         style: TextStyle(
                                                           fontSize: 20,
@@ -260,11 +260,11 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                         ),
                                                       ),
                                                     ),
-                                                    Text("Check out the list of security"),
-                                                    Text("measures to follow"),
+                                                    const Text("Check out the list of security"),
+                                                    const Text("measures to follow"),
                                                   ],
                                                 ),
-                                                Spacer(),
+                                                const Spacer(),
                                                 CachedNetworkImage(
                                                     imageUrl:
                                                         "https://media.karousell.com/media/photos/products/2021/8/29/original_korean_face_mask_adul_1630238266_66f71ff6_progressive.jpg")
@@ -281,9 +281,21 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                   color: Colors.grey,
                                                 ),
                                                 borderRadius: BorderRadius.circular(6)),
+                                            padding: EdgeInsets.all(16),
                                             child: Row(
                                               children: [
-                                                
+                                                Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: [
+                                                    const Text("Special price"),
+                                                    const Text("\$12.2"),
+                                                    const Text("\$11,7"),
+                                                    const Text("KANEBO"),
+                                                    const Text("Moisture Flow Rich Lotion")
+
+                                                  ],
+                                                ),
+
                                               ],
                                             ),
                                           ),
@@ -387,7 +399,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                       decoration:
                                           BoxDecoration(color: kFarmaciaColor, borderRadius: BorderRadius.circular(4)),
                                     )),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 8,
                                     ),
                                     Expanded(
@@ -395,7 +407,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                       decoration:
                                           BoxDecoration(color: kFarmaciaColor, borderRadius: BorderRadius.circular(4)),
                                     )),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 8,
                                     ),
                                     Expanded(
