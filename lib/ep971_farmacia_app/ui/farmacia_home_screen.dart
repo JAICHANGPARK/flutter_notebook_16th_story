@@ -285,6 +285,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                             child: Row(
                                               children: [
                                                 Column(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                   children: [
                                                     const Text(
@@ -301,7 +302,7 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                     const Text(
                                                       "\$11,7",
                                                       style: TextStyle(
-                                                        fontSize: 20,
+                                                        fontSize: 24,
                                                         fontWeight: FontWeight.bold,
                                                       ),
                                                     ),
