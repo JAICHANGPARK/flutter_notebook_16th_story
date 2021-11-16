@@ -437,17 +437,55 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                     ),
                                     Expanded(
                                         child: Container(
-                                      decoration:
+                                          padding: const EdgeInsets.all(16),
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: const [
+                                              Icon(
+                                                Icons.price_check,
+                                                size: 32,
+                                              ),
+                                              Spacer(),
+                                              Text(
+                                                "50% off",
+                                                style: TextStyle(
+                                                  fontSize: 24,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              Text("essential oils")
+                                            ],
+                                          ),
+                                          decoration:
                                           BoxDecoration(color: kFarmaciaColor, borderRadius: BorderRadius.circular(4)),
-                                    )),
+                                        )),
                                     const SizedBox(
                                       width: 8,
                                     ),
                                     Expanded(
                                         child: Container(
-                                      decoration:
+                                          padding: const EdgeInsets.all(16),
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: const [
+                                              Icon(
+                                                Icons.price_check,
+                                                size: 32,
+                                              ),
+                                              Spacer(),
+                                              Text(
+                                                "50% off",
+                                                style: TextStyle(
+                                                  fontSize: 24,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              Text("essential oils")
+                                            ],
+                                          ),
+                                          decoration:
                                           BoxDecoration(color: kFarmaciaColor, borderRadius: BorderRadius.circular(4)),
-                                    )),
+                                        )),
                                   ],
                                 ))
                               ],
