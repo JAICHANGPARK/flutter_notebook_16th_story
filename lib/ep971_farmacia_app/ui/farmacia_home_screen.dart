@@ -230,12 +230,14 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                   color: Colors.grey,
                                                 ),
                                                 borderRadius: BorderRadius.circular(6)),
+                                            padding: EdgeInsets.all(16),
                                             child: Row(
                                               children: [
                                                 Column(
                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                   children: [
                                                     Container(
+                                                      padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
                                                       child: Text(
                                                         "COVID-19 WARNING",
                                                         style: TextStyle(
@@ -245,9 +247,19 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                       ),
                                                       decoration: BoxDecoration(
                                                         color: kFarmaciaColor,
+                                                        borderRadius: BorderRadius.circular(4)
                                                       ),
                                                     ),
-                                                    Text("Keep safe"),
+                                                    Padding(
+                                                      padding: const EdgeInsets.symmetric(vertical: 16),
+                                                      child: Text(
+                                                        "Keep safe",
+                                                        style: TextStyle(
+                                                          fontSize: 20,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
+                                                      ),
+                                                    ),
                                                     Text("Check out the list of security"),
                                                     Text("measures to follow"),
                                                   ],
