@@ -287,15 +287,28 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                 Column(
                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                   children: [
-                                                    const Text("Special price"),
-                                                    const Text("\$12.2"),
-                                                    const Text("\$11,7"),
+                                                    const Text(
+                                                      "Special price",
+                                                      style: TextStyle(
+                                                        fontSize: 20,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
+                                                    ),
+                                                    const Text(
+                                                      "\$12.2",
+                                                      style: TextStyle(color: Colors.grey, fontSize: 12),
+                                                    ),
+                                                    const Text(
+                                                      "\$11,7",
+                                                      style: TextStyle(
+                                                        fontSize: 20,
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
+                                                    ),
                                                     const Text("KANEBO"),
                                                     const Text("Moisture Flow Rich Lotion")
-
                                                   ],
                                                 ),
-
                                               ],
                                             ),
                                           ),
