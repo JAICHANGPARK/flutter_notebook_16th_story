@@ -3,6 +3,10 @@ import 'package:flutter_notebook_16th_story/ep971_farmacia_app/controller/home_c
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+Color kFarmaciaColor = Color(0xffE0FF20);
+
+/// 224 255 32
+
 class FarmaciaHomeScreen extends StatelessWidget {
   FarmaciaHomeScreen({Key? key}) : super(key: key);
   PageController pageController = PageController();
@@ -226,6 +230,30 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                   color: Colors.grey,
                                                 ),
                                                 borderRadius: BorderRadius.circular(6)),
+                                            child: Row(
+                                              children: [
+                                                Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: [
+                                                    Container(
+                                                      child: Text(
+                                                        "COVID-19 WARNING",
+                                                        style: TextStyle(
+                                                          fontSize: 12,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
+                                                      ),
+                                                      decoration: BoxDecoration(
+                                                        color: kFarmaciaColor,
+                                                      ),
+                                                    ),
+                                                    Text("Keep safe"),
+                                                    Text("Check out the list of security"),
+                                                    Text("measures to follow"),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                           const SizedBox(
                                             height: 8,
@@ -332,10 +360,28 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                 ),
                                 Expanded(
                                     child: Row(
-                                  children: const [
-                                    Expanded(child: Placeholder()),
-                                    Expanded(child: Placeholder()),
-                                    Expanded(child: Placeholder()),
+                                  children: [
+                                    Expanded(
+                                        child: Container(
+                                      decoration:
+                                          BoxDecoration(color: kFarmaciaColor, borderRadius: BorderRadius.circular(4)),
+                                    )),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Expanded(
+                                        child: Container(
+                                      decoration:
+                                          BoxDecoration(color: kFarmaciaColor, borderRadius: BorderRadius.circular(4)),
+                                    )),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Expanded(
+                                        child: Container(
+                                      decoration:
+                                          BoxDecoration(color: kFarmaciaColor, borderRadius: BorderRadius.circular(4)),
+                                    )),
                                   ],
                                 ))
                               ],
