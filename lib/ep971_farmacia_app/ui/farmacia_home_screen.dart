@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep971_farmacia_app/controller/home_category_tab_controller.dart';
 import 'package:get/get.dart';
@@ -246,9 +247,8 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                         ),
                                                       ),
                                                       decoration: BoxDecoration(
-                                                        color: kFarmaciaColor,
-                                                        borderRadius: BorderRadius.circular(4)
-                                                      ),
+                                                          color: kFarmaciaColor,
+                                                          borderRadius: BorderRadius.circular(4)),
                                                     ),
                                                     Padding(
                                                       padding: const EdgeInsets.symmetric(vertical: 16),
@@ -264,6 +264,10 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                     Text("measures to follow"),
                                                   ],
                                                 ),
+                                                Spacer(),
+                                                CachedNetworkImage(
+                                                    imageUrl:
+                                                        "https://media.karousell.com/media/photos/products/2021/8/29/original_korean_face_mask_adul_1630238266_66f71ff6_progressive.jpg")
                                               ],
                                             ),
                                           ),
@@ -277,6 +281,11 @@ class FarmaciaHomeScreen extends StatelessWidget {
                                                   color: Colors.grey,
                                                 ),
                                                 borderRadius: BorderRadius.circular(6)),
+                                            child: Row(
+                                              children: [
+                                                
+                                              ],
+                                            ),
                                           ),
                                         ],
                                       ),
