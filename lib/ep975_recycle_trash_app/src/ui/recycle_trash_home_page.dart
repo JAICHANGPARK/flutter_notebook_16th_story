@@ -9,8 +9,23 @@ class RecycleTrashHomePage extends ConsumerWidget {
   Widget build(BuildContext context, ref) {
     int bottomIndex = ref.watch(recycleBottomTapController);
     return Scaffold(
-      body: Column(
-        children: [],
+      body: SafeArea(
+
+        child: IndexedStack(
+          index: bottomIndex,
+          children : [
+            Column(),
+            Center(
+              child: Text("Page 2"),
+            ),
+            Center(
+              child: Text("Page 3"),
+            ),
+            Center(
+              child: Text("Page 4"),
+            )
+          ]
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
@@ -30,9 +45,9 @@ class RecycleTrashHomePage extends ConsumerWidget {
         },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "home")
+          BottomNavigationBarItem(icon: Icon(Icons.add_chart), label: "home"),
+          BottomNavigationBarItem(icon: Icon(Icons.account_balance_wallet_outlined), label: "home"),
+          BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: "home")
         ],
       ),
     );
