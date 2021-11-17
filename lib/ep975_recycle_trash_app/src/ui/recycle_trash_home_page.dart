@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class RecycleTrashHomePage extends StatelessWidget {
+class RecycleTrashHomePage extends ConsumerWidget {
   const RecycleTrashHomePage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
     return Scaffold(
       body: Column(
         children: [],
