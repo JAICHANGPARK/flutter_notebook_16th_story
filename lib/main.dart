@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'ep971_farmacia_app/famacia_app.dart';
+import 'ep975_recycle_trash_app/recycle_trash_app.dart';
 
 main() {
-  runApp(const FarmaciaApp());
+  runApp(const RecycleTrashApp());
 }
