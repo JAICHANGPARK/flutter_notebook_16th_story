@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep975_recycle_trash_app/src/controller/bottom_tab_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../controller/recycle_fab_counter.dart';
+
 class RecycleTrashHomePage extends ConsumerWidget {
   const RecycleTrashHomePage({Key? key}) : super(key: key);
 
@@ -10,28 +12,26 @@ class RecycleTrashHomePage extends ConsumerWidget {
     int bottomIndex = ref.watch(recycleBottomTapController);
     return Scaffold(
       body: SafeArea(
-
-        child: IndexedStack(
-          index: bottomIndex,
-          children : [
-            Column(),
-            Center(
-              child: Text("Page 2"),
-            ),
-            Center(
-              child: Text("Page 3"),
-            ),
-            Center(
-              child: Text("Page 4"),
-            )
-          ]
-        ),
+        child: IndexedStack(index: bottomIndex, children: [
+          Column(),
+          Center(
+            child: Text("Page 2"),
+          ),
+          Center(
+            child: Text("Page 3"),
+          ),
+          Center(
+            child: Text("Page 4"),
+          )
+        ]),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         foregroundColor: Colors.teal,
         backgroundColor: Colors.white,
-        onPressed: () {},
+        onPressed: () {
+          ref.read(recycleFabCounterProvider.notifier).state++;
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
