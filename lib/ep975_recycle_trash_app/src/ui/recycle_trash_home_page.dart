@@ -31,6 +31,8 @@ class RecycleTrashHomePage extends ConsumerWidget {
         backgroundColor: Colors.white,
         onPressed: () {
           ref.read(recycleFabCounterProvider.notifier).state++;
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content:
+          Text("${ref.read(recycleFabCounterProvider)}")));
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
