@@ -12,11 +12,20 @@ class RecycleTrashHomePage extends StatelessWidget {
 
         ],
       ),
+
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         foregroundColor: Colors.teal,
         backgroundColor: Colors.white, onPressed: () {  },
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "home")
+        ],
+      )
+      ,
     );
   }
 }
