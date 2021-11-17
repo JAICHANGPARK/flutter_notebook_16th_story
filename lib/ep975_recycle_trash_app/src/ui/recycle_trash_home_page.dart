@@ -14,19 +14,19 @@ class RecycleTrashHomePage extends ConsumerWidget {
       body: SafeArea(
         child: IndexedStack(index: bottomIndex, children: [
           Column(),
-          Center(
+          const Center(
             child: Text("Page 2"),
           ),
-          Center(
+          const Center(
             child: Text("Page 3"),
           ),
-          Center(
+          const Center(
             child: Text("Page 4"),
           )
         ]),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         foregroundColor: Colors.teal,
         backgroundColor: Colors.white,
         onPressed: () {
