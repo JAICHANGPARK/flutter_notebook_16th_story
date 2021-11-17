@@ -25,8 +25,8 @@ class RecycleTrashHomePage extends ConsumerWidget {
         unselectedItemColor: Colors.teal,
         type: BottomNavigationBarType.fixed,
         currentIndex: bottomIndex,
-        onTap: (idx){
-          ref.watch(recycleBottomTapController) = idx;
+        onTap: (idx) {
+          ref.read(recycleBottomTapController.notifier).state = idx;
         },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
