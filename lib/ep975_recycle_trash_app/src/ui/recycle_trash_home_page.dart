@@ -32,8 +32,7 @@ class RecycleTrashHomePage extends ConsumerWidget {
         onPressed: () {
           ref.read(recycleFabCounterProvider.notifier).state++;
           ScaffoldMessenger.of(context).clearSnackBars();
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content:
-          Text("${ref.read(recycleFabCounterProvider)}")));
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${ref.read(recycleFabCounterProvider)}")));
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
