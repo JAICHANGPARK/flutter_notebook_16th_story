@@ -149,13 +149,16 @@ class RecycleHomeScreen extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(8)
                   ),
+                  padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("12"),
+                          Text("12",style: TextStyle(
+                            fontSize: 20
+                          ),),
                           Text("Transaksi")
                         ],
                       ),
@@ -163,7 +166,9 @@ class RecycleHomeScreen extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("24"),
+                          Text("24",style: TextStyle(
+                              fontSize: 20
+                          ),),
                           Text("Pendapatan")
                         ],
                       ),
@@ -171,7 +176,9 @@ class RecycleHomeScreen extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("4"),
+                          Text("4",style: TextStyle(
+                              fontSize: 20
+                          ),),
                           Text("Menunggu")
                         ],
                       ),
