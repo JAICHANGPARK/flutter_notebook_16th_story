@@ -8,7 +8,7 @@ class RecycleHomeScreen extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(12,24,12,0),
+          padding: const EdgeInsets.fromLTRB(12, 24, 12, 0),
           child: Row(
             children: [
               Column(
@@ -40,11 +40,12 @@ class RecycleHomeScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 12),
           child: Row(
             children: const [
-              Icon(Icons.location_on, color: Colors.teal,
-              size: 14,),
+              Icon(
+                Icons.location_on,
+                color: Colors.teal,
+                size: 14,
+              ),
               Text("Seoul, Republic of Korea")
-
-
             ],
           ),
         ),
@@ -54,7 +55,19 @@ class RecycleHomeScreen extends StatelessWidget {
             height: 320,
             decoration: BoxDecoration(
               color: Colors.teal[200],
-              
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Column(
+              children: [
+                Text("Rapel Cash"),
+                Row(
+                  children: [
+                    Text("RP 129,875"),
+                    IconButton(onPressed: (){}, icon:    Icon(Icons.visibility));
+
+                  ],
+                )
+              ],
             ),
           ),
         )
