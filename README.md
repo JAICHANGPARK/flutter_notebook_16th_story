@@ -1,11 +1,7 @@
 # flutter_notebook_16th_story
 
-A new Flutter project.
-
 - EP971 : https://dribbble.com/shots/16842173-Farmacia-Application
 - EP975 : https://dribbble.com/shots/16876427/attachments/11939305?mode=media
-
-
 
 ## Getting Started
 
