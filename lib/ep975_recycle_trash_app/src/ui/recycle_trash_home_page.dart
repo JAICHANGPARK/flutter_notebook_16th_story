@@ -3,6 +3,7 @@ import 'package:flutter_notebook_16th_story/ep975_recycle_trash_app/src/controll
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../controller/recycle_fab_counter.dart';
+import 'recycle_home_screen.dart';
 
 class RecycleTrashHomePage extends ConsumerWidget {
   const RecycleTrashHomePage({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class RecycleTrashHomePage extends ConsumerWidget {
     return Scaffold(
       body: SafeArea(
         child: IndexedStack(index: bottomIndex, children: [
-          Column(),
+          RecycleHomeScreen(),
           const Center(
             child: Text("Page 2"),
           ),
