@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_16th_story/ep975_recycle_trash_app/src/controller/rp_visivility_controller.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class RecycleHomeScreen extends StatelessWidget {
   const RecycleHomeScreen({Key? key}) : super(key: key);
@@ -63,8 +65,13 @@ class RecycleHomeScreen extends StatelessWidget {
                 Row(
                   children: [
                     Text("RP 129,875"),
-                    IconButton(onPressed: (){}, icon:    Icon(Icons.visibility));
-
+                    Consumer(
+                      builder: (BuildContext context, WidgetRef ref, Widget? child) {
+                        final v = ref.watch(rpVisibilityProvider);
+                        if (v) return IconButton(onPressed: () {}, icon: Icon(Icons.visibility));
+                        return IconButton(onPressed: () {}, icon: Icon(Icons.visibility_off));
+                      },
+                    ),
                   ],
                 )
               ],
