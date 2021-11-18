@@ -8,30 +8,43 @@ class RecycleHomeScreen extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.fromLTRB(12,24,12,0),
           child: Row(
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Hi Dreamwalker"),
-                  SizedBox(
+                  const Text("Hi Dreamwalker"),
+                  const SizedBox(
                     height: 8,
                   ),
-                  Text(
+                  const Text(
                     "Welcome back!",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
                   )
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               CircleAvatar(
                 backgroundColor: Colors.teal[100],
                 foregroundColor: Colors.teal,
-                child: Icon(Icons.notifications_outlined),
+                child: const Icon(Icons.notifications_outlined),
               )
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Icon(Icons.location_on, color: Colors.teal,
+              size: 14,),
+              Text("Seoul, Republic of Korea")
+
+
             ],
           ),
         )
