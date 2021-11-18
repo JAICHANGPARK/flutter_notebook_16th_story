@@ -159,6 +159,7 @@ class RecycleHomeScreen extends StatelessWidget {
                           Text("12",style: TextStyle(
                             fontSize: 20
                           ),),
+                          SizedBox(height: 4,),
                           Text("Transaksi")
                         ],
                       ),
@@ -169,6 +170,7 @@ class RecycleHomeScreen extends StatelessWidget {
                           Text("24",style: TextStyle(
                               fontSize: 20
                           ),),
+                          SizedBox(height: 4,),
                           Text("Pendapatan")
                         ],
                       ),
@@ -179,6 +181,7 @@ class RecycleHomeScreen extends StatelessWidget {
                           Text("4",style: TextStyle(
                               fontSize: 20
                           ),),
+                          SizedBox(height: 4,),
                           Text("Menunggu")
                         ],
                       ),
