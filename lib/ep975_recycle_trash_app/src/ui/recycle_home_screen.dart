@@ -14,10 +14,14 @@ class RecycleHomeScreen extends StatelessWidget {
               Column(
                 children: [
                   Text("Hi Dreamwalker"),
+                  SizedBox(
+                    height: 8,
+                  ),
                   Text(
                     "Welcome back!",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
+                      fontSize: 20,
                     ),
                   )
                 ],
