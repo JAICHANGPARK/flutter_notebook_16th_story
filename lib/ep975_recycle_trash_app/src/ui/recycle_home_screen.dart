@@ -47,6 +47,16 @@ class RecycleHomeScreen extends StatelessWidget {
 
             ],
           ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: 320,
+            decoration: BoxDecoration(
+              color: Colors.teal[200],
+              
+            ),
+          ),
         )
       ],
     );
