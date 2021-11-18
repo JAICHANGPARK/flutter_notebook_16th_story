@@ -61,17 +61,43 @@ class RecycleHomeScreen extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Text("Rapel Cash"),
+                const Text("Rapel Cash",
+                  style: TextStyle(  color: Colors.white),),
                 Row(
                   children: [
-                    Text("RP 129,875"),
+                    const Text(
+                      "RP 129,875",
+                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
                     Consumer(
                       builder: (BuildContext context, WidgetRef ref, Widget? child) {
                         final v = ref.watch(rpVisibilityProvider);
-                        if (v) return IconButton(onPressed: () {}, icon: Icon(Icons.visibility));
-                        return IconButton(onPressed: () {}, icon: Icon(Icons.visibility_off));
+                        if (v) {
+                          return IconButton(
+                              onPressed: () {
+                                ref.read(rpVisibilityProvider.notifier).state = !v;
+                              },
+                              icon: const Icon(Icons.visibility));
+                        }
+                        return IconButton(
+                            onPressed: () {
+                              ref.read(rpVisibilityProvider.notifier).state = !v;
+                            },
+                            icon: const Icon(Icons.visibility_off));
                       },
                     ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Column(
+                      children: [
+                        const CircleAvatar(
+                          backgroundColor: Colors.white,
+                        ),
+                        const Text("lsi Ulang")
+                      ],
+                    )
                   ],
                 )
               ],
