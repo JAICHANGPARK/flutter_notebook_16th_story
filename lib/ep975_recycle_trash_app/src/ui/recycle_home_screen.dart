@@ -59,11 +59,16 @@ class RecycleHomeScreen extends StatelessWidget {
               color: Colors.teal[200],
               borderRadius: BorderRadius.circular(16),
             ),
+            padding: const EdgeInsets.all(16),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const Text("Rapel Cash",
-                  style: TextStyle(  color: Colors.white),),
+                const Text(
+                  "Rapel Cash",
+                  style: TextStyle(color: Colors.white),
+                ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
                       "RP 129,875",
@@ -89,16 +94,66 @@ class RecycleHomeScreen extends StatelessWidget {
                   ],
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Column(
-                      children: [
-                        const CircleAvatar(
+                      children: const [
+                        CircleAvatar(
+                          radius: 24,
                           backgroundColor: Colors.white,
                         ),
-                        const Text("lsi Ulang")
+                        SizedBox(
+                          height: 4,
+                        ),
+                        Text(
+                          "lsi Ulang",
+                          style: TextStyle(color: Colors.white, fontSize: 12),
+                        )
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        CircleAvatar(
+                          radius: 24,
+                          backgroundColor: Colors.white,
+                        ),
+                        SizedBox(
+                          height: 4,
+                        ),
+                        Text(
+                          "lsi Ulang",
+                          style: TextStyle(color: Colors.white, fontSize: 12),
+                        )
+                      ],
+                    ),
+                    Column(
+                      children: const [
+                        CircleAvatar(
+                          radius: 24,
+                          backgroundColor: Colors.white,
+                        ),
+                        SizedBox(
+                          height: 4,
+                        ),
+                        Text(
+                          "lsi Ulang",
+                          style: TextStyle(color: Colors.white, fontSize: 12),
+                        )
                       ],
                     )
                   ],
+                ),
+                Container(
+                  height: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(8)
+                  ),
+                  child: Row(
+                    children: [
+                      
+                    ],
+                  ),
                 )
               ],
             ),
