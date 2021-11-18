@@ -144,14 +144,37 @@ class RecycleHomeScreen extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  height: 120,
+                  height: 100,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(8)
                   ),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("12"),
+                          Text("Transaksi")
+                        ],
+                      ),
+                      VerticalDivider(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("24"),
+                          Text("Pendapatan")
+                        ],
+                      ),
+                      VerticalDivider(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("4"),
+                          Text("Menunggu")
+                        ],
+                      ),
                     ],
                   ),
                 )
