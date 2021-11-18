@@ -13,14 +13,14 @@ class RecycleHomeScreen extends StatelessWidget {
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text("Hi Dreamwalker"),
-                  const SizedBox(
-                    height: 8,
+                children: const [
+                  Text("Hi Dreamwalker"),
+                  SizedBox(
+                    height: 4,
                   ),
-                  const Text(
+                  Text(
                     "Welcome back!",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
@@ -39,7 +39,7 @@ class RecycleHomeScreen extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
-            children: [
+            children: const [
               Icon(Icons.location_on, color: Colors.teal,
               size: 14,),
               Text("Seoul, Republic of Korea")
