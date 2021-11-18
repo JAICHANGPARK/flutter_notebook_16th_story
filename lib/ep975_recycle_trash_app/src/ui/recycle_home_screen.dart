@@ -19,6 +19,9 @@ class RecycleHomeScreen extends StatelessWidget {
                   ),
                 )
               ],
+            ),
+            CircleAvatar(
+              child: Icon(Icons.notification),
             )
           ],
         )
