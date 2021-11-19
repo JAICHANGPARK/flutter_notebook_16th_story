@@ -224,10 +224,10 @@ class RecycleHomeScreen extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.only(right: 8),
               child: Container(
-                width: 96,
+                width: 100,
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.grey[400]!),
-                  borderRadius: BorderRadius.circular(4)
+                  borderRadius: BorderRadius.circular(12)
                 ),
                 padding: EdgeInsets.all(8),
                 child: Column(
