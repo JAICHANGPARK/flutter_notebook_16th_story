@@ -240,7 +240,12 @@ class RecycleHomeScreen extends StatelessWidget {
                         SizedBox(
                           height: 4,
                         ),
-                        Text("12 kali")
+                        Text(
+                          "12 kali",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        )
                       ],
                     ),
                   ),
