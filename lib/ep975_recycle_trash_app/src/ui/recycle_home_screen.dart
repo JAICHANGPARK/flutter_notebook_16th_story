@@ -236,7 +236,10 @@ class RecycleHomeScreen extends StatelessWidget {
                           backgroundColor: Colors.teal[50],
                         ),
                         Spacer(),
-                        Text("Sample"),
+                        Text(
+                          "Sample",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                         SizedBox(
                           height: 4,
                         ),
