@@ -26,16 +26,16 @@ class RecycleTrashHomePage extends ConsumerWidget {
           )
         ]),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        foregroundColor: Colors.teal,
-        backgroundColor: Colors.white,
-        onPressed: () {
-          ref.read(recycleFabCounterProvider.notifier).state++;
-          ScaffoldMessenger.of(context).clearSnackBars();
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${ref.read(recycleFabCounterProvider)}")));
-        },
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   child: const Icon(Icons.add),
+      //   foregroundColor: Colors.teal,
+      //   backgroundColor: Colors.white,
+      //   onPressed: () {
+      //     ref.read(recycleFabCounterProvider.notifier).state++;
+      //     ScaffoldMessenger.of(context).clearSnackBars();
+      //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${ref.read(recycleFabCounterProvider)}")));
+      //   },
+      // ),
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
