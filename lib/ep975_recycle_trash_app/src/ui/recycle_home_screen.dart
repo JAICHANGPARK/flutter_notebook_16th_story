@@ -223,7 +223,6 @@ class RecycleHomeScreen extends StatelessWidget {
           child: Consumer(
             builder: (context, ref, _) {
               final todoItems = ref.watch(trashListProvider);
-
               return ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: 10,
@@ -252,9 +251,9 @@ class RecycleHomeScreen extends StatelessWidget {
                             const SizedBox(
                               height: 4,
                             ),
-                             Text(
+                            Text(
                               // "12 kali",
-                               "${item.subtitle}",
+                              "${item.subtitle}",
                               style: const TextStyle(
                                 fontSize: 12,
                               ),
