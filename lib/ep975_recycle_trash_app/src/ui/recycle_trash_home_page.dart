@@ -13,29 +13,30 @@ class RecycleTrashHomePage extends ConsumerWidget {
     int bottomIndex = ref.watch(recycleBottomTapController);
     return Scaffold(
       body: SafeArea(
-        child: IndexedStack(index: bottomIndex, children: [
+        child: IndexedStack(index: bottomIndex,
+            children: const [
           RecycleHomeScreen(),
-          const Center(
+          Center(
             child: Text("Page 2"),
           ),
-          const Center(
+          Center(
             child: Text("Page 3"),
           ),
-          const Center(
+          Center(
             child: Text("Page 4"),
           )
         ]),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   child: const Icon(Icons.add),
-      //   foregroundColor: Colors.teal,
-      //   backgroundColor: Colors.white,
-      //   onPressed: () {
-      //     ref.read(recycleFabCounterProvider.notifier).state++;
-      //     ScaffoldMessenger.of(context).clearSnackBars();
-      //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${ref.read(recycleFabCounterProvider)}")));
-      //   },
-      // ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        foregroundColor: Colors.teal,
+        backgroundColor: Colors.white,
+        onPressed: () {
+          ref.read(recycleFabCounterProvider.notifier).state++;
+          ScaffoldMessenger.of(context).clearSnackBars();
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("${ref.read(recycleFabCounterProvider)}")));
+        },
+      ),
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
