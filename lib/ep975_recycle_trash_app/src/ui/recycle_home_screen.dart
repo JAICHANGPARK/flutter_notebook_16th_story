@@ -229,9 +229,12 @@ class RecycleHomeScreen extends StatelessWidget {
                   border: Border.all(color: Colors.grey[400]!),
                   borderRadius: BorderRadius.circular(4)
                 ),
+                padding: EdgeInsets.all(8),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CircleAvatar(),
+                    Spacer(),
                     Text("Sample"),
                     Text("12 kali")
                   ],
