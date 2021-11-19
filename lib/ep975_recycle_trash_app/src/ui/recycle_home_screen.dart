@@ -149,13 +149,13 @@ class RecycleHomeScreen extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(8)
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           Text("12",style: TextStyle(
                             fontSize: 20
                           ),),
@@ -163,10 +163,10 @@ class RecycleHomeScreen extends StatelessWidget {
                           Text("Transaksi")
                         ],
                       ),
-                      VerticalDivider(),
+                      const VerticalDivider(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           Text("24",style: TextStyle(
                               fontSize: 20
                           ),),
@@ -174,10 +174,10 @@ class RecycleHomeScreen extends StatelessWidget {
                           Text("Pendapatan")
                         ],
                       ),
-                      VerticalDivider(),
+                      const VerticalDivider(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           Text("4",style: TextStyle(
                               fontSize: 20
                           ),),
