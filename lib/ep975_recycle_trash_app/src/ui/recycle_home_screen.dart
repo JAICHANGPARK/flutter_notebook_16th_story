@@ -193,11 +193,11 @@ class RecycleHomeScreen extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text("Setoran Terakhir"),
+              const Text("Setoran Terakhir",),
               const Text("Lihat semua")
             ],
           ),
