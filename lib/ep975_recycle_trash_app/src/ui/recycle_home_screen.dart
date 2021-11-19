@@ -202,14 +202,14 @@ class RecycleHomeScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
+            children: const [
+              Text(
                 "Setoran Terakhir",
                 style: TextStyle(
                   fontSize: 16,
                 ),
               ),
-              const Text(
+              Text(
                 "Lihat semua",
                 style: TextStyle(fontSize: 12),
               )
@@ -223,6 +223,12 @@ class RecycleHomeScreen extends StatelessWidget {
             width: 84,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.grey[400]!)
+            ),
+            child: Column(
+              children: [
+                CircleAvatar(),
+                
+              ],
             ),
           );
 
