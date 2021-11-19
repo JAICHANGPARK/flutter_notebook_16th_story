@@ -216,24 +216,30 @@ class RecycleHomeScreen extends StatelessWidget {
             ],
           ),
         ),
-        Expanded(child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-          return Container(
-            width: 84,
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.grey[400]!)
-            ),
-            child: Column(
-              children: [
-                CircleAvatar(),
-                Text("Sample"),
-                Text("12 kali")
-              ],
-            ),
-          );
+        Expanded(child: Padding(
+          padding: const EdgeInsets.fromLTRB(16,8,0,8),
+          child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.only(right: 8),
+              child: Container(
+                width: 96,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey[400]!)
+                ),
+                child: Column(
+                  children: [
+                    CircleAvatar(),
+                    Text("Sample"),
+                    Text("12 kali")
+                  ],
+                ),
+              ),
+            );
 
-        })),
+          }),
+        )),
       ],
     );
   }
