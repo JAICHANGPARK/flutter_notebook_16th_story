@@ -223,10 +223,12 @@ class RecycleHomeScreen extends StatelessWidget {
           child: Consumer(
             builder: (context, ref, _) {
               final todoItems = ref.watch(trashListProvider);
+
               return ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: 10,
                   itemBuilder: (context, index) {
+                    final item = todoItems[index];
                     return Padding(
                       padding: const EdgeInsets.only(right: 8),
                       child: Container(
@@ -243,16 +245,17 @@ class RecycleHomeScreen extends StatelessWidget {
                               backgroundColor: Colors.teal[50],
                             ),
                             const Spacer(),
-                            const Text(
-                              "Sample",
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                            Text(
+                              "${item.title}",
+                              style: const TextStyle(fontWeight: FontWeight.bold),
                             ),
                             const SizedBox(
                               height: 4,
                             ),
-                            const Text(
-                              "12 kali",
-                              style: TextStyle(
+                             Text(
+                              // "12 kali",
+                               "${item.subtitle}",
+                              style: const TextStyle(
                                 fontSize: 12,
                               ),
                             )
