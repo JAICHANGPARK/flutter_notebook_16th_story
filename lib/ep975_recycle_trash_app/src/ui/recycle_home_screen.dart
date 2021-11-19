@@ -226,7 +226,8 @@ class RecycleHomeScreen extends StatelessWidget {
               child: Container(
                 width: 96,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey[400]!)
+                  border: Border.all(color: Colors.grey[400]!),
+                  borderRadius: BorderRadius.circular(4)
                 ),
                 child: Column(
                   children: [
