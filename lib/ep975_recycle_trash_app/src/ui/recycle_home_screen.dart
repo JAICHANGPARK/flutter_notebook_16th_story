@@ -219,7 +219,12 @@ class RecycleHomeScreen extends StatelessWidget {
         Expanded(child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-          return Container();
+          return Container(
+            width: 84,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey[400]!)
+            ),
+          );
 
         })),
       ],
