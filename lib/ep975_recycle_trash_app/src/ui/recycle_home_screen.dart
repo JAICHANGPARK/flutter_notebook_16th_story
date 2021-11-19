@@ -145,10 +145,7 @@ class RecycleHomeScreen extends StatelessWidget {
                 ),
                 Container(
                   height: 100,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(8)
-                  ),
+                  decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -156,10 +153,13 @@ class RecycleHomeScreen extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
-                          Text("12",style: TextStyle(
-                            fontSize: 20
-                          ),),
-                          SizedBox(height: 4,),
+                          Text(
+                            "12",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          SizedBox(
+                            height: 4,
+                          ),
                           Text("Transaksi")
                         ],
                       ),
@@ -167,10 +167,13 @@ class RecycleHomeScreen extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
-                          Text("24",style: TextStyle(
-                              fontSize: 20
-                          ),),
-                          SizedBox(height: 4,),
+                          Text(
+                            "24",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          SizedBox(
+                            height: 4,
+                          ),
                           Text("Pendapatan")
                         ],
                       ),
@@ -178,10 +181,13 @@ class RecycleHomeScreen extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
-                          Text("4",style: TextStyle(
-                              fontSize: 20
-                          ),),
-                          SizedBox(height: 4,),
+                          Text(
+                            "4",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          SizedBox(
+                            height: 4,
+                          ),
                           Text("Menunggu")
                         ],
                       ),
@@ -197,8 +203,13 @@ class RecycleHomeScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text("Setoran Terakhir",),
-              const Text("Lihat semua")
+              const Text(
+                "Setoran Terakhir",
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+              const Text("Lihat semua", style: TextStyle(fontSize: 12),)
             ],
           ),
         )
