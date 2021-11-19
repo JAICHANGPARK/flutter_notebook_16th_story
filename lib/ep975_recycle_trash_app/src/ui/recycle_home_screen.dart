@@ -216,35 +216,36 @@ class RecycleHomeScreen extends StatelessWidget {
             ],
           ),
         ),
-        Expanded(child: Padding(
-          padding: const EdgeInsets.fromLTRB(16,8,0,8),
+        Expanded(
+            child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 8, 0, 8),
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.only(right: 8),
-              child: Container(
-                width: 100,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey[300]!),
-                  borderRadius: BorderRadius.circular(12)
-                ),
-                padding: EdgeInsets.all(8),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: Colors.teal[50],
+                return Padding(
+                  padding: const EdgeInsets.only(right: 8),
+                  child: Container(
+                    width: 100,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey[300]!), borderRadius: BorderRadius.circular(12)),
+                    padding: EdgeInsets.all(8),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.teal[50],
+                        ),
+                        Spacer(),
+                        Text("Sample"),
+                        SizedBox(
+                          height: 4,
+                        ),
+                        Text("12 kali")
+                      ],
                     ),
-                    Spacer(),
-                    Text("Sample"),
-                    Text("12 kali")
-                  ],
-                ),
-              ),
-            );
-
-          }),
+                  ),
+                );
+              }),
         )),
       ],
     );
