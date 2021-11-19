@@ -209,10 +209,19 @@ class RecycleHomeScreen extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              const Text("Lihat semua", style: TextStyle(fontSize: 12),)
+              const Text(
+                "Lihat semua",
+                style: TextStyle(fontSize: 12),
+              )
             ],
           ),
-        )
+        ),
+        Expanded(child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+          return Container();
+
+        })),
       ],
     );
   }
