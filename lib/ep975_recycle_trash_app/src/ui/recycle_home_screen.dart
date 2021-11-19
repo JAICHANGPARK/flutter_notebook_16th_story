@@ -227,7 +227,7 @@ class RecycleHomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 CircleAvatar(),
-                
+
               ],
             ),
           );
