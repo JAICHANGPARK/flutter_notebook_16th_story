@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep975_recycle_trash_app/src/controller/rp_visivility_controller.dart';
+import 'package:flutter_notebook_16th_story/ep975_recycle_trash_app/src/controller/trash_home_item.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class RecycleHomeScreen extends StatelessWidget {
@@ -219,44 +220,49 @@ class RecycleHomeScreen extends StatelessWidget {
         Expanded(
             child: Padding(
           padding: const EdgeInsets.fromLTRB(16, 8, 0, 8),
-          child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 10,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(right: 8),
-                  child: Container(
-                    width: 100,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey[300]!),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    padding: const EdgeInsets.all(8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.teal[50],
+          child: Consumer(
+            builder: (context, ref, _) {
+              final todoItems = ref.watch(trashListProvider);
+              return ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: Container(
+                        width: 100,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey[300]!),
+                          borderRadius: BorderRadius.circular(12),
                         ),
-                        const Spacer(),
-                        const Text(
-                          "Sample",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                        padding: const EdgeInsets.all(8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            CircleAvatar(
+                              backgroundColor: Colors.teal[50],
+                            ),
+                            const Spacer(),
+                            const Text(
+                              "Sample",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(
+                              height: 4,
+                            ),
+                            const Text(
+                              "12 kali",
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            )
+                          ],
                         ),
-                        const SizedBox(
-                          height: 4,
-                        ),
-                        const Text(
-                          "12 kali",
-                          style: TextStyle(
-                            fontSize: 12,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                );
-              }),
+                      ),
+                    );
+                  });
+            },
+          ),
         )),
       ],
     );
