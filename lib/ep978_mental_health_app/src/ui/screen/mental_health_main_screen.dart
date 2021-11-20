@@ -21,9 +21,9 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
               padding: const EdgeInsets.all(16.0),
               child: Row(
                 children: [
-                  const Text(
+                  Text(
                     "My Spaces",
-                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
+                    style: GoogleFonts.balsamiqSans(fontWeight: FontWeight.bold, color: Colors.grey),
                   ),
                   const Spacer(),
                   Container(
@@ -32,7 +32,10 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         borderRadius: BorderRadius.circular(24),
                         border: Border.all(color: Colors.black, width: 1.5)),
                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                    child: const Text("SOS"),
+                    child: Text(
+                      "SOS",
+                      style: GoogleFonts.balsamiqSans(fontWeight: FontWeight.bold),
+                    ),
                   ),
                   IconButton(
                     onPressed: () {},
@@ -75,7 +78,9 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 8,),
+            SizedBox(
+              height: 8,
+            ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -88,13 +93,15 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 16,),
+                  SizedBox(
+                    height: 16,
+                  ),
                   Container(
                     height: 100,
-                    decoration: BoxDecoration(color: Colors.cyan[100],
-                    borderRadius: BorderRadius.circular(16),
-                        border: Border.all(color: Colors.black, width: 1.5)
-                    ),
+                    decoration: BoxDecoration(
+                        color: Colors.cyan[100],
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(color: Colors.black, width: 1.5)),
                   )
                 ],
               ),
