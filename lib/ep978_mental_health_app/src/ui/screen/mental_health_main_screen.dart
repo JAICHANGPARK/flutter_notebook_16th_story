@@ -1,5 +1,6 @@
 import 'package:coolicons/coolicons.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MentalHealthMainScreen extends StatefulWidget {
   const MentalHealthMainScreen({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                     "My Spaces",
                     style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     decoration: BoxDecoration(
                         color: Colors.yellow,
@@ -39,24 +40,46 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 ],
               ),
             ),
-            Row(
-              children: [
-                Container(
-                  height: 48,
-                  width: 48,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.black, width: 1.5),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                children: [
+                  Container(
+                    height: 48,
+                    width: 48,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.black, width: 1.5),
+                    ),
                   ),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Hello Dreamwalker"),
-                    Text("Let's explore all the features here")
-                  ],
-                )
-              ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Hello Dreamwalker",
+                          style: GoogleFonts.balsamiqSans(fontWeight: FontWeight.bold, fontSize: 18),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "Let's explore all the features here",
+                          style: GoogleFonts.balsamiqSans(color: Colors.grey, fontSize: 12),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Text(
+              "Use Voice in Menta",
+              style: GoogleFonts.balsamiqSans(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
             )
           ],
         ),
