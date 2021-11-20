@@ -1,5 +1,5 @@
+import 'package:coolicons/coolicons.dart';
 import 'package:flutter/material.dart';
-
 
 class MentalHealthMainScreen extends StatefulWidget {
   const MentalHealthMainScreen({Key? key}) : super(key: key);
@@ -17,19 +17,26 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
           children: [
             Row(
               children: [
-                Text("My Spaces"),
+                const Text("My Spaces"),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.yellow,border: Border.all(
-                    color: Colors.black,
-                  )
-                  ),
-                )
+                      color: Colors.yellow,
+                      borderRadius: BorderRadius.circular(24),
+                      border: Border.all(
+                        color: Colors.black,
+                      )),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                  child: const Text("SOS"),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Coolicons.settings_future),
+                ),
               ],
             )
           ],
         ),
-      ) ,
+      ),
     );
   }
 }
