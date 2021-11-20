@@ -15,6 +15,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
     return Scaffold(
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -74,11 +75,25 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 ],
               ),
             ),
-            Text(
-              "Use Voice in Menta",
-              style: GoogleFonts.balsamiqSans(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Use Voice in Menta",
+                    style: GoogleFonts.balsamiqSans(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 16,),
+                  Container(
+                    height: 120,
+                    decoration: BoxDecoration(color: Colors.cyan[100],
+                    borderRadius: BorderRadius.circular(8)),
+                  )
+                ],
               ),
             )
           ],
