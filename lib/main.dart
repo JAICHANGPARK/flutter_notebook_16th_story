@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'ep975_recycle_trash_app/recycle_trash_app.dart';
+import 'ep978_mental_health_app/mental_health_app.dart';
 
 main() {
-  runApp(const RecycleTrashApp());
+  runApp(const MentalHealthApp());
 }
