@@ -65,7 +65,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                           "Hello Dreamwalker",
                           style: GoogleFonts.balsamiqSans(fontWeight: FontWeight.bold, fontSize: 18),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Text(
@@ -78,7 +78,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Padding(
@@ -93,7 +93,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                   Container(
