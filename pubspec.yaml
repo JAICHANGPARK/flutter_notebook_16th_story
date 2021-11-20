@@ -12,8 +12,10 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.4
-  coolicons: ^1.0.0
+
   flutter_riverpod: ^1.0.0
+
+  coolicons: ^1.0.0
   line_icons: any
   ionicons: any
   google_fonts: any
