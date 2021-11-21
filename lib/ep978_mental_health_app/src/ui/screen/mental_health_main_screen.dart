@@ -104,10 +104,15 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         borderRadius: BorderRadius.circular(16),
                         border: Border.all(color: Colors.black, width: 1.5)),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Column(
-                          children: [Text("New Features"), Text("Talk through your anxiety")],
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("New Features"),
+                            Text("Talk through your anxiety"),
+                          ],
                         ),
                         Container(
                           height: 48,
