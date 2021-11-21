@@ -278,6 +278,17 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                   ],
                 ),
               ),
+            ),
+            Spacer(),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
+                height: 64,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(36),
+                ),
+              ),
             )
           ],
         ),
