@@ -142,6 +142,24 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                   )
                 ],
               ),
+            ),
+
+            Row(
+              children: [
+                Text("Self Care"),
+                Spacer(),
+                Column(
+                  children: [
+                    Text("See All"),
+                    Container(
+                      height: 3,
+                      decoration: BoxDecoration(
+                        color: Colors.blue
+                      ),
+                    )
+                  ],
+                )
+              ],
             )
           ],
         ),
