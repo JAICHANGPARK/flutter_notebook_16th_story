@@ -214,7 +214,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text(
                 "My 4 Am Friends",
                 style: GoogleFonts.balsamiqSans(
@@ -225,13 +225,29 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Container(
-                height: 130,
+                height: 110,
                 decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 1.5,
-                    ),
-                    borderRadius: BorderRadius.circular(16)),
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 1.5,
+                  ),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 64,
+                      width: 64,
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
+                        image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2020/11/23/18/18/birds-5770589_960_720.jpg",
+                        ),
+                        fit: BoxFit.fitHeight,
+                      )),
+                    )
+                  ],
+                ),
               ),
             )
           ],
