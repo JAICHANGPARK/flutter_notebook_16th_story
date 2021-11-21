@@ -110,25 +110,25 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text("New Features",),
-                            const Text("Talk through your anxiety"),
+                          children: const [
+                            Text(
+                              "New Features",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text("Talk through your anxiety"),
                           ],
                         ),
                         const Spacer(),
                         Container(
                           height: 48,
                           width: 48,
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle
-                          ),
+                          decoration: const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
                           padding: const EdgeInsets.all(4),
                           child: Container(
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(color: Colors.black)
-                            ),
+                            decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(color: Colors.black)),
                             child: const Center(
                               child: const Icon(Icons.mic),
                             ),
