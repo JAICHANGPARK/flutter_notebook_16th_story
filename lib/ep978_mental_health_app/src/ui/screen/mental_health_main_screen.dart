@@ -166,7 +166,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
               ),
             ),
             SizedBox(
-              height: 8,
+              height: 16,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 16),
@@ -179,8 +179,8 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                       child: Column(
                         children: [
                           Container(
-                            height: 64,
-                            width: 64,
+                            height: 54,
+                            width: 54,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                                 border: Border.all(
