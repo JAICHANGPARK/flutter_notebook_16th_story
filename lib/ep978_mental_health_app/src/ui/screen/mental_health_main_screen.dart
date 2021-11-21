@@ -234,7 +234,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                   ),
                   borderRadius: BorderRadius.circular(16),
                 ),
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 child: Row(
                   children: [
                     Container(
@@ -248,14 +248,14 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         fit: BoxFit.fitHeight,
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "How are you feeling?",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -266,8 +266,8 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                               color: Colors.yellow,
                               border: Border.all(color: Colors.black, width: 1.5),
                               borderRadius: BorderRadius.circular(24)),
-                          padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                          child: Center(
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                          child: const Center(
                             child: Text(
                               "Talk Now",
                             ),
