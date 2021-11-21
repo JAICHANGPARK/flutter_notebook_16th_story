@@ -213,20 +213,25 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 ),
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
-              child: Text("My 4 Am Friends"),
+              child: Text(
+                "My 4 Am Friends",
+                style: GoogleFonts.balsamiqSans(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Container(
-                height: 120,
+                height: 130,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black,
-                    width: 1.5,
-                  ),
-                  borderRadius: BorderRadius.circular(16)
-                ),
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 1.5,
+                    ),
+                    borderRadius: BorderRadius.circular(16)),
               ),
             )
           ],
