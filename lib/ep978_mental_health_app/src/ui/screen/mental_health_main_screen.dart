@@ -287,6 +287,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 decoration: BoxDecoration(
                   color: Colors.blue,
                   borderRadius: BorderRadius.circular(36),
+                  border: Border.all(color: Colors.black, width: 1.5)
                 ),
               ),
             )
