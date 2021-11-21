@@ -118,7 +118,10 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                             SizedBox(
                               height: 8,
                             ),
-                            Text("Talk through your anxiety"),
+                            Text(
+                              "Talk through your anxiety",
+                              style: TextStyle(fontWeight: FontWeight.w300),
+                            ),
                           ],
                         ),
                         const Spacer(),
