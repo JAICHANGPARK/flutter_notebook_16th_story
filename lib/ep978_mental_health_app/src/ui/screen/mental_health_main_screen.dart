@@ -212,6 +212,22 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                   scrollDirection: Axis.horizontal,
                 ),
               ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Text("My 4 Am Friends"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
+                height: 120,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black,
+                    width: 1.5,
+                  ),
+                  borderRadius: BorderRadius.circular(16)
+                ),
+              ),
             )
           ],
         ),
