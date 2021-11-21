@@ -182,10 +182,17 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                             height: 54,
                             width: 54,
                             decoration: BoxDecoration(
-                              shape: BoxShape.circle,
+                                shape: BoxShape.circle,
                                 border: Border.all(
-                              color: Colors.black,
-                            )),
+                                  color: Colors.black,
+                                )),
+                            padding: EdgeInsets.all(2),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.blue,
+                                shape: BoxShape.circle,
+                              ),
+                            ),
                           ),
                           SizedBox(
                             height: 12,
