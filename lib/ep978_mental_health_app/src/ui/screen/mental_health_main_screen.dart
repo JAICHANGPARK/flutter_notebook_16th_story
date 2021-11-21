@@ -248,15 +248,24 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         fit: BoxFit.fitHeight,
                       )),
                     ),
+                    SizedBox(
+                      width: 16,
+                    ),
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("How are you feeling?"),
+                        Text(
+                          "How are you feeling?",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         Container(
                           decoration: BoxDecoration(
-                            color: Colors.yellow,
-                            border: Border.all(color: Colors.black, width: 1.5),
-                            borderRadius: BorderRadius.circular(24)
-                          ),
+                              color: Colors.yellow,
+                              border: Border.all(color: Colors.black, width: 1.5),
+                              borderRadius: BorderRadius.circular(24)),
                           padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                           child: Center(
                             child: Text(
