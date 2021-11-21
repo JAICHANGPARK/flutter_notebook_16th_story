@@ -121,6 +121,17 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                           width: 48,
                           decoration: BoxDecoration(
                             color: Colors.white,
+                            shape: BoxShape.circle
+                          ),
+                          padding: EdgeInsets.all(4),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.black)
+                            ),
+                            child: Center(
+                              child: Icon(Icons.mic),
+                            ),
                           ),
                         )
                       ],
