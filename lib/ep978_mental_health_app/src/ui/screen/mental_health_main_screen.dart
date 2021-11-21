@@ -103,6 +103,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         color: Colors.cyan[100],
                         borderRadius: BorderRadius.circular(16),
                         border: Border.all(color: Colors.black, width: 1.5)),
+                    padding: EdgeInsets.all(16),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -114,6 +115,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                             Text("Talk through your anxiety"),
                           ],
                         ),
+                        Spacer(),
                         Container(
                           height: 48,
                           width: 48,
