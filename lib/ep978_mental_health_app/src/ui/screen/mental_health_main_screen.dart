@@ -1,4 +1,5 @@
 import 'package:coolicons/coolicons.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -103,12 +104,17 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         borderRadius: BorderRadius.circular(16),
                         border: Border.all(color: Colors.black, width: 1.5)),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Column(
-                          children: [
-                            Text("New Features"),
-                            Text("Talk through your anxiety")
-                          ],
+                          children: [Text("New Features"), Text("Talk through your anxiety")],
+                        ),
+                        Container(
+                          height: 48,
+                          width: 48,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                          ),
                         )
                       ],
                     ),
