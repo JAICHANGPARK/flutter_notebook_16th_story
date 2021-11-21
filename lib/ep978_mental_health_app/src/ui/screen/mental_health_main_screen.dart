@@ -14,6 +14,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -233,11 +234,12 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                   ),
                   borderRadius: BorderRadius.circular(16),
                 ),
+                padding: EdgeInsets.all(16),
                 child: Row(
                   children: [
                     Container(
-                      height: 64,
-                      width: 64,
+                      height: 84,
+                      width: 84,
                       decoration: const BoxDecoration(
                           image: DecorationImage(
                         image: NetworkImage(
@@ -245,6 +247,24 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         ),
                         fit: BoxFit.fitHeight,
                       )),
+                    ),
+                    Column(
+                      children: [
+                        Text("How are you feeling?"),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.yellow,
+                            border: Border.all(color: Colors.black, width: 1.5),
+                            borderRadius: BorderRadius.circular(24)
+                          ),
+                          padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                          child: Center(
+                            child: Text(
+                              "Talk Now",
+                            ),
+                          ),
+                        )
+                      ],
                     )
                   ],
                 ),
