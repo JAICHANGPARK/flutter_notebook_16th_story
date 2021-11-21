@@ -152,7 +152,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                   Column(
                     children: [
                       const Text("See All"),
-                      SizedBox(
+                      const SizedBox(
                         height: 4,
                       ),
                       Container(
@@ -165,7 +165,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Padding(
@@ -186,18 +186,24 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                                 border: Border.all(
                                   color: Colors.black,
                                 )),
-                            padding: EdgeInsets.all(2),
+                            padding: const EdgeInsets.all(2),
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Colors.blue,
                                 shape: BoxShape.circle,
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
-                          Text("Talk")
+                          Text(
+                            "Talk",
+                            style: GoogleFonts.balsamiqSans(
+                              fontWeight: FontWeight.w300,
+                              color: Colors.grey,
+                            ),
+                          )
                         ],
                       ),
                     );
