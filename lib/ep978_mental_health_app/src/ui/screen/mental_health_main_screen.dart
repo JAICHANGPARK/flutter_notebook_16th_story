@@ -110,12 +110,12 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "New Features",
                               style: GoogleFonts.balsamiqSans(fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 8,
                             ),
                             Text(
@@ -143,25 +143,61 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 ],
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Row(
                 children: [
-                  Text("Self Care"),
-                  Spacer(),
+                  const Text("Self Care"),
+                  const Spacer(),
                   Column(
                     children: [
-                      Text("See All"),
+                      const Text("See All"),
+                      SizedBox(
+                        height: 4,
+                      ),
                       Container(
-                        height: 3,
-                        decoration: BoxDecoration(
-                          color: Colors.blue
-                        ),
+                        height: 2,
+                        width: 42,
+                        decoration: const BoxDecoration(color: Colors.blue),
                       )
                     ],
                   )
                 ],
+              ),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: SizedBox(
+                height: 100,
+                child: ListView.builder(
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 12),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 64,
+                            width: 64,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                                border: Border.all(
+                              color: Colors.black,
+                            )),
+                          ),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          Text("Talk")
+                        ],
+                      ),
+                    );
+                  },
+                  itemCount: 10,
+                  scrollDirection: Axis.horizontal,
+                ),
               ),
             )
           ],
