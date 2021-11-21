@@ -102,6 +102,16 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         color: Colors.cyan[100],
                         borderRadius: BorderRadius.circular(16),
                         border: Border.all(color: Colors.black, width: 1.5)),
+                    child: Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text("New Features"),
+                            Text("Talk through your anxiety")
+                          ],
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
