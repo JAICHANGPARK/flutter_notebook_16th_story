@@ -103,7 +103,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         color: Colors.cyan[100],
                         borderRadius: BorderRadius.circular(16),
                         border: Border.all(color: Colors.black, width: 1.5)),
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -111,26 +111,26 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("New Features"),
-                            Text("Talk through your anxiety"),
+                            const Text("New Features",),
+                            const Text("Talk through your anxiety"),
                           ],
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Container(
                           height: 48,
                           width: 48,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             shape: BoxShape.circle
                           ),
-                          padding: EdgeInsets.all(4),
+                          padding: const EdgeInsets.all(4),
                           child: Container(
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(color: Colors.black)
                             ),
-                            child: Center(
-                              child: Icon(Icons.mic),
+                            child: const Center(
+                              child: const Icon(Icons.mic),
                             ),
                           ),
                         )
