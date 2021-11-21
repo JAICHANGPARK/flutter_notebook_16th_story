@@ -113,14 +113,14 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                           children: const [
                             Text(
                               "New Features",
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: GoogleFonts.balsamiqSans(fontWeight: FontWeight.bold),
                             ),
                             SizedBox(
                               height: 8,
                             ),
                             Text(
                               "Talk through your anxiety",
-                              style: TextStyle(fontWeight: FontWeight.w300),
+                              style: GoogleFonts.balsamiqSans(fontWeight: FontWeight.w300),
                             ),
                           ],
                         ),
@@ -133,7 +133,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                           child: Container(
                             decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(color: Colors.black)),
                             child: const Center(
-                              child: const Icon(Icons.mic),
+                              child: Icon(Icons.mic),
                             ),
                           ),
                         )
@@ -144,22 +144,25 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
               ),
             ),
 
-            Row(
-              children: [
-                Text("Self Care"),
-                Spacer(),
-                Column(
-                  children: [
-                    Text("See All"),
-                    Container(
-                      height: 3,
-                      decoration: BoxDecoration(
-                        color: Colors.blue
-                      ),
-                    )
-                  ],
-                )
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                children: [
+                  Text("Self Care"),
+                  Spacer(),
+                  Column(
+                    children: [
+                      Text("See All"),
+                      Container(
+                        height: 3,
+                        decoration: BoxDecoration(
+                          color: Colors.blue
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),
