@@ -290,6 +290,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                     borderRadius: BorderRadius.circular(36),
                     border: Border.all(color: Colors.black, width: 1.5)),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
                       decoration: BoxDecoration(
