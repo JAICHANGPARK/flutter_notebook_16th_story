@@ -286,9 +286,9 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Consumer(
-                builder: (context, ref, _){
+                builder: (context, ref, _) {
                   final index = ref.watch(mhBottomTabProvider);
-                  return  Container(
+                  return Container(
                     height: 64,
                     decoration: BoxDecoration(
                         color: Colors.blue,
@@ -297,8 +297,28 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        GestureDetector(
-                          onTap: (){
+                        index == 0
+                            ? GestureDetector(
+                                onTap: () {
+                                  ref.read(mhBottomTabProvider.notifier).state = 0;
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.yellow,
+                                      borderRadius: BorderRadius.circular(16),
+                                      border: Border.all(color: Colors.black, width: 1.5)),
+                                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                                  child: const Icon(Ionicons.home),
+                                ),
+                              )
+                            : IconButton(
+                                onPressed: () => ref.read(mhBottomTabProvider.notifier).state = 0,
+                                icon: const Icon(Ionicons.home),
+                                color: Colors.white,
+                              ),
+                        index == 1
+                            ? GestureDetector(
+                          onTap: () {
                             ref.read(mhBottomTabProvider.notifier).state = 0;
                           },
                           child: Container(
@@ -307,21 +327,49 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                                 borderRadius: BorderRadius.circular(16),
                                 border: Border.all(color: Colors.black, width: 1.5)),
                             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                            child: const Icon(Ionicons.home),
+                            child: const Icon(Ionicons.chatbubble_outline),
                           ),
-                        ),
-                        IconButton(
+                        )
+                            :IconButton(
                           onPressed: () => ref.read(mhBottomTabProvider.notifier).state = 1,
                           icon: const Icon(Ionicons.chatbubble_outline),
                           color: Colors.white,
                         ),
-                        IconButton(
-                          onPressed: ()=> ref.read(mhBottomTabProvider.notifier).state = 2,
+                        index == 2
+                            ? GestureDetector(
+                          onTap: () {
+                            ref.read(mhBottomTabProvider.notifier).state = 0;
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.yellow,
+                                borderRadius: BorderRadius.circular(16),
+                                border: Border.all(color: Colors.black, width: 1.5)),
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                            child: const Icon(Ionicons.apps_outline),
+                          ),
+                        )
+                            :IconButton(
+                          onPressed: () => ref.read(mhBottomTabProvider.notifier).state = 2,
                           icon: const Icon(Ionicons.apps_outline),
                           color: Colors.white,
                         ),
-                        IconButton(
-                          onPressed: ()=> ref.read(mhBottomTabProvider.notifier).state = 3,
+                        index == 3
+                            ? GestureDetector(
+                          onTap: () {
+                            ref.read(mhBottomTabProvider.notifier).state = 0;
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.yellow,
+                                borderRadius: BorderRadius.circular(16),
+                                border: Border.all(color: Colors.black, width: 1.5)),
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                            child: const Icon(Ionicons.document_text_outline),
+                          ),
+                        )
+                            :IconButton(
+                          onPressed: () => ref.read(mhBottomTabProvider.notifier).state = 3,
                           icon: const Icon(Ionicons.document_text_outline),
                           color: Colors.white,
                         )
@@ -329,7 +377,6 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                     ),
                   );
                 },
-
               ),
             )
           ],
