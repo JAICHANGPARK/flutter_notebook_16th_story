@@ -2,6 +2,7 @@ import 'package:coolicons/coolicons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ionicons/ionicons.dart';
 
 class MentalHealthMainScreen extends StatefulWidget {
   const MentalHealthMainScreen({Key? key}) : super(key: key);
@@ -279,7 +280,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Container(
@@ -291,11 +292,27 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 child: Row(
                   children: [
                     Container(
-                      decoration: BoxDecoration(color: Colors.yellow, borderRadius: BorderRadius.circular(13),
-                        border: Border.all(color: Colors.black, width: 1.5)
-                      ),
-                      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                      child: Icon(Icons.home),
+                      decoration: BoxDecoration(
+                          color: Colors.yellow,
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(color: Colors.black, width: 1.5)),
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                      child: const Icon(Ionicons.home),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Ionicons.chatbubble_outline),
+                      color: Colors.white,
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Ionicons.apps_outline),
+                      color: Colors.white,
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Ionicons.document_text_outline),
+                      color: Colors.white,
                     )
                   ],
                 ),
