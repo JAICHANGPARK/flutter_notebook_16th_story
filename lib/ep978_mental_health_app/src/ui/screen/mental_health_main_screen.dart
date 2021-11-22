@@ -389,7 +389,35 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 );
               case 1:
                 return Column(
-                  children: [],
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Consumer(
+                            builder: (context, ref, _) {
+                              return Container(
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  border: Border.all(
+                                    color: Colors.black,
+                                    width: 1.5,
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.arrow_back,
+                                  color: Colors.white,
+                                ),
+                              );
+                            },
+                          )
+                        ],
+                      ),
+                    )
+                  ],
                 );
               case 2:
                 return Column(
