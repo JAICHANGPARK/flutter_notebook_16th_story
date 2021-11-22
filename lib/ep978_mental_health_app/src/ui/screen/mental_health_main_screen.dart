@@ -396,20 +396,25 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         children: [
                           Consumer(
                             builder: (context, ref, _) {
-                              return Container(
-                                height: 48,
-                                width: 48,
-                                decoration: BoxDecoration(
-                                  color: Colors.blue,
-                                  border: Border.all(
-                                    color: Colors.black,
-                                    width: 1.5,
+                              return GestureDetector(
+                                onTap: (){
+                                  ref.read(mhBottomTabProvider.notifier).state = 0;
+                                },
+                                child: Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                    border: Border.all(
+                                      color: Colors.black,
+                                      width: 1.5,
+                                    ),
+                                    shape: BoxShape.circle,
                                   ),
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Icon(
-                                  Icons.arrow_back,
-                                  color: Colors.white,
+                                  child: Icon(
+                                    Icons.arrow_back,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               );
                             },
