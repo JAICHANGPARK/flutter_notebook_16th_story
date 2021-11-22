@@ -1,6 +1,8 @@
 import 'package:coolicons/coolicons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_16th_story/ep978_mental_health_app/src/riverpod/bottom_tab_provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -283,40 +285,51 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
             const Spacer(),
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Container(
-                height: 64,
-                decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(36),
-                    border: Border.all(color: Colors.black, width: 1.5)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.yellow,
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(color: Colors.black, width: 1.5)),
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                      child: const Icon(Ionicons.home),
+              child: Consumer(
+                builder: (context, ref, _){
+                  final index = ref.watch(mhBottomTabProvider);
+                  return  Container(
+                    height: 64,
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(36),
+                        border: Border.all(color: Colors.black, width: 1.5)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        GestureDetector(
+                          onTap: (){
+                            ref.read(mhBottomTabProvider.notifier).state = 0;
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.yellow,
+                                borderRadius: BorderRadius.circular(16),
+                                border: Border.all(color: Colors.black, width: 1.5)),
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                            child: const Icon(Ionicons.home),
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () => ref.read(mhBottomTabProvider.notifier).state = 1,
+                          icon: const Icon(Ionicons.chatbubble_outline),
+                          color: Colors.white,
+                        ),
+                        IconButton(
+                          onPressed: ()=> ref.read(mhBottomTabProvider.notifier).state = 2,
+                          icon: const Icon(Ionicons.apps_outline),
+                          color: Colors.white,
+                        ),
+                        IconButton(
+                          onPressed: ()=> ref.read(mhBottomTabProvider.notifier).state = 3,
+                          icon: const Icon(Ionicons.document_text_outline),
+                          color: Colors.white,
+                        )
+                      ],
                     ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Ionicons.chatbubble_outline),
-                      color: Colors.white,
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Ionicons.apps_outline),
-                      color: Colors.white,
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Ionicons.document_text_outline),
-                      color: Colors.white,
-                    )
-                  ],
-                ),
+                  );
+                },
+
               ),
             )
           ],
