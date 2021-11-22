@@ -289,6 +289,17 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                   borderRadius: BorderRadius.circular(36),
                   border: Border.all(color: Colors.black, width: 1.5)
                 ),
+                child: Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.yellow,
+                        borderRadius: BorderRadius.circular(24)
+                      ),
+                      child: IconButton(icon: Icon(Icons.home), onPressed: (){},),
+                    )
+                  ],
+                ),
               ),
             )
           ],
