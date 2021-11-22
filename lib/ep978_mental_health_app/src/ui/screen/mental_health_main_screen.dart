@@ -285,18 +285,17 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
               child: Container(
                 height: 64,
                 decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(36),
-                  border: Border.all(color: Colors.black, width: 1.5)
-                ),
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(36),
+                    border: Border.all(color: Colors.black, width: 1.5)),
                 child: Row(
                   children: [
                     Container(
-                      decoration: BoxDecoration(
-                        color: Colors.yellow,
-                        borderRadius: BorderRadius.circular(24)
+                      decoration: BoxDecoration(color: Colors.yellow, borderRadius: BorderRadius.circular(13),
+                        border: Border.all(color: Colors.black, width: 1.5)
                       ),
-                      child: IconButton(icon: Icon(Icons.home), onPressed: (){},),
+                      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                      child: Icon(Icons.home),
                     )
                   ],
                 ),
