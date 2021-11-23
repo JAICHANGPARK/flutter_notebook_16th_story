@@ -389,10 +389,13 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 );
               case 1:
                 return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    const SizedBox(height: 24,),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Consumer(
                             builder: (context, ref, _) {
@@ -411,17 +414,31 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                                     ),
                                     shape: BoxShape.circle,
                                   ),
-                                  child: Icon(
+                                  child: const Icon(
                                     Icons.arrow_back,
                                     color: Colors.white,
                                   ),
                                 ),
                               );
                             },
-                          )
+                          ),
+                          const Text("Wellness"),
+                          const Icon(Icons.more_horiz)
                         ],
                       ),
-                    )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text("5 Exercises"),
+                          SizedBox(height: 16,),
+                          const Text("The essential wellness part works to develop helpful beliefs about your life")
+                        ],
+                      ),
+                    ),
+
                   ],
                 );
               case 2:
