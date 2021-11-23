@@ -429,58 +429,71 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            "5 Exercises",
-                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          const SizedBox(
-                            height: 16,
-                          ),
-                          const Text(
-                            "The essential wellness part works to develop helpful beliefs about your life",
-                            style: const TextStyle(fontWeight: FontWeight.w400, color: Colors.grey),
-                          ),
-                          SizedBox(
-                            height: 24,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 16,
-                                  vertical: 4,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: Colors.yellow,
-                                  borderRadius: BorderRadius.circular(16),
-                                  border: Border.all(color: Colors.black, width: 1.5),
-                                ),
-                                child: const Center(
-                                  child: Text("Unlock All",style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 12
-                                  ),),
-                                ),
-                              ),
-                              Spacer(),
-                              Icon(Ionicons.thumbs_up_outline),
-                              SizedBox(width: 16,),
-                              Icon(Ionicons.share_social)
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 24),
-                            child: Divider(
-                              color: Colors.black,
-
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              "5 Exercises",
+                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                             ),
-                          )
-                        ],
+                            const SizedBox(
+                              height: 16,
+                            ),
+                            const Text(
+                              "The essential wellness part works to develop helpful beliefs about your life",
+                              style: const TextStyle(fontWeight: FontWeight.w400, color: Colors.grey),
+                            ),
+                            const SizedBox(
+                              height: 24,
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 16,
+                                    vertical: 4,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Colors.yellow,
+                                    borderRadius: BorderRadius.circular(16),
+                                    border: Border.all(color: Colors.black, width: 1.5),
+                                  ),
+                                  child: const Center(
+                                    child: Text(
+                                      "Unlock All",
+                                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                                    ),
+                                  ),
+                                ),
+                                const Spacer(),
+                                const Icon(Ionicons.thumbs_up_outline),
+                                const SizedBox(
+                                  width: 16,
+                                ),
+                                const Icon(Ionicons.share_social)
+                              ],
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 24),
+                              child: Divider(color: Colors.black),
+                            ),
+                            Text("10 Video Content"),
+                            Expanded(child: ListView.builder(
+                              
+                                itemBuilder: (context, index){
+                              return Container(
+                                height: 120,
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.black, width: 1.5),
+                                  borderRadius: BorderRadius.circular(24)
+                                ),
+                              );
+                            }))
+                          ],
+                        ),
                       ),
                     ),
                   ],
