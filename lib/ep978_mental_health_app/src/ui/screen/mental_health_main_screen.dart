@@ -391,7 +391,9 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 24,),
+                    const SizedBox(
+                      height: 24,
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Row(
@@ -400,7 +402,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                           Consumer(
                             builder: (context, ref, _) {
                               return GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   ref.read(mhBottomTabProvider.notifier).state = 0;
                                 },
                                 child: Container(
@@ -432,13 +434,48 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text("5 Exercises"),
-                          SizedBox(height: 16,),
-                          const Text("The essential wellness part works to develop helpful beliefs about your life")
+                          const Text(
+                            "5 Exercises",
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                          ),
+                          const SizedBox(
+                            height: 16,
+                          ),
+                          const Text(
+                            "The essential wellness part works to develop helpful beliefs about your life",
+                            style: const TextStyle(fontWeight: FontWeight.w400, color: Colors.grey),
+                          ),
+                          SizedBox(
+                            height: 24,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 16,
+                                  vertical: 4,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.yellow,
+                                  borderRadius: BorderRadius.circular(16),
+                                  border: Border.all(color: Colors.black, width: 1.5),
+                                ),
+                                child: const Center(
+                                  child: Text("Unlock All",style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12
+                                  ),),
+                                ),
+                              ),
+                              Spacer(),
+                              Icon(Ionicons.thumbs_up_outline),
+                              SizedBox(width: 16,),
+                              Icon(Ionicons.share_social)
+                            ],
+                          )
                         ],
                       ),
                     ),
-
                   ],
                 );
               case 2:
