@@ -429,6 +429,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         ],
                       ),
                     ),
+
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
@@ -480,15 +481,20 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                               padding: EdgeInsets.symmetric(vertical: 24),
                               child: Divider(color: Colors.black),
                             ),
+
                             Text("10 Video Content"),
+                            SizedBox(height: 16,),
                             Expanded(child: ListView.builder(
                               
                                 itemBuilder: (context, index){
-                              return Container(
-                                height: 120,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.black, width: 1.5),
-                                  borderRadius: BorderRadius.circular(24)
+                              return Padding(
+                                padding: const EdgeInsets.only(bottom: 16),
+                                child: Container(
+                                  height: 110,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.black, width: 1.5),
+                                    borderRadius: BorderRadius.circular(24)
+                                  ),
                                 ),
                               );
                             }))
