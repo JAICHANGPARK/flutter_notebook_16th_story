@@ -472,6 +472,13 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                               SizedBox(width: 16,),
                               Icon(Ionicons.share_social)
                             ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 24),
+                            child: Divider(
+                              color: Colors.black,
+
+                            ),
                           )
                         ],
                       ),
