@@ -9,6 +9,6 @@ class Wellness with $_Wellness {
     String? title,
     String? subtitle,
     String? time,
-    bool? isLock
-  }) = _Wellness
+    bool? isLock,
+  }) = _Wellness;
 }
