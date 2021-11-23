@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'src/ui/screen/mental_health_main_screen.dart';
@@ -9,6 +10,8 @@ class MentalHealthApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return const MaterialApp(
       title: "Mental Health App",
       debugShowCheckedModeBanner: false,
