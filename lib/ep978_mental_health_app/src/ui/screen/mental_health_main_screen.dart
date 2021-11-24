@@ -6,6 +6,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 
+import 'mental_home_component.dart';
+
 class MentalHealthMainScreen extends StatefulWidget {
   const MentalHealthMainScreen({Key? key}) : super(key: key);
 
@@ -24,7 +26,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
             final index = ref.watch(mhBottomTabProvider);
             switch (index) {
               case 0:
-
+                return MentalHomeComponent();
               case 1:
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,7 +69,6 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                         ],
                       ),
                     ),
-
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
@@ -119,20 +120,18 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                               padding: EdgeInsets.symmetric(vertical: 24),
                               child: Divider(color: Colors.black),
                             ),
-
                             Text("10 Video Content"),
-                            SizedBox(height: 16,),
-                            Expanded(child: ListView.builder(
-                              
-                                itemBuilder: (context, index){
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Expanded(child: ListView.builder(itemBuilder: (context, index) {
                               return Padding(
                                 padding: const EdgeInsets.only(bottom: 16),
                                 child: Container(
                                   height: 110,
                                   decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.black, width: 1.5),
-                                    borderRadius: BorderRadius.circular(24)
-                                  ),
+                                      border: Border.all(color: Colors.black, width: 1.5),
+                                      borderRadius: BorderRadius.circular(24)),
                                 ),
                               );
                             }))
