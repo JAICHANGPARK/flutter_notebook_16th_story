@@ -26,7 +26,7 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
             final index = ref.watch(mhBottomTabProvider);
             switch (index) {
               case 0:
-                return MentalHomeComponent();
+                return const MentalHomeComponent();
               case 1:
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,14 +77,14 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                           children: [
                             const Text(
                               "5 Exercises",
-                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                             ),
                             const SizedBox(
                               height: 16,
                             ),
                             const Text(
                               "The essential wellness part works to develop helpful beliefs about your life",
-                              style: const TextStyle(fontWeight: FontWeight.w400, color: Colors.grey),
+                              style: TextStyle(fontWeight: FontWeight.w400, color: Colors.grey),
                             ),
                             const SizedBox(
                               height: 24,
@@ -120,10 +120,8 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                               padding: EdgeInsets.symmetric(vertical: 24),
                               child: Divider(color: Colors.black),
                             ),
-                            Text("10 Video Content"),
-                            SizedBox(
-                              height: 16,
-                            ),
+                            const Text("10 Video Content"),
+                            const SizedBox(height: 16),
                             Expanded(child: ListView.builder(itemBuilder: (context, index) {
                               return Padding(
                                 padding: const EdgeInsets.only(bottom: 16),
