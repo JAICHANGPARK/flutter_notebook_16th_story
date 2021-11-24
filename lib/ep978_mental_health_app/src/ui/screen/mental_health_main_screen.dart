@@ -124,7 +124,9 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                             ),
                             const Text("10 Video Content"),
                             const SizedBox(height: 16),
-                            Expanded(child: ListView.builder(itemBuilder: (context, index) {
+                            Expanded(child: ListView.builder(
+                                itemCount: fakeWellness.length,
+                                itemBuilder: (context, index) {
                               return Padding(
                                 padding: const EdgeInsets.only(bottom: 16),
                                 child: Container(
@@ -138,10 +140,22 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                                       Container(
                                         height: 100,
                                         width: 120,
-                                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
-                                        child: CachedNetworkImage(
-                                          imageUrl: fakeWellness[index].img ?? "",
-                                          fit: BoxFit.cover,
+                                        decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(16),
+                                            image: DecorationImage(
+                                                image: CachedNetworkImageProvider(
+                                                  fakeWellness[index].img ?? "",
+                                                ),
+                                                fit: BoxFit.cover)),
+                                        child: Center(
+                                          child: CircleAvatar(
+                                            backgroundColor: (fakeWellness[index].isLock ?? false) ? Colors.red  : Colors.blue,
+                                            child: Icon(
+                                                (fakeWellness[index].isLock ?? false) ?
+                                                    Icons.visibility
+                                                    : Icons.lock
+                                            ),
+                                          ),
                                         ),
                                       )
                                     ],
