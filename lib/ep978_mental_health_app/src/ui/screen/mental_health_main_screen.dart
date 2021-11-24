@@ -178,10 +178,10 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                                                         color: Colors.grey,
                                                       ),
                                                     ),
-                                                    Text(fakeWellness[index].time ?? "",
-                                                    style: const TextStyle(
-                                                      fontSize: 12
-                                                    ),),
+                                                    Text(
+                                                      fakeWellness[index].time ?? "",
+                                                      style: const TextStyle(fontSize: 12),
+                                                    ),
                                                   ],
                                                 ),
                                               )
