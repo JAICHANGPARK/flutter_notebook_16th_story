@@ -1,5 +1,11 @@
 
+import 'package:coolicons/coolicons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:ionicons/ionicons.dart';
+
+import '../../riverpod/bottom_tab_provider.dart';
 
 class MentalHomeComponent extends StatelessWidget {
   const MentalHomeComponent({Key? key}) : super(key: key);
