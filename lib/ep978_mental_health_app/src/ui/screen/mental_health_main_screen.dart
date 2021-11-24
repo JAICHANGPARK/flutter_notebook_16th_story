@@ -124,58 +124,72 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                             ),
                             const Text("10 Video Content"),
                             const SizedBox(height: 16),
-                            Expanded(child: ListView.builder(
-                                itemCount: fakeWellness.length,
-                                itemBuilder: (context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.only(bottom: 16),
-                                child: Container(
-                                  height: 110,
-                                  decoration: BoxDecoration(
-                                      border: Border.all(color: Colors.black, width: 1.5),
-                                      borderRadius: BorderRadius.circular(24)),
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        height: 100,
-                                        width: 120,
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(16),
-                                            image: DecorationImage(
-                                                image: CachedNetworkImageProvider(
-                                                  fakeWellness[index].img ?? "",
+                            Expanded(
+                                child: ListView.builder(
+                                    itemCount: fakeWellness.length,
+                                    itemBuilder: (context, index) {
+                                      return Padding(
+                                        padding: const EdgeInsets.only(bottom: 16),
+                                        child: Container(
+                                          height: 110,
+                                          decoration: BoxDecoration(
+                                              border: Border.all(color: Colors.black, width: 1.5),
+                                              borderRadius: BorderRadius.circular(24)),
+                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                                          child: Row(
+                                            children: [
+                                              Container(
+                                                height: 100,
+                                                width: 120,
+                                                decoration: BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(16),
+                                                    image: DecorationImage(
+                                                        image: CachedNetworkImageProvider(
+                                                          fakeWellness[index].img ?? "",
+                                                        ),
+                                                        fit: BoxFit.cover)),
+                                                child: Center(
+                                                  child: CircleAvatar(
+                                                    backgroundColor: (fakeWellness[index].isLock ?? false)
+                                                        ? Colors.red
+                                                        : Colors.blue,
+                                                    foregroundColor: Colors.white,
+                                                    child: Icon((fakeWellness[index].isLock ?? false)
+                                                        ? Icons.visibility
+                                                        : Icons.lock),
+                                                  ),
                                                 ),
-                                                fit: BoxFit.cover)),
-                                        child: Center(
-                                          child: CircleAvatar(
-                                            backgroundColor: (fakeWellness[index].isLock ?? false) ? Colors.red  : Colors.blue,
-                                            foregroundColor: Colors.white,
-                                            child: Icon(
-                                                (fakeWellness[index].isLock ?? false) ?
-                                                    Icons.visibility
-                                                    : Icons.lock
-                                            ),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.all(8.0),
+                                                child: Column(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      fakeWellness[index].title ?? "",
+                                                      style: const TextStyle(
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
+                                                    ),
+                                                    Text(
+                                                      fakeWellness[index].subtitle ?? "",
+                                                      style: const TextStyle(
+                                                        color: Colors.grey,
+                                                      ),
+                                                    ),
+                                                    Text(fakeWellness[index].time ?? "",
+                                                    style: const TextStyle(
+                                                      fontSize: 12
+                                                    ),),
+                                                  ],
+                                                ),
+                                              )
+                                            ],
                                           ),
                                         ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Text(fakeWellness[index].title ?? ""),
-                                            Text(fakeWellness[index].subtitle ?? ""),
-                                            Text(fakeWellness[index].time ??""),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              );
-                            }))
+                                      );
+                                    }))
                           ],
                         ),
                       ),
