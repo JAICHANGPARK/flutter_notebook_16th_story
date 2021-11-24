@@ -150,12 +150,25 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                                         child: Center(
                                           child: CircleAvatar(
                                             backgroundColor: (fakeWellness[index].isLock ?? false) ? Colors.red  : Colors.blue,
+                                            foregroundColor: Colors.white,
                                             child: Icon(
                                                 (fakeWellness[index].isLock ?? false) ?
                                                     Icons.visibility
                                                     : Icons.lock
                                             ),
                                           ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(fakeWellness[index].title ?? ""),
+                                            Text(fakeWellness[index].subtitle ?? ""),
+                                            Text(fakeWellness[index].time ??""),
+                                          ],
                                         ),
                                       )
                                     ],
