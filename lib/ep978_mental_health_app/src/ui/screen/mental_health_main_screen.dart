@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:coolicons/coolicons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 
+import '../../data/fake_wellness.dart';
 import 'mental_home_component.dart';
 
 class MentalHealthMainScreen extends StatefulWidget {
@@ -130,6 +132,20 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                                   decoration: BoxDecoration(
                                       border: Border.all(color: Colors.black, width: 1.5),
                                       borderRadius: BorderRadius.circular(24)),
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        height: 100,
+                                        width: 120,
+                                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
+                                        child: CachedNetworkImage(
+                                          imageUrl: fakeWellness[index].img ?? "",
+                                          fit: BoxFit.cover,
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ),
                               );
                             }))
