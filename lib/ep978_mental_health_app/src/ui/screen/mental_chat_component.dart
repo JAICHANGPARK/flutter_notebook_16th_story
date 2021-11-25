@@ -140,7 +140,19 @@ class MentalChatComponent extends StatelessWidget {
           final topTab = ref.watch(mhChatTabProvider);
           switch(topTab){
             case 0:
-              return Container();
+              return Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(24),
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 1.5)
+                    ),
+                  ),
+                ),
+              );
             case 1:
               return Container();
             default:
