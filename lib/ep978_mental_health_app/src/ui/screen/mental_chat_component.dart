@@ -73,50 +73,57 @@ class MentalChatComponent extends StatelessWidget {
                                     width: 1.5,
                                   ),
                                   borderRadius: BorderRadius.circular(24)),
-                              child: Center(
-                                child: const Text(
+                              child: const Center(
+                                child: Text(
                                   "Consult",
-                                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,),
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                             )
-                          : const Text(
-                              "Consult",
-                              style: TextStyle(color: Colors.white),
+                          : const Center(
+                              child: Text(
+                                "Consult",
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
                     ),
                     const SizedBox(
                       width: 12,
                     ),
                     Expanded(
-                      child:
-
-                      GestureDetector(
-                        onTap: (){
+                      child: GestureDetector(
+                        onTap: () {
                           ref.read(mhChatTabProvider.notifier).state = 1;
                         },
-                        child:   topTab == 1
+                        child: topTab == 1
                             ? Container(
-                          decoration: BoxDecoration(
-                              color: Colors.yellow,
-                              border: Border.all(
-                                color: Colors.black,
-                                width: 1.5,
+                                decoration: BoxDecoration(
+                                    color: Colors.yellow,
+                                    border: Border.all(
+                                      color: Colors.black,
+                                      width: 1.5,
+                                    ),
+                                    borderRadius: BorderRadius.circular(24)),
+                                child: const Center(
+                                  child: Text(
+                                    "Description",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              )
+                            : const Center(
+                                child: Text(
+                                  "Description",
+                                  style: TextStyle(color: Colors.white),
+                                ),
                               ),
-                              borderRadius: BorderRadius.circular(24)),
-                          child: Center(
-                            child: const Text(
-                              "Description",
-                              style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,),
-                            ),
-                          ),
-                        )
-                            : const Text(
-                          "Description",
-                          style: TextStyle(color: Colors.white),
-                        ),
                       ),
-
                     ),
                   ],
                 );
