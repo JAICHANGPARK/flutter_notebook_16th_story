@@ -52,6 +52,26 @@ class MentalChatComponent extends StatelessWidget {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Container(
+            height: 64,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(32),
+              color: Colors.blue,
+              border: Border.all(color: Colors.black, width: 1.5)
+            ),
+            child: Consumer(
+              builder: (context, ref, _){
+                return Row(
+                  children: [
+
+                  ],
+                );
+              },
+            ),
+          ),
+        )
       ],
     );
   }
