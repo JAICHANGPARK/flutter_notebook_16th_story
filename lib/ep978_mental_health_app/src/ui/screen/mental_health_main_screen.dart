@@ -30,6 +30,8 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
               case 0:
                 return const MentalHomeComponent();
               case 1:
+                return Column();
+              case 2:
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -45,7 +47,9 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                             builder: (context, ref, _) {
                               return GestureDetector(
                                 onTap: () {
-                                  ref.read(mhBottomTabProvider.notifier).state = 0;
+                                  ref
+                                      .read(mhBottomTabProvider.notifier)
+                                      .state = 0;
                                 },
                                 child: Container(
                                   height: 48,
@@ -195,10 +199,6 @@ class _MentalHealthMainScreenState extends State<MentalHealthMainScreen> {
                       ),
                     ),
                   ],
-                );
-              case 2:
-                return Column(
-                  children: [],
                 );
               case 3:
                 return Column(
