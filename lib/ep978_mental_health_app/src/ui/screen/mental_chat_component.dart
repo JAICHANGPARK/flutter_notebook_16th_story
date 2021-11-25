@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../riverpod/bottom_tab_provider.dart';
 
-
 class MentalChatComponent extends StatelessWidget {
   const MentalChatComponent({Key? key}) : super(key: key);
 
@@ -24,9 +23,7 @@ class MentalChatComponent extends StatelessWidget {
                 builder: (context, ref, _) {
                   return GestureDetector(
                     onTap: () {
-                      ref
-                          .read(mhBottomTabProvider.notifier)
-                          .state = 0;
+                      ref.read(mhBottomTabProvider.notifier).state = 0;
                     },
                     child: Container(
                       height: 48,
@@ -55,34 +52,43 @@ class MentalChatComponent extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: Container(
-            height: 64,
+            height: 60,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(32),
-              color: Colors.blue,
-              border: Border.all(color: Colors.black, width: 1.5)
-            ),
+                borderRadius: BorderRadius.circular(32),
+                color: Colors.blue,
+                border: Border.all(color: Colors.black, width: 1.5)),
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
             child: Consumer(
-              builder: (context, ref, _){
+              builder: (context, ref, _) {
                 final topTab = ref.watch(mhChatTabProvider);
                 return Row(
                   children: [
-                    Expanded(child:
-                    topTab == 0 ? Container(
-                      decoration: BoxDecoration(
-                        color: Colors.yellow,
-                        border: Border.all(
-                          color: Colors.black,
-                          width: 1.5,
-                        ),
-                        borderRadius: BorderRadius.circular(24)
-                      ),
-                    ):Text("Consult", style: TextStyle(
-                      color: Colors.white
-                    ),)),
+                    Expanded(
+                      child: topTab == 0
+                          ? Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.yellow,
+                                  border: Border.all(
+                                    color: Colors.black,
+                                    width: 1.5,
+                                  ),
+                                  borderRadius: BorderRadius.circular(24)),
+                              child: Center(
+                                child: const Text(
+                                  "Consult",
+                                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,),
+                                ),
+                              ),
+                            )
+                          : const Text(
+                              "Consult",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                    ),
+                    const SizedBox(
+                      width: 12,
+                    ),
                     const Expanded(child: Placeholder()),
-
-
                   ],
                 );
               },
