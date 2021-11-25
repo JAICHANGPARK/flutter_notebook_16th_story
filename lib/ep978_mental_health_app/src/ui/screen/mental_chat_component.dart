@@ -61,10 +61,15 @@ class MentalChatComponent extends StatelessWidget {
               color: Colors.blue,
               border: Border.all(color: Colors.black, width: 1.5)
             ),
+            padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
             child: Consumer(
               builder: (context, ref, _){
+                final topTab = ref.watch(mhChatTabProvider);
                 return Row(
                   children: [
+                    Expanded(child: Placeholder()),
+                    Expanded(child: Placeholder()),
+
 
                   ],
                 );
