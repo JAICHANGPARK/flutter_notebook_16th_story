@@ -1,7 +1,9 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ionicons/ionicons.dart';
 
+import '../../data/fake_wellness.dart';
 import '../../riverpod/bottom_tab_provider.dart';
 
 class MentalWellnessComponent extends StatelessWidget {
