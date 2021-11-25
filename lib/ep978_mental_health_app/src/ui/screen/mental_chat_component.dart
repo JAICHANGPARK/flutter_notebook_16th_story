@@ -64,39 +64,36 @@ class MentalChatComponent extends StatelessWidget {
                 return Row(
                   children: [
                     Expanded(
-                      child:
-                      GestureDetector(
-                        onTap: (){
-                          ref.read(mhChatTabProvider.notifier).state = 1;
+                      child: GestureDetector(
+                        onTap: () {
+                          ref.read(mhChatTabProvider.notifier).state = 0;
                         },
                         child: topTab == 0
                             ? Container(
-                          decoration: BoxDecoration(
-                              color: Colors.yellow,
-                              border: Border.all(
-                                color: Colors.black,
-                                width: 1.5,
-                              ),
-                              borderRadius: BorderRadius.circular(24)),
-                          child: const Center(
-                            child: Text(
-                              "Consult",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        )
+                                decoration: BoxDecoration(
+                                    color: Colors.yellow,
+                                    border: Border.all(
+                                      color: Colors.black,
+                                      width: 1.5,
+                                    ),
+                                    borderRadius: BorderRadius.circular(24)),
+                                child: const Center(
+                                  child: Text(
+                                    "Consult",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              )
                             : const Center(
-                          child: Text(
-                            "Consult",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ),
+                                child: Text(
+                                  "Consult",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
                       ),
-
-
                     ),
                     const SizedBox(
                       width: 12,
@@ -138,7 +135,18 @@ class MentalChatComponent extends StatelessWidget {
               },
             ),
           ),
-        )
+        ),
+        Consumer(builder: (context, ref, _){
+          final topTab = ref.watch(mhChatTabProvider);
+          switch(topTab){
+            case 0:
+              return Container();
+            case 1:
+              return Container();
+            default:
+              return Container();
+          }
+        })
       ],
     );
   }
