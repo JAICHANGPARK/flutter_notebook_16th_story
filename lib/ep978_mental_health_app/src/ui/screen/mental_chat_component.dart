@@ -47,7 +47,7 @@ class MentalChatComponent extends StatelessWidget {
                   );
                 },
               ),
-              const Text("Wellness"),
+              const Text("Cope with Pain"),
               const Icon(Icons.more_horiz)
             ],
           ),
