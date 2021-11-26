@@ -21,7 +21,7 @@ class ChatScreenComponent extends ConsumerWidget {
           ),
           Container(
             height: 60,
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(36), border: Border.all(color: Colors.black, width: 1.5)),
             child: Row(
@@ -36,30 +36,36 @@ class ChatScreenComponent extends ConsumerWidget {
                   onEditingComplete: () {
                     print("onEditingComplete()");
                   },
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: "Type your messages...",
                   ),
                 )),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
-                Container(
-                  height: 48,
-                  width: 48,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.yellow,
-                      border: Border.all(
-                        color: Colors.black,
-                        width: 1.5,
-                      )),
-                  child: Transform.rotate(
-                    angle: -pi / 4,
-                    child: Center(
-                      child: Icon(
-                        Icons.send,
-                        size: 20,
+                GestureDetector(
+                  onTap: (){
+                    ref.read(chatTextProvider).clear();
+                    FocusManager.instance.primaryFocus?.unfocus();
+                  },
+                  child: Container(
+                    height: 48,
+                    width: 48,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.yellow,
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1.5,
+                        )),
+                    child: Transform.rotate(
+                      angle: -pi / 4,
+                      child: const Center(
+                        child: const Icon(
+                          Icons.send,
+                          size: 20,
+                        ),
                       ),
                     ),
                   ),
