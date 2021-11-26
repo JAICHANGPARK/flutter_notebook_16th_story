@@ -11,7 +11,7 @@ class ChatList extends StateNotifier<List<String>> {
   add() {
     String msg = read(chatTextProvider).text.trim();
     print("add: msg: $msg");
-    state.add(msg);
-    
+    state = [...state, msg];
+
   }
 }
