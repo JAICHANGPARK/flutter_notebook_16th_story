@@ -31,7 +31,10 @@ class ChatScreenComponent extends ConsumerWidget {
                   controller: ref.read(chatTextProvider),
                   decoration: InputDecoration(
                     border: InputBorder.none,
+                    hintText: "Type your messages...",
+                    
                   ),
+
                 )),
                 SizedBox(
                   width: 16,
@@ -49,9 +52,10 @@ class ChatScreenComponent extends ConsumerWidget {
                   child: Transform.rotate(
                     angle: -pi / 4,
                     child: Center(
-                      child: Icon(Icons.send
-                      ,
-                      size: 20,),
+                      child: Icon(
+                        Icons.send,
+                        size: 20,
+                      ),
                     ),
                   ),
                 )
