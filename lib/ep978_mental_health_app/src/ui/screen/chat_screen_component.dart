@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep978_mental_health_app/src/riverpod/chat_text_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../riverpod/mh_chat_provider.dart';
+
 class ChatScreenComponent extends ConsumerWidget {
   const ChatScreenComponent({Key? key}) : super(key: key);
 
@@ -48,6 +50,9 @@ class ChatScreenComponent extends ConsumerWidget {
                   onTap: (){
                     ref.read(chatTextProvider).clear();
                     FocusManager.instance.primaryFocus?.unfocus();
+
+                    ref.read(mhChatProvider.notifier).add();
+
                   },
                   child: Container(
                     height: 48,
