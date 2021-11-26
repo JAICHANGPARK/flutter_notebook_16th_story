@@ -19,7 +19,7 @@ class ChatScreenComponent extends ConsumerWidget {
         children: [
           Expanded(
             child: Consumer(
-              builder: (context, ref, _){
+              builder: (context, ref, _) {
                 final item = ref.watch(mhChatProvider);
                 return ListView.builder(
                   itemCount: item.length,
@@ -28,7 +28,6 @@ class ChatScreenComponent extends ConsumerWidget {
                   },
                 );
               },
-
             ),
           ),
           const SizedBox(
@@ -38,7 +37,12 @@ class ChatScreenComponent extends ConsumerWidget {
             height: 60,
             padding: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(36), border: Border.all(color: Colors.black, width: 1.5)),
+              borderRadius: BorderRadius.circular(36),
+              border: Border.all(
+                color: Colors.black,
+                width: 1.5,
+              ),
+            ),
             child: Row(
               children: [
                 Expanded(
@@ -80,7 +84,7 @@ class ChatScreenComponent extends ConsumerWidget {
                     child: Transform.rotate(
                       angle: -pi / 4,
                       child: const Center(
-                        child: const Icon(
+                        child: Icon(
                           Icons.send,
                           size: 20,
                         ),
