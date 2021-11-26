@@ -47,17 +47,12 @@ class ChatScreenComponent extends ConsumerWidget {
                   width: 16,
                 ),
                 GestureDetector(
-                  onTap: (){
-                    if(ref.read(chatTextProvider).text.isNotEmpty){
+                  onTap: () {
+                    if (ref.read(chatTextProvider).text.isNotEmpty) {
                       ref.read(mhChatProvider.notifier).add();
-
                       ref.read(chatTextProvider).clear();
                       FocusManager.instance.primaryFocus?.unfocus();
                     }
-
-
-
-
                   },
                   child: Container(
                     height: 48,
