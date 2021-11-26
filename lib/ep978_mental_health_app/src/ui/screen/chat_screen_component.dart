@@ -17,7 +17,15 @@ class ChatScreenComponent extends ConsumerWidget {
           BoxDecoration(borderRadius: BorderRadius.circular(24), border: Border.all(color: Colors.black, width: 1.5)),
       child: Column(
         children: [
-          const Expanded(child: const Placeholder()),
+          Expanded(
+            child: ListView.builder(
+              itemCount: ref.read(mhChatProvider).length,
+              itemBuilder: (context, index) {
+                var item = ref.read(mhChatProvider);
+                return Text("${item[index]}");
+              },
+            ),
+          ),
           const SizedBox(
             height: 24,
           ),
