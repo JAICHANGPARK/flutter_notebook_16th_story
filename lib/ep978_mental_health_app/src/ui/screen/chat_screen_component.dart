@@ -18,12 +18,17 @@ class ChatScreenComponent extends ConsumerWidget {
       child: Column(
         children: [
           Expanded(
-            child: ListView.builder(
-              itemCount: ref.read(mhChatProvider).length,
-              itemBuilder: (context, index) {
-                var item = ref.read(mhChatProvider);
-                return Text("${item[index]}");
+            child: Consumer(
+              builder: (context, ref, _){
+                final item = ref.watch(mhChatProvider);
+                return ListView.builder(
+                  itemCount: item.length,
+                  itemBuilder: (context, index) {
+                    return Text("${item[index]}");
+                  },
+                );
               },
+
             ),
           ),
           const SizedBox(
