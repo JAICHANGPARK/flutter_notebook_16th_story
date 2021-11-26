@@ -22,7 +22,10 @@ class ChatScreenComponent extends ConsumerWidget {
           Container(
             height: 64,
             decoration: BoxDecoration(
-              color: Colors.yellow
+                borderRadius: BorderRadius.circular(24),
+                border: Border.all(
+                    color: Colors.black,
+                    width: 1.5)
             ),
           )
         ],
