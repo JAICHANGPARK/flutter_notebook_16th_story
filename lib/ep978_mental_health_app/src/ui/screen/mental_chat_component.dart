@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_16th_story/ep978_mental_health_app/src/riverpod/chat_text_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../riverpod/bottom_tab_provider.dart';
@@ -24,7 +25,9 @@ class MentalChatComponent extends StatelessWidget {
                 builder: (context, ref, _) {
                   return GestureDetector(
                     onTap: () {
+                      ref.read(chatTextProvider).clear();
                       ref.read(mhBottomTabProvider.notifier).state = 0;
+
                     },
                     child: Container(
                       height: 48,
