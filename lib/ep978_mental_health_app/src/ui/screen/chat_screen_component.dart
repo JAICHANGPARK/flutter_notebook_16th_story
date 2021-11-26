@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep978_mental_health_app/src/riverpod/chat_text_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -39,10 +41,19 @@ class ChatScreenComponent extends ConsumerWidget {
                   width: 48,
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
+                      color: Colors.yellow,
                       border: Border.all(
                         color: Colors.black,
                         width: 1.5,
                       )),
+                  child: Transform.rotate(
+                    angle: -pi / 4,
+                    child: Center(
+                      child: Icon(Icons.send
+                      ,
+                      size: 20,),
+                    ),
+                  ),
                 )
               ],
             ),
