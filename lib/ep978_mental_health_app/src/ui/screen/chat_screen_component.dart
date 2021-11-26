@@ -30,7 +30,7 @@ class ChatScreenComponent extends ConsumerWidget {
                     child: TextField(
                   controller: ref.read(chatTextProvider),
                   onSubmitted: (v) {
-                    print("onSubmitted()");s
+                    print("onSubmitted()");
                     print(v);
                   },
                   onEditingComplete: () {
