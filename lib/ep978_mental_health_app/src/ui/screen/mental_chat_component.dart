@@ -141,9 +141,9 @@ class MentalChatComponent extends StatelessWidget {
           final topTab = ref.watch(mhChatTabProvider);
           switch (topTab) {
             case 0:
-              return Expanded(
+              return const Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(8.0),
                   child: ChatScreenComponent(),
                 ),
               );
