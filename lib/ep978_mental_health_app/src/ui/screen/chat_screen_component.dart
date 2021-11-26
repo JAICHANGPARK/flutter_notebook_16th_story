@@ -8,6 +8,7 @@ class ChatScreenComponent extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     return Container(
+      padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24),
           border: Border.all(
@@ -17,8 +18,9 @@ class ChatScreenComponent extends ConsumerWidget {
       child: Column(
         children: [
           Expanded(child: Placeholder()),
+          SizedBox(height: 16,),
           Container(
-            height: 72,
+            height: 64,
             decoration: BoxDecoration(
               color: Colors.yellow
             ),
