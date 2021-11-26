@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../riverpod/bottom_tab_provider.dart';
+import 'chat_screen_component.dart';
 
 class MentalChatComponent extends StatelessWidget {
   const MentalChatComponent({Key? key}) : super(key: key);
@@ -136,21 +137,14 @@ class MentalChatComponent extends StatelessWidget {
             ),
           ),
         ),
-        Consumer(builder: (context, ref, _){
+        Consumer(builder: (context, ref, _) {
           final topTab = ref.watch(mhChatTabProvider);
-          switch(topTab){
+          switch (topTab) {
             case 0:
               return Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(24),
-                      border: Border.all(
-                        color: Colors.black,
-                        width: 1.5)
-                    ),
-                  ),
+                  child: ChatScreenComponent(),
                 ),
               );
             case 1:
