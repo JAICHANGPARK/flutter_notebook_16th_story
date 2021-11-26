@@ -29,12 +29,17 @@ class ChatScreenComponent extends ConsumerWidget {
                 Expanded(
                     child: TextField(
                   controller: ref.read(chatTextProvider),
+                  onSubmitted: (v) {
+                    print("onSubmitted()");s
+                    print(v);
+                  },
+                  onEditingComplete: () {
+                    print("onEditingComplete()");
+                  },
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: "Type your messages...",
-                    
                   ),
-
                 )),
                 SizedBox(
                   width: 16,
