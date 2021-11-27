@@ -27,18 +27,18 @@ class ChatScreenComponent extends ConsumerWidget {
                     if (item[index].isSend ?? false) {
                       return Row(
                         children: [
-                          Text(""),
+                          Text("12:34"),
+                          Spacer(),
                           Container(
+                            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                             decoration: BoxDecoration(
-                              color: Colors.blueGrey[200],
-                              border: Border.all(color: Colors.black),
-                              borderRadius: BorderRadius.only(
-                                topRight: Radius.circular(24),
-                                topLeft: Radius.circular(24),
-                                bottomLeft: Radius.circular(24),
-
-                              )
-                            ),
+                                color: Colors.blueGrey[50],
+                                border: Border.all(color: Colors.black),
+                                borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(24),
+                                  topLeft: Radius.circular(24),
+                                  bottomLeft: Radius.circular(24),
+                                )),
                             child: Center(
                               child: Text("${item[index].msg}"),
                             ),
