@@ -24,6 +24,29 @@ class ChatScreenComponent extends ConsumerWidget {
                 return ListView.builder(
                   itemCount: item.length,
                   itemBuilder: (context, index) {
+                    if (item[index].isSend ?? false) {
+                      return Row(
+                        children: [
+                          Text(""),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.blueGrey[200],
+                              border: Border.all(color: Colors.black),
+                              borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(24),
+                                topLeft: Radius.circular(24),
+                                bottomLeft: Radius.circular(24),
+
+                              )
+                            ),
+                            child: Center(
+                              child: Text("${item[index].msg}"),
+                            ),
+                          )
+                        ],
+                      );
+                    }
+
                     return Text("${item[index]}");
                   },
                 );
