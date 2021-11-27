@@ -25,25 +25,28 @@ class ChatScreenComponent extends ConsumerWidget {
                   itemCount: item.length,
                   itemBuilder: (context, index) {
                     if (item[index].isSend ?? false) {
-                      return Row(
-                        children: [
-                          Text("12:34"),
-                          Spacer(),
-                          Container(
-                            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                            decoration: BoxDecoration(
-                                color: Colors.blueGrey[50],
-                                border: Border.all(color: Colors.black),
-                                borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(24),
-                                  topLeft: Radius.circular(24),
-                                  bottomLeft: Radius.circular(24),
-                                )),
-                            child: Center(
-                              child: Text("${item[index].msg}"),
-                            ),
-                          )
-                        ],
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8),
+                        child: Row(
+                          children: [
+                            const Text("12:34"),
+                            const Spacer(),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                              decoration: BoxDecoration(
+                                  color: Colors.blueGrey[50],
+                                  border: Border.all(color: Colors.black),
+                                  borderRadius: const BorderRadius.only(
+                                    topRight: Radius.circular(24),
+                                    topLeft: Radius.circular(24),
+                                    bottomLeft: Radius.circular(24),
+                                  )),
+                              child: Center(
+                                child: Text("${item[index].msg}"),
+                              ),
+                            )
+                          ],
+                        ),
                       );
                     }
 
