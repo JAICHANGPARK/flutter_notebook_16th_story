@@ -31,6 +31,8 @@ dependencies:
   cached_network_image: any
   smooth_page_indicator: ^1.0.0+2
 
+  uuid: any
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
