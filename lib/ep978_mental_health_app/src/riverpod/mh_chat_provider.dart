@@ -14,7 +14,7 @@ class ChatList extends StateNotifier<List<MhChat>> {
   Timer? receiveTimer;
   ChatList(List<MhChat> state, this.read) : super(state);
 
-  ScrollController _scrollController =  ScrollController();
+  // ScrollController _scrollController =  ScrollController();
 
   add() {
     String msg = read(chatTextProvider).text.trim();
@@ -29,7 +29,7 @@ class ChatList extends StateNotifier<List<MhChat>> {
           time: DateFormat("HH:mm").format(DateTime.now()),
           uid: const Uuid().v4())
     ];
-    receiveTimer ??= Timer(const Duration(milliseconds: 300), () {
+    receiveTimer ??= Timer(const Duration(milliseconds: 500), () {
       state = [
         ...state,
         MhChat(
