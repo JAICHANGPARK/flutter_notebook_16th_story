@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep978_mental_health_app/src/riverpod/chat_text_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -50,7 +51,21 @@ class ChatScreenComponent extends ConsumerWidget {
                       );
                     }
 
-                    return Text("${item[index]}");
+                    return Row(
+                      children: [
+                        Container(
+                          height: 38,
+                          width: 38,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(width: 1),
+                              image: DecorationImage(
+                                image: CachedNetworkImageProvider(item[index]?.profileImg ?? ""),
+                                fit: BoxFit.cover,
+                              )),
+                        )
+                      ],
+                    );
                   },
                 );
               },
