@@ -51,20 +51,41 @@ class ChatScreenComponent extends ConsumerWidget {
                       );
                     }
 
-                    return Row(
-                      children: [
-                        Container(
-                          height: 38,
-                          width: 38,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(width: 1),
-                              image: DecorationImage(
-                                image: CachedNetworkImageProvider(item[index]?.profileImg ?? ""),
-                                fit: BoxFit.cover,
-                              )),
-                        )
-                      ],
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(8.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 38,
+                            width: 38,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(width: 1),
+                                image: DecorationImage(
+                                  image: CachedNetworkImageProvider(item[index]?.profileImg ?? ""),
+                                  fit: BoxFit.cover,
+                                )),
+                          ),
+                          const SizedBox(width: 8,),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                            decoration: BoxDecoration(
+                                color: Colors.blueGrey[50],
+                                border: Border.all(color: Colors.black),
+                                borderRadius: const BorderRadius.only(
+                                  topRight: Radius.circular(24),
+                                  topLeft: Radius.circular(24),
+                                  bottomRight: Radius.circular(24),
+                                )),
+                            child: Center(
+                              child: Text("${item[index].msg}"),
+                            ),
+                          ),
+                          const Spacer(),
+                          Text(item[index].time ?? "??:??"),
+
+                        ],
+                      ),
                     );
                   },
                 );
