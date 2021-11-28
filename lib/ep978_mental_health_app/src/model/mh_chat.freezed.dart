@@ -17,11 +17,17 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$MhChatTearOff {
   const _$MhChatTearOff();
 
-  _MhChat call({String? uid, String? profileImg, String? msg, bool? isSend}) {
+  _MhChat call(
+      {String? uid,
+      String? profileImg,
+      String? msg,
+      String? time,
+      bool? isSend}) {
     return _MhChat(
       uid: uid,
       profileImg: profileImg,
       msg: msg,
+      time: time,
       isSend: isSend,
     );
   }
@@ -35,6 +41,7 @@ mixin _$MhChat {
   String? get uid => throw _privateConstructorUsedError;
   String? get profileImg => throw _privateConstructorUsedError;
   String? get msg => throw _privateConstructorUsedError;
+  String? get time => throw _privateConstructorUsedError;
   bool? get isSend => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -45,7 +52,12 @@ mixin _$MhChat {
 abstract class $MhChatCopyWith<$Res> {
   factory $MhChatCopyWith(MhChat value, $Res Function(MhChat) then) =
       _$MhChatCopyWithImpl<$Res>;
-  $Res call({String? uid, String? profileImg, String? msg, bool? isSend});
+  $Res call(
+      {String? uid,
+      String? profileImg,
+      String? msg,
+      String? time,
+      bool? isSend});
 }
 
 /// @nodoc
@@ -61,6 +73,7 @@ class _$MhChatCopyWithImpl<$Res> implements $MhChatCopyWith<$Res> {
     Object? uid = freezed,
     Object? profileImg = freezed,
     Object? msg = freezed,
+    Object? time = freezed,
     Object? isSend = freezed,
   }) {
     return _then(_value.copyWith(
@@ -76,6 +89,10 @@ class _$MhChatCopyWithImpl<$Res> implements $MhChatCopyWith<$Res> {
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String?,
+      time: time == freezed
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as String?,
       isSend: isSend == freezed
           ? _value.isSend
           : isSend // ignore: cast_nullable_to_non_nullable
@@ -89,7 +106,12 @@ abstract class _$MhChatCopyWith<$Res> implements $MhChatCopyWith<$Res> {
   factory _$MhChatCopyWith(_MhChat value, $Res Function(_MhChat) then) =
       __$MhChatCopyWithImpl<$Res>;
   @override
-  $Res call({String? uid, String? profileImg, String? msg, bool? isSend});
+  $Res call(
+      {String? uid,
+      String? profileImg,
+      String? msg,
+      String? time,
+      bool? isSend});
 }
 
 /// @nodoc
@@ -106,6 +128,7 @@ class __$MhChatCopyWithImpl<$Res> extends _$MhChatCopyWithImpl<$Res>
     Object? uid = freezed,
     Object? profileImg = freezed,
     Object? msg = freezed,
+    Object? time = freezed,
     Object? isSend = freezed,
   }) {
     return _then(_MhChat(
@@ -121,6 +144,10 @@ class __$MhChatCopyWithImpl<$Res> extends _$MhChatCopyWithImpl<$Res>
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String?,
+      time: time == freezed
+          ? _value.time
+          : time // ignore: cast_nullable_to_non_nullable
+              as String?,
       isSend: isSend == freezed
           ? _value.isSend
           : isSend // ignore: cast_nullable_to_non_nullable
@@ -132,7 +159,7 @@ class __$MhChatCopyWithImpl<$Res> extends _$MhChatCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_MhChat implements _MhChat {
-  _$_MhChat({this.uid, this.profileImg, this.msg, this.isSend});
+  _$_MhChat({this.uid, this.profileImg, this.msg, this.time, this.isSend});
 
   @override
   final String? uid;
@@ -141,11 +168,13 @@ class _$_MhChat implements _MhChat {
   @override
   final String? msg;
   @override
+  final String? time;
+  @override
   final bool? isSend;
 
   @override
   String toString() {
-    return 'MhChat(uid: $uid, profileImg: $profileImg, msg: $msg, isSend: $isSend)';
+    return 'MhChat(uid: $uid, profileImg: $profileImg, msg: $msg, time: $time, isSend: $isSend)';
   }
 
   @override
@@ -157,11 +186,13 @@ class _$_MhChat implements _MhChat {
             (identical(other.profileImg, profileImg) ||
                 other.profileImg == profileImg) &&
             (identical(other.msg, msg) || other.msg == msg) &&
+            (identical(other.time, time) || other.time == time) &&
             (identical(other.isSend, isSend) || other.isSend == isSend));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, uid, profileImg, msg, isSend);
+  int get hashCode =>
+      Object.hash(runtimeType, uid, profileImg, msg, time, isSend);
 
   @JsonKey(ignore: true)
   @override
@@ -171,7 +202,11 @@ class _$_MhChat implements _MhChat {
 
 abstract class _MhChat implements MhChat {
   factory _MhChat(
-      {String? uid, String? profileImg, String? msg, bool? isSend}) = _$_MhChat;
+      {String? uid,
+      String? profileImg,
+      String? msg,
+      String? time,
+      bool? isSend}) = _$_MhChat;
 
   @override
   String? get uid;
@@ -179,6 +214,8 @@ abstract class _MhChat implements MhChat {
   String? get profileImg;
   @override
   String? get msg;
+  @override
+  String? get time;
   @override
   bool? get isSend;
   @override
