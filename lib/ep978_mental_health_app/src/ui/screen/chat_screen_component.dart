@@ -70,7 +70,7 @@ class ChatScreenComponent extends ConsumerWidget {
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                             decoration: BoxDecoration(
-                                color: Colors.blueGrey[50],
+                                color: Colors.grey[50],
                                 border: Border.all(color: Colors.black),
                                 borderRadius: const BorderRadius.only(
                                   topRight: Radius.circular(24),
