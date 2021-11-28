@@ -52,7 +52,7 @@ class ChatScreenComponent extends ConsumerWidget {
                     }
 
                     return Padding(
-                      padding: const EdgeInsets.symmetric(8.0),
+                      padding: const EdgeInsets.symmetric(vertical: 8),
                       child: Row(
                         children: [
                           Container(
