@@ -29,7 +29,7 @@ class ChatScreenComponent extends ConsumerWidget {
                         padding: const EdgeInsets.symmetric(vertical: 8),
                         child: Row(
                           children: [
-                            const Text("12:34"),
+                            Text(item[index].time ?? "??:??"),
                             const Spacer(),
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
