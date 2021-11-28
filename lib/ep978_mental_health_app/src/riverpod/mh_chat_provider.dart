@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep978_mental_health_app/src/model/mh_chat.dart';
 import 'package:flutter_notebook_16th_story/ep978_mental_health_app/src/riverpod/chat_text_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -11,8 +12,9 @@ final mhChatProvider = StateNotifierProvider<ChatList, List<MhChat>>((ref) => Ch
 class ChatList extends StateNotifier<List<MhChat>> {
   Reader read;
   Timer? receiveTimer;
-
   ChatList(List<MhChat> state, this.read) : super(state);
+
+  ScrollController _scrollController =  ScrollController();
 
   add() {
     String msg = read(chatTextProvider).text.trim();
