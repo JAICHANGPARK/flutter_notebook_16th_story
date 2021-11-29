@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -31,18 +32,25 @@ class _InspirationPageState extends State<InspirationPage> {
                 imageUrl:
                     "https://upload.wikimedia.org/wikipedia/commons/3/31/Virgil_Abloh_Paris_Fashion_Week_Autumn_Winter_2019_%28cropped%29.jpg",
               )),
-
           Positioned(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("\"STREETWEAR IN THE 2020S?\""),
-                SizedBox(height: 24,),
-                Center(
-                    child: Text(
-                  quotes[0].toUpperCase(),
+                const Text(
+                  "\"STREETWEAR IN THE 2020S?\"",
                   style: TextStyle(
-                    fontSize: 24
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                Center(
+                    child: DefaultTextStyle(
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 24, color: Colors.white, height: 1.6),
+                  child: AnimatedTextKit(
+                    animatedTexts: quotes.map((e) => FadeAnimatedText(e.toUpperCase())).toList(),
                   ),
                 )),
               ],
