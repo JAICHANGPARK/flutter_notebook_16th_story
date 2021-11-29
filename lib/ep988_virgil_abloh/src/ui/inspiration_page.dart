@@ -26,14 +26,17 @@ class _InspirationPageState extends State<InspirationPage> {
               bottom: 0,
               child: CachedNetworkImage(
                 fit: BoxFit.cover,
-                color: Colors.black.withOpacity(0.5),
+                color: Colors.black.withOpacity(0.55),
                 colorBlendMode: BlendMode.darken,
                 imageUrl:
                     "https://upload.wikimedia.org/wikipedia/commons/3/31/Virgil_Abloh_Paris_Fashion_Week_Autumn_Winter_2019_%28cropped%29.jpg",
               )),
           const Positioned(
-            child: Center(child: Text("Virgil Abloh")),
-            bottom: 16,
+            child: Center(child: Text("Virgil Abloh",style: TextStyle(
+              color: Colors.white,
+              fontSize: 18
+            ),)),
+            bottom: 24,
             left: 0,
             right: 0,
           ),
