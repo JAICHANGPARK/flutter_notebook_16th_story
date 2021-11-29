@@ -5,6 +5,11 @@ import 'package:flutter/material.dart';
 List<String> quotes = [
   "Wow. I would definitely say it's gonna die you know?",
   "Fashion and music are two great artistic forms that can be molded by the youth culture - our taste and our passion for evolving things in our limited time on earth allows us to look at things with fresh eyes.",
+  "I'd do anything at the right time, and I would also do things at the wrong time if they felt right.",
+  "Everything I do references something that influenced me.",
+  "I'm not really into style. I'm more into confidence or having something to say.",
+  "I do fashion to tell a narrative.",
+  "Whenever I'm doing a collection, I'm inspired by the world around us."
 ];
 
 class InspirationPage extends StatefulWidget {
@@ -36,21 +41,28 @@ class _InspirationPageState extends State<InspirationPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
-                  "\"STREETWEAR IN THE 2020S?\"",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-                const SizedBox(
-                  height: 24,
-                ),
+                // const Text(
+                //   "\"STREETWEAR IN THE 2020S?\"",
+                //   style: TextStyle(
+                //     color: Colors.white,
+                //   ),
+                // ),
+                // const SizedBox(
+                //   height: 24,
+                // ),
                 Center(
                     child: DefaultTextStyle(
                   textAlign: TextAlign.center,
                   style: const TextStyle(fontSize: 24, color: Colors.white, height: 1.6),
                   child: AnimatedTextKit(
-                    animatedTexts: quotes.map((e) => FadeAnimatedText(e.toUpperCase())).toList(),
+                    repeatForever: true,
+                    animatedTexts: quotes
+                        .map((e) => FadeAnimatedText(
+                              e.toUpperCase(),
+                              duration: const Duration(seconds: 5),
+                              textAlign: TextAlign.center,
+                            ))
+                        .toList(),
                   ),
                 )),
               ],
@@ -60,12 +72,23 @@ class _InspirationPageState extends State<InspirationPage> {
             bottom: 0,
             top: 0,
           ),
-          const Positioned(
-            child: Center(
-                child: Text(
-              "Virgil Abloh",
-              style: TextStyle(color: Colors.white, fontSize: 18),
-            )),
+          Positioned(
+            child: Column(
+              children: const [
+                Center(
+                    child: Text(
+                  "Virgil Abloh",
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                )),
+                SizedBox(
+                  height: 8,
+                ),
+                Text(
+                  "September 30, 1980 - 	November 28, 2021",
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                )
+              ],
+            ),
             bottom: 24,
             left: 0,
             right: 0,
