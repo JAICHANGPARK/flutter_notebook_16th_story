@@ -20,6 +20,9 @@ class _InspirationPageState extends State<InspirationPage> {
               top: 0,
               bottom: 0,
               child: CachedNetworkImage(
+                fit: BoxFit.cover,
+            color: Colors.black.withOpacity(0.5),
+            colorBlendMode: BlendMode.darken,
             imageUrl:
                 "https://upload.wikimedia.org/wikipedia/commons/3/31/Virgil_Abloh_Paris_Fashion_Week_Autumn_Winter_2019_%28cropped%29.jpg",
           ))
