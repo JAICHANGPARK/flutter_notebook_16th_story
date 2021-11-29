@@ -62,7 +62,7 @@ class ChatScreenComponent extends ConsumerWidget {
                                 shape: BoxShape.circle,
                                 border: Border.all(width: 1),
                                 image: DecorationImage(
-                                  image: CachedNetworkImageProvider(item[index]?.profileImg ?? ""),
+                                  image: CachedNetworkImageProvider(item[index].profileImg ?? ""),
                                   fit: BoxFit.cover,
                                 )),
                           ),
