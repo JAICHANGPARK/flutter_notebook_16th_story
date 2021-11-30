@@ -31,7 +31,9 @@ class _TravelMainPageState extends State<TravelMainPage> {
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Search for place",
-                            hintStyle: TextStyle(color: Colors.grey,)),
+                            hintStyle: TextStyle(
+                              color: Colors.grey,
+                            )),
                       ),
                       decoration: BoxDecoration(
                         color: Colors.grey[100],
@@ -47,24 +49,25 @@ class _TravelMainPageState extends State<TravelMainPage> {
                 ),
               ),
             ),
-            SizedBox(height: 16,),
-            Expanded(child: Placeholder()),
-            SizedBox(height: 16,),
-            Expanded(child: Placeholder()),
+            SizedBox(
+              height: 16,
+            ),
+            Expanded(
+                child: Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: Placeholder(),
+            )),
+            SizedBox(
+              height: 16,
+            ),
+            Expanded(
+                child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Placeholder(),
+            )),
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
