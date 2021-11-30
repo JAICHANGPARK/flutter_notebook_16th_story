@@ -26,8 +26,8 @@ class _TravelMainPageState extends State<TravelMainPage> {
                   children: [
                     Expanded(
                         child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
-                      child: TextField(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: const TextField(
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Search for place",
@@ -39,30 +39,30 @@ class _TravelMainPageState extends State<TravelMainPage> {
                         color: Colors.grey[100],
                       ),
                     )),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
                     Badge(
-                      child: Icon(Ionicons.menu),
+                      child: const Icon(Ionicons.menu),
                     )
                   ],
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            Expanded(
+            const Expanded(
                 child: Padding(
-              padding: const EdgeInsets.only(left: 16),
+              padding: EdgeInsets.only(left: 16),
               child: Placeholder(),
             )),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            Expanded(
+            const Expanded(
                 child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: EdgeInsets.all(16.0),
               child: Placeholder(),
             )),
           ],
