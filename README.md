@@ -3,7 +3,8 @@
 - EP971 : https://dribbble.com/shots/16842173-Farmacia-Application
 - EP975 : https://dribbble.com/shots/16876427/attachments/11939305?mode=media
 - EP978 : https://dribbble.com/shots/16892232-Mental-Health-App/attachments/11957109?mode=media
-- EP988 : https://dribbble.com/shots/9196998-Virgil-Abloh-Inspiration/attachments/1240456?mode=media
+- EP987 : https://dribbble.com/shots/9196998-Virgil-Abloh-Inspiration/attachments/1240456?mode=media
+- EP988 : https://dribbble.com/shots/16962964/attachments/12037556?mode=media
 
 ## Getting Started
 
