@@ -59,7 +59,7 @@ class _InspirationPageState extends State<InspirationPage> {
                     animatedTexts: quotes
                         .map((e) => FadeAnimatedText(
                               e.toUpperCase(),
-                              duration: const Duration(seconds: 5),
+                              duration: const Duration(seconds: 8),
                               textAlign: TextAlign.center,
                             ))
                         .toList(),
