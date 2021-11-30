@@ -15,6 +15,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Column(
           children: [
