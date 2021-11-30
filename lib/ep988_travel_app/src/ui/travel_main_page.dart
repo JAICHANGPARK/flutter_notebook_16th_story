@@ -26,30 +26,45 @@ class _TravelMainPageState extends State<TravelMainPage> {
                   children: [
                     Expanded(
                         child: Container(
-                          padding: EdgeInsets.symmetric(horizontal: 16),
+                      padding: EdgeInsets.symmetric(horizontal: 16),
                       child: TextField(
                         decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: "Search for place",
-
-
-                        ),
+                            border: InputBorder.none,
+                            hintText: "Search for place",
+                            hintStyle: TextStyle(color: Colors.grey,)),
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.grey[200],
+                        color: Colors.grey[100],
                       ),
                     )),
-                    SizedBox(width: 16,),
+                    SizedBox(
+                      width: 16,
+                    ),
                     Badge(
                       child: Icon(Ionicons.menu),
                     )
                   ],
                 ),
               ),
-            )
+            ),
+            SizedBox(height: 16,),
+            Expanded(child: Placeholder()),
+            SizedBox(height: 16,),
+            Expanded(child: Placeholder()),
           ],
         ),
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
