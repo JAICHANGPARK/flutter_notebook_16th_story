@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'ep988_virgil_abloh/virgil_abloh_app.dart';
+
+import 'ep988_travel_app/travel_app.dart';
 
 main() {
-  runApp(const VirgilAblohApp());
+  runApp(const TravelApp());
 }
