@@ -69,7 +69,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
                       Expanded(
@@ -104,11 +104,11 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                       top: 24,
                                       left: 0,
                                       child: Container(
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           color: Colors.black87,
                                         ),
-                                        padding: EdgeInsets.symmetric(vertical: 8, horizontal: 5),
-                                        child: Text(
+                                        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+                                        child: const Text(
                                           "06 days 16 hours",
                                           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                                         ),
