@@ -56,86 +56,97 @@ class _TravelMainPageState extends State<TravelMainPage> {
               height: 16,
             ),
             Expanded(
-              flex: 7,
+                flex: 7,
                 child: Padding(
-              padding: const EdgeInsets.only(left: 16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    "Ondue",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Expanded(
-                      child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: const EdgeInsets.only(right: 8),
-                        child: Container(
-                          width: 240,
-                          child: Stack(
-                            children: [
-                              Positioned(
-                                left: 4,
-                                top: 4,
-                                bottom: 4,
-                                right: 8,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(16),
-                                    color: Colors.blueGrey,
-                                    image: const DecorationImage(
-                                      image: CachedNetworkImageProvider(
-                                        "https://cdn.pixabay.com/photo/2020/12/17/00/43/skyscrapers-5838029__340.jpg",
+                  padding: const EdgeInsets.only(left: 16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "Ondue",
+                        style: TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Expanded(
+                          child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: Container(
+                              width: 240,
+                              child: Stack(
+                                children: [
+                                  Positioned(
+                                    left: 4,
+                                    top: 4,
+                                    bottom: 4,
+                                    right: 8,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(16),
+                                        color: Colors.blueGrey,
+                                        image: const DecorationImage(
+                                          image: CachedNetworkImageProvider(
+                                            "https://cdn.pixabay.com/photo/2020/12/17/00/43/skyscrapers-5838029__340.jpg",
+                                          ),
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
-                                      fit: BoxFit.cover,
                                     ),
                                   ),
-                                ),
+                                  Positioned(
+                                      top: 24,
+                                      left: 0,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.black87,
+                                        ),
+                                        padding: EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+                                        child: Text(
+                                          "06 days 16 hours",
+                                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                                        ),
+                                      ))
+                                ],
                               ),
-                              Positioned(
-                                  top: 24,
-                                  left: 0,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.black87,
-                                    ),
-                                    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 5),
-                                    child: Text(
-                                      "06 days 16 hours",
-                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                                    ),
-                                  ))
-                            ],
-                          ),
+                            ),
+                          );
+                        },
+                      )),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 16, top: 4),
+                        child: Row(
+                          children: const [
+                            Spacer(),
+                            Text(
+                              "VIEW ALL -",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                                color: Colors.grey,
+                              ),
+                            )
+                          ],
                         ),
-                      );
-                    },
-                  )),
-                  Row(
-                    children: const [
-                      Text(
-                        "VIEW ALL -",
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                       )
                     ],
-                  )
-                ],
-              ),
-            )),
+                  ),
+                )),
             const SizedBox(
               height: 16,
             ),
             const Expanded(
-              flex: 5,
+                flex: 5,
                 child: Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Placeholder(),
-            )),
+                  padding: EdgeInsets.all(16.0),
+                  child: Placeholder(),
+                )),
           ],
         ),
       ),
