@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -53,10 +54,49 @@ class _TravelMainPageState extends State<TravelMainPage> {
             const SizedBox(
               height: 16,
             ),
-            const Expanded(
+            Expanded(
                 child: Padding(
-              padding: EdgeInsets.only(left: 16),
-              child: Placeholder(),
+              padding: const EdgeInsets.only(left: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Ondue",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Expanded(
+                      child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        width: 240,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              left: 8,
+                              top: 4,
+                              bottom: 4,
+                              right: 8,
+                              child: Container(),)
+                          ],
+                        ),
+                      );
+                    },
+                  )),
+                  Row(
+                    children: const [
+                      Text("VIEW ALL -", style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16
+                      ),)
+                    ],
+                  )
+
+                ],
+              ),
             )),
             const SizedBox(
               height: 16,
