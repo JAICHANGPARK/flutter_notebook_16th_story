@@ -56,6 +56,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
               height: 16,
             ),
             Expanded(
+              flex: 7,
                 child: Padding(
               padding: const EdgeInsets.only(left: 16),
               child: Column(
@@ -130,6 +131,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
               height: 16,
             ),
             const Expanded(
+              flex: 5,
                 child: Padding(
               padding: EdgeInsets.all(16.0),
               child: Placeholder(),
