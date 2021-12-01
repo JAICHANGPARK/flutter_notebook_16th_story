@@ -107,7 +107,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                       decoration: const BoxDecoration(
                                         color: Colors.black87,
                                       ),
-                                      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+                                      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                                       child: const Text(
                                         "06 days 16 hours",
                                         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
