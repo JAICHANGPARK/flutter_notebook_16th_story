@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
@@ -80,7 +81,19 @@ class _TravelMainPageState extends State<TravelMainPage> {
                               top: 4,
                               bottom: 4,
                               right: 8,
-                              child: Container(),)
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  color: Colors.blueGrey,
+                                  image: const DecorationImage(
+                                    image: CachedNetworkImageProvider(
+                                      "https://cdn.pixabay.com/photo/2020/12/17/00/43/skyscrapers-5838029__340.jpg",
+                                    ),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            )
                           ],
                         ),
                       );
@@ -88,13 +101,12 @@ class _TravelMainPageState extends State<TravelMainPage> {
                   )),
                   Row(
                     children: const [
-                      Text("VIEW ALL -", style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16
-                      ),)
+                      Text(
+                        "VIEW ALL -",
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      )
                     ],
                   )
-
                 ],
               ),
             )),
