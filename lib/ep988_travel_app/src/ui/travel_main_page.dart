@@ -101,18 +101,37 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                     ),
                                   ),
                                   Positioned(
-                                      top: 24,
-                                      left: 0,
-                                      child: Container(
-                                        decoration: const BoxDecoration(
-                                          color: Colors.black87,
+                                    top: 24,
+                                    left: 0,
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        color: Colors.black87,
+                                      ),
+                                      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+                                      child: const Text(
+                                        "06 days 16 hours",
+                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 64,
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                                      decoration: BoxDecoration(color: Colors.red[500],
+                                      borderRadius: const BorderRadius.only(
+                                        topRight: Radius.circular(4),
+                                        bottomRight:Radius.circular(4),
+                                      )),
+                                      child: const Text(
+                                        "-20%",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold
                                         ),
-                                        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
-                                        child: const Text(
-                                          "06 days 16 hours",
-                                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                                        ),
-                                      ))
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
