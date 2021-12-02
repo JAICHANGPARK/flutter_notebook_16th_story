@@ -193,7 +193,18 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                   ),
                                                 ],
                                               )),
-                                          Positioned(child: Column(), ),
+                                          Positioned(
+                                            right: 8,
+                                            bottom: 8,
+                                            child: Column(
+                                              children: [
+                                                Text("\$920",style: TextStyle(
+                                                  color: Colors.grey,
+                                                  
+                                                ),),
+                                                Text("\$770")
+                                              ],
+                                            ), ),
                                         ],
                                       ),
                                     ),
