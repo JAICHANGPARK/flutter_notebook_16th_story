@@ -105,6 +105,56 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                           fit: BoxFit.cover,
                                         ),
                                       ),
+                                      child: Stack(
+                                        children: [
+                                          Positioned(
+                                              left: 8,
+                                              right: 8,
+                                              bottom: 8,
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  const Text(
+                                                    "Singahura",
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                  Row(
+                                                    children: const [
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.orange,
+                                                        size: 14,
+                                                      ),
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.orange,
+                                                        size: 14,
+                                                      ),
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.orange,
+                                                        size: 14,
+                                                      ),
+                                                      Icon(
+                                                        Icons.star,
+                                                        color: Colors.orange,
+                                                        size: 14,
+                                                      ),
+                                                      Icon(
+                                                        Icons.star_border,
+                                                        color: Colors.orange,
+                                                        size: 14,
+                                                      ),
+                                                    ],
+                                                  )
+                                                ],
+                                              ))
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Positioned(
