@@ -122,42 +122,48 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                       fontWeight: FontWeight.bold,
                                                     ),
                                                   ),
-                                                  Row(
-                                                    children: const [
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.orange,
-                                                        size: 14,
-                                                      ),
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.orange,
-                                                        size: 14,
-                                                      ),
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.orange,
-                                                        size: 14,
-                                                      ),
-                                                      Icon(
-                                                        Icons.star,
-                                                        color: Colors.orange,
-                                                        size: 14,
-                                                      ),
-                                                      Icon(
-                                                        Icons.star_border,
-                                                        color: Colors.orange,
-                                                        size: 14,
-                                                      ),
-                                                    ],
+                                                  Padding(
+                                                    padding: const EdgeInsets.symmetric(vertical: 16),
+                                                    child: Row(
+                                                      children: const [
+                                                        Icon(
+                                                          Icons.star,
+                                                          color: Colors.orange,
+                                                          size: 14,
+                                                        ),
+                                                        Icon(
+                                                          Icons.star,
+                                                          color: Colors.orange,
+                                                          size: 14,
+                                                        ),
+                                                        Icon(
+                                                          Icons.star,
+                                                          color: Colors.orange,
+                                                          size: 14,
+                                                        ),
+                                                        Icon(
+                                                          Icons.star,
+                                                          color: Colors.orange,
+                                                          size: 14,
+                                                        ),
+                                                        Icon(
+                                                          Icons.star_border,
+                                                          color: Colors.orange,
+                                                          size: 14,
+                                                        ),
+                                                      ],
+                                                    ),
                                                   ),
                                                   Row(
                                                     children: const [
-                                                      Icon(Icons.flight_takeoff,
-                                                      color: Colors.white,
-                                                      size: 16,
+                                                      Icon(
+                                                        Icons.flight_takeoff,
+                                                        color: Colors.white,
+                                                        size: 16,
                                                       ),
-                                                      SizedBox(width: 8,),
+                                                      SizedBox(
+                                                        width: 8,
+                                                      ),
                                                       Text(
                                                         "Ha Noi - May 20, 2019",
                                                         style: TextStyle(
@@ -166,12 +172,17 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                       ),
                                                     ],
                                                   ),
+                                                  SizedBox(height: 8,),
                                                   Row(
                                                     children: const [
-                                                      Icon(Icons.loyalty,
+                                                      Icon(
+                                                        Icons.loyalty,
                                                         color: Colors.white,
-                                                        size: 16,),
-                                                      SizedBox(width: 8,),
+                                                        size: 16,
+                                                      ),
+                                                      SizedBox(
+                                                        width: 8,
+                                                      ),
                                                       Text(
                                                         "02/12 Seats",
                                                         style: TextStyle(
