@@ -63,7 +63,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
               height: 16,
             ),
             Expanded(
-                flex: 7,
+                flex: 6,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 16),
                   child: Column(
@@ -108,9 +108,9 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                       child: Stack(
                                         children: [
                                           Positioned(
-                                              left: 8,
-                                              right: 8,
-                                              bottom: 8,
+                                              left: 12,
+                                              right: 12,
+                                              bottom: 12,
                                               child: Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
@@ -172,7 +172,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                       ),
                                                     ],
                                                   ),
-                                                  SizedBox(height: 8,),
+                                                  const SizedBox(height: 8,),
                                                   Row(
                                                     children: const [
                                                       Icon(
@@ -192,7 +192,8 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                     ],
                                                   ),
                                                 ],
-                                              ))
+                                              )),
+                                          Positioned(child: Column(), ),
                                         ],
                                       ),
                                     ),
