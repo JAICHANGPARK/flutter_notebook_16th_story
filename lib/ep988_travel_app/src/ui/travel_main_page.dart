@@ -13,10 +13,13 @@ class TravelMainPage extends StatefulWidget {
 
 class _TravelMainPageState extends State<TravelMainPage> {
   TextEditingController _textEditingController = TextEditingController();
+ GlobalKey<ScaffoldState> _globalKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _globalKey,
+      drawer: const Drawer(),
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Column(
@@ -46,7 +49,11 @@ class _TravelMainPageState extends State<TravelMainPage> {
                       width: 16,
                     ),
                     Badge(
-                      child: const Icon(Ionicons.menu),
+                      child: GestureDetector(
+                          onTap: (){
+                            _globalKey.currentState?.openDrawer();
+                          },
+                          child: const Icon(Ionicons.menu)),
                     )
                   ],
                 ),
@@ -106,6 +113,10 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                     child: Container(
                                       decoration: const BoxDecoration(
                                         color: Colors.black87,
+                                        borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(4),
+                                          bottomRight: Radius.circular(4),
+                                        ),
                                       ),
                                       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                                       child: const Text(
@@ -118,17 +129,16 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                     top: 64,
                                     child: Container(
                                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                                      decoration: BoxDecoration(color: Colors.red[500],
-                                      borderRadius: const BorderRadius.only(
-                                        topRight: Radius.circular(4),
-                                        bottomRight:Radius.circular(4),
-                                      )),
+                                      decoration: BoxDecoration(
+                                        color: Colors.red[500],
+                                        borderRadius: const BorderRadius.only(
+                                          topRight: Radius.circular(4),
+                                          bottomRight: Radius.circular(4),
+                                        ),
+                                      ),
                                       child: const Text(
                                         "-20%",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold
-                                        ),
+                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                                       ),
                                     ),
                                   ),
