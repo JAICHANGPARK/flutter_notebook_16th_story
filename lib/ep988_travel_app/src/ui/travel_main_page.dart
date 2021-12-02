@@ -150,7 +150,29 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                         size: 14,
                                                       ),
                                                     ],
-                                                  )
+                                                  ),
+                                                  Row(
+                                                    children: const [
+                                                      Icon(Icons.flight_takeoff),
+                                                      Text(
+                                                        "Ha Noi - May 20, 2019",
+                                                        style: TextStyle(
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Row(
+                                                    children: const [
+                                                      Icon(Icons.loyalty),
+                                                      Text(
+                                                        "02/12 Seats",
+                                                        style: TextStyle(
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
                                                 ],
                                               ))
                                         ],
