@@ -316,10 +316,11 @@ class _TravelMainPageState extends State<TravelMainPage> {
                         ),
                       ),
                       Expanded(child: ListView.builder(
-                        itemBuilder: (context, index){
+                        itemBuilder: (context, index) {
                           return const SizedBox(
-                              height: 160,
-                              child: Card());
+                            height: 160,
+                            child: Card(),
+                          );
                         },
                       ))
                     ],
