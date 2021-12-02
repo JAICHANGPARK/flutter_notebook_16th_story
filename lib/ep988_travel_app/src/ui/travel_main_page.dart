@@ -32,19 +32,19 @@ class _TravelMainPageState extends State<TravelMainPage> {
                   children: [
                     Expanded(
                         child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          child: const TextField(
-                            decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: "Search for place",
-                                hintStyle: TextStyle(
-                                  color: Colors.grey,
-                                )),
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.grey[100],
-                          ),
-                        )),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: const TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Search for place",
+                            hintStyle: TextStyle(
+                              color: Colors.grey,
+                            )),
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[100],
+                      ),
+                    )),
                     const SizedBox(
                       width: 16,
                     ),
@@ -81,185 +81,185 @@ class _TravelMainPageState extends State<TravelMainPage> {
                       ),
                       Expanded(
                           child: ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            itemBuilder: (BuildContext context, int index) {
-                              return Padding(
-                                padding: const EdgeInsets.only(right: 8),
-                                child: Container(
-                                  width: 240,
-                                  child: Stack(
-                                    children: [
-                                      Positioned(
-                                        left: 4,
-                                        top: 4,
-                                        bottom: 4,
-                                        right: 8,
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(16),
-                                            color: Colors.blueGrey,
-                                            image: const DecorationImage(
-                                              image: CachedNetworkImageProvider(
-                                                "https://cdn.pixabay.com/photo/2020/12/17/00/43/skyscrapers-5838029__340.jpg",
-                                              ),
-                                              fit: BoxFit.cover,
-                                            ),
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: Container(
+                              width: 240,
+                              child: Stack(
+                                children: [
+                                  Positioned(
+                                    left: 4,
+                                    top: 4,
+                                    bottom: 4,
+                                    right: 8,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(16),
+                                        color: Colors.blueGrey,
+                                        image: const DecorationImage(
+                                          image: CachedNetworkImageProvider(
+                                            "https://cdn.pixabay.com/photo/2020/12/17/00/43/skyscrapers-5838029__340.jpg",
                                           ),
-                                          child: Stack(
-                                            children: [
-                                              Positioned(
-                                                  left: 12,
-                                                  right: 12,
-                                                  bottom: 12,
-                                                  child: Column(
-                                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                                    children: [
-                                                      const Text(
-                                                        "Singahura",
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      child: Stack(
+                                        children: [
+                                          Positioned(
+                                              left: 12,
+                                              right: 12,
+                                              bottom: 12,
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  const Text(
+                                                    "Singahura",
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding: const EdgeInsets.symmetric(vertical: 16),
+                                                    child: Row(
+                                                      children: const [
+                                                        Icon(
+                                                          Icons.star,
+                                                          color: Colors.orange,
+                                                          size: 14,
+                                                        ),
+                                                        Icon(
+                                                          Icons.star,
+                                                          color: Colors.orange,
+                                                          size: 14,
+                                                        ),
+                                                        Icon(
+                                                          Icons.star,
+                                                          color: Colors.orange,
+                                                          size: 14,
+                                                        ),
+                                                        Icon(
+                                                          Icons.star,
+                                                          color: Colors.orange,
+                                                          size: 14,
+                                                        ),
+                                                        Icon(
+                                                          Icons.star_border,
+                                                          color: Colors.orange,
+                                                          size: 14,
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Row(
+                                                    children: const [
+                                                      Icon(
+                                                        Icons.flight_takeoff,
+                                                        color: Colors.white,
+                                                        size: 16,
+                                                      ),
+                                                      SizedBox(
+                                                        width: 8,
+                                                      ),
+                                                      Text(
+                                                        "Ha Noi - May 20, 2019",
                                                         style: TextStyle(
                                                           color: Colors.white,
-                                                          fontSize: 18,
-                                                          fontWeight: FontWeight.bold,
                                                         ),
-                                                      ),
-                                                      Padding(
-                                                        padding: const EdgeInsets.symmetric(vertical: 16),
-                                                        child: Row(
-                                                          children: const [
-                                                            Icon(
-                                                              Icons.star,
-                                                              color: Colors.orange,
-                                                              size: 14,
-                                                            ),
-                                                            Icon(
-                                                              Icons.star,
-                                                              color: Colors.orange,
-                                                              size: 14,
-                                                            ),
-                                                            Icon(
-                                                              Icons.star,
-                                                              color: Colors.orange,
-                                                              size: 14,
-                                                            ),
-                                                            Icon(
-                                                              Icons.star,
-                                                              color: Colors.orange,
-                                                              size: 14,
-                                                            ),
-                                                            Icon(
-                                                              Icons.star_border,
-                                                              color: Colors.orange,
-                                                              size: 14,
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                      Row(
-                                                        children: const [
-                                                          Icon(
-                                                            Icons.flight_takeoff,
-                                                            color: Colors.white,
-                                                            size: 16,
-                                                          ),
-                                                          SizedBox(
-                                                            width: 8,
-                                                          ),
-                                                          Text(
-                                                            "Ha Noi - May 20, 2019",
-                                                            style: TextStyle(
-                                                              color: Colors.white,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      const SizedBox(
-                                                        height: 8,
-                                                      ),
-                                                      Row(
-                                                        children: const [
-                                                          Icon(
-                                                            Icons.loyalty,
-                                                            color: Colors.white,
-                                                            size: 16,
-                                                          ),
-                                                          SizedBox(
-                                                            width: 8,
-                                                          ),
-                                                          Text(
-                                                            "02/12 Seats",
-                                                            style: TextStyle(
-                                                              color: Colors.white,
-                                                            ),
-                                                          ),
-                                                        ],
                                                       ),
                                                     ],
-                                                  )),
-                                              Positioned(
-                                                right: 8,
-                                                bottom: 8,
-                                                child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                                  children: [
-                                                    const Text(
-                                                      "\$920",
-                                                      style: TextStyle(
-                                                          color: Colors.grey,
-                                                          fontSize: 12,
-                                                          decoration: TextDecoration.lineThrough),
-                                                    ),
-                                                    Text(
-                                                      "\$770",
-                                                      style: TextStyle(color: Colors.red[400], fontSize: 18),
-                                                    )
-                                                  ],
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 8,
+                                                  ),
+                                                  Row(
+                                                    children: const [
+                                                      Icon(
+                                                        Icons.loyalty,
+                                                        color: Colors.white,
+                                                        size: 16,
+                                                      ),
+                                                      SizedBox(
+                                                        width: 8,
+                                                      ),
+                                                      Text(
+                                                        "02/12 Seats",
+                                                        style: TextStyle(
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              )),
+                                          Positioned(
+                                            right: 8,
+                                            bottom: 8,
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.end,
+                                              children: [
+                                                const Text(
+                                                  "\$920",
+                                                  style: TextStyle(
+                                                      color: Colors.grey,
+                                                      fontSize: 12,
+                                                      decoration: TextDecoration.lineThrough),
                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                      Positioned(
-                                        top: 24,
-                                        left: 0,
-                                        child: Container(
-                                          decoration: const BoxDecoration(
-                                            color: Colors.black87,
-                                            borderRadius: BorderRadius.only(
-                                              topRight: Radius.circular(4),
-                                              bottomRight: Radius.circular(4),
+                                                Text(
+                                                  "\$770",
+                                                  style: TextStyle(color: Colors.red[400], fontSize: 18),
+                                                )
+                                              ],
                                             ),
                                           ),
-                                          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-                                          child: const Text(
-                                            "06 days 16 hours",
-                                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                                          ),
-                                        ),
+                                        ],
                                       ),
-                                      Positioned(
-                                        top: 64,
-                                        child: Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                                          decoration: BoxDecoration(
-                                            color: Colors.red[500],
-                                            borderRadius: const BorderRadius.only(
-                                              topRight: Radius.circular(4),
-                                              bottomRight: Radius.circular(4),
-                                            ),
-                                          ),
-                                          child: const Text(
-                                            "-20%",
-                                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
+                                    ),
                                   ),
-                                ),
-                              );
-                            },
-                          )),
+                                  Positioned(
+                                    top: 24,
+                                    left: 0,
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        color: Colors.black87,
+                                        borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(4),
+                                          bottomRight: Radius.circular(4),
+                                        ),
+                                      ),
+                                      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                                      child: const Text(
+                                        "06 days 16 hours",
+                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    top: 64,
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                                      decoration: BoxDecoration(
+                                        color: Colors.red[500],
+                                        borderRadius: const BorderRadius.only(
+                                          topRight: Radius.circular(4),
+                                          bottomRight: Radius.circular(4),
+                                        ),
+                                      ),
+                                      child: const Text(
+                                        "-20%",
+                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      )),
                       Padding(
                         padding: const EdgeInsets.only(right: 16, top: 4),
                         child: Row(
@@ -285,12 +285,12 @@ class _TravelMainPageState extends State<TravelMainPage> {
             Expanded(
                 flex: 5,
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Column(
                     children: [
                       Container(
                         height: 48,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                         ),
                         child: Row(
@@ -298,19 +298,29 @@ class _TravelMainPageState extends State<TravelMainPage> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Favorite"),
+                                const Text(
+                                  "Favorite",
+                                  style: TextStyle(fontSize: 24),
+                                ),
+                                const SizedBox(
+                                  height: 2,
+                                ),
                                 Container(
-                                    height: 2,
-                                    width: 24,
-                                    color: Colors.black,
+                                  height: 2,
+                                  width: 24,
+                                  color: Colors.black,
                                 )
                               ],
                             )
                           ],
                         ),
                       ),
-                      Expanded(child: SingleChildScrollView(
-
+                      Expanded(child: ListView.builder(
+                        itemBuilder: (context, index){
+                          return const SizedBox(
+                              height: 160,
+                              child: Card());
+                        },
                       ))
                     ],
                   ),
