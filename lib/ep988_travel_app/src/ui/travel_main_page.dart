@@ -153,7 +153,11 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                   ),
                                                   Row(
                                                     children: const [
-                                                      Icon(Icons.flight_takeoff),
+                                                      Icon(Icons.flight_takeoff,
+                                                      color: Colors.white,
+                                                      size: 16,
+                                                      ),
+                                                      SizedBox(width: 8,),
                                                       Text(
                                                         "Ha Noi - May 20, 2019",
                                                         style: TextStyle(
@@ -164,7 +168,10 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                   ),
                                                   Row(
                                                     children: const [
-                                                      Icon(Icons.loyalty),
+                                                      Icon(Icons.loyalty,
+                                                        color: Colors.white,
+                                                        size: 16,),
+                                                      SizedBox(width: 8,),
                                                       Text(
                                                         "02/12 Seats",
                                                         style: TextStyle(
