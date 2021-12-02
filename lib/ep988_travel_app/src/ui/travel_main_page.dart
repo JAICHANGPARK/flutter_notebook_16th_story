@@ -13,7 +13,7 @@ class TravelMainPage extends StatefulWidget {
 
 class _TravelMainPageState extends State<TravelMainPage> {
   TextEditingController _textEditingController = TextEditingController();
- GlobalKey<ScaffoldState> _globalKey = GlobalKey();
+  GlobalKey<ScaffoldState> _globalKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
                     ),
                     Badge(
                       child: GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             _globalKey.currentState?.openDrawer();
                           },
                           child: const Icon(Ionicons.menu)),
