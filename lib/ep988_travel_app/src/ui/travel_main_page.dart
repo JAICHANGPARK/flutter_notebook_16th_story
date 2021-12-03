@@ -14,6 +14,7 @@ class TravelMainPage extends StatefulWidget {
 class _TravelMainPageState extends State<TravelMainPage> {
   TextEditingController _textEditingController = TextEditingController();
   GlobalKey<ScaffoldState> _globalKey = GlobalKey();
+  int tabIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -294,22 +295,61 @@ class _TravelMainPageState extends State<TravelMainPage> {
                         // ),
                         child: Row(
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  "Favorite",
-                                  style: TextStyle(fontSize: 24),
-                                ),
-                                const SizedBox(
-                                  height: 2,
-                                ),
-                                Container(
-                                  height: 2,
-                                  width: 32,
-                                  color: Colors.black,
-                                )
-                              ],
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  tabIndex = 0;
+                                });
+                              },
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    "Favorite",
+                                    style: TextStyle(fontSize: 24),
+                                  ),
+                                  const SizedBox(
+                                    height: 2,
+                                  ),
+                                  Container(
+                                    height: 2,
+                                    width: 32,
+                                    color: Colors.black,
+                                  )
+                                ],
+                              ),
+                            ),
+                            const SizedBox(width: 16,),
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  tabIndex = 1;
+                                });
+                              },
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "New",
+                                    style: tabIndex == 1
+                                        ? const TextStyle(fontSize: 24)
+                                        : const TextStyle(
+                                            fontSize: 20,
+                                            color: Colors.grey,
+                                          ),
+                                  ),
+                                  const SizedBox(
+                                    height: 2,
+                                  ),
+                                  tabIndex == 1
+                                      ? Container(
+                                          height: 2,
+                                          width: 32,
+                                          color: Colors.black,
+                                        )
+                                      : Container()
+                                ],
+                              ),
                             )
                           ],
                         ),
