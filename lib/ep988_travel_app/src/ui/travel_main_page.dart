@@ -304,22 +304,31 @@ class _TravelMainPageState extends State<TravelMainPage> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const Text(
+                                  Text(
                                     "Favorite",
-                                    style: TextStyle(fontSize: 24),
+                                    style: tabIndex == 0
+                                        ? const TextStyle(fontSize: 24)
+                                        : const TextStyle(
+                                            fontSize: 20,
+                                            color: Colors.grey,
+                                          ),
                                   ),
                                   const SizedBox(
                                     height: 2,
                                   ),
-                                  Container(
+                                  tabIndex == 0
+                                      ? Container(
                                     height: 2,
                                     width: 32,
                                     color: Colors.black,
                                   )
+                                      : Container()
                                 ],
                               ),
                             ),
-                            const SizedBox(width: 16,),
+                            const SizedBox(
+                              width: 16,
+                            ),
                             GestureDetector(
                               onTap: () {
                                 setState(() {
