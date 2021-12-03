@@ -318,10 +318,10 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                   ),
                                   tabIndex == 0
                                       ? Container(
-                                    height: 2,
-                                    width: 32,
-                                    color: Colors.black,
-                                  )
+                                          height: 2,
+                                          width: 32,
+                                          color: Colors.black,
+                                        )
                                       : Container()
                                 ],
                               ),
@@ -363,14 +363,50 @@ class _TravelMainPageState extends State<TravelMainPage> {
                           ],
                         ),
                       ),
-                      Expanded(child: ListView.builder(
-                        itemBuilder: (context, index) {
-                          return const SizedBox(
-                            height: 160,
-                            child: Card(),
-                          );
-                        },
-                      ))
+                      Expanded(
+                        child: IndexedStack(
+                          index: tabIndex,
+                          children: [
+                            ListView.builder(
+                              itemBuilder: (context, index) {
+                                return SizedBox(
+                                  height: 160,
+                                  child: Card(
+                                    child: Stack(
+                                      children: [
+                                        Positioned(
+                                            left: 8,
+                                            top: 8,
+                                            bottom: 8,
+                                            right: 8,
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  width: 100,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.blue,
+                                                    borderRadius: BorderRadius.circular(8)
+                                                  ),
+                                                )
+                                              ],
+                                            ))
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                            ListView.builder(
+                              itemBuilder: (context, index) {
+                                return const SizedBox(
+                                  height: 160,
+                                  child: Card(),
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 )),
