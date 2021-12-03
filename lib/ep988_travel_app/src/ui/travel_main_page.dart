@@ -290,9 +290,8 @@ class _TravelMainPageState extends State<TravelMainPage> {
                     children: [
                       Container(
                         height: 48,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                        ),
+                        // decoration: const BoxDecoration(
+                        // ),
                         child: Row(
                           children: [
                             Column(
@@ -307,7 +306,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                 ),
                                 Container(
                                   height: 2,
-                                  width: 24,
+                                  width: 32,
                                   color: Colors.black,
                                 )
                               ],
