@@ -390,14 +390,14 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                 ),
 
                                                 Padding(
-                                                  padding: const EdgeInsets.all(8.0),
+                                                  padding: const EdgeInsets.only(left: 16),
                                                   child: Column(
+                                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                                     crossAxisAlignment: CrossAxisAlignment.start,
                                                     children: [
                                                       const Text(
-                                                        "Singahura",
+                                                        "Nagoya & Tokyo",
                                                         style: TextStyle(
-                                                          color: Colors.white,
                                                           fontSize: 18,
                                                           fontWeight: FontWeight.bold,
                                                         ),
@@ -438,7 +438,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                         children: const [
                                                           Icon(
                                                             Icons.flight_takeoff,
-                                                            color: Colors.white,
+
                                                             size: 16,
                                                           ),
                                                           SizedBox(
@@ -447,7 +447,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                           Text(
                                                             "Ha Noi - May 20, 2019",
                                                             style: TextStyle(
-                                                              color: Colors.white,
+
                                                             ),
                                                           ),
                                                         ],
@@ -459,18 +459,22 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                         children: const [
                                                           Icon(
                                                             Icons.loyalty,
-                                                            color: Colors.white,
+
                                                             size: 16,
                                                           ),
                                                           SizedBox(
                                                             width: 8,
                                                           ),
                                                           Text(
-                                                            "02/12 Seats",
+                                                            "02/12 Seats Remaining",
                                                             style: TextStyle(
-                                                              color: Colors.white,
                                                             ),
                                                           ),
+                                                          Spacer(),
+                                                          Text("\$512",style: TextStyle(
+                                                            color: Colors.red,
+                                                            fontWeight: FontWeight.bold
+                                                          ),)
                                                         ],
                                                       ),
                                                     ],
