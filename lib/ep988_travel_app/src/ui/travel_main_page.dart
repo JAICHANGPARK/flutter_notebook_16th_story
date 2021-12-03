@@ -387,6 +387,94 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                     color: Colors.blue,
                                                     borderRadius: BorderRadius.circular(8)
                                                   ),
+                                                ),
+
+                                                Padding(
+                                                  padding: const EdgeInsets.all(8.0),
+                                                  child: Column(
+                                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                    children: [
+                                                      const Text(
+                                                        "Singahura",
+                                                        style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 18,
+                                                          fontWeight: FontWeight.bold,
+                                                        ),
+                                                      ),
+                                                      Padding(
+                                                        padding: const EdgeInsets.symmetric(vertical: 16),
+                                                        child: Row(
+                                                          children: const [
+                                                            Icon(
+                                                              Icons.star,
+                                                              color: Colors.orange,
+                                                              size: 14,
+                                                            ),
+                                                            Icon(
+                                                              Icons.star,
+                                                              color: Colors.orange,
+                                                              size: 14,
+                                                            ),
+                                                            Icon(
+                                                              Icons.star,
+                                                              color: Colors.orange,
+                                                              size: 14,
+                                                            ),
+                                                            Icon(
+                                                              Icons.star,
+                                                              color: Colors.orange,
+                                                              size: 14,
+                                                            ),
+                                                            Icon(
+                                                              Icons.star_border,
+                                                              color: Colors.orange,
+                                                              size: 14,
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                      Row(
+                                                        children: const [
+                                                          Icon(
+                                                            Icons.flight_takeoff,
+                                                            color: Colors.white,
+                                                            size: 16,
+                                                          ),
+                                                          SizedBox(
+                                                            width: 8,
+                                                          ),
+                                                          Text(
+                                                            "Ha Noi - May 20, 2019",
+                                                            style: TextStyle(
+                                                              color: Colors.white,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      const SizedBox(
+                                                        height: 8,
+                                                      ),
+                                                      Row(
+                                                        children: const [
+                                                          Icon(
+                                                            Icons.loyalty,
+                                                            color: Colors.white,
+                                                            size: 16,
+                                                          ),
+                                                          SizedBox(
+                                                            width: 8,
+                                                          ),
+                                                          Text(
+                                                            "02/12 Seats",
+                                                            style: TextStyle(
+                                                              color: Colors.white,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ],
+                                                  ),
                                                 )
                                               ],
                                             ))
