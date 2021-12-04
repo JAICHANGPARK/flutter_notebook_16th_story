@@ -5,6 +5,8 @@
 - EP978 : https://dribbble.com/shots/16892232-Mental-Health-App/attachments/11957109?mode=media
 - EP987 : https://dribbble.com/shots/9196998-Virgil-Abloh-Inspiration/attachments/1240456?mode=media
 - EP988 : https://dribbble.com/shots/16962964/attachments/12037556?mode=media
+- EP992 : https://dribbble.com/shots/16983265-New-Twist-for-Android/attachments/12060682?mode=media
+
 
 ## Getting Started
 
