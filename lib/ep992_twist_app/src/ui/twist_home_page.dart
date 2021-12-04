@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_16th_story/ep992_twist_app/src/controller/twist_menu_contoller.dart';
+import 'package:get/get.dart';
 
 
 class TwistHomePage extends StatefulWidget {
@@ -11,7 +13,16 @@ class TwistHomePage extends StatefulWidget {
 class _TwistHomePageState extends State<TwistHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return GetBuilder<TwistMenuController>(
+      init: TwistMenuController(),
+      builder: (controller){
+        return Scaffold(
+          body: IndexedStack(
+            index: controller.bottomTab,
+
+          ),
+        );
+      },
 
     );
   }
