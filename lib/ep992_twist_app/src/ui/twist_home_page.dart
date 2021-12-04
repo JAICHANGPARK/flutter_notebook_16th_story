@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep992_twist_app/src/controller/twist_menu_contoller.dart';
+import 'package:flutter_notebook_16th_story/ep992_twist_app/src/ui/twist_inbox_screen.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -10,28 +11,56 @@ class TwistHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<TwistMenuController>(
       init: TwistMenuController(),
-      builder: (controller){
+      builder: (controller) {
         return Scaffold(
           body: IndexedStack(
             index: controller.bottomTab,
+            children: [
+              const TwistInboxScreen(),
+              const Center(
+                child: Text("Channels"),
+              ),
+              const Center(
+                child: Text("Messages>"),
+              ),
+              const Center(
+                child: Text("More"),
+              )
+            ],
+          ),
+          floatingActionButton: FloatingActionButton(
+            backgroundColor: Colors.cyan,
+            child: const Icon(Ionicons.create_outline),
+            onPressed: (){
 
+            },
           ),
           bottomNavigationBar: BottomNavigationBar(
+            backgroundColor: Colors.grey[200],
             currentIndex: controller.bottomTab,
-            onTap: (idx){
+            onTap: (idx) {
               controller.setBottomTab(idx);
             },
             type: BottomNavigationBarType.fixed,
-            items: const [BottomNavigationBarItem(icon: Icon(Ionicons.cube_outline), label: "Inbox"),
+            selectedItemColor: Colors.teal,
+            unselectedItemColor: Colors.grey,
+            items: const [
+              BottomNavigationBarItem(icon: Icon(Ionicons.cube_outline), label: "Inbox"),
               BottomNavigationBarItem(icon: Icon(Icons.tag), label: "Channels"),
               BottomNavigationBarItem(icon: Icon(Ionicons.chatbubble_outline), label: "Messages"),
-              BottomNavigationBarItem(icon: CircleAvatar(), label: "Inbox"),],
+              BottomNavigationBarItem(
+                  icon: CircleAvatar(
+                    radius: 12,
+                    child: Text(
+                      "d",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                  label: "More"),
+            ],
           ),
         );
       },
-
     );
   }
 }
-
-
