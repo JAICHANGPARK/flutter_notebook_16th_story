@@ -386,7 +386,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                   decoration: BoxDecoration(
                                                     color: Colors.blue,
                                                     borderRadius: BorderRadius.circular(8),
-                                                    image: DecorationImage(
+                                                    image: const DecorationImage(
                                                       image: CachedNetworkImageProvider(
                                                         "https://cdn.pixabay.com/photo/2020/01/31/07/26/chef-4807317_960_720.jpg",
                                                       ),
@@ -476,7 +476,7 @@ class _TravelMainPageState extends State<TravelMainPage> {
                                                             style: TextStyle(
                                                             ),
                                                           ),
-                                                          Spacer(),
+
                                                           Text("\$512",style: TextStyle(
                                                             color: Colors.red,
                                                             fontWeight: FontWeight.bold
