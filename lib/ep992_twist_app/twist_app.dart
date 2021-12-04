@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'src/ui/twist_home_page.dart';
 
 
 class TwistApp extends StatelessWidget {
@@ -6,8 +9,8 @@ class TwistApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-
+    return GetMaterialApp(
+    home: TwistHomePage(),
     );
   }
 }
