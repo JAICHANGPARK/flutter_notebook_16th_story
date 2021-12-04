@@ -15,15 +15,15 @@ class TwistHomePage extends StatelessWidget {
         return Scaffold(
           body: IndexedStack(
             index: controller.bottomTab,
-            children: [
-              const TwistInboxScreen(),
-              const Center(
+            children: const [
+              TwistInboxScreen(),
+              Center(
                 child: Text("Channels"),
               ),
-              const Center(
+              Center(
                 child: Text("Messages>"),
               ),
-              const Center(
+              Center(
                 child: Text("More"),
               )
             ],
