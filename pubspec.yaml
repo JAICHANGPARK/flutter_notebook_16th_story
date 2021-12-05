@@ -14,7 +14,7 @@ dependencies:
   cupertino_icons: ^1.0.4
   intl: any
 
-  flutter_riverpod: ^1.0.0
+  flutter_riverpod: ^1.0.2
 
   coolicons: ^1.0.0
   line_icons: any
@@ -24,8 +24,8 @@ dependencies:
   freezed_annotation:
   percent_indicator: any
   fl_chart: any
-  get: ^4.3.8
-  json_annotation: ^4.3.0
+  get: ^4.5.1
+  json_annotation: ^4.4.0
   equatable: ^2.0.3
 
   flutter_bloc: any
@@ -34,12 +34,13 @@ dependencies:
 
   uuid: any
   animated_text_kit: ^4.2.1
+  timeago: ^3.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.4
-  json_serializable: ^6.0.1
+  json_serializable: ^6.1.1
   build_runner: any
   freezed: any
 
