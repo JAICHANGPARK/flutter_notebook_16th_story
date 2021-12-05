@@ -9,7 +9,10 @@ class TwistApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return  GetMaterialApp(
+      theme: ThemeData(
+        primaryColor: Color(0xff008AA6)  /// 0 138 166  8a  a6
+      ),
     home: TwistHomePage(),
     );
   }
