@@ -17,17 +17,17 @@ class TwistInboxScreen extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(
+                const Text(
                   "Inbox",
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Spacer(),
-                IconButton(onPressed: () {}, icon: Icon(Icons.filter_list)),
-                IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-                IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
+                const Spacer(),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.filter_list)),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
               ],
             ),
             Expanded(
@@ -36,8 +36,9 @@ class TwistInboxScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 var item = twistInboxController.inboxItems[index];
                 return Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
@@ -66,9 +67,15 @@ class TwistInboxScreen extends StatelessWidget {
                         ],
                       ),
                       Container(
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(16), border: Border.all()),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(),
+                        ),
                         child: Row(
-                          children: [Text("# ${item.tag}")],
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text("# ${item.tag}"),
+                          ],
                         ),
                       )
                     ],
