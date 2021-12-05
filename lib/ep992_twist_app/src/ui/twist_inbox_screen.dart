@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-
 
 class TwistInboxScreen extends StatefulWidget {
   const TwistInboxScreen({Key? key}) : super(key: key);
@@ -12,6 +10,17 @@ class TwistInboxScreen extends StatefulWidget {
 class _TwistInboxScreenState extends State<TwistInboxScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: [
+        Row(
+          children: [
+            Text("Inbox"),
+            IconButton(onPressed: () {}, icon: Icon(Icons.filter)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.filter)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.filter)),
+          ],
+        )
+      ],
+    );
   }
 }
