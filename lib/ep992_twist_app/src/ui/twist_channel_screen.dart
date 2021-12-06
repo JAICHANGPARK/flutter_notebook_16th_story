@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep992_twist_app/src/controller/twist_channel_controller.dart';
-import 'package:flutter_notebook_16th_story/ep992_twist_app/src/ui/channel_component.dart';
+import 'package:flutter_notebook_16th_story/ep992_twist_app/src/ui/component/channel_component.dart';
 import 'package:get/get.dart';
 
-import 'inbox_component.dart';
+
 
 class TwistChannelScreen extends StatelessWidget {
   const TwistChannelScreen({Key? key}) : super(key: key);
@@ -30,12 +30,23 @@ class TwistChannelScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("Lounge"),
-                const Text("Public - 10 members"),
+                const Text(
+                  "Lounge",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                const Text(
+                  "Public - 10 members",
+                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                ),
               ],
             ),
           ),
-
           Expanded(
               child: GetBuilder<TwistChannelController>(
             init: TwistChannelController(),
