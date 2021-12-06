@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 
 import '../model/twist_inbox.dart';
+import 'twist_channel_screen.dart';
 
 class TwistHomePage extends StatelessWidget {
   const TwistHomePage({Key? key}) : super(key: key);
@@ -20,9 +21,7 @@ class TwistHomePage extends StatelessWidget {
             index: controller.bottomTab,
             children: const [
               TwistInboxScreen(),
-              Center(
-                child: Text("Channels"),
-              ),
+              TwistChannelScreen(),
               Center(
                 child: Text("Messages>"),
               ),
