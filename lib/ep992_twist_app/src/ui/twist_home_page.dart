@@ -31,7 +31,7 @@ class TwistHomePage extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             backgroundColor: Colors.cyan,
-            child: const Icon(Ionicons.create_outline),
+            child: controller.bottomTab == 2 ? Icon(Ionicons.chatbubble_outline):const Icon(Ionicons.create_outline),
             onPressed: () {
               final TwistInboxController twistInboxController = Get.find<TwistInboxController>();
               twistInboxController.addItem(
