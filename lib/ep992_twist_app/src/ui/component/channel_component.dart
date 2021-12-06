@@ -24,7 +24,7 @@ class ChannelComponent extends StatelessWidget {
                     Text(
                       twistChannel?.title ?? "-",
                       style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                     const SizedBox(
