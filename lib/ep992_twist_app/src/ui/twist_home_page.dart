@@ -7,6 +7,7 @@ import 'package:ionicons/ionicons.dart';
 
 import '../model/twist_inbox.dart';
 import 'twist_channel_screen.dart';
+import 'twist_message_screen.dart';
 
 class TwistHomePage extends StatelessWidget {
   const TwistHomePage({Key? key}) : super(key: key);
@@ -22,9 +23,7 @@ class TwistHomePage extends StatelessWidget {
             children: const [
               TwistInboxScreen(),
               TwistChannelScreen(),
-              Center(
-                child: Text("Messages>"),
-              ),
+              TwistMessageScreen(),
               Center(
                 child: Text("More"),
               )
