@@ -38,7 +38,7 @@ class TwistInboxScreen extends StatelessWidget {
                   itemCount: c.inboxItems.length,
                   itemBuilder: (context, index) {
                     var item = c.inboxItems[index];
-                    return Padding(
+                    return  Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
