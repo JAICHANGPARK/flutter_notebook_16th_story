@@ -9,14 +9,22 @@ class TwistMessageScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Text("Messages"),
-              Spacer(),
-              IconButton(onPressed: (){}, icon: Icon(Icons.search)),
-            ],
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                const Text(
+                  "Messages",
+                  style: TextStyle(fontSize: 18),
+                ),
+                const Spacer(),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.search),
+                ),
+              ],
+            ),
           )
-
         ],
       ),
     );
