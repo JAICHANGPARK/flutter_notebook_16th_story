@@ -1,10 +1,9 @@
-import 'package:cached_network_image/cached_network_image.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep992_twist_app/src/controller/twist_inbox_controller.dart';
 import 'package:get/get.dart';
-import 'package:timeago/timeago.dart' as timeago;
 
-import 'inbox_component.dart';
+import 'component/inbox_component.dart';
 
 class TwistInboxScreen extends StatelessWidget {
   const TwistInboxScreen({Key? key}) : super(key: key);
