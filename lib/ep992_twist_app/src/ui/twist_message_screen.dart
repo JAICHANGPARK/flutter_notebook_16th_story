@@ -95,7 +95,7 @@ class TwistMessageScreen extends StatelessWidget {
                                           ),
                                         ),
                                         Text(timeago.format(messageBlock.dateTime ?? DateTime.now()),
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontSize: 10,
                                         ),)
                                       ],
