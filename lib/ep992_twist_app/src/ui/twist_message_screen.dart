@@ -45,9 +45,6 @@ class TwistMessageScreen extends StatelessWidget {
                             Container(
                               height: 52,
                               width: 52,
-                              decoration: const BoxDecoration(
-                                color: Colors.blue,
-                              ),
                               child: messageBlock.images.length > 1
                                   ? Stack(
                                       children: [
@@ -97,11 +94,14 @@ class TwistMessageScreen extends StatelessWidget {
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                        Text(timeago.format(messageBlock.dateTime ?? DateTime.now()))
+                                        Text(timeago.format(messageBlock.dateTime ?? DateTime.now()),
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                        ),)
                                       ],
                                     ),
                                     const SizedBox(
-                                      height: 4,
+                                      height: 8,
                                     ),
                                     Text(
                                       messageBlock.subtitle ?? "-",
