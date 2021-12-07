@@ -6,7 +6,10 @@ class TwistMessageController extends GetxController{
     TwistMessage(
       name: "Generalist",
       subtitle: "John: OK! That's super nice. Let's more flutter development",
-      dateTime: DateTime.now().subtract(Duration())
+      dateTime: DateTime.now().subtract(Duration(minutes: 13)),
+      images: [
+        
+      ]
     ),
   ];
 
