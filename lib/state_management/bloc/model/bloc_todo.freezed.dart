@@ -151,14 +151,17 @@ class _$_Todo implements _Todo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Todo &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, createdAt);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(createdAt));
 
   @JsonKey(ignore: true)
   @override

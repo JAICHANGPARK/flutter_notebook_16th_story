@@ -246,27 +246,26 @@ class _$_TodayTask implements _TodayTask {
         (other.runtimeType == runtimeType &&
             other is _TodayTask &&
             const DeepCollectionEquality().equals(other.tags, tags) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.date, date) || other.date == date) &&
-            (identical(other.time, time) || other.time == time) &&
-            (identical(other.isCompleted, isCompleted) ||
-                other.isCompleted == isCompleted) &&
-            (identical(other.remindAt, remindAt) ||
-                other.remindAt == remindAt) &&
-            (identical(other.backgroundColorRGB, backgroundColorRGB) ||
-                other.backgroundColorRGB == backgroundColorRGB));
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality().equals(other.time, time) &&
+            const DeepCollectionEquality()
+                .equals(other.isCompleted, isCompleted) &&
+            const DeepCollectionEquality().equals(other.remindAt, remindAt) &&
+            const DeepCollectionEquality()
+                .equals(other.backgroundColorRGB, backgroundColorRGB));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(tags),
-      title,
-      date,
-      time,
-      isCompleted,
-      remindAt,
-      backgroundColorRGB);
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(date),
+      const DeepCollectionEquality().hash(time),
+      const DeepCollectionEquality().hash(isCompleted),
+      const DeepCollectionEquality().hash(remindAt),
+      const DeepCollectionEquality().hash(backgroundColorRGB));
 
   @JsonKey(ignore: true)
   @override

@@ -186,18 +186,21 @@ class _$_TwistInbox implements _TwistInbox {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _TwistInbox &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.subtitle, subtitle) ||
-                other.subtitle == subtitle) &&
-            (identical(other.tag, tag) || other.tag == tag) &&
-            (identical(other.img, img) || other.img == img) &&
-            (identical(other.dateTime, dateTime) ||
-                other.dateTime == dateTime));
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.subtitle, subtitle) &&
+            const DeepCollectionEquality().equals(other.tag, tag) &&
+            const DeepCollectionEquality().equals(other.img, img) &&
+            const DeepCollectionEquality().equals(other.dateTime, dateTime));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, title, subtitle, tag, img, dateTime);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(subtitle),
+      const DeepCollectionEquality().hash(tag),
+      const DeepCollectionEquality().hash(img),
+      const DeepCollectionEquality().hash(dateTime));
 
   @JsonKey(ignore: true)
   @override

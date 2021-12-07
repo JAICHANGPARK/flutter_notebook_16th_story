@@ -154,16 +154,19 @@ class _$_Workout implements _Workout {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Workout &&
-            (identical(other.thumbImg, thumbImg) ||
-                other.thumbImg == thumbImg) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.subtitle, subtitle) ||
-                other.subtitle == subtitle) &&
-            (identical(other.time, time) || other.time == time));
+            const DeepCollectionEquality().equals(other.thumbImg, thumbImg) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.subtitle, subtitle) &&
+            const DeepCollectionEquality().equals(other.time, time));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, thumbImg, title, subtitle, time);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(thumbImg),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(subtitle),
+      const DeepCollectionEquality().hash(time));
 
   @JsonKey(ignore: true)
   @override

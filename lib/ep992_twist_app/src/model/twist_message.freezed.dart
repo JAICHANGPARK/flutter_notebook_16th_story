@@ -17,10 +17,16 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$TwistMessageTearOff {
   const _$TwistMessageTearOff();
 
-  _TwistMessage call({String? name, List<String> images = const []}) {
+  _TwistMessage call(
+      {String? name,
+      List<String> images = const [],
+      DateTime? dateTime,
+      String? subtitle}) {
     return _TwistMessage(
       name: name,
       images: images,
+      dateTime: dateTime,
+      subtitle: subtitle,
     );
   }
 }
@@ -32,6 +38,8 @@ const $TwistMessage = _$TwistMessageTearOff();
 mixin _$TwistMessage {
   String? get name => throw _privateConstructorUsedError;
   List<String> get images => throw _privateConstructorUsedError;
+  DateTime? get dateTime => throw _privateConstructorUsedError;
+  String? get subtitle => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TwistMessageCopyWith<TwistMessage> get copyWith =>
@@ -43,7 +51,11 @@ abstract class $TwistMessageCopyWith<$Res> {
   factory $TwistMessageCopyWith(
           TwistMessage value, $Res Function(TwistMessage) then) =
       _$TwistMessageCopyWithImpl<$Res>;
-  $Res call({String? name, List<String> images});
+  $Res call(
+      {String? name,
+      List<String> images,
+      DateTime? dateTime,
+      String? subtitle});
 }
 
 /// @nodoc
@@ -58,6 +70,8 @@ class _$TwistMessageCopyWithImpl<$Res> implements $TwistMessageCopyWith<$Res> {
   $Res call({
     Object? name = freezed,
     Object? images = freezed,
+    Object? dateTime = freezed,
+    Object? subtitle = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -68,6 +82,14 @@ class _$TwistMessageCopyWithImpl<$Res> implements $TwistMessageCopyWith<$Res> {
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      dateTime: dateTime == freezed
+          ? _value.dateTime
+          : dateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      subtitle: subtitle == freezed
+          ? _value.subtitle
+          : subtitle // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -79,7 +101,11 @@ abstract class _$TwistMessageCopyWith<$Res>
           _TwistMessage value, $Res Function(_TwistMessage) then) =
       __$TwistMessageCopyWithImpl<$Res>;
   @override
-  $Res call({String? name, List<String> images});
+  $Res call(
+      {String? name,
+      List<String> images,
+      DateTime? dateTime,
+      String? subtitle});
 }
 
 /// @nodoc
@@ -96,6 +122,8 @@ class __$TwistMessageCopyWithImpl<$Res> extends _$TwistMessageCopyWithImpl<$Res>
   $Res call({
     Object? name = freezed,
     Object? images = freezed,
+    Object? dateTime = freezed,
+    Object? subtitle = freezed,
   }) {
     return _then(_TwistMessage(
       name: name == freezed
@@ -106,6 +134,14 @@ class __$TwistMessageCopyWithImpl<$Res> extends _$TwistMessageCopyWithImpl<$Res>
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      dateTime: dateTime == freezed
+          ? _value.dateTime
+          : dateTime // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      subtitle: subtitle == freezed
+          ? _value.subtitle
+          : subtitle // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -113,17 +149,22 @@ class __$TwistMessageCopyWithImpl<$Res> extends _$TwistMessageCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_TwistMessage implements _TwistMessage {
-  _$_TwistMessage({this.name, this.images = const []});
+  _$_TwistMessage(
+      {this.name, this.images = const [], this.dateTime, this.subtitle});
 
   @override
   final String? name;
   @JsonKey(defaultValue: const [])
   @override
   final List<String> images;
+  @override
+  final DateTime? dateTime;
+  @override
+  final String? subtitle;
 
   @override
   String toString() {
-    return 'TwistMessage(name: $name, images: $images)';
+    return 'TwistMessage(name: $name, images: $images, dateTime: $dateTime, subtitle: $subtitle)';
   }
 
   @override
@@ -131,13 +172,19 @@ class _$_TwistMessage implements _TwistMessage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _TwistMessage &&
-            (identical(other.name, name) || other.name == name) &&
-            const DeepCollectionEquality().equals(other.images, images));
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.images, images) &&
+            const DeepCollectionEquality().equals(other.dateTime, dateTime) &&
+            const DeepCollectionEquality().equals(other.subtitle, subtitle));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, name, const DeepCollectionEquality().hash(images));
+      runtimeType,
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(images),
+      const DeepCollectionEquality().hash(dateTime),
+      const DeepCollectionEquality().hash(subtitle));
 
   @JsonKey(ignore: true)
   @override
@@ -146,12 +193,20 @@ class _$_TwistMessage implements _TwistMessage {
 }
 
 abstract class _TwistMessage implements TwistMessage {
-  factory _TwistMessage({String? name, List<String> images}) = _$_TwistMessage;
+  factory _TwistMessage(
+      {String? name,
+      List<String> images,
+      DateTime? dateTime,
+      String? subtitle}) = _$_TwistMessage;
 
   @override
   String? get name;
   @override
   List<String> get images;
+  @override
+  DateTime? get dateTime;
+  @override
+  String? get subtitle;
   @override
   @JsonKey(ignore: true)
   _$TwistMessageCopyWith<_TwistMessage> get copyWith =>

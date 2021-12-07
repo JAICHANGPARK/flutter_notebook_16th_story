@@ -183,17 +183,21 @@ class _$_Wellness implements _Wellness {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Wellness &&
-            (identical(other.img, img) || other.img == img) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.subtitle, subtitle) ||
-                other.subtitle == subtitle) &&
-            (identical(other.time, time) || other.time == time) &&
-            (identical(other.isLock, isLock) || other.isLock == isLock));
+            const DeepCollectionEquality().equals(other.img, img) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.subtitle, subtitle) &&
+            const DeepCollectionEquality().equals(other.time, time) &&
+            const DeepCollectionEquality().equals(other.isLock, isLock));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, img, title, subtitle, time, isLock);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(img),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(subtitle),
+      const DeepCollectionEquality().hash(time),
+      const DeepCollectionEquality().hash(isLock));
 
   @JsonKey(ignore: true)
   @override

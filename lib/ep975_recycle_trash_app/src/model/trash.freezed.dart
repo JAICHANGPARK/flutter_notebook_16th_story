@@ -125,13 +125,15 @@ class _$_Trash implements _Trash {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Trash &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.subtitle, subtitle) ||
-                other.subtitle == subtitle));
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.subtitle, subtitle));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, title, subtitle);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(subtitle));
 
   @JsonKey(ignore: true)
   @override

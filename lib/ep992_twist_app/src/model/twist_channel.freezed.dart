@@ -159,16 +159,19 @@ class _$_TwistChannel implements _TwistChannel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _TwistChannel &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.subtitle, subtitle) ||
-                other.subtitle == subtitle) &&
-            (identical(other.img, img) || other.img == img) &&
-            (identical(other.dateTime, dateTime) ||
-                other.dateTime == dateTime));
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.subtitle, subtitle) &&
+            const DeepCollectionEquality().equals(other.img, img) &&
+            const DeepCollectionEquality().equals(other.dateTime, dateTime));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, title, subtitle, img, dateTime);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(subtitle),
+      const DeepCollectionEquality().hash(img),
+      const DeepCollectionEquality().hash(dateTime));
 
   @JsonKey(ignore: true)
   @override

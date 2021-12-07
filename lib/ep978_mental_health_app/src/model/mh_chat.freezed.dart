@@ -182,17 +182,22 @@ class _$_MhChat implements _MhChat {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _MhChat &&
-            (identical(other.uid, uid) || other.uid == uid) &&
-            (identical(other.profileImg, profileImg) ||
-                other.profileImg == profileImg) &&
-            (identical(other.msg, msg) || other.msg == msg) &&
-            (identical(other.time, time) || other.time == time) &&
-            (identical(other.isSend, isSend) || other.isSend == isSend));
+            const DeepCollectionEquality().equals(other.uid, uid) &&
+            const DeepCollectionEquality()
+                .equals(other.profileImg, profileImg) &&
+            const DeepCollectionEquality().equals(other.msg, msg) &&
+            const DeepCollectionEquality().equals(other.time, time) &&
+            const DeepCollectionEquality().equals(other.isSend, isSend));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, uid, profileImg, msg, time, isSend);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(uid),
+      const DeepCollectionEquality().hash(profileImg),
+      const DeepCollectionEquality().hash(msg),
+      const DeepCollectionEquality().hash(time),
+      const DeepCollectionEquality().hash(isSend));
 
   @JsonKey(ignore: true)
   @override
