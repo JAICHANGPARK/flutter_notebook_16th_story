@@ -7,5 +7,7 @@ class TwistMessage with _$TwistMessage {
   factory TwistMessage({
     String? name,
     @Default([]) List<String> images,
+    DateTime? dateTime,
+    String? subtitle,
   }) = _TwistMessage;
 }
