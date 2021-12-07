@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep992_twist_app/src/controller/twist_message_controller.dart';
 import 'package:get/get.dart';
-
+import 'package:timeago/timeago.dart' as timeago;
 class TwistMessageScreen extends StatelessWidget {
   const TwistMessageScreen({Key? key}) : super(key: key);
 
@@ -34,7 +34,39 @@ class TwistMessageScreen extends StatelessWidget {
                 return ListView.builder(
                     itemCount: controller.messageItem.length,
                     itemBuilder: (context, index) {
-                  return Row();
+
+                      var messageBlock  = controller.messageItem[index];
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 64,
+                          width: 64,
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(messageBlock.name ?? "-"),
+                                    Text(timeago.format(messageBlock.dateTime ?? DateTime.now()))
+
+                                  ],
+                                ),
+                                Text(messageBlock.subtitle ?? "-")
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  );
                 });
               },
             ),
