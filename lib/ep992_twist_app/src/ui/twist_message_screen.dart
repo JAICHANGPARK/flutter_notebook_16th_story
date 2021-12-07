@@ -31,7 +31,9 @@ class TwistMessageScreen extends StatelessWidget {
             child: GetBuilder<TwistMessageController>(
               init: TwistMessageController(),
               builder: (controller) {
-                return ListView.builder(itemBuilder: (context, index) {
+                return ListView.builder(
+                    itemCount: controller.messageItem.length,
+                    itemBuilder: (context, index) {
                   return Row();
                 });
               },
