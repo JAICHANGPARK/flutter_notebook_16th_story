@@ -60,34 +60,50 @@ class TwistChatScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Expanded(child: Placeholder()),
-            Container(height: 58,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.grey[200],
-                  ),
-                  SizedBox(width: 8,),
-                  CircleAvatar(
-                    backgroundColor: Colors.grey[200],
-                  ),
-                  SizedBox(width: 8,),
-                  Expanded(child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: BorderRadius.circular(24)
-                      ),
+            Expanded(child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Placeholder(),
+            )),
+            Container(
+              height: 58,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.grey[200],
+                      child: Icon(Icons.bookmark_border),
+                      foregroundColor: Colors.purple,
                     ),
-                  ))
-                ],
+                    SizedBox(
+                      width: 8,
+                    ),
+                    CircleAvatar(
+                      backgroundColor: Colors.grey[200],
+                      child: Icon(Icons.check_circle_outlined),
+                      foregroundColor: Colors.green,
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Expanded(
+                        child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        child: TextField(
+                          decoration: InputDecoration(border: InputBorder.none, hintText: "Reply"),
+                        ),
+                      ),
+                    ))
+                  ],
+                ),
               ),
-            ),),
-
-
+            ),
           ],
         ),
       ),
