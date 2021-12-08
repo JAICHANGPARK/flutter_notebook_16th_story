@@ -9,6 +9,7 @@ class TwistChatScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
@@ -32,13 +33,13 @@ class TwistChatScreen extends StatelessWidget {
             Text("A warm welcome, team"),
             Row(
               children: [
-                Text("#", style: TextStyle(
-                  color: Colors.orange
-                ),),
+                Text(
+                  "#",
+                  style: TextStyle(color: Colors.orange),
+                ),
                 Text("Lounge")
               ],
             )
-
           ],
         ),
       ),
