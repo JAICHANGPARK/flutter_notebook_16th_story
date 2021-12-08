@@ -7,6 +7,7 @@ import 'package:ionicons/ionicons.dart';
 
 import '../model/twist_inbox.dart';
 import 'twist_channel_screen.dart';
+import 'twist_chat_screen.dart';
 import 'twist_message_screen.dart';
 
 class TwistHomePage extends StatelessWidget {
@@ -31,8 +32,12 @@ class TwistHomePage extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             backgroundColor: Colors.cyan,
-            child: controller.bottomTab == 2 ? Icon(Ionicons.chatbubble_outline):const Icon(Ionicons.create_outline),
+            child: controller.bottomTab == 2 ? const Icon(Ionicons.chatbubble_outline):const Icon(Ionicons.create_outline),
             onPressed: () {
+              if(controller.bottomTab == 2){
+                Get.to(const TwistChatScreen());
+                return;
+              }
               final TwistInboxController twistInboxController = Get.find<TwistInboxController>();
               twistInboxController.addItem(
                 TwistInbox(
