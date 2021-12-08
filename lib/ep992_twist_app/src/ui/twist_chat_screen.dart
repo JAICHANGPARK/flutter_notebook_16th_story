@@ -32,14 +32,24 @@ class TwistChatScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Text("A warm welcome, team", style: TextStyle(
-                fontSize: 20,
-              ),),
+              Text(
+                "A warm welcome, team",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 8,
+              ),
               Row(
                 children: [
                   Text(
                     "#",
                     style: TextStyle(color: Colors.orange),
+                  ),
+                  SizedBox(
+                    width: 8,
                   ),
                   Text("Lounge")
                 ],
