@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 class TwistChatScreen extends StatelessWidget {
@@ -10,7 +11,14 @@ class TwistChatScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-
+            Row(
+              children: [
+                IconButton(onPressed: (){
+                  Get.back();
+                },
+                icon: const Icon(Icons.arrow_back),)
+              ],
+            )
           ],
         ),
       ),
