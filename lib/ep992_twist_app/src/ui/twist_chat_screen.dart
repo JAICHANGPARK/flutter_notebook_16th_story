@@ -19,7 +19,7 @@ class TwistChatScreen extends StatelessWidget {
                   },
                   icon: const Icon(Icons.arrow_back),
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(Icons.search),
@@ -35,18 +35,18 @@ class TwistChatScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "A warm welcome, team",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         "#",
                         style: TextStyle(color: Colors.orange),
