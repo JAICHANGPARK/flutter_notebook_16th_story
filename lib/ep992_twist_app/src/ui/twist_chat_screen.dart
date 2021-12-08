@@ -28,7 +28,17 @@ class TwistChatScreen extends StatelessWidget {
                   icon: const Icon(Icons.more_vert),
                 ),
               ],
+            ),
+            Text("A warm welcome, team"),
+            Row(
+              children: [
+                Text("#", style: TextStyle(
+                  color: Colors.orange
+                ),),
+                Text("Lounge")
+              ],
             )
+
           ],
         ),
       ),
