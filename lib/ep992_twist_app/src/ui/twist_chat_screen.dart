@@ -16,7 +16,15 @@ class TwistChatScreen extends StatelessWidget {
                 IconButton(onPressed: (){
                   Get.back();
                 },
-                icon: const Icon(Icons.arrow_back),)
+                icon: const Icon(Icons.arrow_back),),
+                IconButton(onPressed: (){
+                },
+                  icon: const Icon(Icons.search),),
+                IconButton(onPressed: (){
+                  Get.back();
+                },
+                  icon: const Icon(Icons.more_veti),),
+
               ],
             )
           ],
