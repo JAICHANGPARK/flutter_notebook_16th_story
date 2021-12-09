@@ -78,6 +78,8 @@ class TwistMessageController extends GetxController {
   List<TwistChat> get chatItem => _chatItem;
   List<TwistChat> _chatItem = [
     TwistChat(
+      name: "Dreamwalker",
+      ago: "23m",
       img: "https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_960_720.jpg",
       msg:
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -96,6 +98,8 @@ class TwistMessageController extends GetxController {
       pinCount: 14,
     ),
     TwistChat(
+      name: "Dreamwalker",
+      ago: "23m",
       img: "https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_960_720.jpg",
       msg:
     "Super exited to give this a try",
@@ -103,6 +107,8 @@ class TwistMessageController extends GetxController {
       pinCount: 1,
     ),
     TwistChat(
+      name: "Dreamwalker",
+      ago: "23m",
       img: "https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_960_720.jpg",
       msg:
       "I'm already loving this",
