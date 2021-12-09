@@ -83,13 +83,13 @@ class TwistMessageController extends GetxController {
       img: "https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_960_720.jpg",
       msg:
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              "\n "
+              "\n\n"
               "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
               "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit "
               "in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
-              "\nExcepteur sint occaecat cupidatat non proident, "
+              "\n\nExcepteur sint occaecat cupidatat non proident, "
               "sunt in culpa qui officia deserunt mollit anim id est laborum"
-              "\n"
+              "\n\n"
               "Thanks",
       like: {
         "favorite": 14,
