@@ -131,6 +131,12 @@ class TwistChatScreen extends StatelessWidget {
                                             scrollDirection: Axis.horizontal,
                                             itemBuilder: (context, index2) {
                                               var tagItem = item.like?.entries.toList()[index2];
+                                              if(index2 == (item.like?.length?? 0  + 1)){
+                                                return CircleAvatar(
+                                                  radius: 16,
+                                                  backgroundColor: Colors.grey[300],
+                                                );
+                                              }
                                               switch (tagItem?.key ?? "") {
                                                 case "favorite":
                                                   return Container(
@@ -165,9 +171,12 @@ class TwistChatScreen extends StatelessWidget {
                                                     ),
                                                   );
                                               }
+
+
                                               return Container();
+
                                             },
-                                            itemCount: item.like?.length ?? 0,
+                                            itemCount: ((item.like?.length ?? 0) + 1),
                                           ),
                                         )
                                             : Container()
