@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_16th_story/ep992_twist_app/src/controller/twist_message_controller.dart';
 import 'package:flutter_notebook_16th_story/ep992_twist_app/src/model/twist_message.dart';
@@ -72,7 +73,14 @@ class TwistChatScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         var item = controller.chatItem[index];
                         return Row(
-                          children: [],
+                          children: [
+                            CircleAvatar(
+                              backgroundImage: CachedNetworkImageProvider(
+                                item.img ?? "",
+                              ),
+                            ),
+
+                          ],
                         );
                       });
                 },
