@@ -75,8 +75,41 @@ class TwistMessageController extends GetxController {
   ];
 
   List<TwistMessage> get messageItem => _messageItem;
-
-
-  List<TwistChat> _chatItem = [];
-
+  List<TwistChat> get chatItem => _chatItem;
+  List<TwistChat> _chatItem = [
+    TwistChat(
+      img: "https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_960_720.jpg",
+      msg:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "\n "
+              "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+              "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit "
+              "in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+              "\nExcepteur sint occaecat cupidatat non proident, "
+              "sunt in culpa qui officia deserunt mollit anim id est laborum"
+              "\n"
+              "Thanks",
+      like: {
+        "favorite": 14,
+        "heart": 4,
+      },
+      pinCount: 14,
+    ),
+    TwistChat(
+      img: "https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_960_720.jpg",
+      msg:
+    "Super exited to give this a try",
+      like: {},
+      pinCount: 1,
+    ),
+    TwistChat(
+      img: "https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_960_720.jpg",
+      msg:
+      "I'm already loving this",
+      like: {
+        "favorite": 1,
+      },
+      pinCount: 1,
+    ),
+  ];
 }
