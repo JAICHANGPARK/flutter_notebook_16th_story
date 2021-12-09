@@ -212,3 +212,187 @@ abstract class _TwistMessage implements TwistMessage {
   _$TwistMessageCopyWith<_TwistMessage> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+class _$TwistChatTearOff {
+  const _$TwistChatTearOff();
+
+  _TwistChat call(
+      {String? img, int? pinCount, String? msg, Map<String, int>? like}) {
+    return _TwistChat(
+      img: img,
+      pinCount: pinCount,
+      msg: msg,
+      like: like,
+    );
+  }
+}
+
+/// @nodoc
+const $TwistChat = _$TwistChatTearOff();
+
+/// @nodoc
+mixin _$TwistChat {
+  String? get img => throw _privateConstructorUsedError;
+  int? get pinCount => throw _privateConstructorUsedError;
+  String? get msg => throw _privateConstructorUsedError;
+  Map<String, int>? get like => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $TwistChatCopyWith<TwistChat> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TwistChatCopyWith<$Res> {
+  factory $TwistChatCopyWith(TwistChat value, $Res Function(TwistChat) then) =
+      _$TwistChatCopyWithImpl<$Res>;
+  $Res call({String? img, int? pinCount, String? msg, Map<String, int>? like});
+}
+
+/// @nodoc
+class _$TwistChatCopyWithImpl<$Res> implements $TwistChatCopyWith<$Res> {
+  _$TwistChatCopyWithImpl(this._value, this._then);
+
+  final TwistChat _value;
+  // ignore: unused_field
+  final $Res Function(TwistChat) _then;
+
+  @override
+  $Res call({
+    Object? img = freezed,
+    Object? pinCount = freezed,
+    Object? msg = freezed,
+    Object? like = freezed,
+  }) {
+    return _then(_value.copyWith(
+      img: img == freezed
+          ? _value.img
+          : img // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pinCount: pinCount == freezed
+          ? _value.pinCount
+          : pinCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      msg: msg == freezed
+          ? _value.msg
+          : msg // ignore: cast_nullable_to_non_nullable
+              as String?,
+      like: like == freezed
+          ? _value.like
+          : like // ignore: cast_nullable_to_non_nullable
+              as Map<String, int>?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$TwistChatCopyWith<$Res> implements $TwistChatCopyWith<$Res> {
+  factory _$TwistChatCopyWith(
+          _TwistChat value, $Res Function(_TwistChat) then) =
+      __$TwistChatCopyWithImpl<$Res>;
+  @override
+  $Res call({String? img, int? pinCount, String? msg, Map<String, int>? like});
+}
+
+/// @nodoc
+class __$TwistChatCopyWithImpl<$Res> extends _$TwistChatCopyWithImpl<$Res>
+    implements _$TwistChatCopyWith<$Res> {
+  __$TwistChatCopyWithImpl(_TwistChat _value, $Res Function(_TwistChat) _then)
+      : super(_value, (v) => _then(v as _TwistChat));
+
+  @override
+  _TwistChat get _value => super._value as _TwistChat;
+
+  @override
+  $Res call({
+    Object? img = freezed,
+    Object? pinCount = freezed,
+    Object? msg = freezed,
+    Object? like = freezed,
+  }) {
+    return _then(_TwistChat(
+      img: img == freezed
+          ? _value.img
+          : img // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pinCount: pinCount == freezed
+          ? _value.pinCount
+          : pinCount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      msg: msg == freezed
+          ? _value.msg
+          : msg // ignore: cast_nullable_to_non_nullable
+              as String?,
+      like: like == freezed
+          ? _value.like
+          : like // ignore: cast_nullable_to_non_nullable
+              as Map<String, int>?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_TwistChat implements _TwistChat {
+  _$_TwistChat({this.img, this.pinCount, this.msg, this.like});
+
+  @override
+  final String? img;
+  @override
+  final int? pinCount;
+  @override
+  final String? msg;
+  @override
+  final Map<String, int>? like;
+
+  @override
+  String toString() {
+    return 'TwistChat(img: $img, pinCount: $pinCount, msg: $msg, like: $like)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _TwistChat &&
+            const DeepCollectionEquality().equals(other.img, img) &&
+            const DeepCollectionEquality().equals(other.pinCount, pinCount) &&
+            const DeepCollectionEquality().equals(other.msg, msg) &&
+            const DeepCollectionEquality().equals(other.like, like));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(img),
+      const DeepCollectionEquality().hash(pinCount),
+      const DeepCollectionEquality().hash(msg),
+      const DeepCollectionEquality().hash(like));
+
+  @JsonKey(ignore: true)
+  @override
+  _$TwistChatCopyWith<_TwistChat> get copyWith =>
+      __$TwistChatCopyWithImpl<_TwistChat>(this, _$identity);
+}
+
+abstract class _TwistChat implements TwistChat {
+  factory _TwistChat(
+      {String? img,
+      int? pinCount,
+      String? msg,
+      Map<String, int>? like}) = _$_TwistChat;
+
+  @override
+  String? get img;
+  @override
+  int? get pinCount;
+  @override
+  String? get msg;
+  @override
+  Map<String, int>? get like;
+  @override
+  @JsonKey(ignore: true)
+  _$TwistChatCopyWith<_TwistChat> get copyWith =>
+      throw _privateConstructorUsedError;
+}
