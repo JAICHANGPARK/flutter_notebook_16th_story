@@ -65,71 +65,93 @@ class TwistChatScreen extends StatelessWidget {
             ),
             Expanded(
                 child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: GetBuilder<TwistMessageController>(
-                builder: (controller) {
-                  return ListView.builder(
-                      itemCount: controller.chatItem.length,
-                      itemBuilder: (context, index) {
-                        var item = controller.chatItem[index];
-                        return Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: CircleAvatar(
-                                radius: 16,
-                                backgroundImage: CachedNetworkImageProvider(
-                                  item.img ?? "",
+                  padding: const EdgeInsets.all(8.0),
+                  child: GetBuilder<TwistMessageController>(
+                    builder: (controller) {
+                      return ListView.builder(
+                          itemCount: controller.chatItem.length,
+                          itemBuilder: (context, index) {
+                            var item = controller.chatItem[index];
+                            return Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: CircleAvatar(
+                                    radius: 16,
+                                    backgroundImage: CachedNetworkImageProvider(
+                                      item.img ?? "",
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: [
-                                    Row(
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Text(
-                                          item.name ?? "-",
-                                          style: const TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              item.name ?? "-",
+                                              style: const TextStyle(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              width: 4,
+                                            ),
+                                            Text(
+                                              item.ago ?? "-",
+                                              style: const TextStyle(fontSize: 12),
+                                            ),
+                                            const Spacer(),
+                                            const Icon(
+                                              Icons.notifications,
+                                              size: 12,
+                                            ),
+                                            Text(
+                                              "${item.pinCount}",
+                                              style: const TextStyle(fontSize: 12),
+                                            )
+                                          ],
                                         ),
                                         const SizedBox(
-                                          width: 4,
+                                          height: 8,
                                         ),
-                                        Text(
-                                          item.ago ?? "-",
-                                          style: const TextStyle(fontSize: 12),
-                                        ),
-                                        const Spacer(),
-                                        const Icon(
-                                          Icons.notifications,
-                                          size: 12,
-                                        ),
-                                        Text(
-                                          "${item.pinCount}",
-                                          style: const TextStyle(fontSize: 12),
+                                        Text(item.msg ?? "", style: const TextStyle(
+                                            fontSize: 13
+                                        ),),
+                                        (item.like?.length ?? 0) > 0 ?
+                                        ListView.builder(
+                                          itemBuilder: (context, index2) {
+                                            var tagItem = item.like?.entries.toList()[index2];
+                                            switch (tagItem?.key ?? "") {
+                                              case "favorite":
+                                                return Container(
+                                                  child: Row(
+                                                    children: [
+                                                      
+                                                    ],
+                                                  ),
+                                                );
+                                            }
+                                            return Container();
+                                          },
+                                          itemCount: item.like?.length ?? 0,
                                         )
+                                            : Container()
                                       ],
                                     ),
-                                    const SizedBox(
-                                      height: 8,
-                                    ),
-                                    Text(item.msg ?? ""),
-                                  ],
-                                ),
-                              ),
-                            )
-                          ],
-                        );
-                      });
-                },
-              ),
-            )),
+                                  ),
+                                )
+                              ],
+                            );
+                          });
+                    },
+                  ),
+                )),
             Container(
               height: 58,
               child: Padding(
@@ -154,18 +176,18 @@ class TwistChatScreen extends StatelessWidget {
                     ),
                     Expanded(
                         child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.circular(24),
-                        ),
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: const TextField(
-                          decoration: InputDecoration(border: InputBorder.none, hintText: "Reply"),
-                        ),
-                      ),
-                    ))
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.grey[200],
+                              borderRadius: BorderRadius.circular(24),
+                            ),
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                            child: const TextField(
+                              decoration: InputDecoration(border: InputBorder.none, hintText: "Reply"),
+                            ),
+                          ),
+                        ))
                   ],
                 ),
               ),
