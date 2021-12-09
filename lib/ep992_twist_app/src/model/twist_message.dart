@@ -11,3 +11,7 @@ class TwistMessage with _$TwistMessage {
     String? subtitle,
   }) = _TwistMessage;
 }
+
+
+@freezed
+cla
