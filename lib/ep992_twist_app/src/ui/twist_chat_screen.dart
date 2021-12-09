@@ -123,24 +123,36 @@ class TwistChatScreen extends StatelessWidget {
                                         Text(item.msg ?? "", style: const TextStyle(
                                             fontSize: 13
                                         ),),
+                                        SizedBox(height: 8,),
                                         (item.like?.length ?? 0) > 0 ?
-                                        ListView.builder(
-                                          itemBuilder: (context, index2) {
-                                            var tagItem = item.like?.entries.toList()[index2];
-                                            switch (tagItem?.key ?? "") {
-                                              case "favorite":
-                                                return Container(
-                                                  child: Row(
-                                                    children: [
-                                                      Icon(Icons.favorite, color: Colors.red,),
-                                                      Text("${tagItem?.value}"),
-                                                    ],
-                                                  ),
-                                                );
-                                            }
-                                            return Container();
-                                          },
-                                          itemCount: item.like?.length ?? 0,
+                                        SizedBox(
+                                          height: 32,
+                                          child: ListView.builder(
+                                            scrollDirection: Axis.horizontal,
+                                            itemBuilder: (context, index2) {
+                                              var tagItem = item.like?.entries.toList()[index2];
+                                              switch (tagItem?.key ?? "") {
+                                                case "favorite":
+                                                  return Container(
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.grey[200],
+                                                      borderRadius: BorderRadius.circular(16),
+                                                    ),
+                                                    padding: EdgeInsets.symmetric(horizontal: 4),
+                                                    child: Row(
+                                                      children: [
+                                                        Icon(Icons.favorite, color: Colors.red,
+                                                        size: 16,),
+                                                        SizedBox(width: 2,),
+                                                        Text("${tagItem?.value}"),
+                                                      ],
+                                                    ),
+                                                  );
+                                              }
+                                              return Container();
+                                            },
+                                            itemCount: item.like?.length ?? 0,
+                                          ),
                                         )
                                             : Container()
                                       ],
