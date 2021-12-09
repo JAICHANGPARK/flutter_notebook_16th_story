@@ -130,13 +130,16 @@ class TwistChatScreen extends StatelessWidget {
                                           child: ListView.builder(
                                             scrollDirection: Axis.horizontal,
                                             itemBuilder: (context, index2) {
-                                              var tagItem = item.like?.entries.toList()[index2];
+
                                               if(index2 == (item.like?.length?? 0  + 1)){
                                                 return CircleAvatar(
+                                                  foregroundColor: Colors.black,
                                                   radius: 16,
-                                                  backgroundColor: Colors.grey[300],
+                                                  backgroundColor: Colors.grey[200],
+                                                  child: Icon(Icons.add),
                                                 );
                                               }
+                                              var tagItem = item.like?.entries.toList()[index2];
                                               switch (tagItem?.key ?? "") {
                                                 case "favorite":
                                                   return Container(
