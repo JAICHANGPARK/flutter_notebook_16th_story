@@ -218,9 +218,16 @@ class _$TwistChatTearOff {
   const _$TwistChatTearOff();
 
   _TwistChat call(
-      {String? img, int? pinCount, String? msg, Map<String, int>? like}) {
+      {String? img,
+      String? name,
+      String? ago,
+      int? pinCount,
+      String? msg,
+      Map<String, int>? like}) {
     return _TwistChat(
       img: img,
+      name: name,
+      ago: ago,
       pinCount: pinCount,
       msg: msg,
       like: like,
@@ -234,6 +241,8 @@ const $TwistChat = _$TwistChatTearOff();
 /// @nodoc
 mixin _$TwistChat {
   String? get img => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  String? get ago => throw _privateConstructorUsedError;
   int? get pinCount => throw _privateConstructorUsedError;
   String? get msg => throw _privateConstructorUsedError;
   Map<String, int>? get like => throw _privateConstructorUsedError;
@@ -247,7 +256,13 @@ mixin _$TwistChat {
 abstract class $TwistChatCopyWith<$Res> {
   factory $TwistChatCopyWith(TwistChat value, $Res Function(TwistChat) then) =
       _$TwistChatCopyWithImpl<$Res>;
-  $Res call({String? img, int? pinCount, String? msg, Map<String, int>? like});
+  $Res call(
+      {String? img,
+      String? name,
+      String? ago,
+      int? pinCount,
+      String? msg,
+      Map<String, int>? like});
 }
 
 /// @nodoc
@@ -261,6 +276,8 @@ class _$TwistChatCopyWithImpl<$Res> implements $TwistChatCopyWith<$Res> {
   @override
   $Res call({
     Object? img = freezed,
+    Object? name = freezed,
+    Object? ago = freezed,
     Object? pinCount = freezed,
     Object? msg = freezed,
     Object? like = freezed,
@@ -269,6 +286,14 @@ class _$TwistChatCopyWithImpl<$Res> implements $TwistChatCopyWith<$Res> {
       img: img == freezed
           ? _value.img
           : img // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      ago: ago == freezed
+          ? _value.ago
+          : ago // ignore: cast_nullable_to_non_nullable
               as String?,
       pinCount: pinCount == freezed
           ? _value.pinCount
@@ -292,7 +317,13 @@ abstract class _$TwistChatCopyWith<$Res> implements $TwistChatCopyWith<$Res> {
           _TwistChat value, $Res Function(_TwistChat) then) =
       __$TwistChatCopyWithImpl<$Res>;
   @override
-  $Res call({String? img, int? pinCount, String? msg, Map<String, int>? like});
+  $Res call(
+      {String? img,
+      String? name,
+      String? ago,
+      int? pinCount,
+      String? msg,
+      Map<String, int>? like});
 }
 
 /// @nodoc
@@ -307,6 +338,8 @@ class __$TwistChatCopyWithImpl<$Res> extends _$TwistChatCopyWithImpl<$Res>
   @override
   $Res call({
     Object? img = freezed,
+    Object? name = freezed,
+    Object? ago = freezed,
     Object? pinCount = freezed,
     Object? msg = freezed,
     Object? like = freezed,
@@ -315,6 +348,14 @@ class __$TwistChatCopyWithImpl<$Res> extends _$TwistChatCopyWithImpl<$Res>
       img: img == freezed
           ? _value.img
           : img // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      ago: ago == freezed
+          ? _value.ago
+          : ago // ignore: cast_nullable_to_non_nullable
               as String?,
       pinCount: pinCount == freezed
           ? _value.pinCount
@@ -335,10 +376,15 @@ class __$TwistChatCopyWithImpl<$Res> extends _$TwistChatCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_TwistChat implements _TwistChat {
-  _$_TwistChat({this.img, this.pinCount, this.msg, this.like});
+  _$_TwistChat(
+      {this.img, this.name, this.ago, this.pinCount, this.msg, this.like});
 
   @override
   final String? img;
+  @override
+  final String? name;
+  @override
+  final String? ago;
   @override
   final int? pinCount;
   @override
@@ -348,7 +394,7 @@ class _$_TwistChat implements _TwistChat {
 
   @override
   String toString() {
-    return 'TwistChat(img: $img, pinCount: $pinCount, msg: $msg, like: $like)';
+    return 'TwistChat(img: $img, name: $name, ago: $ago, pinCount: $pinCount, msg: $msg, like: $like)';
   }
 
   @override
@@ -357,6 +403,8 @@ class _$_TwistChat implements _TwistChat {
         (other.runtimeType == runtimeType &&
             other is _TwistChat &&
             const DeepCollectionEquality().equals(other.img, img) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.ago, ago) &&
             const DeepCollectionEquality().equals(other.pinCount, pinCount) &&
             const DeepCollectionEquality().equals(other.msg, msg) &&
             const DeepCollectionEquality().equals(other.like, like));
@@ -366,6 +414,8 @@ class _$_TwistChat implements _TwistChat {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(img),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(ago),
       const DeepCollectionEquality().hash(pinCount),
       const DeepCollectionEquality().hash(msg),
       const DeepCollectionEquality().hash(like));
@@ -379,12 +429,18 @@ class _$_TwistChat implements _TwistChat {
 abstract class _TwistChat implements TwistChat {
   factory _TwistChat(
       {String? img,
+      String? name,
+      String? ago,
       int? pinCount,
       String? msg,
       Map<String, int>? like}) = _$_TwistChat;
 
   @override
   String? get img;
+  @override
+  String? get name;
+  @override
+  String? get ago;
   @override
   int? get pinCount;
   @override
