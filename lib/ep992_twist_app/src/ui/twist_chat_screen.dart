@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_16th_story/ep992_twist_app/src/controller/twist_message_controller.dart';
+import 'package:flutter_notebook_16th_story/ep992_twist_app/src/model/twist_message.dart';
 import 'package:get/get.dart';
 
 class TwistChatScreen extends StatelessWidget {
@@ -63,13 +65,18 @@ class TwistChatScreen extends StatelessWidget {
             Expanded(
                 child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: ListView.builder(itemBuilder: (context, index) {
-                return Row(
-                  children: [
-
-                  ],
-                );
-              }),
+              child: GetBuilder<TwistMessageController>(
+                builder: (controller) {
+                  return ListView.builder(
+                      itemCount: controller.chatItem.length,
+                      itemBuilder: (context, index) {
+                        var item = controller.chatItem[index];
+                        return Row(
+                          children: [],
+                        );
+                      });
+                },
+              ),
             )),
             Container(
               height: 58,
