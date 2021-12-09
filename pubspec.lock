@@ -259,7 +259,7 @@ packages:
       name: fl_chart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.40.5"
+    version: "0.40.6"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -311,7 +311,7 @@ packages:
       name: freezed
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.2"
+    version: "1.0.2+1"
   freezed_annotation:
     dependency: "direct main"
     description:
@@ -605,7 +605,7 @@ packages:
       name: pubspec_parse
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.0"
+    version: "1.2.0"
   riverpod:
     dependency: transitive
     description:
