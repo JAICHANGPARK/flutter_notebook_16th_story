@@ -17,7 +17,7 @@ class TwistChat with _$TwistChat {
   factory TwistChat({
     String? img,
     int? pinCount,
-    String msg,
-    Map<String, int> like,
+    String? msg,
+    Map<String, int>? like,
   }) = _TwistChat;
 }
