@@ -132,7 +132,8 @@ class TwistChatScreen extends StatelessWidget {
                                                 return Container(
                                                   child: Row(
                                                     children: [
-                                                      
+                                                      Icon(Icons.favorite, color: Colors.red,),
+                                                      Text("${tagItem?.value}"),
                                                     ],
                                                   ),
                                                 );
