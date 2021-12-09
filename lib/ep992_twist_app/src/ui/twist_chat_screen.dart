@@ -138,7 +138,7 @@ class TwistChatScreen extends StatelessWidget {
                                                       color: Colors.grey[200],
                                                       borderRadius: BorderRadius.circular(16),
                                                     ),
-                                                    padding: EdgeInsets.symmetric(horizontal: 4),
+                                                    padding: EdgeInsets.symmetric(horizontal: 16),
                                                     child: Row(
                                                       children: [
                                                         Icon(Icons.favorite, color: Colors.red,
