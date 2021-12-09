@@ -16,6 +16,8 @@ class TwistMessage with _$TwistMessage {
 class TwistChat with _$TwistChat {
   factory TwistChat({
     String? img,
+    String? name,
+    String? ago,
     int? pinCount,
     String? msg,
     Map<String, int>? like,
