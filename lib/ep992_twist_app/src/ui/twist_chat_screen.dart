@@ -123,7 +123,7 @@ class TwistChatScreen extends StatelessWidget {
                                         Text(item.msg ?? "", style: const TextStyle(
                                             fontSize: 13
                                         ),),
-                                        SizedBox(height: 8,),
+                                        const SizedBox(height: 8,),
                                         (item.like?.length ?? 0) > 0 ?
                                         SizedBox(
                                           height: 32,
@@ -138,12 +138,28 @@ class TwistChatScreen extends StatelessWidget {
                                                       color: Colors.grey[200],
                                                       borderRadius: BorderRadius.circular(16),
                                                     ),
-                                                    padding: EdgeInsets.symmetric(horizontal: 16),
+                                                    padding: const EdgeInsets.symmetric(horizontal: 16),
                                                     child: Row(
                                                       children: [
-                                                        Icon(Icons.favorite, color: Colors.red,
+                                                        const Icon(Icons.favorite, color: Colors.red,
                                                         size: 16,),
-                                                        SizedBox(width: 2,),
+                                                        const SizedBox(width: 2,),
+                                                        Text("${tagItem?.value}"),
+                                                      ],
+                                                    ),
+                                                  );
+                                                case "heart":
+                                                  return Container(
+                                                    margin: EdgeInsets.symmetric(horizontal: 8),
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.grey[200],
+                                                      borderRadius: BorderRadius.circular(16),
+                                                    ),
+                                                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                                                    child: Row(
+                                                      children: [
+                                                       Text("😍", ),
+                                                        const SizedBox(width: 2,),
                                                         Text("${tagItem?.value}"),
                                                       ],
                                                     ),
