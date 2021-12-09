@@ -73,13 +73,57 @@ class TwistChatScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         var item = controller.chatItem[index];
                         return Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            CircleAvatar(
-                              backgroundImage: CachedNetworkImageProvider(
-                                item.img ?? "",
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: CircleAvatar(
+                                radius: 16,
+                                backgroundImage: CachedNetworkImageProvider(
+                                  item.img ?? "",
+                                ),
                               ),
                             ),
-
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Text(
+                                          item.name ?? "-",
+                                          style: const TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          width: 4,
+                                        ),
+                                        Text(
+                                          item.ago ?? "-",
+                                          style: const TextStyle(fontSize: 12),
+                                        ),
+                                        const Spacer(),
+                                        const Icon(
+                                          Icons.notifications,
+                                          size: 12,
+                                        ),
+                                        Text(
+                                          "${item.pinCount}",
+                                          style: const TextStyle(fontSize: 12),
+                                        )
+                                      ],
+                                    ),
+                                    const SizedBox(
+                                      height: 8,
+                                    ),
+                                    Text(item.msg ?? ""),
+                                  ],
+                                ),
+                              ),
+                            )
                           ],
                         );
                       });
