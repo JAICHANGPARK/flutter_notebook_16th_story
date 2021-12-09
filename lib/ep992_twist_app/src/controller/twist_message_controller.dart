@@ -75,4 +75,8 @@ class TwistMessageController extends GetxController {
   ];
 
   List<TwistMessage> get messageItem => _messageItem;
+
+
+  List<TwistChat> _chatItem = [];
+
 }
