@@ -9,6 +9,7 @@ class EwlMainPage extends StatefulWidget {
 }
 
 class _EwlMainPageState extends State<EwlMainPage> {
+  int _bottomIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,6 +59,12 @@ class _EwlMainPageState extends State<EwlMainPage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        onTap: (idx){
+          setState(() {
+            _bottomIndex = idx;
+          });
+        },
+        currentIndex: _bottomIndex,
         backgroundColor: Colors.transparent,
         selectedItemColor: Colors.indigoAccent,
         elevation: 0,
