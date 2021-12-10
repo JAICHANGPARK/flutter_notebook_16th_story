@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 class EwlMainPage extends StatefulWidget {
   const EwlMainPage({Key? key}) : super(key: key);
@@ -60,8 +61,8 @@ class _EwlMainPageState extends State<EwlMainPage> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        items: [BottomNavigationBarItem(icon: Icon(Icons.home), label: "Learn"),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Learn")],
+        items: [BottomNavigationBarItem(icon: Icon(Ionicons.documents_outline), label: "Learn"),
+          BottomNavigationBarItem(icon: Icon(Ionicons.book_outline), label: "Dictionary")],
       ),
     );
   }
