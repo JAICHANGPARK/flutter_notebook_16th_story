@@ -11,6 +11,14 @@ class EwlMainPage extends StatefulWidget {
 class _EwlMainPageState extends State<EwlMainPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.grey[200],
+      appBar: AppBar(),
+      body: Column(
+        children: [
+
+        ],
+      ),
+    );
   }
 }
