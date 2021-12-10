@@ -55,14 +55,18 @@ class _EwlMainPageState extends State<EwlMainPage> {
               ),
             ),
           ),
-
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        items: [BottomNavigationBarItem(icon: Icon(Ionicons.documents_outline), label: "Learn"),
-          BottomNavigationBarItem(icon: Icon(Ionicons.book_outline), label: "Dictionary")],
+        items: [
+          BottomNavigationBarItem(icon: Icon(Ionicons.documents_outline), label: "Learn"),
+          BottomNavigationBarItem(icon: Icon(Ionicons.book_outline), label: "Dictionary"),
+          BottomNavigationBarItem(icon: Icon(Ionicons.stats_chart), label: "Statistic"),
+          BottomNavigationBarItem(icon: Icon(Ionicons.settings_outline), label: "Settings"),
+        ],
+        type: BottomNavigationBarType.fixed,
       ),
     );
   }
