@@ -26,7 +26,42 @@ class _EwlMainPageState extends State<EwlMainPage> {
         ],
       ),
       body: Column(
-        children: [],
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              height: 64,
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              height: 300,
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              height: 160,
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+            ),
+          ),
+
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        items: [BottomNavigationBarItem(icon: Icon(Icons.home), label: "Learn"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Learn")],
       ),
     );
   }
