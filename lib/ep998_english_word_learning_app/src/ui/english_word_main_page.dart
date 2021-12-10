@@ -48,9 +48,9 @@ class _EwlMainPageState extends State<EwlMainPage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Container(
-              height: 160,
+              height: 180,
               decoration: BoxDecoration(
                 color: Colors.white,
               ),
