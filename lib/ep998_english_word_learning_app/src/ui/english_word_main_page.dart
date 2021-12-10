@@ -59,6 +59,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.transparent,
+        selectedItemColor: Colors.indigoAccent,
         elevation: 0,
         items: [
           BottomNavigationBarItem(icon: Icon(Ionicons.documents_outline), label: "Learn"),
