@@ -149,10 +149,27 @@ class _EwlMainPageState extends State<EwlMainPage> {
                       ],
                     ),
                   ),
+                  SizedBox(height: 4,),
                   Expanded(child: Placeholder()),
                   Row(
                     children: const [
-
+                      CircleAvatar(radius: 4,),
+                      SizedBox(width: 4,),
+                      Text("Learned: 8",style: TextStyle(
+                        fontSize: 12
+                      ),),
+                      Spacer(),
+                      CircleAvatar(radius: 4,),
+                      SizedBox(width: 4,),
+                      Text("New: 35"),
+                      Spacer(),
+                      CircleAvatar(radius: 4,),
+                      SizedBox(width: 4,),
+                      Text("Learning: 85"),
+                      Spacer(),
+                      CircleAvatar(radius: 4,),
+                      SizedBox(width: 4,),
+                      Text("Skipped: 35")
                     ],
                   )
                 ],
