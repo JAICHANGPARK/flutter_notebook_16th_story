@@ -17,13 +17,13 @@ class _EwlMainPageState extends State<EwlMainPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text("Statistic"),
+        title: const Text("Statistic"),
         foregroundColor: Colors.black,
         centerTitle: true,
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.file_upload_outlined),
+            icon: const Icon(Icons.file_upload_outlined),
           )
         ],
       ),
@@ -33,7 +33,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
             padding: const EdgeInsets.all(16.0),
             child: Container(
               height: 64,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
               ),
             ),
@@ -42,7 +42,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
             padding: const EdgeInsets.all(16.0),
             child: Container(
               height: 300,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
               ),
             ),
@@ -51,7 +51,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Container(
               height: 180,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
               ),
             ),
@@ -69,10 +69,10 @@ class _EwlMainPageState extends State<EwlMainPage> {
         selectedItemColor: Colors.indigoAccent,
         elevation: 0,
         items: [
-          BottomNavigationBarItem(icon: Icon(Ionicons.documents_outline), label: "Learn"),
-          BottomNavigationBarItem(icon: Icon(Ionicons.book_outline), label: "Dictionary"),
-          BottomNavigationBarItem(icon: Icon(Ionicons.stats_chart), label: "Statistic"),
-          BottomNavigationBarItem(icon: Icon(Ionicons.settings_outline), label: "Settings"),
+          const BottomNavigationBarItem(icon: Icon(Ionicons.documents_outline), label: "Learn"),
+          const BottomNavigationBarItem(icon: Icon(Ionicons.book_outline), label: "Dictionary"),
+          const BottomNavigationBarItem(icon: Icon(Ionicons.stats_chart), label: "Statistic"),
+          const BottomNavigationBarItem(icon: const Icon(Ionicons.settings_outline), label: "Settings"),
         ],
         type: BottomNavigationBarType.fixed,
       ),
