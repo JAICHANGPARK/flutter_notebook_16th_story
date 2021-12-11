@@ -39,7 +39,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
               ),
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: IntrinsicHeight(
                 child: Row(
                   children: [
@@ -57,22 +57,45 @@ class _EwlMainPageState extends State<EwlMainPage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("New words",style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.grey
-                              ),),
-                              Text("Today: 3/5",style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600
-                              ),)
+                            children: const [
+                              Text(
+                                "New words",
+                                style: TextStyle(fontSize: 12, color: Colors.grey),
+                              ),
+                              Text(
+                                "Today: 3/5",
+                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                              )
                             ],
                           ),
                         )
                       ],
                     )),
-                    VerticalDivider(),
-                    Expanded(child: Placeholder()),
+                    const VerticalDivider(),
+                     Expanded(child:  Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.orange,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                "Current streak",
+                                style: TextStyle(fontSize: 12, color: Colors.grey),
+                              ),
+                              Text(
+                                "12 days",
+                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    )),
                   ],
                 ),
               ),
@@ -84,6 +107,36 @@ class _EwlMainPageState extends State<EwlMainPage> {
               height: 300,
               decoration: const BoxDecoration(
                 color: Colors.white,
+              ),
+              padding: const EdgeInsets.all(8),
+              child: Column(
+                children: [
+                  Container(
+                    height: 32,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(8)
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(child: Card(
+                          child: Center(
+                            child: Text("Week"),
+                          ),
+                        )),
+                        Expanded(child: Placeholder()),
+                        Expanded(child: Placeholder()),
+                        Expanded(child: Placeholder()),
+                      ],
+                    ),
+                  ),
+                  Expanded(child: Placeholder()),
+                  Row(
+                    children: [
+
+                    ],
+                  )
+                ],
               ),
             ),
           ),
