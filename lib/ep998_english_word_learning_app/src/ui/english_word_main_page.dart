@@ -52,11 +52,22 @@ class _EwlMainPageState extends State<EwlMainPage> {
                           progressColor: Colors.indigoAccent,
                           circularStrokeCap: CircularStrokeCap.round,
                         ),
-                        Column(
-                          children: [
-                            Text("New words"),
-                            Text("Today: 3/5")
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("New words",style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey
+                              ),),
+                              Text("Today: 3/5",style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600
+                              ),)
+                            ],
+                          ),
                         )
                       ],
                     )),
