@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class EwlMainPage extends StatefulWidget {
   const EwlMainPage({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class EwlMainPage extends StatefulWidget {
 
 class _EwlMainPageState extends State<EwlMainPage> {
   int _bottomIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,8 +35,35 @@ class _EwlMainPageState extends State<EwlMainPage> {
             padding: const EdgeInsets.all(16.0),
             child: Container(
               height: 64,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 color: Colors.white,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              padding: EdgeInsets.all(8),
+              child: IntrinsicHeight(
+                child: Row(
+                  children: [
+                    Expanded(
+                        child: Row(
+                      children: [
+                        CircularPercentIndicator(
+                          radius: 42,
+                          percent: .7,
+                          progressColor: Colors.indigoAccent,
+                          circularStrokeCap: CircularStrokeCap.round,
+                        ),
+                        Column(
+                          children: [
+                            Text("New words"),
+                            Text("Today: 3/5")
+                          ],
+                        )
+                      ],
+                    )),
+                    VerticalDivider(),
+                    Expanded(child: Placeholder()),
+                  ],
+                ),
               ),
             ),
           ),
@@ -59,7 +88,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        onTap: (idx){
+        onTap: (idx) {
           setState(() {
             _bottomIndex = idx;
           });
@@ -68,11 +97,11 @@ class _EwlMainPageState extends State<EwlMainPage> {
         backgroundColor: Colors.transparent,
         selectedItemColor: Colors.indigoAccent,
         elevation: 0,
-        items: [
-          const BottomNavigationBarItem(icon: Icon(Ionicons.documents_outline), label: "Learn"),
-          const BottomNavigationBarItem(icon: Icon(Ionicons.book_outline), label: "Dictionary"),
-          const BottomNavigationBarItem(icon: Icon(Ionicons.stats_chart), label: "Statistic"),
-          const BottomNavigationBarItem(icon: const Icon(Ionicons.settings_outline), label: "Settings"),
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Ionicons.documents_outline), label: "Learn"),
+          BottomNavigationBarItem(icon: Icon(Ionicons.book_outline), label: "Dictionary"),
+          BottomNavigationBarItem(icon: Icon(Ionicons.stats_chart), label: "Statistic"),
+          BottomNavigationBarItem(icon: Icon(Ionicons.settings_outline), label: "Settings"),
         ],
         type: BottomNavigationBarType.fixed,
       ),
