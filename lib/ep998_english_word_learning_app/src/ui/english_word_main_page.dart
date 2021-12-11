@@ -104,7 +104,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
-              height: 320,
+              height: 340,
               decoration: const BoxDecoration(
                 color: Colors.white,
               ),
@@ -192,7 +192,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Container(
-              height: 160,
+              height: 140,
               decoration: const BoxDecoration(
                 color: Colors.white,
               ),
@@ -214,7 +214,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
                   Divider(),
                   Row(
                     children: const [
-                      Icon(Ionicons.bookmarks_outline, color: Colors.grey,
+                      Icon(Ionicons.star_outline, color: Colors.grey,
                         size: 18,),
                       SizedBox(width: 8,),
                       Text("Complete learned"),
@@ -225,7 +225,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
                   Divider(),
                   Row(
                     children: const [
-                      Icon(Ionicons.bookmarks_outline, color: Colors.grey,
+                      Icon(Ionicons.bonfire_outline, color: Colors.grey,
                         size: 18,),
                       SizedBox(width: 8,),
                       Text("Best streak"),
@@ -236,7 +236,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
                   Divider(),
                   Row(
                     children: const [
-                      Icon(Ionicons.bookmarks_outline, color: Colors.grey,
+                      Icon(Ionicons.time_outline, color: Colors.grey,
                         size: 18,),
                       SizedBox(width: 8,),
                       Text("Start of learning"),
