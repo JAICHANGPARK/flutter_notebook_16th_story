@@ -200,13 +200,48 @@ class _EwlMainPageState extends State<EwlMainPage> {
               child: ListView(
                 children: [
                   Row(
-                    children: [
+                    children: const [
                       Icon(Ionicons.bookmarks_outline, color: Colors.grey,
                       size: 18,),
                       SizedBox(width: 8,),
                       Text("Learning"),
                       Spacer(),
-                      Text("542 words")
+                      Text("542 words",style: TextStyle(
+                        color: Colors.grey
+                      ),)
+                    ],
+                  ),
+                  Divider(),
+                  Row(
+                    children: const [
+                      Icon(Ionicons.bookmarks_outline, color: Colors.grey,
+                        size: 18,),
+                      SizedBox(width: 8,),
+                      Text("Complete learned"),
+                      Spacer(),
+                      Text("185 words")
+                    ],
+                  ),
+                  Divider(),
+                  Row(
+                    children: const [
+                      Icon(Ionicons.bookmarks_outline, color: Colors.grey,
+                        size: 18,),
+                      SizedBox(width: 8,),
+                      Text("Best streak"),
+                      Spacer(),
+                      Text("16 days")
+                    ],
+                  ),
+                  Divider(),
+                  Row(
+                    children: const [
+                      Icon(Ionicons.bookmarks_outline, color: Colors.grey,
+                        size: 18,),
+                      SizedBox(width: 8,),
+                      Text("Start of learning"),
+                      Spacer(),
+                      Text("May, 2021")
                     ],
                   ),
                   Divider(),
