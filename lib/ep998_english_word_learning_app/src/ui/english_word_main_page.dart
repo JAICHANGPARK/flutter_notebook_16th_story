@@ -149,8 +149,11 @@ class _EwlMainPageState extends State<EwlMainPage> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 4,),
-                  Expanded(child: Placeholder()),
+
+                  Expanded(child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 4),
+                    child: Placeholder(),
+                  )),
                   Row(
                     children: const [
                       CircleAvatar(radius: 4,
@@ -192,6 +195,22 @@ class _EwlMainPageState extends State<EwlMainPage> {
               height: 180,
               decoration: const BoxDecoration(
                 color: Colors.white,
+              ),
+              padding: EdgeInsets.all(8),
+              child: ListView(
+                children: [
+                  Row(
+                    children: [
+                      Icon(Ionicons.bookmarks_outline, color: Colors.grey,
+                      size: 18,),
+                      SizedBox(width: 8,),
+                      Text("Learning"),
+                      Spacer(),
+                      Text("542 words")
+                    ],
+                  ),
+                  Divider(),
+                ],
               ),
             ),
           ),
