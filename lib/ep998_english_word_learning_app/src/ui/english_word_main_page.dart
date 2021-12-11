@@ -104,7 +104,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
-              height: 300,
+              height: 320,
               decoration: const BoxDecoration(
                 color: Colors.white,
               ),
@@ -192,7 +192,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Container(
-              height: 180,
+              height: 160,
               decoration: const BoxDecoration(
                 color: Colors.white,
               ),
