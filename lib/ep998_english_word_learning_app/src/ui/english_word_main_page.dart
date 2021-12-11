@@ -114,25 +114,44 @@ class _EwlMainPageState extends State<EwlMainPage> {
                   Container(
                     height: 32,
                     decoration: BoxDecoration(
-                      color: Colors.grey[200],
+                      color: Colors.grey[100],
                       borderRadius: BorderRadius.circular(8)
                     ),
+                    padding: EdgeInsets.symmetric(vertical: 1),
                     child: Row(
-                      children: [
+                      children: const [
                         Expanded(child: Card(
                           child: Center(
                             child: Text("Week"),
                           ),
                         )),
-                        Expanded(child: Placeholder()),
-                        Expanded(child: Placeholder()),
-                        Expanded(child: Placeholder()),
+                        VerticalDivider(
+                          indent: 2,
+                          endIndent: 2,
+                        ),
+                        Expanded(child: Center(
+                          child: Text("Month"),
+                        )),
+                        VerticalDivider(
+                          indent: 2,
+                          endIndent: 2,
+                        ),
+                        Expanded(child: Center(
+                          child: Text("Quater"),
+                        )),
+                        VerticalDivider(
+                          indent: 4,
+                          endIndent: 4,
+                        ),
+                        Expanded(child: Center(
+                          child: Text("Year"),
+                        )),
                       ],
                     ),
                   ),
                   Expanded(child: Placeholder()),
                   Row(
-                    children: [
+                    children: const [
 
                     ],
                   )
