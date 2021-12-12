@@ -73,7 +73,8 @@ class _EwlMainPageState extends State<EwlMainPage> {
                       ],
                     )),
                     const VerticalDivider(),
-                     Expanded(child:  Row(
+                    Expanded(
+                        child: Row(
                       children: [
                         CircleAvatar(
                           backgroundColor: Colors.orange,
@@ -114,14 +115,12 @@ class _EwlMainPageState extends State<EwlMainPage> {
                 children: [
                   Container(
                     height: 32,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[100],
-                      borderRadius: BorderRadius.circular(8)
-                    ),
+                    decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(8)),
                     padding: EdgeInsets.symmetric(vertical: 1),
                     child: Row(
                       children: const [
-                        Expanded(child: Card(
+                        Expanded(
+                            child: Card(
                           child: Center(
                             child: Text("Week"),
                           ),
@@ -130,83 +129,97 @@ class _EwlMainPageState extends State<EwlMainPage> {
                           indent: 2,
                           endIndent: 2,
                         ),
-                        Expanded(child: Center(
+                        Expanded(
+                            child: Center(
                           child: Text("Month"),
                         )),
                         VerticalDivider(
                           indent: 2,
                           endIndent: 2,
                         ),
-                        Expanded(child: Center(
+                        Expanded(
+                            child: Center(
                           child: Text("Quater"),
                         )),
                         VerticalDivider(
                           indent: 4,
                           endIndent: 4,
                         ),
-                        Expanded(child: Center(
+                        Expanded(
+                            child: Center(
                           child: Text("Year"),
                         )),
                       ],
                     ),
                   ),
-
-                  Expanded(child: Padding(
+                  Expanded(
+                      child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: BarChart(
-                      BarChartData(
-                        borderData: FlBorderData(
-                          show: false
-                        ),
-                        barGroups: [
-                          BarChartGroupData(x: 0, barRods: [
-                            BarChartRodData(y: 1,
-                            rodStackItems: [
-                              BarChartRodStackItem(0 , 2, Colors.grey),
-                              BarChartRodStackItem(2 , 14, Colors.green),
-                              BarChartRodStackItem(14 , 17, Colors.green)
-                            ]),
-
-                          ]),
-                          BarChartGroupData(x: 1),
-                          BarChartGroupData(x: 2),
-                          BarChartGroupData(x: 3),
-                          BarChartGroupData(x: 4),
-                          BarChartGroupData(x: 5),
-                          BarChartGroupData(x: 6),
-                        ]
-                      )
-                    ),
+                    child: BarChart(BarChartData(borderData: FlBorderData(show: false), barGroups: [
+                      BarChartGroupData(x: 0, barRods: [
+                        BarChartRodData(y: 17, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                          BarChartRodStackItem(0, 2, Colors.grey),
+                          BarChartRodStackItem(2, 14, Colors.green),
+                          BarChartRodStackItem(14, 17, Colors.indigo)
+                        ]),
+                      ]),
+                      BarChartGroupData(x: 1),
+                      BarChartGroupData(x: 2),
+                      BarChartGroupData(x: 3),
+                      BarChartGroupData(x: 4),
+                      BarChartGroupData(x: 5),
+                      BarChartGroupData(x: 6),
+                    ])),
                   )),
                   Row(
                     children: const [
-                      CircleAvatar(radius: 4,
-                      backgroundColor: Colors.black,),
-                      SizedBox(width: 4,),
-                      Text("Learned: 8",style: TextStyle(
-                        fontSize: 12
-                      ),),
+                      CircleAvatar(
+                        radius: 4,
+                        backgroundColor: Colors.black,
+                      ),
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Text(
+                        "Learned: 8",
+                        style: TextStyle(fontSize: 12),
+                      ),
                       Spacer(),
-                      CircleAvatar(radius: 4,
-                      backgroundColor: Colors.indigoAccent,),
-                      SizedBox(width: 4,),
-                      Text("New: 35",style: TextStyle(
-                          fontSize: 12
-                      ),),
+                      CircleAvatar(
+                        radius: 4,
+                        backgroundColor: Colors.indigoAccent,
+                      ),
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Text(
+                        "New: 35",
+                        style: TextStyle(fontSize: 12),
+                      ),
                       Spacer(),
-                      CircleAvatar(radius: 4,
-                      backgroundColor: Colors.greenAccent,),
-                      SizedBox(width: 4,),
-                      Text("Learning: 85",style: TextStyle(
-                          fontSize: 12
-                      ),),
+                      CircleAvatar(
+                        radius: 4,
+                        backgroundColor: Colors.greenAccent,
+                      ),
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Text(
+                        "Learning: 85",
+                        style: TextStyle(fontSize: 12),
+                      ),
                       Spacer(),
-                      CircleAvatar(radius: 4,
-                      backgroundColor: Colors.grey,),
-                      SizedBox(width: 4,),
-                      Text("Skipped: 35",style: TextStyle(
-                          fontSize: 12
-                      ),)
+                      CircleAvatar(
+                        radius: 4,
+                        backgroundColor: Colors.grey,
+                      ),
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Text(
+                        "Skipped: 35",
+                        style: TextStyle(fontSize: 12),
+                      )
                     ],
                   )
                 ],
@@ -225,22 +238,33 @@ class _EwlMainPageState extends State<EwlMainPage> {
                 children: [
                   Row(
                     children: const [
-                      Icon(Ionicons.bookmarks_outline, color: Colors.grey,
-                      size: 18,),
-                      SizedBox(width: 8,),
+                      Icon(
+                        Ionicons.bookmarks_outline,
+                        color: Colors.grey,
+                        size: 18,
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
                       Text("Learning"),
                       Spacer(),
-                      Text("542 words",style: TextStyle(
-                        color: Colors.grey
-                      ),)
+                      Text(
+                        "542 words",
+                        style: TextStyle(color: Colors.grey),
+                      )
                     ],
                   ),
                   Divider(),
                   Row(
                     children: const [
-                      Icon(Ionicons.star_outline, color: Colors.grey,
-                        size: 18,),
-                      SizedBox(width: 8,),
+                      Icon(
+                        Ionicons.star_outline,
+                        color: Colors.grey,
+                        size: 18,
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
                       Text("Complete learned"),
                       Spacer(),
                       Text("185 words")
@@ -249,9 +273,14 @@ class _EwlMainPageState extends State<EwlMainPage> {
                   Divider(),
                   Row(
                     children: const [
-                      Icon(Ionicons.bonfire_outline, color: Colors.grey,
-                        size: 18,),
-                      SizedBox(width: 8,),
+                      Icon(
+                        Ionicons.bonfire_outline,
+                        color: Colors.grey,
+                        size: 18,
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
                       Text("Best streak"),
                       Spacer(),
                       Text("16 days")
@@ -260,9 +289,14 @@ class _EwlMainPageState extends State<EwlMainPage> {
                   Divider(),
                   Row(
                     children: const [
-                      Icon(Ionicons.time_outline, color: Colors.grey,
-                        size: 18,),
-                      SizedBox(width: 8,),
+                      Icon(
+                        Ionicons.time_outline,
+                        color: Colors.grey,
+                        size: 18,
+                      ),
+                      SizedBox(
+                        width: 8,
+                      ),
                       Text("Start of learning"),
                       Spacer(),
                       Text("May, 2021")
