@@ -152,12 +152,20 @@ class _EwlMainPageState extends State<EwlMainPage> {
                   ),
 
                   Expanded(child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 4),
+                    padding: const EdgeInsets.symmetric(vertical: 8),
                     child: BarChart(
                       BarChartData(
-                        borderData: ,
+                        borderData: FlBorderData(
+                          show: false
+                        ),
                         barGroups: [
-                          BarChartGroupData(x: 0),
+                          BarChartGroupData(x: 0, barRods: [
+                            BarChartRodData(y: 1,
+                            rodStackItems: [
+                              
+                            ]),
+
+                          ]),
                           BarChartGroupData(x: 1),
                           BarChartGroupData(x: 2),
                           BarChartGroupData(x: 3),
