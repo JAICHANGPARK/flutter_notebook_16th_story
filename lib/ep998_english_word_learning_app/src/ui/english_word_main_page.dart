@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -152,7 +153,20 @@ class _EwlMainPageState extends State<EwlMainPage> {
 
                   Expanded(child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 4),
-                    child: Placeholder(),
+                    child: BarChart(
+                      BarChartData(
+                        borderData: ,
+                        barGroups: [
+                          BarChartGroupData(x: 0),
+                          BarChartGroupData(x: 1),
+                          BarChartGroupData(x: 2),
+                          BarChartGroupData(x: 3),
+                          BarChartGroupData(x: 4),
+                          BarChartGroupData(x: 5),
+                          BarChartGroupData(x: 6),
+                        ]
+                      )
+                    ),
                   )),
                   Row(
                     children: const [
