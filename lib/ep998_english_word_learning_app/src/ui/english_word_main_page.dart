@@ -162,7 +162,9 @@ class _EwlMainPageState extends State<EwlMainPage> {
                           BarChartGroupData(x: 0, barRods: [
                             BarChartRodData(y: 1,
                             rodStackItems: [
-                              
+                              BarChartRodStackItem(0 , 2, Colors.grey),
+                              BarChartRodStackItem(2 , 14, Colors.green),
+                              BarChartRodStackItem(14 , 17, Colors.green)
                             ]),
 
                           ]),
