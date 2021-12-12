@@ -155,52 +155,87 @@ class _EwlMainPageState extends State<EwlMainPage> {
                   Expanded(
                       child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: BarChart(BarChartData(maxY: 40, minY: 0, borderData: FlBorderData(show: false), barGroups: [
-                      BarChartGroupData(x: 0, barRods: [
-                        BarChartRodData(y: 17, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                          BarChartRodStackItem(0, 2, Colors.grey),
-                          BarChartRodStackItem(2, 14, Colors.green),
-                          BarChartRodStackItem(14, 17, Colors.indigoAccent)
-                        ]),
-                      ]),
-                      BarChartGroupData(x: 1, barRods: [
-                        BarChartRodData(y: 32, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                          BarChartRodStackItem(0, 7, Colors.grey),
-                          BarChartRodStackItem(7, 22, Colors.green),
-                          BarChartRodStackItem(22, 27, Colors.indigoAccent),
-                          BarChartRodStackItem(27, 32, Colors.black)
-                        ]),
-                      ]),
-                      BarChartGroupData(x: 2, barRods: [
-                        BarChartRodData(y: 22, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                          BarChartRodStackItem(0, 3, Colors.grey),
-                          BarChartRodStackItem(3, 15, Colors.green),
-                          BarChartRodStackItem(15, 20, Colors.indigoAccent),
-                          BarChartRodStackItem(20, 22, Colors.black)
-                        ]),
-                      ]),
-                      BarChartGroupData(x: 3, barRods: [
-                        BarChartRodData(y: 22, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                          BarChartRodStackItem(0, 15, Colors.green),
-                          BarChartRodStackItem(15, 22, Colors.indigoAccent),
-                        ]),
-                      ]),
-                      BarChartGroupData(x: 4, barRods: [
-                        BarChartRodData(y: 30, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                          BarChartRodStackItem(0, 8, Colors.grey),
-                          BarChartRodStackItem(8, 25, Colors.green),
-                          BarChartRodStackItem(25, 30, Colors.indigoAccent),
-                        ]),
-                      ]),
-                      BarChartGroupData(x: 4, barRods: [
-                        BarChartRodData(y: 30, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                          BarChartRodStackItem(0, 8, Colors.grey),
-                          BarChartRodStackItem(8, 25, Colors.green),
-                          BarChartRodStackItem(25, 30, Colors.indigoAccent),
-                        ]),
-                      ]),
-                      BarChartGroupData(x: 6),
-                    ])),
+                    child: BarChart(BarChartData(
+                        maxY: 40,
+                        minY: 0,
+                        titlesData: FlTitlesData(
+                          rightTitles: SideTitles(
+                            showTitles: false,
+                          ),
+                          topTitles: SideTitles(
+                            showTitles: false,
+                          ),
+                          leftTitles: SideTitles(
+                            margin: 14,
+                            showTitles: true,
+                            interval: 10,
+                            getTextStyles: (context, value){
+                              return TextStyle(fontSize: 10);
+                            },
+                            getTitles: (value){
+                              return value.toInt().toString();
+                            }
+
+                          )
+                        ),
+                        axisTitleData: FlAxisTitleData(
+                            rightTitle: AxisTitle(
+                          showTitle: false,
+                        )),
+                        borderData: FlBorderData(show: false),
+                        barGroups: [
+                          BarChartGroupData(x: 0, barRods: [
+                            BarChartRodData(y: 17, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                              BarChartRodStackItem(0, 2, Colors.grey),
+                              BarChartRodStackItem(2, 14, Colors.green),
+                              BarChartRodStackItem(14, 17, Colors.indigoAccent)
+                            ]),
+                          ]),
+                          BarChartGroupData(x: 1, barRods: [
+                            BarChartRodData(y: 32, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                              BarChartRodStackItem(0, 7, Colors.grey),
+                              BarChartRodStackItem(7, 22, Colors.green),
+                              BarChartRodStackItem(22, 27, Colors.indigoAccent),
+                              BarChartRodStackItem(27, 32, Colors.black)
+                            ]),
+                          ]),
+                          BarChartGroupData(x: 2, barRods: [
+                            BarChartRodData(y: 22, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                              BarChartRodStackItem(0, 3, Colors.grey),
+                              BarChartRodStackItem(3, 15, Colors.green),
+                              BarChartRodStackItem(15, 20, Colors.indigoAccent),
+                              BarChartRodStackItem(20, 22, Colors.black)
+                            ]),
+                          ]),
+                          BarChartGroupData(x: 3, barRods: [
+                            BarChartRodData(y: 22, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                              BarChartRodStackItem(0, 15, Colors.green),
+                              BarChartRodStackItem(15, 22, Colors.indigoAccent),
+                            ]),
+                          ]),
+                          BarChartGroupData(x: 4, barRods: [
+                            BarChartRodData(y: 30, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                              BarChartRodStackItem(0, 8, Colors.grey),
+                              BarChartRodStackItem(8, 25, Colors.green),
+                              BarChartRodStackItem(25, 30, Colors.indigoAccent),
+                            ]),
+                          ]),
+                          BarChartGroupData(x: 5, barRods: [
+                            BarChartRodData(y: 32, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                              BarChartRodStackItem(0, 12, Colors.grey),
+                              BarChartRodStackItem(12, 27, Colors.green),
+                              BarChartRodStackItem(27, 32, Colors.indigoAccent),
+                            ]),
+                          ]),
+                          BarChartGroupData(x: 6, barRods: [
+                            BarChartRodData(y: 19, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                              BarChartRodStackItem(0, 3, Colors.grey),
+                              BarChartRodStackItem(3, 13, Colors.green),
+                              BarChartRodStackItem(13, 18, Colors.indigoAccent),
+                              BarChartRodStackItem(18, 19, Colors.black)
+                            ]),
+                          ]),
+                        ])),
                   )),
                   Row(
                     children: const [
