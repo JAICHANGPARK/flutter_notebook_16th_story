@@ -76,7 +76,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
                     Expanded(
                         child: Row(
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           backgroundColor: Colors.orange,
                         ),
                         Padding(
@@ -116,7 +116,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
                   Container(
                     height: 32,
                     decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(8)),
-                    padding: EdgeInsets.symmetric(vertical: 1),
+                    padding: const EdgeInsets.symmetric(vertical: 1),
                     child: Row(
                       children: const [
                         Expanded(
@@ -156,27 +156,57 @@ class _EwlMainPageState extends State<EwlMainPage> {
                       child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
                     child: BarChart(BarChartData(
-                        maxY: 40,
+                        maxY: 42,
                         minY: 0,
                         titlesData: FlTitlesData(
-                          rightTitles: SideTitles(
-                            showTitles: false,
-                          ),
-                          topTitles: SideTitles(
-                            showTitles: false,
-                          ),
-                          leftTitles: SideTitles(
-                            margin: 14,
-                            showTitles: true,
-                            interval: 10,
-                            getTextStyles: (context, value){
-                              return TextStyle(fontSize: 10);
-                            },
-                            getTitles: (value){
-                              return value.toInt().toString();
-                            }
-
-                          )
+                            rightTitles: SideTitles(
+                              showTitles: false,
+                            ),
+                            topTitles: SideTitles(
+                              showTitles: false,
+                            ),
+                            leftTitles: SideTitles(
+                                margin: 14,
+                                showTitles: true,
+                                interval: 10,
+                                getTextStyles: (context, value) {
+                                  return const TextStyle(fontSize: 10);
+                                },
+                                getTitles: (value) {
+                                  return value.toInt().toString();
+                                }),
+                            bottomTitles: SideTitles(
+                                showTitles: true,
+                                margin: 10,
+                                getTextStyles: (context, value) {
+                                  return const TextStyle(
+                                    fontSize: 10,
+                                    color: Colors.grey,
+                                  );
+                                },
+                                getTitles: (value) {
+                                  int v = value.toInt();
+                                  switch (v) {
+                                    case 0:
+                                      return "22 Jun";
+                                    case 1:
+                                      return "23 Jun";
+                                    case 2:
+                                      return "24 Jun";
+                                    case 3:
+                                      return "25 Jun";
+                                    case 4:
+                                      return "26 Jun";
+                                    case 5:
+                                      return "27 Jun";
+                                    case 6:
+                                      return "28 Jun";
+                                    default:
+                                      return "";
+                                  }
+                                })),
+                        gridData: FlGridData(
+                          drawVerticalLine: false,
                         ),
                         axisTitleData: FlAxisTitleData(
                             rightTitle: AxisTitle(
@@ -299,7 +329,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
               decoration: const BoxDecoration(
                 color: Colors.white,
               ),
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: ListView(
                 children: [
                   Row(
@@ -320,7 +350,7 @@ class _EwlMainPageState extends State<EwlMainPage> {
                       )
                     ],
                   ),
-                  Divider(),
+                  const Divider(),
                   Row(
                     children: const [
                       Icon(
@@ -333,10 +363,13 @@ class _EwlMainPageState extends State<EwlMainPage> {
                       ),
                       Text("Complete learned"),
                       Spacer(),
-                      Text("185 words")
+                      Text(
+                        "185 words",
+                        style: TextStyle(color: Colors.grey),
+                      )
                     ],
                   ),
-                  Divider(),
+                  const Divider(),
                   Row(
                     children: const [
                       Icon(
@@ -349,10 +382,13 @@ class _EwlMainPageState extends State<EwlMainPage> {
                       ),
                       Text("Best streak"),
                       Spacer(),
-                      Text("16 days")
+                      Text(
+                        "16 days",
+                        style: TextStyle(color: Colors.grey),
+                      )
                     ],
                   ),
-                  Divider(),
+                  const Divider(),
                   Row(
                     children: const [
                       Icon(
@@ -365,10 +401,13 @@ class _EwlMainPageState extends State<EwlMainPage> {
                       ),
                       Text("Start of learning"),
                       Spacer(),
-                      Text("May, 2021")
+                      Text(
+                        "May, 2021",
+                        style: TextStyle(color: Colors.grey),
+                      )
                     ],
                   ),
-                  Divider(),
+                  const Divider(),
                 ],
               ),
             ),
