@@ -155,7 +155,9 @@ class _EwlMainPageState extends State<EwlMainPage> {
                   Expanded(
                       child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: BarChart(BarChartData(borderData: FlBorderData(show: false), barGroups: [
+                    child: BarChart(BarChartData(
+
+                        borderData: FlBorderData(show: false), barGroups: [
                       BarChartGroupData(x: 0, barRods: [
                         BarChartRodData(y: 17, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
                           BarChartRodStackItem(0, 2, Colors.grey),
@@ -163,7 +165,14 @@ class _EwlMainPageState extends State<EwlMainPage> {
                           BarChartRodStackItem(14, 17, Colors.indigo)
                         ]),
                       ]),
-                      BarChartGroupData(x: 1),
+                      BarChartGroupData(x: 1, barRods: [
+                        BarChartRodData(y: 32, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                          BarChartRodStackItem(0, 7, Colors.grey),
+                          BarChartRodStackItem(7, 22, Colors.green),
+                          BarChartRodStackItem(22, 27, Colors.indigo),
+                          BarChartRodStackItem(27, 32, Colors.black)
+                        ]),
+                      ]),
                       BarChartGroupData(x: 2),
                       BarChartGroupData(x: 3),
                       BarChartGroupData(x: 4),
