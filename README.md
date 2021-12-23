@@ -8,6 +8,10 @@
 - EP992 : https://dribbble.com/shots/16983265-New-Twist-for-Android/attachments/12060682?mode=media
 - EP998 : https://dribbble.com/shots/17036667-English-word-learning-App/attachments/12120779?mode=media
 
+## Contribution 
+
+- No limit PR
+
 
 ## Getting Started
 
