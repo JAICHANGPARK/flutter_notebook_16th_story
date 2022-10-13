@@ -2,19 +2,19 @@ name: flutter_notebook_16th_story
 description: A new Flutter project.
 
 publish_to: 'none'
-version: 1.0.2+3
+version: 1.1.0+4
 
 environment:
-  sdk: ">=2.15.0-246.0.dev <3.0.0"
+  sdk: ">=2.18.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.4
+  cupertino_icons: ^1.0.5
   intl: any
 
-  flutter_riverpod: ^1.0.2
+  flutter_riverpod: ^2.0.2
 
   coolicons: ^1.0.0
   line_icons: any
@@ -24,23 +24,23 @@ dependencies:
   freezed_annotation:
   percent_indicator: any
   fl_chart: any
-  get: ^4.5.1
-  json_annotation: ^4.4.0
-  equatable: ^2.0.3
+  get: ^4.6.5
+  json_annotation: ^4.7.0
+  equatable: ^2.0.5
 
   flutter_bloc: any
   cached_network_image: any
   smooth_page_indicator: ^1.0.0+2
 
   uuid: any
-  animated_text_kit: ^4.2.1
-  timeago: ^3.1.0
+  animated_text_kit: ^4.2.2
+  timeago: ^3.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.4
-  json_serializable: ^6.1.1
+  flutter_lints: ^2.0.1
+  json_serializable: ^6.5.1
   build_runner: any
   freezed: any
 
