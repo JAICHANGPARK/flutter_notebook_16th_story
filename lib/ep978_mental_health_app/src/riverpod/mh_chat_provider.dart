@@ -7,17 +7,17 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 
-final mhChatProvider = StateNotifierProvider<ChatList, List<MhChat>>((ref) => ChatList([], ref.read));
+final mhChatProvider = StateNotifierProvider<ChatList, List<MhChat>>((ref) => ChatList([], ref));
 
 class ChatList extends StateNotifier<List<MhChat>> {
-  Reader read;
+  Ref ref;
   Timer? receiveTimer;
-  ChatList(List<MhChat> state, this.read) : super(state);
+  ChatList(List<MhChat> state, this.ref) : super(state);
 
   // ScrollController _scrollController =  ScrollController();
 
   add() {
-    String msg = read(chatTextProvider).text.trim();
+    String msg = ref.read(chatTextProvider).text.trim();
 
     print("add: msg: $msg");
     state = [
