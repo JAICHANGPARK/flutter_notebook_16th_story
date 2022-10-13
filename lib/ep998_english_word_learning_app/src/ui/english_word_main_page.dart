@@ -155,117 +155,126 @@ class _EwlMainPageState extends State<EwlMainPage> {
                   Expanded(
                       child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: BarChart(BarChartData(
+                    child: BarChart(
+                      BarChartData(
                         maxY: 42,
                         minY: 0,
                         titlesData: FlTitlesData(
-                            rightTitles: SideTitles(
+                          rightTitles: AxisTitles(
+                            sideTitles: SideTitles(
                               showTitles: false,
                             ),
-                            topTitles: SideTitles(
+                          ),
+                          topTitles: AxisTitles(
+                            sideTitles: SideTitles(
                               showTitles: false,
                             ),
-                            leftTitles: SideTitles(
-                                margin: 14,
+                          ),
+                          leftTitles: AxisTitles(
+                            sideTitles: SideTitles(
+                                reservedSize: 10,
                                 showTitles: true,
                                 interval: 10,
-                                getTextStyles: (context, value) {
-                                  return const TextStyle(fontSize: 10);
-                                },
-                                getTitles: (value) {
-                                  return value.toInt().toString();
+                                getTitlesWidget: (value, _) {
+                                  return Text(value.toInt().toString());
                                 }),
-                            bottomTitles: SideTitles(
+                          ),
+                          bottomTitles: AxisTitles(
+                            sideTitles: SideTitles(
                                 showTitles: true,
-                                margin: 10,
-                                getTextStyles: (context, value) {
-                                  return const TextStyle(
-                                    fontSize: 10,
-                                    color: Colors.grey,
-                                  );
-                                },
-                                getTitles: (value) {
+                                reservedSize: 10,
+                                // getTextStyles: (context, value) {
+                                //   return const TextStyle(
+                                //     fontSize: 10,
+                                //     color: Colors.grey,
+                                //   );
+                                // },
+                                getTitlesWidget: (value, _) {
                                   int v = value.toInt();
                                   switch (v) {
                                     case 0:
-                                      return "22 Jun";
+                                      return const Text("22 Jun");
                                     case 1:
-                                      return "23 Jun";
+                                      return const Text("23 Jun");
                                     case 2:
-                                      return "24 Jun";
+                                      return const Text("24 Jun");
                                     case 3:
-                                      return "25 Jun";
+                                      return const Text("25 Jun");
                                     case 4:
-                                      return "26 Jun";
+                                      return const Text("26 Jun");
                                     case 5:
-                                      return "27 Jun";
+                                      return const Text("27 Jun");
                                     case 6:
-                                      return "28 Jun";
+                                      return const Text("28 Jun");
                                     default:
-                                      return "";
+                                      return const Text("");
                                   }
-                                })),
+                                }),
+                          ),
+                        ),
                         gridData: FlGridData(
                           drawVerticalLine: false,
                         ),
-                        axisTitleData: FlAxisTitleData(
-                            rightTitle: AxisTitle(
-                          showTitle: false,
-                        )),
+                        // axisTitleData: FlAxisTitleData(
+                        //     rightTitle: AxisTitle(
+                        //   showTitle: false,
+                        // )),
                         borderData: FlBorderData(show: false),
-                        barGroups: [
-                          BarChartGroupData(x: 0, barRods: [
-                            BarChartRodData(y: 17, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                              BarChartRodStackItem(0, 2, Colors.grey),
-                              BarChartRodStackItem(2, 14, Colors.green),
-                              BarChartRodStackItem(14, 17, Colors.indigoAccent)
-                            ]),
-                          ]),
-                          BarChartGroupData(x: 1, barRods: [
-                            BarChartRodData(y: 32, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                              BarChartRodStackItem(0, 7, Colors.grey),
-                              BarChartRodStackItem(7, 22, Colors.green),
-                              BarChartRodStackItem(22, 27, Colors.indigoAccent),
-                              BarChartRodStackItem(27, 32, Colors.black)
-                            ]),
-                          ]),
-                          BarChartGroupData(x: 2, barRods: [
-                            BarChartRodData(y: 22, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                              BarChartRodStackItem(0, 3, Colors.grey),
-                              BarChartRodStackItem(3, 15, Colors.green),
-                              BarChartRodStackItem(15, 20, Colors.indigoAccent),
-                              BarChartRodStackItem(20, 22, Colors.black)
-                            ]),
-                          ]),
-                          BarChartGroupData(x: 3, barRods: [
-                            BarChartRodData(y: 22, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                              BarChartRodStackItem(0, 15, Colors.green),
-                              BarChartRodStackItem(15, 22, Colors.indigoAccent),
-                            ]),
-                          ]),
-                          BarChartGroupData(x: 4, barRods: [
-                            BarChartRodData(y: 30, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                              BarChartRodStackItem(0, 8, Colors.grey),
-                              BarChartRodStackItem(8, 25, Colors.green),
-                              BarChartRodStackItem(25, 30, Colors.indigoAccent),
-                            ]),
-                          ]),
-                          BarChartGroupData(x: 5, barRods: [
-                            BarChartRodData(y: 32, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                              BarChartRodStackItem(0, 12, Colors.grey),
-                              BarChartRodStackItem(12, 27, Colors.green),
-                              BarChartRodStackItem(27, 32, Colors.indigoAccent),
-                            ]),
-                          ]),
-                          BarChartGroupData(x: 6, barRods: [
-                            BarChartRodData(y: 19, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
-                              BarChartRodStackItem(0, 3, Colors.grey),
-                              BarChartRodStackItem(3, 13, Colors.green),
-                              BarChartRodStackItem(13, 18, Colors.indigoAccent),
-                              BarChartRodStackItem(18, 19, Colors.black)
-                            ]),
-                          ]),
-                        ])),
+                        // barGroups: [
+                        //   BarChartGroupData(x: 0, barRods: [
+                        //     BarChartRodData(y: 17, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                        //       BarChartRodStackItem(0, 2, Colors.grey),
+                        //       BarChartRodStackItem(2, 14, Colors.green),
+                        //       BarChartRodStackItem(14, 17, Colors.indigoAccent)
+                        //     ]),
+                        //   ]),
+                        //   BarChartGroupData(x: 1, barRods: [
+                        //     BarChartRodData(y: 32, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                        //       BarChartRodStackItem(0, 7, Colors.grey),
+                        //       BarChartRodStackItem(7, 22, Colors.green),
+                        //       BarChartRodStackItem(22, 27, Colors.indigoAccent),
+                        //       BarChartRodStackItem(27, 32, Colors.black)
+                        //     ]),
+                        //   ]),
+                        //   BarChartGroupData(x: 2, barRods: [
+                        //     BarChartRodData(y: 22, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                        //       BarChartRodStackItem(0, 3, Colors.grey),
+                        //       BarChartRodStackItem(3, 15, Colors.green),
+                        //       BarChartRodStackItem(15, 20, Colors.indigoAccent),
+                        //       BarChartRodStackItem(20, 22, Colors.black)
+                        //     ]),
+                        //   ]),
+                        //   BarChartGroupData(x: 3, barRods: [
+                        //     BarChartRodData(y: 22, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                        //       BarChartRodStackItem(0, 15, Colors.green),
+                        //       BarChartRodStackItem(15, 22, Colors.indigoAccent),
+                        //     ]),
+                        //   ]),
+                        //   BarChartGroupData(x: 4, barRods: [
+                        //     BarChartRodData(y: 30, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                        //       BarChartRodStackItem(0, 8, Colors.grey),
+                        //       BarChartRodStackItem(8, 25, Colors.green),
+                        //       BarChartRodStackItem(25, 30, Colors.indigoAccent),
+                        //     ]),
+                        //   ]),
+                        //   BarChartGroupData(x: 5, barRods: [
+                        //     BarChartRodData(y: 32, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                        //       BarChartRodStackItem(0, 12, Colors.grey),
+                        //       BarChartRodStackItem(12, 27, Colors.green),
+                        //       BarChartRodStackItem(27, 32, Colors.indigoAccent),
+                        //     ]),
+                        //   ]),
+                        //   BarChartGroupData(x: 6, barRods: [
+                        //     BarChartRodData(y: 19, width: 16, borderRadius: BorderRadius.circular(2), rodStackItems: [
+                        //       BarChartRodStackItem(0, 3, Colors.grey),
+                        //       BarChartRodStackItem(3, 13, Colors.green),
+                        //       BarChartRodStackItem(13, 18, Colors.indigoAccent),
+                        //       BarChartRodStackItem(18, 19, Colors.black)
+                        //     ]),
+                        //   ]),
+                        // ],
+                      ),
+                    ),
                   )),
                   Row(
                     children: const [

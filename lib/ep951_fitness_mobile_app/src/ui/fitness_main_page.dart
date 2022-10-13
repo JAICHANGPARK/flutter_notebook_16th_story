@@ -223,54 +223,86 @@ class _FitnessMainPageState extends State<FitnessMainPage> {
                                   alignment: BarChartAlignment.spaceAround,
                                   gridData: FlGridData(show: false),
                                   titlesData: FlTitlesData(
-                                      bottomTitles: SideTitles(
+                                    bottomTitles: AxisTitles(
+                                      sideTitles: SideTitles(
                                           showTitles: true,
-                                          getTitles: (value) {
+                                          getTitlesWidget: (value, meta) {
                                             switch (value.toInt()) {
                                               case 0:
-                                                return "S";
+                                                return Text("S");
                                               case 1:
-                                                return "M";
+                                                return Text("M");
                                               case 2:
-                                                return "T";
+                                                return Text("T");
                                               case 3:
-                                                return "W";
+                                                return Text("W");
                                               case 4:
-                                                return "W";
+                                                return Text("W");
                                               case 5:
-                                                return "W";
+                                                return Text("W");
                                               case 6:
-                                                return "S";
+                                                return Text("S");
                                               default:
-                                                return "A";
+                                                return Text("A");
                                             }
                                           }),
-                                      leftTitles: SideTitles(showTitles: false),
-                                      rightTitles: SideTitles(showTitles: false),
-                                      topTitles: SideTitles(showTitles: false)),
+                                    ),
+                                    leftTitles: AxisTitles(
+                                      sideTitles: SideTitles(showTitles: false),
+                                    ),
+                                    rightTitles: AxisTitles(
+                                      sideTitles: SideTitles(showTitles: false),
+                                    ),
+                                    topTitles: AxisTitles(
+                                      sideTitles: SideTitles(showTitles: false),
+                                    ),
+                                  ),
                                   borderData: FlBorderData(show: false),
-                                  axisTitleData: FlAxisTitleData(show: false),
+                                  // axisTitleData: FlAxisTitleData(show: false),
                                   barGroups: [
-                                    BarChartGroupData(x: 0, barRods: [
-                                      BarChartRodData(y: 16, width: 2.5, colors: [Colors.black])
-                                    ]),
+                                    BarChartGroupData(
+                                        x: 0, barRods: [BarChartRodData(width: 2.5, color: Colors.black, toY: 16)]),
                                     BarChartGroupData(x: 1, barRods: [
-                                      BarChartRodData(y: 10, width: 2.5, colors: [Colors.black])
+                                      BarChartRodData(
+                                        toY: 10,
+                                        width: 2.5,
+                                        color: Colors.black,
+                                      )
                                     ]),
                                     BarChartGroupData(x: 2, barRods: [
-                                      BarChartRodData(y: 11, width: 2.5, colors: [Colors.black])
+                                      BarChartRodData(
+                                        toY: 11,
+                                        width: 2.5,
+                                        color: Colors.black,
+                                      )
                                     ]),
                                     BarChartGroupData(x: 3, barRods: [
-                                      BarChartRodData(y: 10, width: 2.5, colors: [Colors.black])
+                                      BarChartRodData(
+                                        toY: 10,
+                                        width: 2.5,
+                                        color: Colors.black,
+                                      )
                                     ]),
                                     BarChartGroupData(x: 4, barRods: [
-                                      BarChartRodData(y: 16, width: 2.5, colors: [Colors.black])
+                                      BarChartRodData(
+                                        toY: 16,
+                                        width: 2.5,
+                                        color: Colors.black,
+                                      )
                                     ]),
                                     BarChartGroupData(x: 5, barRods: [
-                                      BarChartRodData(y: 8, width: 2.5, colors: [Colors.black])
+                                      BarChartRodData(
+                                        toY: 8,
+                                        width: 2.5,
+                                        color: Colors.black,
+                                      )
                                     ]),
                                     BarChartGroupData(x: 6, barRods: [
-                                      BarChartRodData(y: 16, width: 2.5, colors: [Colors.black])
+                                      BarChartRodData(
+                                        toY: 16,
+                                        width: 2.5,
+                                        color: Colors.black,
+                                      )
                                     ]),
                                   ],
                                 ),

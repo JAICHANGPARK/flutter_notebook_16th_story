@@ -41,58 +41,73 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                       ),
                     ),
                     Expanded(
-                        child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Card(
-                        elevation: 2,
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: LineChart(LineChartData(
-                              maxY: 1200,
-                              minY: 0,
-                              borderData: FlBorderData(
-                                show: false,
-                              ),
-                              gridData: FlGridData(
-                                show: false,
-                              ),
-                              axisTitleData: FlAxisTitleData(show: false),
-                              titlesData: FlTitlesData(
-                                topTitles: SideTitles(
-                                  showTitles: false,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Card(
+                          elevation: 2,
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: LineChart(
+                              LineChartData(
+                                maxY: 1200,
+                                minY: 0,
+                                borderData: FlBorderData(
+                                  show: false,
                                 ),
-                                rightTitles: SideTitles(
-                                  showTitles: false,
+                                gridData: FlGridData(
+                                  show: false,
                                 ),
-                                leftTitles: SideTitles(
-                                  showTitles: true,
-                                  interval: 250,
-                                  getTextStyles: (context, value) {
-                                    return const TextStyle(fontSize: 10, color: Colors.grey);
-                                  },
+                                // axisTitleData: FlAxisTitleData(show: false),
+                                titlesData: FlTitlesData(
+                                  topTitles: AxisTitles(
+                                    sideTitles: SideTitles(
+                                      showTitles: false,
+                                    ),
+                                  ),
+                                  rightTitles: AxisTitles(
+                                    sideTitles: SideTitles(
+                                      showTitles: false,
+                                    ),
+                                  ),
+                                  leftTitles: AxisTitles(
+                                    sideTitles: SideTitles(
+                                      showTitles: true,
+                                      interval: 250,
+                                      getTitlesWidget: (value, _) {
+                                        return Text(value.toStringAsFixed(1));
+                                      },
+                                    ),
+                                  ),
+                                  bottomTitles: AxisTitles(
+                                    sideTitles: SideTitles(
+                                      showTitles: true,
+                                      interval: 5,
+                                      getTitlesWidget: (value, _) {
+                                        return Text(
+                                          value.toStringAsFixed(1),
+                                          style: const TextStyle(
+                                            fontSize: 10,
+                                            color: Colors.grey,
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ),
                                 ),
-                                bottomTitles: SideTitles(
-                                  showTitles: true,
-                                  interval: 5,
-                                  getTextStyles: (context, value) {
-                                    return const TextStyle(fontSize: 10, color: Colors.grey);
-                                  },
-                                ),
-                              ),
-                              lineBarsData: [
-                                LineChartBarData(
-                                    colors: [Colors.purple],
-                                    dotData: FlDotData(show: false),
-                                    isCurved: true,
-                                    spots: List.generate(
-                                      40,
-                                      (index) => FlSpot(
-                                        index.toDouble(),
-                                        250 + (Random().nextDouble() * 500),
-                                      ),
-                                    )),
-                                LineChartBarData(
-                                    colors: [Colors.red],
+                                lineBarsData: [
+                                  LineChartBarData(
+                                      color: Colors.purple,
+                                      dotData: FlDotData(show: false),
+                                      isCurved: true,
+                                      spots: List.generate(
+                                        40,
+                                        (index) => FlSpot(
+                                          index.toDouble(),
+                                          250 + (Random().nextDouble() * 500),
+                                        ),
+                                      )),
+                                  LineChartBarData(
+                                    color: Colors.red,
                                     dotData: FlDotData(show: false),
                                     isCurved: true,
                                     spots: List.generate(
@@ -101,11 +116,15 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                                         index.toDouble(),
                                         500 + (Random().nextDouble() * 500),
                                       ),
-                                    )),
-                              ])),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
                         ),
                       ),
-                    )),
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
@@ -160,7 +179,8 @@ class _BankWalletStaticPageState extends State<BankWalletStaticPage> {
                             child: Container(
                               width: 110,
                               padding: const EdgeInsets.symmetric(horizontal: 8),
-                              decoration: BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(4)),
+                              decoration:
+                                  BoxDecoration(color: Colors.deepOrangeAccent, borderRadius: BorderRadius.circular(4)),
                               child: Center(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
